@@ -27,6 +27,8 @@ const duration = computed(() => transcript.value?.duration ?? 0);
 
 const { activeIndex } = useTranscriptSync(segments, currentTime);
 
+const speakerTab = ref<'airtime' | 'volume'>('airtime');
+
 const onSeek = (time: number) => {
   audioApi.seek(time);
 };
@@ -71,16 +73,33 @@ const onSeek = (time: number) => {
           <InsightCards :insights="insights" />
         </section>
 
-        <!-- Speaking time bars -->
+        <!-- Speaker analysis (tabbed) -->
         <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Airtime breakdown</h2>
-          <SpeakingTimeBars :speakers="metrics.speakers" />
-        </section>
-
-        <!-- Volume profile -->
-        <section v-if="volumeAnalysis" class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Volume profile</h2>
-          <VolumeProfile :speakers="volumeAnalysis.speakers" />
+          <div class="MeetingTabs">
+            <button
+              class="MeetingTab"
+              :class="{ tabActive: speakerTab === 'airtime' }"
+              @click="speakerTab = 'airtime'"
+            >
+              Airtime breakdown
+            </button>
+            <button
+              v-if="volumeAnalysis"
+              class="MeetingTab"
+              :class="{ tabActive: speakerTab === 'volume' }"
+              @click="speakerTab = 'volume'"
+            >
+              Volume profile
+            </button>
+          </div>
+          <SpeakingTimeBars
+            v-if="speakerTab === 'airtime'"
+            :speakers="metrics.speakers"
+          />
+          <VolumeProfile
+            v-if="speakerTab === 'volume' && volumeAnalysis"
+            :speakers="volumeAnalysis.speakers"
+          />
         </section>
 
         <!-- Timeline -->
@@ -178,5 +197,28 @@ const onSeek = (time: number) => {
 .MeetingError {
   color: var(--accent-70);
   font-size: var(--caption-text-height);
+}
+
+.MeetingTabs {
+  display: flex;
+  gap: var(--space-bit-1);
+}
+
+.MeetingTab {
+  font-size: var(--caption-text-height);
+  font-weight: 600;
+  color: var(--base-50);
+  padding: var(--space-bit-1) var(--space-bit-3);
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: color var(--time-2) var(--timing), background var(--time-2) var(--timing);
+}
+
+.MeetingTab:hover {
+  color: var(--base-80);
+}
+
+.MeetingTab.tabActive {
+  color: var(--base-110);
+  background: var(--base-20);
 }
 </style>
