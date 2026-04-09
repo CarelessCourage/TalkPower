@@ -67,6 +67,22 @@ const onSeek = (time: number) => {
         <!-- Summary row -->
         <MeetingSummary :metrics="metrics" />
 
+        <!-- Conversation flow — hero feature -->
+        <section class="MeetingSection MeetingHero">
+          <h2 class="MeetingHeroTitle">Conversation flow</h2>
+          <p class="MeetingHeroSub">
+            Scrub through the meeting to see who spoke, when, and how they
+            interacted
+          </p>
+          <ConversationTimeline
+            :segments="segments"
+            :duration="duration"
+            :current-time="currentTime ?? 0"
+            :interruptions="interruptions"
+            @seek="onSeek"
+          />
+        </section>
+
         <!-- Dominance insights -->
         <section class="MeetingSection">
           <h2 class="MeetingSectionTitle">Power dynamics</h2>
@@ -99,18 +115,6 @@ const onSeek = (time: number) => {
           <VolumeProfile
             v-if="speakerTab === 'volume' && volumeAnalysis"
             :speakers="volumeAnalysis.speakers"
-          />
-        </section>
-
-        <!-- Timeline -->
-        <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Conversation flow</h2>
-          <ConversationTimeline
-            :segments="segments"
-            :duration="duration"
-            :current-time="currentTime ?? 0"
-            :interruptions="interruptions"
-            @seek="onSeek"
           />
         </section>
 
@@ -193,6 +197,25 @@ const onSeek = (time: number) => {
   font-weight: 700;
   color: var(--base-90);
   letter-spacing: -0.01em;
+}
+
+.MeetingHero {
+  padding: var(--space-3);
+  background: var(--base-10);
+  border-radius: var(--radius-outer);
+  border: 1px solid var(--base-20);
+}
+
+.MeetingHeroTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--base-120);
+  letter-spacing: -0.02em;
+}
+
+.MeetingHeroSub {
+  font-size: var(--caption-text-height);
+  color: var(--base-50);
 }
 
 .MeetingError {

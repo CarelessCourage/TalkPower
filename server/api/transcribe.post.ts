@@ -28,12 +28,29 @@ export default defineEventHandler(async (event) => {
     type: fileField.type ?? 'audio/mpeg'
   });
 
-  const transcription = await client.audio.transcriptions.create({
-    model: 'gpt-4o-transcribe-diarize',
-    file,
-    response_format: 'diarized_json',
-    chunking_strategy: 'auto'
-  });
+  let transcription;
+  try {
+    transcription = await client.audio.transcriptions.create({
+      model: 'gpt-4o-transcribe-diarize',
+      file,
+      response_format: 'diarized_json',
+      chunking_strategy: 'auto'
+    });
+  } catch (err: unknown) {
+    if (err instanceof OpenAI.APIError) {
+      throw createError({
+        statusCode: err.status ?? 500,
+        statusMessage:
+          err.status === 429
+            ? 'OpenAI rate limit reached — check your plan and billing at platform.openai.com'
+            : `OpenAI error: ${err.message}`
+      });
+    }
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Transcription request failed'
+    });
+  }
 
   const response = transcription as unknown as {
     text: string;
