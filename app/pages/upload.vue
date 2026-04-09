@@ -8,6 +8,7 @@ const {
   transcript,
   volumeAnalysis,
   interruptions,
+  interruptionThreshold,
   uploadStatus,
   errorMessage,
   audioUrl,
@@ -28,6 +29,13 @@ const duration = computed(() => transcript.value?.duration ?? 0);
 const { activeIndex } = useTranscriptSync(segments, currentTime);
 
 const speakerTab = ref<'airtime' | 'volume'>('airtime');
+
+const hardInterruptions = computed(
+  () => interruptions.value.filter((i) => i.severity === 'hard').length
+);
+const softInterruptions = computed(
+  () => interruptions.value.filter((i) => i.severity === 'soft').length
+);
 
 const onSeek = (time: number) => {
   audioApi.seek(time);
@@ -71,6 +79,13 @@ const onSeek = (time: number) => {
             Scrub through the meeting to see who spoke, when, and how they
             interacted
           </p>
+          <AnalysisSettings
+            :threshold="interruptionThreshold"
+            :interruption-count="interruptions.length"
+            :hard-count="hardInterruptions"
+            :soft-count="softInterruptions"
+            @update:threshold="interruptionThreshold = $event"
+          />
           <ConversationTimeline
             :segments="segments"
             :duration="duration"

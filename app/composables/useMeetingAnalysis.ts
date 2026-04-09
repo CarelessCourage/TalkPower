@@ -12,7 +12,8 @@ import {
   computeMeetingMetrics,
   generateInsights,
   generateVolumeInsights,
-  detectInterruptions
+  detectInterruptions,
+  DEFAULT_INTERRUPTION_THRESHOLD
 } from '~/utils/metrics';
 import {
   analyzeAudioVolume,
@@ -35,6 +36,8 @@ export const useMeetingAnalysis = () => {
 
   const audioUrl = useObjectUrl(audioFile);
 
+  const interruptionThreshold = ref(DEFAULT_INTERRUPTION_THRESHOLD);
+
   const metrics = computed<MeetingMetrics | null>(() => {
     if (!transcript.value) return null;
     return computeMeetingMetrics(
@@ -45,7 +48,10 @@ export const useMeetingAnalysis = () => {
 
   const interruptions = computed<Interruption[]>(() => {
     if (!transcript.value) return [];
-    return detectInterruptions(transcript.value.segments);
+    return detectInterruptions(
+      transcript.value.segments,
+      interruptionThreshold.value
+    );
   });
 
   const insights = computed<DominanceInsight[]>(() => {
@@ -132,6 +138,7 @@ export const useMeetingAnalysis = () => {
     transcript,
     volumeAnalysis,
     interruptions,
+    interruptionThreshold,
     uploadStatus,
     errorMessage,
     audioFile,

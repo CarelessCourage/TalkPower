@@ -51,7 +51,8 @@ const getInterruption = (index: number): Interruption | undefined => {
       class="TranscriptSegment"
       :class="{
         segmentActive: i === activeIndex,
-        segmentInterruption: !!getInterruption(i)
+        segmentHardInterruption: getInterruption(i)?.severity === 'hard',
+        segmentSoftInterruption: getInterruption(i)?.severity === 'soft'
       }"
       @click="emit('seek', segment.start)"
     >
@@ -61,13 +62,19 @@ const getInterruption = (index: number): Interruption | undefined => {
           <span :class="getSpeakerColor(getInterruption(i)!.interrupter)">
             {{ getInterruption(i)!.interrupter }}
           </span>
-          <span class="InterruptionCutOff">cut off</span>
+          <span class="InterruptionCutOff">
+            {{ getInterruption(i)!.severity === 'hard' ? 'cut off' : 'soft' }}
+          </span>
           <span :class="getSpeakerColor(getInterruption(i)!.interrupted)">
             {{ getInterruption(i)!.interrupted }}
           </span>
         </span>
         <span class="InterruptionOverlap mono">
-          {{ getInterruption(i)!.overlap.toFixed(1) }}s overlap
+          {{
+            getInterruption(i)!.gap <= 0
+              ? `${Math.abs(getInterruption(i)!.gap).toFixed(1)}s overlap`
+              : `${getInterruption(i)!.gap.toFixed(1)}s gap`
+          }}
         </span>
       </div>
 
@@ -114,18 +121,27 @@ const getInterruption = (index: number): Interruption | undefined => {
   padding-left: calc(var(--space-bit-3) - 3px);
 }
 
-.TranscriptSegment.segmentInterruption {
+.TranscriptSegment.segmentHardInterruption {
   border-left: 3px solid var(--accent-60);
   padding-left: calc(var(--space-bit-3) - 3px);
   background: color-mix(in srgb, var(--accent) 4%, transparent);
 }
 
-.TranscriptSegment.segmentInterruption:hover {
+.TranscriptSegment.segmentHardInterruption:hover {
   background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
-.TranscriptSegment.segmentActive.segmentInterruption {
+.TranscriptSegment.segmentActive.segmentHardInterruption {
   border-left-color: var(--accent-80);
+}
+
+.TranscriptSegment.segmentSoftInterruption {
+  border-left: 3px dashed var(--base-50);
+  padding-left: calc(var(--space-bit-3) - 3px);
+}
+
+.TranscriptSegment.segmentActive.segmentSoftInterruption {
+  border-left-color: var(--base-70);
 }
 
 .InterruptionBanner {

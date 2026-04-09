@@ -180,7 +180,8 @@ watch(
             :key="index"
             class="TimelineCard"
             :class="{
-              cardInterruption: !!getInterruption(index)
+              cardHardInterruption: getInterruption(index)?.severity === 'hard',
+              cardSoftInterruption: getInterruption(index)?.severity === 'soft'
             }"
           >
             <div v-if="getInterruption(index)" class="CardInterruptionBanner">
@@ -190,7 +191,13 @@ watch(
                 >
                   {{ getInterruption(index)!.interrupter }}
                 </span>
-                <span class="CardCutOff">cut off</span>
+                <span class="CardCutOff">
+                  {{
+                    getInterruption(index)!.severity === 'hard'
+                      ? 'cut off'
+                      : 'soft'
+                  }}
+                </span>
                 <span
                   :class="getSpeakerColor(getInterruption(index)!.interrupted)"
                 >
@@ -276,10 +283,15 @@ watch(
   background: var(--base-20);
 }
 
-.TimelineCard.cardInterruption {
+.TimelineCard.cardHardInterruption {
   border-left: 3px solid var(--accent-60);
   padding-left: calc(var(--space-bit-3) - 3px);
   background: color-mix(in srgb, var(--accent) 4%, transparent);
+}
+
+.TimelineCard.cardSoftInterruption {
+  border-left: 3px solid var(--base-50);
+  padding-left: calc(var(--space-bit-3) - 3px);
 }
 
 .CardInterruptionBanner {

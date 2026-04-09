@@ -7,8 +7,8 @@ import type {
   VolumeAnalysis
 } from '~/types/meeting';
 
-/** Threshold in seconds — overlapping segments closer than this count as an interruption */
-const INTERRUPTION_OVERLAP = 0.5;
+/** Default hard-interruption threshold in seconds */
+export const DEFAULT_INTERRUPTION_THRESHOLD = 0.3;
 
 /** Group segments by speaker and sum their durations */
 const computeSpeakerTime = (
@@ -38,24 +38,42 @@ const computeLongestMonologue = (
   }, new Map<string, number>());
 };
 
-/** Detect rough interruptions based on overlapping timestamps */
+/**
+ * Detect interruptions based on gap between speaker transitions.
+ * OpenAI diarization rarely produces true overlap — instead, tight transitions
+ * (little or no breathing room) signal interruptions.
+ *
+ * - gap <= 0 (overlap or seamless handoff) → always detected
+ * - 0 < gap <= hardThreshold → detected as "soft" (quick back-and-forth)
+ * - gap <= 0 or gap within a very tight window → "hard" (real interruption)
+ *
+ * The hardThreshold slider controls what counts as "hard" vs "soft":
+ * transitions with gap <= hardThreshold are hard, the rest up to a max
+ * detection window are soft.
+ */
 export const detectInterruptions = (
-  segments: TranscriptSegment[]
+  segments: TranscriptSegment[],
+  hardThreshold: number = DEFAULT_INTERRUPTION_THRESHOLD
 ): Interruption[] => {
+  /** We detect up to 2× the hard threshold as soft interruptions */
+  const softCeiling = Math.max(hardThreshold * 2, 0.5);
+
   return segments.reduce<Interruption[]>((acc, seg, i) => {
     if (i === 0) return acc;
     const prev = segments[i - 1]!;
     if (seg.speaker === prev.speaker) return acc;
 
-    const overlap = prev.end - seg.start;
-    if (overlap > INTERRUPTION_OVERLAP) {
+    const gap = seg.start - prev.end; // positive = pause, 0 = seamless, negative = overlap
+
+    if (gap <= softCeiling) {
       return [
         ...acc,
         {
           interrupted: prev.speaker,
           interrupter: seg.speaker,
           time: seg.start,
-          overlap
+          gap,
+          severity: gap <= hardThreshold ? 'hard' : 'soft'
         }
       ];
     }

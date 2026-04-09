@@ -55,8 +55,10 @@ export interface Interruption {
   interrupter: string;
   /** Time of the interruption in seconds */
   time: number;
-  /** How much overlap in seconds */
-  overlap: number;
+  /** Gap between segments in seconds (negative = overlap, zero/small = tight) */
+  gap: number;
+  /** Soft = tight transition; hard = no breathing room at all */
+  severity: 'soft' | 'hard';
 }
 
 /** Volume data for a single transcript segment */
