@@ -1,32 +1,29 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed } from 'vue';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import { useMeetingAnalysis } from '~/composables/useMeetingAnalysis';
 import { useTranscriptSync } from '~/composables/useTranscriptSync';
-import demoVideo from '~/assets/video/argumentAtTheMuseum.mp4';
 
 const {
   transcript,
   volumeAnalysis,
   interruptions,
+  uploadStatus,
+  errorMessage,
   audioUrl,
   metrics,
   insights,
   hasData,
-  loadDemo
+  uploadAudio,
+  loadMockData,
+  reset
 } = useMeetingAnalysis();
-
-onMounted(() => {
-  if (!hasData.value) loadDemo();
-});
 
 const playerId = ref('meeting-player');
 const { currentTime, audioApi } = useMagicPlayer(playerId);
 
 const segments = computed(() => transcript.value?.segments ?? []);
 const duration = computed(() => transcript.value?.duration ?? 0);
-
-const playerSrc = computed(() => audioUrl.value ?? demoVideo);
 
 const { activeIndex } = useTranscriptSync(segments, currentTime);
 
@@ -38,27 +35,39 @@ const onSeek = (time: number) => {
 </script>
 
 <template>
-  <div class="MeetingPage">
-    <header class="MeetingHeader">
-      <div class="MeetingBrand">
-        <h1 class="MeetingTitle">TalkPower</h1>
-        <p class="MeetingTagline">Reveal who runs the room</p>
+  <div class="UploadPage">
+    <header class="UploadHeader">
+      <div class="UploadBrand">
+        <NuxtLink to="/" class="UploadBackLink">&larr; Back to demo</NuxtLink>
+        <h1 class="UploadTitle">Analyze your recording</h1>
       </div>
-      <NuxtLink to="/upload" class="MeetingUploadLink">
-        Try your own recording
-      </NuxtLink>
+      <button v-if="hasData" class="UploadReset" @click="reset">
+        New analysis
+      </button>
     </header>
 
-    <main class="MeetingMain">
+    <main class="UploadMain">
+      <!-- Upload state -->
+      <AudioUpload
+        v-if="!hasData"
+        :status="uploadStatus"
+        @upload="uploadAudio"
+        @demo="loadMockData"
+      />
+
+      <p v-if="uploadStatus === 'error'" class="UploadError">
+        {{ errorMessage }}
+      </p>
+
       <!-- Analysis dashboard -->
       <template v-if="hasData && metrics">
-        <!-- Player -->
-        <MeetingPlayer :src="playerSrc" />
+        <MeetingPlayer v-if="audioUrl" :src="audioUrl" />
 
-        <!-- Conversation flow — hero feature -->
-        <section class="MeetingSection MeetingHero">
-          <h2 class="MeetingHeroTitle">Conversation flow</h2>
-          <p class="MeetingHeroSub">
+        <MeetingSummary :metrics="metrics" />
+
+        <section class="UploadSection UploadHero">
+          <h2 class="UploadHeroTitle">Conversation flow</h2>
+          <p class="UploadHeroSub">
             Scrub through the meeting to see who spoke, when, and how they
             interacted
           </p>
@@ -71,20 +80,15 @@ const onSeek = (time: number) => {
           />
         </section>
 
-        <!-- Summary row -->
-        <MeetingSummary :metrics="metrics" />
-
-        <!-- Dominance insights -->
-        <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Power dynamics</h2>
+        <section class="UploadSection">
+          <h2 class="UploadSectionTitle">Power dynamics</h2>
           <InsightCards :insights="insights" />
         </section>
 
-        <!-- Speaker analysis (tabbed) -->
-        <section class="MeetingSection">
-          <div class="MeetingTabs">
+        <section class="UploadSection">
+          <div class="UploadTabs">
             <button
-              class="MeetingTab"
+              class="UploadTab"
               :class="{ tabActive: speakerTab === 'airtime' }"
               @click="speakerTab = 'airtime'"
             >
@@ -92,7 +96,7 @@ const onSeek = (time: number) => {
             </button>
             <button
               v-if="volumeAnalysis"
-              class="MeetingTab"
+              class="UploadTab"
               :class="{ tabActive: speakerTab === 'volume' }"
               @click="speakerTab = 'volume'"
             >
@@ -109,9 +113,8 @@ const onSeek = (time: number) => {
           />
         </section>
 
-        <!-- Transcript -->
-        <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Full transcript</h2>
+        <section class="UploadSection">
+          <h2 class="UploadSectionTitle">Full transcript</h2>
           <TranscriptView
             :segments="segments"
             :active-index="activeIndex"
@@ -125,7 +128,7 @@ const onSeek = (time: number) => {
 </template>
 
 <style scoped>
-.MeetingPage {
+.UploadPage {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -134,87 +137,97 @@ const onSeek = (time: number) => {
   padding: var(--space-5) var(--space-3);
 }
 
-.MeetingHeader {
+.UploadHeader {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-3);
 }
 
-.MeetingBrand {
+.UploadBrand {
   display: flex;
   flex-direction: column;
   gap: var(--space-bit-0);
 }
 
-.MeetingTitle {
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--base-120);
-}
-
-.MeetingTagline {
-  font-size: var(--caption-text-height);
-  color: var(--base-50);
-  font-style: italic;
-}
-
-.MeetingUploadLink {
+.UploadBackLink {
   font-size: var(--caption-text-height);
   color: var(--base-60);
   text-decoration: underline;
   transition: color var(--time-2) var(--timing);
 }
 
-.MeetingUploadLink:hover {
+.UploadBackLink:hover {
   color: var(--base-100);
 }
 
-.MeetingMain {
+.UploadTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--base-120);
+}
+
+.UploadReset {
+  font-size: var(--caption-text-height);
+  color: var(--base-60);
+  text-decoration: underline;
+  transition: color var(--time-2) var(--timing);
+}
+
+.UploadReset:hover {
+  color: var(--base-100);
+}
+
+.UploadMain {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
 }
 
-.MeetingSection {
+.UploadSection {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
 }
 
-.MeetingSectionTitle {
+.UploadSectionTitle {
   font-size: 1rem;
   font-weight: 700;
   color: var(--base-90);
   letter-spacing: -0.01em;
 }
 
-.MeetingHero {
+.UploadHero {
   padding: var(--space-3);
   background: var(--base-10);
   border-radius: var(--radius-outer);
   border: 1px solid var(--base-20);
 }
 
-.MeetingHeroTitle {
+.UploadHeroTitle {
   font-size: 1.25rem;
   font-weight: 800;
   color: var(--base-120);
   letter-spacing: -0.02em;
 }
 
-.MeetingHeroSub {
+.UploadHeroSub {
   font-size: var(--caption-text-height);
   color: var(--base-50);
 }
 
-.MeetingTabs {
+.UploadError {
+  color: var(--accent-70);
+  font-size: var(--caption-text-height);
+}
+
+.UploadTabs {
   display: flex;
   gap: var(--space-bit-1);
 }
 
-.MeetingTab {
+.UploadTab {
   font-size: var(--caption-text-height);
   font-weight: 600;
   color: var(--base-50);
@@ -225,11 +238,11 @@ const onSeek = (time: number) => {
     background var(--time-2) var(--timing);
 }
 
-.MeetingTab:hover {
+.UploadTab:hover {
   color: var(--base-80);
 }
 
-.MeetingTab.tabActive {
+.UploadTab.tabActive {
   color: var(--base-110);
   background: var(--base-20);
 }

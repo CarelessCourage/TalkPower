@@ -1,0 +1,558 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " Stop right there, please,",
+      "speaker": "A",
+      "start": 0.3500000000000001,
+      "end": 4.5,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr.",
+      "speaker": "A",
+      "start": 4.65,
+      "end": 4.9,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Daley.",
+      "speaker": "A",
+      "start": 4.95,
+      "end": 5.4,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Well, well, well, well.",
+      "speaker": "A",
+      "start": 5.9,
+      "end": 7.8,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Sadly know how to make an entrance.",
+      "speaker": "A",
+      "start": 8.700000000000001,
+      "end": 10.250000000000002,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Send recruits back.",
+      "speaker": "B",
+      "start": 10.250000000000002,
+      "end": 11.350000000000001,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Don't your little friend think,",
+      "speaker": "A",
+      "start": 11.956,
+      "end": 13.756,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Chell, that you also figured out the combination?",
+      "speaker": "A",
+      "start": 13.856,
+      "end": 16.456,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Gimme jet.",
+      "speaker": "C",
+      "start": 16.956,
+      "end": 17.456,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Oh no no no, first give me the combination and hand over that tablet.",
+      "speaker": "A",
+      "start": 17.456,
+      "end": 21.256,
+      "id": "seg_9"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'll give you the tablet and the combination when you release my friends and give him back to me.",
+      "speaker": "C",
+      "start": 21.506,
+      "end": 24.956,
+      "id": "seg_10"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I shall relieve what I want to relieve the moment I want to release it.",
+      "speaker": "A",
+      "start": 24.956,
+      "end": 28.656,
+      "id": "seg_11"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Great. And I'll release what I want to release at the exact moment that I want to release it, okay?",
+      "speaker": "C",
+      "start": 29.006,
+      "end": 32.306,
+      "id": "seg_12"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Tell me the combination and give me that tablet right now or I shall kill all of your friend,",
+      "speaker": "A",
+      "start": 32.306,
+      "end": 36.856,
+      "id": "seg_13"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " starting with the little shaggy-headed little Calvin.",
+      "speaker": "A",
+      "start": 37.256,
+      "end": 39.456,
+      "id": "seg_14"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Tell me, Hale.",
+      "speaker": "A",
+      "start": 39.348,
+      "end": 39.798,
+      "id": "seg_15"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I ain't shaggy headed, Juche. Angela, let me take this guy.",
+      "speaker": "C",
+      "start": 40.248,
+      "end": 42.998,
+      "id": "seg_16"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Don't worry,",
+      "speaker": "C",
+      "start": 43.548,
+      "end": 43.897999999999996,
+      "id": "seg_17"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I got this handled.",
+      "speaker": "C",
+      "start": 43.998,
+      "end": 44.547999999999995,
+      "id": "seg_18"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You don't want to give me my friends,",
+      "speaker": "C",
+      "start": 44.647999999999996,
+      "end": 45.998,
+      "id": "seg_19"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " then you're not going to get your combination on your tablet.",
+      "speaker": "C",
+      "start": 46.248,
+      "end": 47.998,
+      "id": "seg_20"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " All right,",
+      "speaker": "A",
+      "start": 48.19799999999999,
+      "end": 48.69799999999999,
+      "id": "seg_21"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'll tell you what,",
+      "speaker": "A",
+      "start": 48.897999999999996,
+      "end": 49.397999999999996,
+      "id": "seg_22"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Good.",
+      "speaker": "C",
+      "start": 49.397999999999996,
+      "end": 49.44799999999999,
+      "id": "seg_23"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " all right. They didn't call me Conrad the Trustworthy for nothing.",
+      "speaker": "A",
+      "start": 49.44799999999999,
+      "end": 52.397999999999996,
+      "id": "seg_24"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Here you go.",
+      "speaker": "A",
+      "start": 52.598,
+      "end": 53.147999999999996,
+      "id": "seg_25"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " They didn't call me Conrad the Trustworthy.",
+      "speaker": "A",
+      "start": 53.248,
+      "end": 55.19799999999999,
+      "id": "seg_26"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " They called me Conrad the Bloodthirsty, who kills whoever doesn't give Conrad exactly what he wants in the moment that he wants it, which is right now when I had also better get the combination and the tablet.",
+      "speaker": "A",
+      "start": 55.348,
+      "end": 66.648,
+      "id": "seg_27"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That's what they called you.",
+      "speaker": "C",
+      "start": 67.7,
+      "end": 68.60000000000001,
+      "id": "seg_28"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It was shorter in Egyptian.",
+      "speaker": "A",
+      "start": 68.85000000000001,
+      "end": 70.3,
+      "id": "seg_29"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Great. Well, I'll give you the combination after you give",
+      "speaker": "C",
+      "start": 70.3,
+      "end": 72,
+      "id": "seg_30"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How",
+      "speaker": "A",
+      "start": 72,
+      "end": 72.05,
+      "id": "seg_31"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " him back.",
+      "speaker": "C",
+      "start": 72.05,
+      "end": 72.2,
+      "id": "seg_32"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " dare you? If you touch that again,",
+      "speaker": "A",
+      "start": 72.2,
+      "end": 74,
+      "id": "seg_33"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I shall kill you right now.",
+      "speaker": "A",
+      "start": 74.05,
+      "end": 75.10000000000001,
+      "id": "seg_34"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay.",
+      "speaker": "C",
+      "start": 75.3,
+      "end": 75.60000000000001,
+      "id": "seg_35"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Do not touch this. This is a no touching zone.",
+      "speaker": "A",
+      "start": 75.60000000000001,
+      "end": 78.35000000000001,
+      "id": "seg_36"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Good.",
+      "speaker": "C",
+      "start": 78.35000000000001,
+      "end": 78.65,
+      "id": "seg_37"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Well then,",
+      "speaker": "C",
+      "start": 78.7,
+      "end": 79.10000000000001,
+      "id": "seg_38"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " great.",
+      "speaker": "C",
+      "start": 79.15,
+      "end": 79.45,
+      "id": "seg_39"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Oh, for God. Oh, my God.",
+      "speaker": "A",
+      "start": 79.45,
+      "end": 80.65,
+      "id": "seg_40"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I can't believe you reached across like that again.",
+      "speaker": "A",
+      "start": 80.75,
+      "end": 84.05000000000001,
+      "id": "seg_41"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But,",
+      "speaker": "C",
+      "start": 84.05000000000001,
+      "end": 84.15,
+      "id": "seg_42"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I can't even believe it. Oh,",
+      "speaker": "A",
+      "start": 84.15,
+      "end": 85.80000000000001,
+      "id": "seg_43"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " honestly.",
+      "speaker": "C",
+      "start": 85.80000000000001,
+      "end": 86,
+      "id": "seg_44"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " God, I want to kill you right if you didn't know this combination you'd be you'd be so dead right now. It would be unbelievable.",
+      "speaker": "A",
+      "start": 86,
+      "end": 92.35000000000001,
+      "id": "seg_45"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Great, but I do know the combination.",
+      "speaker": "C",
+      "start": 92.65,
+      "end": 94.05000000000001,
+      "id": "seg_46"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " don't cross this line with your hand.",
+      "speaker": "A",
+      "start": 94.548,
+      "end": 98.148,
+      "id": "seg_47"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " No,",
+      "speaker": "D",
+      "start": 98.748,
+      "end": 98.94800000000001,
+      "id": "seg_48"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How dare you?",
+      "speaker": "A",
+      "start": 98.94800000000001,
+      "end": 99.348,
+      "id": "seg_49"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm just,",
+      "speaker": "D",
+      "start": 99.348,
+      "end": 99.598,
+      "id": "seg_50"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " If",
+      "speaker": "A",
+      "start": 99.598,
+      "end": 99.798,
+      "id": "seg_51"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm just saying",
+      "speaker": "D",
+      "start": 99.798,
+      "end": 100.098,
+      "id": "seg_52"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you speak again,",
+      "speaker": "A",
+      "start": 100.098,
+      "end": 100.648,
+      "id": "seg_53"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " there's nobody.",
+      "speaker": "D",
+      "start": 100.648,
+      "end": 101.098,
+      "id": "seg_54"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " if you speak again,",
+      "speaker": "A",
+      "start": 101.098,
+      "end": 102.598,
+      "id": "seg_55"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm going to kill you. Do you understand me?",
+      "speaker": "A",
+      "start": 102.998,
+      "end": 105.798,
+      "id": "seg_56"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Don't say anything. Oh God, I see you getting ready. Oh my God, don't say anything.",
+      "speaker": "A",
+      "start": 106.398,
+      "end": 109.648,
+      "id": "seg_57"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I shall murder you if you talk again.",
+      "speaker": "A",
+      "start": 110.098,
+      "end": 112.098,
+      "id": "seg_58"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Now give me that tablet and tell me the combination.",
+      "speaker": "A",
+      "start": 112.498,
+      "end": 117.248,
+      "id": "seg_59"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay, after you give me Jed and release my friends.",
+      "speaker": "D",
+      "start": 117.998,
+      "end": 120.748,
+      "id": "seg_60"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You did all three!",
+      "speaker": "A",
+      "start": 121.492,
+      "end": 122.69200000000001,
+      "id": "seg_61"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You spoke and waved your hand across!",
+      "speaker": "A",
+      "start": 122.792,
+      "end": 125.042,
+      "id": "seg_62"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Look, I can talk to you about this all night,",
+      "speaker": "D",
+      "start": 125.042,
+      "end": 126.69200000000001,
+      "id": "seg_63"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " okay? How about this?",
+      "speaker": "A",
+      "start": 126.842,
+      "end": 127.292,
+      "id": "seg_64"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Look, just",
+      "speaker": "D",
+      "start": 127.292,
+      "end": 127.542,
+      "id": "seg_65"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How",
+      "speaker": "A",
+      "start": 127.542,
+      "end": 127.592,
+      "id": "seg_66"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " give...",
+      "speaker": "D",
+      "start": 127.592,
+      "end": 127.64200000000001,
+      "id": "seg_67"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " about this? How about I don't kill you right now like I really, really want to, and I give you precisely five seconds to give me that tablet and tell me the combination.",
+      "speaker": "A",
+      "start": 127.64200000000001,
+      "end": 135.442,
+      "id": "seg_68"
+    }
+  ],
+  "duration": 135.442,
+  "text": "Stop right there, please, Mr. Daley. Well, well, well, well. Sadly know how to make an entrance. Send recruits back.\nDon't your little friend think, Chell, that you also figured out the combination? Gimme jet. Oh no no no, first give me the combination and hand over that tablet. I'll give you the tablet and the combination when you release my friends and give him back to me. I shall relieve what I want to relieve the moment I want to release it. Great. And I'll release what I want to release at the exact moment that I want to release it, okay? Tell me the combination and give me that tablet right now or I shall kill all of your friend, starting with the little shaggy-headed little Calvin.\nTell me, Hale. I ain't shaggy headed, Juche. Angela, let me take this guy. Don't worry, I got this handled. You don't want to give me my friends, then you're not going to get your combination on your tablet. All right, I'll tell you what, Good. all right. They didn't call me Conrad the Trustworthy for nothing. Here you go. They didn't call me Conrad the Trustworthy. They called me Conrad the Bloodthirsty, who kills whoever doesn't give Conrad exactly what he wants in the moment that he wants it, which is right now when I had also better get the combination and the tablet.\nThat's what they called you. It was shorter in Egyptian. Great. Well, I'll give you the combination after you give How him back. dare you? If you touch that again, I shall kill you right now. Okay. Do not touch this. This is a no touching zone. Good. Well then, great. Oh, for God. Oh, my God. I can't believe you reached across like that again. But, I can't even believe it. Oh, honestly. God, I want to kill you right if you didn't know this combination you'd be you'd be so dead right now. It would be unbelievable. Great, but I do know the combination.\ndon't cross this line with your hand. No, How dare you? I'm just, If I'm just saying you speak again, there's nobody. if you speak again, I'm going to kill you. Do you understand me? Don't say anything. Oh God, I see you getting ready. Oh my God, don't say anything. I shall murder you if you talk again. Now give me that tablet and tell me the combination. Okay, after you give me Jed and release my friends.\nYou did all three! You spoke and waved your hand across! Look, I can talk to you about this all night, okay? How about this? Look, just How give... about this? How about I don't kill you right now like I really, really want to, and I give you precisely five seconds to give me that tablet and tell me the combination."
+}
