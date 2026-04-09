@@ -37,7 +37,8 @@ const getInterruption = (index: number): Interruption | undefined => {
   const seg = segments[index];
   if (!seg) return undefined;
   return interruptions.find(
-    (int) => int.interrupter === seg.speaker && Math.abs(int.time - seg.start) < 0.01
+    (int) =>
+      int.interrupter === seg.speaker && Math.abs(int.time - seg.start) < 0.01
   );
 };
 </script>

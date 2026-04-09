@@ -109,6 +109,7 @@ const onSeek = (time: number) => {
             :segments="segments"
             :duration="duration"
             :current-time="currentTime ?? 0"
+            :interruptions="interruptions"
             @seek="onSeek"
           />
         </section>
@@ -210,7 +211,9 @@ const onSeek = (time: number) => {
   color: var(--base-50);
   padding: var(--space-bit-1) var(--space-bit-3);
   border-radius: var(--radius) var(--radius) 0 0;
-  transition: color var(--time-2) var(--timing), background var(--time-2) var(--timing);
+  transition:
+    color var(--time-2) var(--timing),
+    background var(--time-2) var(--timing);
 }
 
 .MeetingTab:hover {
