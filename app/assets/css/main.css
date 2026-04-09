@@ -1,0 +1,111 @@
+/*
+ * main.css — Global styles and resets
+ * Imported after tokens.css via nuxt.config
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--base-text);
+  background: var(--base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+figure,
+pre {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-80);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* --- Abstract utility classes --- */
+
+.surface {
+  background: var(--base-10);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.surfaceRaised {
+  background: var(--base-20);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.label {
+  font-size: var(--caption-text-height);
+  color: var(--base-70);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: 'Berkeley Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

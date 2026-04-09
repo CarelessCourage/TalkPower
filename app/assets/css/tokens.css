@@ -1,0 +1,259 @@
+/*
+ * tokens.css — Design system foundation
+ * Umbra color tokens are generated externally and injected at :root.
+ * This file defines spacing, sizing, timing, and structural tokens.
+ */
+
+:root {
+  /* --- Typography base (used to derive spacing) --- */
+  --text-height: 1.25rem;
+  --caption-text-height: 0.875rem;
+
+  /* --- Radius --- */
+  --radius-inner: calc(var(--radius) - var(--space-bit-2) / 2);
+  --radius: 7px;
+  --radius-outer: calc(var(--radius) + var(--space-bit-2));
+
+  /* --- Borders --- */
+  --border-size: 1px;
+  --border-color: var(--base-50);
+  --border: solid var(--border-size) var(--border-color);
+
+  /* --- Internal spacing (inside elements) --- */
+  --space-bit-5: calc(var(--space-bit-3) * 4);
+  --space-bit-4: calc(var(--space-bit-3) * 2);
+  --space-bit-3: calc(var(--text-height) * 0.7);
+  --space-bit-2: calc(var(--space-bit-3) / 2);
+  --space-bit-1: calc(var(--space-bit-3) / 4);
+  --space-bit-0: calc(var(--space-bit-3) / 8);
+
+  /* --- External spacing (between elements) --- */
+  --space-1: calc(var(--text-height) / 2);
+  --space-2: var(--text-height);
+  --space-3: calc(var(--text-height) + var(--space-bit-3));
+  --space-4: calc(var(--text-height) + var(--space-bit-4));
+  --space-5: calc(var(--space-4) + var(--space-bit-3) * 2);
+  --space-6: calc(var(--space-4) + var(--space-bit-3) * 4);
+  --space-7: calc(var(--space-4) + var(--space-bit-3) * 6);
+  --space-8: calc(var(--space-4) + var(--space-bit-3) * 8);
+  --space-9: calc(var(--space-4) + var(--space-bit-3) * 10);
+  --space-10: calc(var(--space-4) + var(--space-bit-3) * 12);
+
+  /* --- Element heights --- */
+  --block-4: calc(
+    var(--text-height) + var(--space-bit-5) + var(--border-size) * 2
+  );
+  --block-3: calc(
+    var(--text-height) + var(--space-bit-4) + var(--border-size) * 2
+  );
+  --block-2: calc(
+    var(--text-height) + var(--space-bit-3) + var(--border-size) * 2
+  );
+  --block-1: calc(
+    var(--text-height) + var(--space-bit-1) + var(--border-size) * 2
+  );
+  --block-0: calc(
+    var(--caption-text-height) + var(--space-bit-1) + var(--border-size) * 2
+  );
+
+  /* --- Panel widths --- */
+  --panel-padding: calc(var(--space-3) * 2 + var(--border-size) * 2);
+  --panel-0: clamp(300px, 90dvw, 700px);
+  --panel-1: calc(var(--panel-0) + var(--panel-padding));
+  --panel-2: clamp(100px, 90dvw, 1300px);
+  --panel-3: calc(var(--panel-2) + var(--panel-padding));
+
+  /* --- Timing --- */
+  --time-1: 0.1s;
+  --time-2: calc(var(--time-1) * 2);
+  --time-3: calc(var(--time-1) * 3);
+  --time-4: calc(var(--time-1) * 4);
+  --time-6: calc(var(--time-1) * 6);
+  --timing: ease-in-out;
+
+  /* --- Icon color --- */
+  --svg-color: var(--base-text);
+
+  @media (min-width: 2000px) {
+    --panel-0: clamp(300px, 90dvw, 900px);
+  }
+}
+
+/* --- Umbra color overrides (dark theme defaults) --- */
+:root {
+  --base: #0f0f0f;
+  --base-10: #161616;
+  --base-20: #1e1e1e;
+  --base-30: #262626;
+  --base-40: #333333;
+  --base-50: #444444;
+  --base-60: #555555;
+  --base-70: #777777;
+  --base-80: #999999;
+  --base-90: #b0b0b0;
+  --base-100: #cccccc;
+  --base-110: #e0e0e0;
+  --base-120: #f0f0f0;
+  --base-text: #eaeaea;
+
+  --accent: #e03e3e;
+  --accent-10: #3a1414;
+  --accent-20: #4e1a1a;
+  --accent-30: #621f1f;
+  --accent-40: #7a2424;
+  --accent-50: #932c2c;
+  --accent-60: #ad3333;
+  --accent-70: #e03e3e;
+  --accent-80: #e86565;
+  --accent-90: #f08a8a;
+  --accent-100: #f5aaaa;
+  --accent-110: #f9cccc;
+  --accent-120: #fce6e6;
+  --accent-text: #ffffff;
+
+  --warning: #e8920d;
+  --warning-10: #2e1e03;
+  --warning-20: #3f2904;
+  --warning-30: #523505;
+  --warning-40: #6a4507;
+  --warning-50: #835509;
+  --warning-60: #9d660b;
+  --warning-70: #e8920d;
+  --warning-80: #eda83d;
+  --warning-90: #f2be6d;
+  --warning-100: #f5d29a;
+  --warning-110: #f9e3c2;
+  --warning-120: #fcf1e0;
+  --warning-text: #000000;
+
+  --success: #2b9a3e;
+  --success-10: #0b200e;
+  --success-20: #0f2b13;
+  --success-30: #133718;
+  --success-40: #19471f;
+  --success-50: #1f5826;
+  --success-60: #256a2e;
+  --success-70: #2b9a3e;
+  --success-80: #55b165;
+  --success-90: #80c88c;
+  --success-100: #a8dab1;
+  --success-110: #ceead3;
+  --success-120: #e6f4e9;
+  --success-text: #ffffff;
+
+  --info: #2f7dc4;
+  --info-10: #0c1a28;
+  --info-20: #102336;
+  --info-30: #142d44;
+  --info-40: #1a3a58;
+  --info-50: #1f486c;
+  --info-60: #255781;
+  --info-70: #2f7dc4;
+  --info-80: #5997d0;
+  --info-90: #83b1dc;
+  --info-100: #aacbe7;
+  --info-110: #cfe1f2;
+  --info-120: #e7f0f8;
+  --info-text: #ffffff;
+
+  --yellow: #d4b800;
+  --yellow-10: #2a2500;
+  --yellow-20: #393200;
+  --yellow-30: #4a4100;
+  --yellow-40: #5f5300;
+  --yellow-50: #756600;
+  --yellow-60: #8c7a00;
+  --yellow-70: #d4b800;
+  --yellow-80: #ddc633;
+  --yellow-90: #e6d566;
+  --yellow-100: #ede199;
+  --yellow-110: #f5edc7;
+  --yellow-120: #faf6e3;
+  --yellow-text: #000000;
+}
+
+/* --- Token conversion classes --- */
+.base-accent {
+  --base: var(--accent);
+  --base-10: var(--accent-10);
+  --base-20: var(--accent-20);
+  --base-30: var(--accent-30);
+  --base-40: var(--accent-40);
+  --base-50: var(--accent-50);
+  --base-60: var(--accent-60);
+  --base-70: var(--accent-70);
+  --base-80: var(--accent-80);
+  --base-90: var(--accent-90);
+  --base-100: var(--accent-100);
+  --base-110: var(--accent-110);
+  --base-120: var(--accent-120);
+  --base-text: var(--accent-text);
+}
+
+.base-warning {
+  --base: var(--warning);
+  --base-10: var(--warning-10);
+  --base-20: var(--warning-20);
+  --base-30: var(--warning-30);
+  --base-40: var(--warning-40);
+  --base-50: var(--warning-50);
+  --base-60: var(--warning-60);
+  --base-70: var(--warning-70);
+  --base-80: var(--warning-80);
+  --base-90: var(--warning-90);
+  --base-100: var(--warning-100);
+  --base-110: var(--warning-110);
+  --base-120: var(--warning-120);
+  --base-text: var(--warning-text);
+}
+
+.base-success {
+  --base: var(--success);
+  --base-10: var(--success-10);
+  --base-20: var(--success-20);
+  --base-30: var(--success-30);
+  --base-40: var(--success-40);
+  --base-50: var(--success-50);
+  --base-60: var(--success-60);
+  --base-70: var(--success-70);
+  --base-80: var(--success-80);
+  --base-90: var(--success-90);
+  --base-100: var(--success-100);
+  --base-110: var(--success-110);
+  --base-120: var(--success-120);
+  --base-text: var(--success-text);
+}
+
+.base-info {
+  --base: var(--info);
+  --base-10: var(--info-10);
+  --base-20: var(--info-20);
+  --base-30: var(--info-30);
+  --base-40: var(--info-40);
+  --base-50: var(--info-50);
+  --base-60: var(--info-60);
+  --base-70: var(--info-70);
+  --base-80: var(--info-80);
+  --base-90: var(--info-90);
+  --base-100: var(--info-100);
+  --base-110: var(--info-110);
+  --base-120: var(--info-120);
+  --base-text: var(--info-text);
+}
+
+.base-yellow {
+  --base: var(--yellow);
+  --base-10: var(--yellow-10);
+  --base-20: var(--yellow-20);
+  --base-30: var(--yellow-30);
+  --base-40: var(--yellow-40);
+  --base-50: var(--yellow-50);
+  --base-60: var(--yellow-60);
+  --base-70: var(--yellow-70);
+  --base-80: var(--yellow-80);
+  --base-90: var(--yellow-90);
+  --base-100: var(--yellow-100);
+  --base-110: var(--yellow-110);
+  --base-120: var(--yellow-120);
+  --base-text: var(--yellow-text);
+}
