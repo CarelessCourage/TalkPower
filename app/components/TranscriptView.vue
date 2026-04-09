@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import type { TranscriptSegment } from '~/types/meeting';
+import type { TranscriptSegment, Interruption } from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
 interface Props {
   segments: TranscriptSegment[];
   activeIndex: number;
+  interruptions?: Interruption[];
 }
 
-const { segments, activeIndex = -1 } = defineProps<Props>();
+const { segments, activeIndex = -1, interruptions = [] } = defineProps<Props>();
 
 const emit = defineEmits<{
   seek: [time: number];
@@ -30,6 +31,15 @@ const getSpeakerColor = (speaker: string): string => {
   }
   return speakerColors[speaker]!;
 };
+
+/** Look up if this segment is an interruption (it's the interrupter) */
+const getInterruption = (index: number): Interruption | undefined => {
+  const seg = segments[index];
+  if (!seg) return undefined;
+  return interruptions.find(
+    (int) => int.interrupter === seg.speaker && Math.abs(int.time - seg.start) < 0.01
+  );
+};
 </script>
 
 <template>
@@ -38,9 +48,28 @@ const getSpeakerColor = (speaker: string): string => {
       v-for="(segment, i) in segments"
       :key="i"
       class="TranscriptSegment"
-      :class="{ segmentActive: i === activeIndex }"
+      :class="{
+        segmentActive: i === activeIndex,
+        segmentInterruption: !!getInterruption(i)
+      }"
       @click="emit('seek', segment.start)"
     >
+      <!-- Interruption badge -->
+      <div v-if="getInterruption(i)" class="InterruptionBanner">
+        <span class="InterruptionLabel">
+          <span :class="getSpeakerColor(getInterruption(i)!.interrupter)">
+            {{ getInterruption(i)!.interrupter }}
+          </span>
+          <span class="InterruptionCutOff">cut off</span>
+          <span :class="getSpeakerColor(getInterruption(i)!.interrupted)">
+            {{ getInterruption(i)!.interrupted }}
+          </span>
+        </span>
+        <span class="InterruptionOverlap mono">
+          {{ getInterruption(i)!.overlap.toFixed(1) }}s overlap
+        </span>
+      </div>
+
       <div class="TranscriptMeta">
         <span
           class="TranscriptSpeaker"
@@ -82,6 +111,48 @@ const getSpeakerColor = (speaker: string): string => {
   background: var(--base-20);
   border-left: 3px solid var(--accent-70);
   padding-left: calc(var(--space-bit-3) - 3px);
+}
+
+.TranscriptSegment.segmentInterruption {
+  border-left: 3px solid var(--accent-60);
+  padding-left: calc(var(--space-bit-3) - 3px);
+  background: color-mix(in srgb, var(--accent) 4%, transparent);
+}
+
+.TranscriptSegment.segmentInterruption:hover {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.TranscriptSegment.segmentActive.segmentInterruption {
+  border-left-color: var(--accent-80);
+}
+
+.InterruptionBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-bit-2);
+  padding-bottom: var(--space-bit-1);
+}
+
+.InterruptionLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-bit-2);
+  font-size: var(--caption-text-height);
+  font-weight: 700;
+}
+
+.InterruptionCutOff {
+  color: var(--accent-70);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.InterruptionOverlap {
+  font-size: var(--caption-text-height);
+  color: var(--accent-60);
+  white-space: nowrap;
 }
 
 .TranscriptMeta {

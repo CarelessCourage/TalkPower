@@ -55,6 +55,41 @@ export interface Interruption {
   interrupter: string;
   /** Time of the interruption in seconds */
   time: number;
+  /** How much overlap in seconds */
+  overlap: number;
+}
+
+/** Volume data for a single transcript segment */
+export interface SegmentVolume {
+  /** Index into the segments array */
+  segmentIndex: number;
+  /** RMS loudness normalized 0–1 */
+  rms: number;
+  /** Peak amplitude normalized 0–1 */
+  peak: number;
+}
+
+/** Per-speaker volume profile */
+export interface SpeakerVolume {
+  speaker: string;
+  /** Average RMS across all their segments */
+  averageRms: number;
+  /** Their baseline (median) loudness */
+  baseline: number;
+  /** Peak RMS across all their segments */
+  peakRms: number;
+  /** Number of segments where volume exceeded baseline by threshold */
+  raisedVoiceCount: number;
+  /** Segment indices where voice was raised */
+  raisedVoiceSegments: number[];
+}
+
+/** Complete volume analysis result */
+export interface VolumeAnalysis {
+  /** Per-segment volume data */
+  segments: SegmentVolume[];
+  /** Per-speaker volume profile */
+  speakers: SpeakerVolume[];
 }
 
 /** A dominance insight card */

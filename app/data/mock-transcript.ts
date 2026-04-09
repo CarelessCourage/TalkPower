@@ -1,204 +1,255 @@
 import type { TranscriptResponse } from '~/types/meeting';
 
 /**
- * Simulated 4-person meeting (~3 minutes).
- * Speakers A and B dominate; C barely speaks; D gets interrupted.
+ * Simulated 4-person budget meeting (~3 minutes) that escalates into a heated argument.
+ * Speaker A (VP) wants to cut Speaker D's team budget.
+ * Speaker B (Finance) backs A with numbers.
+ * Speaker C (HR) tries to mediate but gets talked over.
+ * Speaker D (Engineering lead) fights back — lots of interruptions and raised voices.
  */
 export const mockTranscript: TranscriptResponse = {
-  duration: 185,
+  duration: 192,
   text: '',
   segments: [
     {
       speaker: 'Speaker A',
-      text: "Alright, let's get started. I want to go over the quarterly numbers before we talk about anything else.",
+      text: "Okay, we need to finalize the Q3 budget allocations today. No more delays. I've already flagged engineering as over-budget by eighteen percent.",
       start: 0,
-      end: 6.2
+      end: 7.8
     },
     {
-      speaker: 'Speaker B',
-      text: "Sure. I've got the deck pulled up. Revenue is up twelve percent, which is solid, but churn increased by three points.",
-      start: 6.5,
-      end: 14.1
+      speaker: 'Speaker D',
+      text: 'Wait, eighteen percent? Where is that number coming from? We agreed to the expanded scope in—',
+      start: 8.1,
+      end: 14.0
     },
     {
       speaker: 'Speaker A',
-      text: "Three points is a lot. We need to dig into that. What's driving it?",
-      start: 14.3,
-      end: 18.0
+      text: "It's coming from the actuals, which I sent out last week. You're burning through contractor hours faster than any other department.",
+      start: 12.8,
+      end: 19.5
+    },
+    {
+      speaker: 'Speaker D',
+      text: 'Because you approved those contractors! You sat in this room and said we needed to accelerate—',
+      start: 18.5,
+      end: 24.0
+    },
+    {
+      speaker: 'Speaker A',
+      text: 'I approved a temporary ramp, not permanent headcount. That was supposed to end in April.',
+      start: 22.8,
+      end: 28.8
     },
     {
       speaker: 'Speaker B',
-      text: 'Mostly the mid-tier plans. Customers are downgrading or canceling after the first ninety days. Onboarding might be the issue.',
-      start: 18.2,
-      end: 26.5
+      text: 'If I can jump in with the numbers — engineering is at one point four million against a one point two budget. That gap is real.',
+      start: 29.5,
+      end: 36.8
+    },
+    {
+      speaker: 'Speaker D',
+      text: 'Of course the gap is real because the scope tripled! We took on the platform migration that nobody else wanted to—',
+      start: 35.5,
+      end: 42.5
+    },
+    {
+      speaker: 'Speaker A',
+      text: 'Nobody forced you to take that on. You volunteered.',
+      start: 41.2,
+      end: 45.0
+    },
+    {
+      speaker: 'Speaker D',
+      text: 'Are you serious right now? You literally sent me an email saying, and I quote, make this your top priority.',
+      start: 43.8,
+      end: 50.8
     },
     {
       speaker: 'Speaker C',
-      text: 'I actually had a thought on—',
-      start: 26.8,
-      end: 28.1
+      text: "Hey, let's try to keep this—",
+      start: 51.0,
+      end: 53.2
     },
     {
       speaker: 'Speaker A',
-      text: 'Hold on, let me finish this point. If onboarding is broken, we should look at the activation metrics first.',
-      start: 27.9,
-      end: 33.5
-    },
-    {
-      speaker: 'Speaker B',
-      text: "Agreed. Activation to day seven is only forty-one percent. That's below our target of sixty.",
-      start: 34.0,
-      end: 40.2
-    },
-    {
-      speaker: 'Speaker A',
-      text: 'Okay so we have a clear gap. I think we should restructure the first-week email flow and add an in-app walkthrough. Thoughts?',
-      start: 41.0,
-      end: 48.8
+      text: "The point is we need to cut two hundred K from somewhere. Engineering is the obvious place. The numbers don't lie.",
+      start: 51.8,
+      end: 58.5
     },
     {
       speaker: 'Speaker D',
-      text: "I've been looking at some competitor onboarding flows and I think we could—",
-      start: 49.2,
-      end: 53.0
+      text: "Cut two hundred K? That's three engineers. You want me to ship the platform migration with three fewer people?",
+      start: 57.2,
+      end: 64.0
     },
     {
       speaker: 'Speaker A',
-      text: "Yeah, competitor analysis is useful but I think we already know the problem. Let's focus on execution.",
-      start: 52.8,
-      end: 59.1
+      text: 'I want you to ship it on budget. Figure it out.',
+      start: 62.5,
+      end: 66.5
     },
     {
-      speaker: 'Speaker B',
-      text: 'I can take the lead on the email redesign. We have some templates from marketing that might work as a starting point.',
-      start: 60.0,
-      end: 67.4
-    },
-    {
-      speaker: 'Speaker A',
-      text: "Good. Let's aim to have a draft ready by Friday. And I want to see the walkthrough prototype too.",
-      start: 68.0,
-      end: 74.5
+      speaker: 'Speaker D',
+      text: "Figure it out? That's your management strategy? Just figure it out?",
+      start: 65.2,
+      end: 70.0
     },
     {
       speaker: 'Speaker C',
-      text: 'Should we also revisit the pricing on those mid-tier plans? If people are downgrading—',
-      start: 76.0,
-      end: 81.2
+      text: 'Can we just take a step back for a second? I think—',
+      start: 70.3,
+      end: 73.5
     },
     {
       speaker: 'Speaker A',
-      text: "Pricing is a separate conversation. Let's not mix it in here. We'll schedule a dedicated session for that.",
-      start: 81.5,
-      end: 87.8
+      text: "No, we're not stepping back. We've been stepping back for three months and the budget is still blown.",
+      start: 72.0,
+      end: 78.0
     },
     {
       speaker: 'Speaker B',
-      text: 'Makes sense. Moving on — the product roadmap. We have three features in the pipeline. The dashboard redesign is the biggest one.',
-      start: 89.0,
-      end: 97.3
-    },
-    {
-      speaker: 'Speaker A',
-      text: 'Where are we on that? Last I checked the design team was still iterating.',
-      start: 97.8,
-      end: 102.0
-    },
-    {
-      speaker: 'Speaker B',
-      text: "They finished last week. Engineering started on Monday. We're estimating three sprints to ship.",
-      start: 102.5,
-      end: 108.2
+      text: 'There might be a middle ground. If we defer the analytics module to Q4, that frees up about ninety K in contractor costs.',
+      start: 79.0,
+      end: 86.0
     },
     {
       speaker: 'Speaker D',
-      text: 'I had some concerns about the scope. The analytics page alone has—',
-      start: 108.8,
-      end: 112.5
-    },
-    {
-      speaker: 'Speaker B',
-      text: "We scoped that down already. We're shipping a minimal version first and iterating after launch.",
-      start: 112.3,
-      end: 118.0
+      text: 'The analytics module that the CEO specifically asked for by September?',
+      start: 86.3,
+      end: 90.5
     },
     {
       speaker: 'Speaker A',
-      text: 'Good call. Ship small, learn fast. What about the other two features?',
-      start: 119.0,
-      end: 123.2
-    },
-    {
-      speaker: 'Speaker B',
-      text: 'The API improvements are on track. Should be done this sprint. The integrations piece is blocked on third-party documentation.',
-      start: 123.8,
-      end: 131.5
-    },
-    {
-      speaker: 'Speaker A',
-      text: 'Can we unblock it?',
-      start: 132.0,
-      end: 133.2
-    },
-    {
-      speaker: 'Speaker B',
-      text: "I've reached out to their team. Waiting to hear back.",
-      start: 133.5,
-      end: 136.8
-    },
-    {
-      speaker: 'Speaker A',
-      text: "Follow up again today. Don't let it slip. Anything else from the product side?",
-      start: 137.5,
-      end: 142.0
+      text: "I'll handle the CEO. That's not your concern.",
+      start: 89.2,
+      end: 92.5
     },
     {
       speaker: 'Speaker D',
-      text: 'Just a quick note — customer support flagged some UX confusion around the new settings page.',
-      start: 143.0,
-      end: 148.5
+      text: 'It is absolutely my concern when my team gets blamed for—',
+      start: 91.3,
+      end: 95.5
     },
     {
       speaker: 'Speaker A',
-      text: "Noted. Can you write that up and send it to the design team? We'll address it in the next cycle.",
-      start: 149.0,
-      end: 154.8
+      text: "Your team isn't getting blamed, they're being held accountable. There's a difference.",
+      start: 94.2,
+      end: 99.5
     },
     {
       speaker: 'Speaker D',
-      text: 'Will do.',
-      start: 155.0,
-      end: 155.8
+      text: 'Accountable for scope that was dumped on us without resources! This is—',
+      start: 98.2,
+      end: 103.0
     },
     {
       speaker: 'Speaker A',
-      text: "Great. Last topic — hiring. We're behind on the engineering headcount. We need two more senior devs by end of quarter.",
-      start: 157.0,
-      end: 164.5
-    },
-    {
-      speaker: 'Speaker B',
-      text: 'Recruiting has three candidates in the pipeline. Two look strong. We should be able to close at least one this month.',
-      start: 165.0,
-      end: 172.0
-    },
-    {
-      speaker: 'Speaker A',
-      text: "Push for both. We can't afford to be short-staffed with the roadmap we just discussed. Anything else?",
-      start: 172.5,
-      end: 179.0
+      text: "Enough. I've heard the argument. You've made your point.",
+      start: 101.5,
+      end: 106.0
     },
     {
       speaker: 'Speaker C',
-      text: 'Nothing from me.',
-      start: 180.0,
-      end: 181.0
+      text: 'I really think we should hear everyone out here. The team morale data from last month showed—',
+      start: 107.0,
+      end: 113.0
     },
     {
       speaker: 'Speaker A',
-      text: "Alright. Good meeting everyone. Let's execute.",
-      start: 182.0,
-      end: 185.0
+      text: "Morale data? We're talking about two hundred thousand dollars, not a feelings survey.",
+      start: 111.5,
+      end: 117.0
+    },
+    {
+      speaker: 'Speaker C',
+      text: "It's not a feelings survey, it's attrition risk. If we gut the engineering team right before a major—",
+      start: 117.3,
+      end: 123.0
+    },
+    {
+      speaker: 'Speaker B',
+      text: 'She has a point actually. Replacing a senior engineer costs roughly one-fifty K when you factor in recruiting and ramp time.',
+      start: 123.5,
+      end: 130.5
+    },
+    {
+      speaker: 'Speaker A',
+      text: "That's a hypothetical cost. The budget overrun is real money, right now, today.",
+      start: 131.0,
+      end: 136.0
+    },
+    {
+      speaker: 'Speaker D',
+      text: "It's not hypothetical. Two of my seniors already have offers from other companies. You cut this budget and they're gone by August.",
+      start: 135.0,
+      end: 143.5
+    },
+    {
+      speaker: 'Speaker A',
+      text: "Then they're gone. We'll backfill. This isn't a negotiation.",
+      start: 142.0,
+      end: 147.0
+    },
+    {
+      speaker: 'Speaker D',
+      text: 'Not a negotiation? Then why are we even in this meeting?',
+      start: 145.5,
+      end: 149.5
+    },
+    {
+      speaker: 'Speaker A',
+      text: "To align on the plan I've already decided on. I'm cutting one-fifty from engineering and fifty from marketing.",
+      start: 148.2,
+      end: 155.5
+    },
+    {
+      speaker: 'Speaker C',
+      text: 'If the decision is already made then this whole meeting was just—',
+      start: 156.0,
+      end: 160.0
+    },
+    {
+      speaker: 'Speaker A',
+      text: 'It was to get everyone on the same page. And now you are.',
+      start: 158.5,
+      end: 162.5
+    },
+    {
+      speaker: 'Speaker D',
+      text: 'I want it on record that I disagree with this entirely. When the migration fails in Q4, this conversation is why.',
+      start: 163.5,
+      end: 170.5
+    },
+    {
+      speaker: 'Speaker B',
+      text: "For what it's worth, I'll document the risk in the finance review so leadership has full visibility.",
+      start: 171.5,
+      end: 177.5
+    },
+    {
+      speaker: 'Speaker A',
+      text: "Fine. Document whatever you want. The allocations go out tomorrow. We're done here.",
+      start: 178.0,
+      end: 183.5
+    },
+    {
+      speaker: 'Speaker C',
+      text: 'This is not how these meetings should go.',
+      start: 185.0,
+      end: 187.5
+    },
+    {
+      speaker: 'Speaker D',
+      text: "No, it's not.",
+      start: 188.5,
+      end: 189.8
+    },
+    {
+      speaker: 'Speaker A',
+      text: 'Meeting adjourned.',
+      start: 191.0,
+      end: 192.0
     }
   ]
 };

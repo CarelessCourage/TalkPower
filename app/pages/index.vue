@@ -6,6 +6,8 @@ import { useTranscriptSync } from '~/composables/useTranscriptSync';
 
 const {
   transcript,
+  volumeAnalysis,
+  interruptions,
   uploadStatus,
   errorMessage,
   audioUrl,
@@ -75,6 +77,12 @@ const onSeek = (time: number) => {
           <SpeakingTimeBars :speakers="metrics.speakers" />
         </section>
 
+        <!-- Volume profile -->
+        <section v-if="volumeAnalysis" class="MeetingSection">
+          <h2 class="MeetingSectionTitle">Volume profile</h2>
+          <VolumeProfile :speakers="volumeAnalysis.speakers" />
+        </section>
+
         <!-- Timeline -->
         <section class="MeetingSection">
           <h2 class="MeetingSectionTitle">Conversation flow</h2>
@@ -92,6 +100,7 @@ const onSeek = (time: number) => {
           <TranscriptView
             :segments="segments"
             :active-index="activeIndex"
+            :interruptions="interruptions"
             @seek="onSeek"
           />
         </section>

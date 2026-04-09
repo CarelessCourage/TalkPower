@@ -3,7 +3,8 @@ import type {
   SpeakerMetrics,
   MeetingMetrics,
   Interruption,
-  DominanceInsight
+  DominanceInsight,
+  VolumeAnalysis
 } from '~/types/meeting';
 
 /** Threshold in seconds — overlapping segments closer than this count as an interruption */
@@ -53,7 +54,8 @@ export const detectInterruptions = (
         {
           interrupted: prev.speaker,
           interrupter: seg.speaker,
-          time: seg.start
+          time: seg.start,
+          overlap
         }
       ];
     }
@@ -181,4 +183,54 @@ export const formatDuration = (seconds: number): string => {
   const m = Math.floor(seconds / 60);
   const s = Math.round(seconds % 60);
   return s > 0 ? `${m}m ${s}s` : `${m}m`;
+};
+
+/** Generate volume-specific insights from analysis data */
+export const generateVolumeInsights = (
+  volume: VolumeAnalysis
+): DominanceInsight[] => {
+  if (volume.speakers.length === 0) return [];
+
+  const insights: DominanceInsight[] = [];
+
+  const loudest = [...volume.speakers].sort(
+    (a, b) => b.averageRms - a.averageRms
+  )[0]!;
+
+  const quietestSpeaker = [...volume.speakers].sort(
+    (a, b) => a.averageRms - b.averageRms
+  )[0]!;
+
+  insights.push({
+    label: 'Loudest speaker',
+    value: loudest.speaker,
+    detail: `${Math.round(loudest.averageRms * 100)}% average volume`,
+    tone: 'neutral'
+  });
+
+  if (loudest.speaker !== quietestSpeaker.speaker) {
+    const ratio =
+      loudest.averageRms / Math.max(quietestSpeaker.averageRms, 0.01);
+    insights.push({
+      label: 'Quietest speaker',
+      value: quietestSpeaker.speaker,
+      detail: `${ratio.toFixed(1)}× quieter than ${loudest.speaker}`,
+      tone: quietestSpeaker.averageRms < 0.2 ? 'warning' : 'neutral'
+    });
+  }
+
+  const raisers = volume.speakers.filter((s) => s.raisedVoiceCount > 0);
+  if (raisers.length > 0) {
+    const topRaiser = [...raisers].sort(
+      (a, b) => b.raisedVoiceCount - a.raisedVoiceCount
+    )[0]!;
+    insights.push({
+      label: 'Raised voice most',
+      value: topRaiser.speaker,
+      detail: `Voice raised in ${topRaiser.raisedVoiceCount} segment${topRaiser.raisedVoiceCount === 1 ? '' : 's'}`,
+      tone: 'warning'
+    });
+  }
+
+  return insights;
 };

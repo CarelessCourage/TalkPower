@@ -4,10 +4,19 @@ import type {
   TranscriptResponse,
   MeetingMetrics,
   DominanceInsight,
+  Interruption,
+  VolumeAnalysis,
   UploadStatus
 } from '~/types/meeting';
-import { computeMeetingMetrics, generateInsights } from '~/utils/metrics';
+import {
+  computeMeetingMetrics,
+  generateInsights,
+  generateVolumeInsights,
+  detectInterruptions
+} from '~/utils/metrics';
+import { analyzeAudioVolume } from '~/utils/volume';
 import { mockTranscript } from '~/data/mock-transcript';
+import { mockVolumeAnalysis } from '~/data/mock-volume';
 
 /**
  * Core composable for the meeting analysis workflow.
@@ -15,6 +24,7 @@ import { mockTranscript } from '~/data/mock-transcript';
  */
 export const useMeetingAnalysis = () => {
   const transcript = ref<TranscriptResponse | null>(null);
+  const volumeAnalysis = ref<VolumeAnalysis | null>(null);
   const uploadStatus = ref<UploadStatus>('idle');
   const errorMessage = ref('');
   const audioFile = ref<File | null>(null);
@@ -29,9 +39,17 @@ export const useMeetingAnalysis = () => {
     );
   });
 
+  const interruptions = computed<Interruption[]>(() => {
+    if (!transcript.value) return [];
+    return detectInterruptions(transcript.value.segments);
+  });
+
   const insights = computed<DominanceInsight[]>(() => {
-    if (!metrics.value) return [];
-    return generateInsights(metrics.value);
+    const base = metrics.value ? generateInsights(metrics.value) : [];
+    const vol = volumeAnalysis.value
+      ? generateVolumeInsights(volumeAnalysis.value)
+      : [];
+    return [...base, ...vol];
   });
 
   const hasData = computed(() => transcript.value !== null);
@@ -51,6 +69,16 @@ export const useMeetingAnalysis = () => {
         body: formData
       });
       transcript.value = response;
+
+      try {
+        volumeAnalysis.value = await analyzeAudioVolume(
+          file,
+          response.segments
+        );
+      } catch {
+        /** Volume analysis is best-effort — don't block on failure */
+      }
+
       uploadStatus.value = 'done';
     } catch (err) {
       uploadStatus.value = 'error';
@@ -61,12 +89,14 @@ export const useMeetingAnalysis = () => {
 
   const loadMockData = () => {
     transcript.value = mockTranscript;
+    volumeAnalysis.value = mockVolumeAnalysis;
     uploadStatus.value = 'done';
     audioFile.value = null;
   };
 
   const reset = () => {
     transcript.value = null;
+    volumeAnalysis.value = null;
     uploadStatus.value = 'idle';
     errorMessage.value = '';
     audioFile.value = null;
@@ -74,6 +104,8 @@ export const useMeetingAnalysis = () => {
 
   return {
     transcript,
+    volumeAnalysis,
+    interruptions,
     uploadStatus,
     errorMessage,
     audioFile,
