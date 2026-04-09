@@ -1,4 +1,17 @@
 import OpenAI from 'openai';
+import { createHash } from 'node:crypto';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { join } from 'node:path';
+
+/** Hash filename + size to create a stable cache key */
+const getCacheKey = (name: string, size: number): string => {
+  return createHash('sha256')
+    .update(`${name}:${size}`)
+    .digest('hex')
+    .slice(0, 16);
+};
+
+const CACHE_DIR = join(process.cwd(), '.cache', 'transcriptions');
 
 export default defineEventHandler(async (event) => {
   const formData = await readMultipartFormData(event);
@@ -15,6 +28,20 @@ export default defineEventHandler(async (event) => {
   }
 
   const apiKey = useRuntimeConfig().openaiApiKey;
+
+  const fileName = fileField.filename ?? 'audio.mp3';
+  const cacheKey = getCacheKey(fileName, fileField.data.length);
+  const cachePath = join(CACHE_DIR, `${cacheKey}.json`);
+
+  /** Return cached transcription if it exists */
+  try {
+    const cached = await readFile(cachePath, 'utf-8');
+    console.log(`[transcribe] Cache hit for "${fileName}" → ${cachePath}`);
+    return JSON.parse(cached);
+  } catch {
+    /** No cache — proceed to API */
+  }
+
   if (!apiKey) {
     throw createError({
       statusCode: 500,
@@ -66,9 +93,20 @@ export default defineEventHandler(async (event) => {
   const lastSegment = segments.at(-1);
   const lastEnd = lastSegment ? lastSegment.end : 0;
 
-  return {
+  const result = {
     segments,
     duration: lastEnd,
     text: response.text ?? ''
   };
+
+  /** Write to cache so we never re-transcribe the same file */
+  try {
+    await mkdir(CACHE_DIR, { recursive: true });
+    await writeFile(cachePath, JSON.stringify(result, null, 2));
+    console.log(`[transcribe] Cached "${fileName}" → ${cachePath}`);
+  } catch {
+    /** Cache write is best-effort */
+  }
+
+  return result;
 });
