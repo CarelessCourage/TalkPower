@@ -46,14 +46,13 @@ const median = (values: number[]): number => {
 };
 
 /**
- * Analyze audio loudness per transcript segment using Web Audio API.
- * Decodes the audio file and computes RMS/peak for each segment's time range.
+ * Analyze audio loudness per transcript segment from an ArrayBuffer.
+ * Decodes the audio and computes RMS/peak for each segment's time range.
  */
-export const analyzeAudioVolume = async (
-  file: File,
+export const analyzeAudioVolumeFromBuffer = async (
+  arrayBuffer: ArrayBuffer,
   segments: TranscriptSegment[]
 ): Promise<VolumeAnalysis> => {
-  const arrayBuffer = await file.arrayBuffer();
   const audioContext = new AudioContext();
   const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
 
@@ -117,4 +116,15 @@ export const analyzeAudioVolume = async (
     segments: segmentVolumes,
     speakers: speakerVolumes
   };
+};
+
+/**
+ * Convenience wrapper: analyze volume from a File object.
+ */
+export const analyzeAudioVolume = async (
+  file: File,
+  segments: TranscriptSegment[]
+): Promise<VolumeAnalysis> => {
+  const arrayBuffer = await file.arrayBuffer();
+  return analyzeAudioVolumeFromBuffer(arrayBuffer, segments);
 };

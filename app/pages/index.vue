@@ -17,7 +17,7 @@ const {
 } = useMeetingAnalysis();
 
 onMounted(() => {
-  if (!hasData.value) loadDemo();
+  if (!hasData.value) loadDemo(demoVideo);
 });
 
 const playerId = ref('meeting-player');

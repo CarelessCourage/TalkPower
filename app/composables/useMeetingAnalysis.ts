@@ -14,11 +14,13 @@ import {
   generateVolumeInsights,
   detectInterruptions
 } from '~/utils/metrics';
-import { analyzeAudioVolume } from '~/utils/volume';
+import {
+  analyzeAudioVolume,
+  analyzeAudioVolumeFromBuffer
+} from '~/utils/volume';
 import { mockTranscript } from '~/data/mock-transcript';
 import { mockVolumeAnalysis } from '~/data/mock-volume';
 import { demoTranscript } from '~/data/demo-transcript';
-import { demoVolumeAnalysis } from '~/data/demo-volume';
 
 /**
  * Core composable for the meeting analysis workflow.
@@ -99,11 +101,22 @@ export const useMeetingAnalysis = () => {
   /** Load the bundled demo video + its pre-transcribed data */
   const demoVideoUrl = ref<string | null>(null);
 
-  const loadDemo = () => {
+  const loadDemo = async (videoUrl: string) => {
     transcript.value = demoTranscript;
-    volumeAnalysis.value = demoVolumeAnalysis;
+    volumeAnalysis.value = null;
     uploadStatus.value = 'done';
     audioFile.value = null;
+
+    try {
+      const response = await fetch(videoUrl);
+      const buffer = await response.arrayBuffer();
+      volumeAnalysis.value = await analyzeAudioVolumeFromBuffer(
+        buffer,
+        demoTranscript.segments
+      );
+    } catch {
+      /** Volume analysis is best-effort */
+    }
   };
 
   const reset = () => {
