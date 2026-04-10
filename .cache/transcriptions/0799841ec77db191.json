@@ -1,0 +1,86 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " Why should Caesar get to stomp around like a giant while the rest of us try not to get smushed under his big feet?",
+      "speaker": "A",
+      "start": 1.1500000000000001,
+      "end": 7.3999999999999995,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What's so great about Caesar?",
+      "speaker": "A",
+      "start": 7.95,
+      "end": 9.100000000000001,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Brutus is just as cute as Caesar.",
+      "speaker": "A",
+      "start": 9.700000000000001,
+      "end": 11.500000000000002,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay,",
+      "speaker": "A",
+      "start": 11.700000000000001,
+      "end": 12.000000000000002,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Brutus is just as smart as Caesar.",
+      "speaker": "A",
+      "start": 12.050000000000002,
+      "end": 13.500000000000002,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " People totally like Brutus just as much as they like Caesar.",
+      "speaker": "A",
+      "start": 13.600000000000001,
+      "end": 15.8,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And when did it become okay for one person to be the boss of everybody,",
+      "speaker": "A",
+      "start": 15.900000000000002,
+      "end": 18.650000000000002,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " huh?",
+      "speaker": "A",
+      "start": 18.8,
+      "end": 18.900000000000002,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Because that's not what Rome is about.",
+      "speaker": "A",
+      "start": 19.05,
+      "end": 20.8,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " We should totally just stab Caesar!",
+      "speaker": "A",
+      "start": 20.85,
+      "end": 22.5,
+      "id": "seg_9"
+    }
+  ],
+  "duration": 22.5,
+  "text": "Why should Caesar get to stomp around like a giant while the rest of us try not to get smushed under his big feet? What's so great about Caesar? Brutus is just as cute as Caesar. Okay, Brutus is just as smart as Caesar. People totally like Brutus just as much as they like Caesar. And when did it become okay for one person to be the boss of everybody, huh? Because that's not what Rome is about. We should totally just stab Caesar!"
+}

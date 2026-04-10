@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { ref, computed, provide, onMounted } from 'vue';
+import { ref, computed, provide, onMounted, watch } from 'vue';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import { useMeetingAnalysis } from '~/composables/useMeetingAnalysis';
 import { useTranscriptSync } from '~/composables/useTranscriptSync';
 import { meetingStateKey } from '~/composables/useMeetingState';
-import demoVideo from '~/assets/video/argumentAtTheMuseum.mp4';
+import { demos, DEFAULT_DEMO, loadDemoData } from '~/data/demos';
 
+const route = useRoute();
+const router = useRouter();
 const analysis = useMeetingAnalysis();
 
 const {
@@ -20,12 +22,33 @@ const {
   insights,
   hasData,
   audioUrl,
+  demoVideoUrl,
+  activeDemo,
   loadDemo,
   analyzeBehavior
 } = analysis;
 
-onMounted(() => {
-  if (!hasData.value) loadDemo(demoVideo);
+const currentDemoSlug = computed(
+  () => (route.query.demo as string) || DEFAULT_DEMO
+);
+
+const switchDemo = async (slug: string) => {
+  if (slug === activeDemo.value) return;
+  const entry = await loadDemoData(slug);
+  if (!entry) return;
+  await loadDemo(entry);
+  if (slug !== DEFAULT_DEMO) {
+    router.replace({ query: { ...route.query, demo: slug } });
+  } else {
+    const { demo: _, ...rest } = route.query;
+    router.replace({ query: rest });
+  }
+};
+
+onMounted(async () => {
+  const slug = currentDemoSlug.value;
+  const entry = await loadDemoData(slug);
+  if (entry) await loadDemo(entry);
 });
 
 const playerId = ref('meeting-player');
@@ -33,7 +56,7 @@ const { currentTime, audioApi } = useMagicPlayer(playerId);
 
 const segments = computed(() => transcript.value?.segments ?? []);
 const duration = computed(() => transcript.value?.duration ?? 0);
-const playerSrc = computed(() => audioUrl.value ?? demoVideo);
+const playerSrc = computed(() => audioUrl.value ?? demoVideoUrl.value ?? '');
 const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 const emotionLabels = computed(() => behaviorAnalysis.value?.emotions ?? []);
 
@@ -88,9 +111,22 @@ const tabs = [
         <h1 class="MeetingTitle">TalkPower</h1>
         <p class="MeetingTagline">Reveal who runs the room</p>
       </div>
-      <NuxtLink to="/upload" class="MeetingUploadLink">
-        Try your own recording
-      </NuxtLink>
+      <div class="MeetingActions">
+        <div class="DemoSwitcher">
+          <button
+            v-for="demo in demos"
+            :key="demo.slug"
+            class="DemoBtn"
+            :class="{ demoBtnActive: activeDemo === demo.slug }"
+            @click="switchDemo(demo.slug)"
+          >
+            {{ demo.title }}
+          </button>
+        </div>
+        <NuxtLink to="/upload" class="MeetingUploadLink">
+          Try your own recording
+        </NuxtLink>
+      </div>
     </header>
 
     <template v-if="hasData && metrics">

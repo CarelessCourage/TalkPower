@@ -1,0 +1,63 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "emotional appeal",
+      "category": "constructive",
+      "detail": "Speaker A uses a vivid metaphor to express frustration with social hierarchies, appealing to her peers' emotions.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 6,
+      "label": "rhetorical manipulation",
+      "category": "destructive",
+      "detail": "The call to action to 'stab Caesar' is a hyperbolic statement meant to incite a strong emotional response from her classmates.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 8,
+      "label": "building coalition",
+      "category": "constructive",
+      "detail": "Speaker A emphasizes collective values by questioning the fairness of one person dominating, fostering a sense of unity among her peers.",
+      "deception": null
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "frustrated",
+      "trigger": "unprovoked",
+      "surface": "passionate"
+    },
+    {
+      "segmentIndex": 6,
+      "emotion": "hostile",
+      "trigger": "provocation of social hierarchy",
+      "surface": "playful"
+    },
+    {
+      "segmentIndex": 8,
+      "emotion": "determined",
+      "trigger": "unprovoked",
+      "surface": "confident"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Powerful Metaphor Usage",
+      "body": "Speaker A effectively uses the metaphor of Caesar to illustrate her grievances about social dynamics. This approach resonates with her audience and can foster a sense of shared experience among her classmates.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Potential for Escalation",
+      "body": "While the call to 'stab Caesar' is a dramatic rhetorical device, it risks escalating tensions rather than promoting constructive dialogue. Consider softening such language to maintain solidarity without inciting aggression.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Encouraging Solidarity",
+      "body": "Speaker A's emphasis on Brutus as a relatable figure helps build a coalition against perceived injustice. This is a strong foundation for encouraging classmates to unite over shared values and experiences.",
+      "addressedTo": "Speaker A"
+    }
+  ],
+  "summary": "The meeting showcased a passionate speech that effectively rallied peers against social hierarchies, using emotional appeals and metaphors. However, some rhetoric risked escalation and hostility, highlighting the need for careful language to maintain a constructive atmosphere."
+}

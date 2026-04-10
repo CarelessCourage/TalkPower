@@ -22,14 +22,16 @@ const speakers = computed(() => {
   for (const label of labels) {
     const seg = segments[label.segmentIndex];
     if (!seg) continue;
-    if (!map.has(seg.speaker)) map.set(seg.speaker, { labels: [], emotions: [] });
+    if (!map.has(seg.speaker))
+      map.set(seg.speaker, { labels: [], emotions: [] });
     map.get(seg.speaker)!.labels.push(label);
   }
 
   for (const emotion of emotions) {
     const seg = segments[emotion.segmentIndex];
     if (!seg) continue;
-    if (!map.has(seg.speaker)) map.set(seg.speaker, { labels: [], emotions: [] });
+    if (!map.has(seg.speaker))
+      map.set(seg.speaker, { labels: [], emotions: [] });
     map.get(seg.speaker)!.emotions.push(emotion);
   }
 
@@ -68,11 +70,7 @@ const categoryColorClass: Record<string, string> = {
 
 <template>
   <div class="SpeakerBreakdown">
-    <div
-      v-for="entry in speakers"
-      :key="entry.speaker"
-      class="SpeakerSection"
-    >
+    <div v-for="entry in speakers" :key="entry.speaker" class="SpeakerSection">
       <h3 class="SpeakerName" :class="getSpeakerColor(entry.speaker)">
         {{ entry.speaker }}
       </h3>
@@ -88,9 +86,11 @@ const categoryColorClass: Record<string, string> = {
               categoryColorClass[label.category],
               { chipDeceptive: label.deception }
             ]"
-            :title="label.deception
-              ? `${label.detail} ⚠ ${label.deception}`
-              : label.detail"
+            :title="
+              label.deception
+                ? `${label.detail} ⚠ ${label.deception}`
+                : label.detail
+            "
           >
             {{ label.label }}
             <span v-if="label.deception" class="DeceptionFlag">⚠</span>
@@ -106,9 +106,11 @@ const categoryColorClass: Record<string, string> = {
             :key="emotion.segmentIndex"
             class="Chip ChipEmotion"
             :class="{ chipMasked: emotion.surface }"
-            :title="emotion.surface
-              ? `Appears ${emotion.surface} but actually ${emotion.emotion} — ${emotion.trigger}`
-              : emotion.trigger"
+            :title="
+              emotion.surface
+                ? `Appears ${emotion.surface} but actually ${emotion.emotion} — ${emotion.trigger}`
+                : emotion.trigger
+            "
           >
             {{ emotion.emotion }}
             <span v-if="emotion.surface" class="SurfaceFlag">

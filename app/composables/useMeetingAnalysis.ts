@@ -22,8 +22,7 @@ import {
 } from '~/utils/volume';
 import { mockTranscript } from '~/data/mock-transcript';
 import { mockVolumeAnalysis } from '~/data/mock-volume';
-import { demoTranscript } from '~/data/demo-transcript';
-import { demoLabels, demoContext } from '~/data/demo-labels';
+import type { DemoEntry } from '~/data/demos';
 
 /**
  * Simple cache key from segment count + context string.
@@ -119,25 +118,33 @@ export const useMeetingAnalysis = () => {
 
   /** Load the bundled demo video + its pre-transcribed data */
   const demoVideoUrl = ref<string | null>(null);
+  const activeDemo = ref<string | null>(null);
 
-  const loadDemo = async (videoUrl: string) => {
-    transcript.value = demoTranscript;
+  const loadDemo = async (demo: DemoEntry) => {
+    transcript.value = demo.transcript;
     volumeAnalysis.value = null;
-    behaviorAnalysis.value = demoLabels;
-    behaviorContext.value = demoContext;
+    behaviorAnalysis.value = demo.labels;
+    behaviorContext.value = demo.context;
     uploadStatus.value = 'done';
     audioFile.value = null;
+    demoVideoUrl.value = demo.video;
+    activeDemo.value = demo.slug;
 
     // Seed the behavior cache so re-analyze with same prompt is instant
-    const key = behaviorCacheKey(demoTranscript.segments.length, demoContext);
-    behaviorCache.set(key, demoLabels);
+    if (demo.labels.labels.length) {
+      const key = behaviorCacheKey(
+        demo.transcript.segments.length,
+        demo.context
+      );
+      behaviorCache.set(key, demo.labels);
+    }
 
     try {
-      const response = await fetch(videoUrl);
+      const response = await fetch(demo.video);
       const buffer = await response.arrayBuffer();
       volumeAnalysis.value = await analyzeAudioVolumeFromBuffer(
         buffer,
-        demoTranscript.segments
+        demo.transcript.segments
       );
     } catch {
       /** Volume analysis is best-effort */
@@ -187,6 +194,7 @@ export const useMeetingAnalysis = () => {
     errorMessage.value = '';
     audioFile.value = null;
     demoVideoUrl.value = null;
+    activeDemo.value = null;
   };
 
   return {
@@ -202,6 +210,7 @@ export const useMeetingAnalysis = () => {
     audioFile,
     audioUrl,
     demoVideoUrl,
+    activeDemo,
     metrics,
     insights,
     hasData,
