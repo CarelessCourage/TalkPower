@@ -10,11 +10,15 @@ const {
   volumeAnalysis,
   interruptions,
   interruptionThreshold,
+  behaviorAnalysis,
+  behaviorContext,
+  analyzingBehavior,
   audioUrl,
   metrics,
   insights,
   hasData,
-  loadDemo
+  loadDemo,
+  analyzeBehavior
 } = useMeetingAnalysis();
 
 onMounted(() => {
@@ -44,6 +48,8 @@ const softInterruptions = computed(
 const onSeek = (time: number) => {
   audioApi.seek(time);
 };
+
+const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 </script>
 
 <template>
@@ -68,6 +74,7 @@ const onSeek = (time: number) => {
             :segments="segments"
             :duration="duration"
             :interruptions="interruptions"
+            :labels="behaviorLabels"
             @seek="onSeek"
           />
           <AnalysisSettings
@@ -81,6 +88,20 @@ const onSeek = (time: number) => {
 
         <!-- Summary row -->
         <MeetingSummary :metrics="metrics" />
+
+        <!-- Behavior analysis -->
+        <section class="MeetingSection">
+          <h2 class="MeetingSectionTitle">Behavior analysis</h2>
+          <p v-if="behaviorAnalysis?.summary" class="MeetingBehaviorSummary">
+            {{ behaviorAnalysis.summary }}
+          </p>
+          <BehaviorPrompt
+            v-model="behaviorContext"
+            :analyzing="analyzingBehavior"
+            :has-labels="behaviorLabels.length > 0"
+            @analyze="analyzeBehavior"
+          />
+        </section>
 
         <!-- Dominance insights -->
         <section class="MeetingSection">
@@ -228,5 +249,11 @@ const onSeek = (time: number) => {
 .MeetingTab.tabActive {
   color: var(--base-110);
   background: var(--base-20);
+}
+
+.MeetingBehaviorSummary {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--base-80);
 }
 </style>

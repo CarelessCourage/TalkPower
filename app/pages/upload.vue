@@ -9,6 +9,9 @@ const {
   volumeAnalysis,
   interruptions,
   interruptionThreshold,
+  behaviorAnalysis,
+  behaviorContext,
+  analyzingBehavior,
   uploadStatus,
   errorMessage,
   audioUrl,
@@ -16,6 +19,7 @@ const {
   insights,
   hasData,
   uploadAudio,
+  analyzeBehavior,
   loadMockData,
   reset
 } = useMeetingAnalysis();
@@ -40,6 +44,8 @@ const softInterruptions = computed(
 const onSeek = (time: number) => {
   audioApi.seek(time);
 };
+
+const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 </script>
 
 <template>
@@ -75,6 +81,7 @@ const onSeek = (time: number) => {
             :segments="segments"
             :duration="duration"
             :interruptions="interruptions"
+            :labels="behaviorLabels"
             @seek="onSeek"
           />
           <AnalysisSettings
@@ -87,6 +94,19 @@ const onSeek = (time: number) => {
         </section>
 
         <MeetingSummary :metrics="metrics" />
+
+        <section class="UploadSection">
+          <h2 class="UploadSectionTitle">Behavior analysis</h2>
+          <p v-if="behaviorAnalysis?.summary" class="UploadBehaviorSummary">
+            {{ behaviorAnalysis.summary }}
+          </p>
+          <BehaviorPrompt
+            v-model="behaviorContext"
+            :analyzing="analyzingBehavior"
+            :has-labels="behaviorLabels.length > 0"
+            @analyze="analyzeBehavior"
+          />
+        </section>
 
         <section class="UploadSection">
           <h2 class="UploadSectionTitle">Power dynamics</h2>
@@ -241,5 +261,11 @@ const onSeek = (time: number) => {
 .UploadTab.tabActive {
   color: var(--base-110);
   background: var(--base-20);
+}
+
+.UploadBehaviorSummary {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--base-80);
 }
 </style>

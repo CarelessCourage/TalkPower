@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
-import type { TranscriptSegment, Interruption } from '~/types/meeting';
+import type {
+  TranscriptSegment,
+  Interruption,
+  BehaviorLabel
+} from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
 interface Props {
@@ -9,13 +13,15 @@ interface Props {
   segments?: TranscriptSegment[];
   duration?: number;
   interruptions?: Interruption[];
+  labels?: BehaviorLabel[];
 }
 
 const {
   src,
   segments = [],
   duration = 0,
-  interruptions = []
+  interruptions = [],
+  labels = []
 } = defineProps<Props>();
 
 const emit = defineEmits<{
@@ -121,6 +127,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
           :segments="segments"
           :current-time="currentTime ?? 0"
           :interruptions="interruptions"
+          :labels="labels"
         />
       </div>
     </div>

@@ -1,0 +1,115 @@
+import type { BehaviorAnalysis } from '~/types/meeting';
+
+/** Demo context prompt for the Night at the Museum argument. */
+export const demoContext =
+  "This is a negotiation between a pharaoh and a night guard over sharing a magical artifact. I'm concerned about the complete inability to cooperate — one side refuses to share or compromise, using threats instead of finding a mutual solution. Look for patterns around failure to share, refusal to cooperate, and whether anyone attempts a constructive path.";
+
+/**
+ * Pre-generated behavioral labels for the demo transcript.
+ * Matches segments from demo-transcript.ts (argumentAtTheMuseum.mp4).
+ */
+export const demoLabels: BehaviorAnalysis = {
+  context: demoContext,
+  labels: [
+    {
+      segmentIndex: 0,
+      label: 'claiming ownership',
+      category: 'assertive',
+      detail:
+        'Opens by commanding the other party to stop — immediately frames the artifact as something to be surrendered, not shared.'
+    },
+    {
+      segmentIndex: 6,
+      label: 'refuses to share',
+      category: 'destructive',
+      detail:
+        'Demands the tablet and combination with zero offer of reciprocity — a textbook refusal to cooperate.'
+    },
+    {
+      segmentIndex: 7,
+      label: 'proposing a trade',
+      category: 'constructive',
+      detail:
+        'The only moment where someone offers a genuine exchange — "I\'ll give you X when you give me Y." This is the closest anyone gets to cooperation.'
+    },
+    {
+      segmentIndex: 8,
+      label: 'hoarding control',
+      category: 'destructive',
+      detail:
+        'Explicitly states he will release things only on his own terms — refuses the mutual exchange just proposed.'
+    },
+    {
+      segmentIndex: 9,
+      label: 'mirroring stubbornness',
+      category: 'assertive',
+      detail:
+        'Mirrors the pharaoh\'s "I\'ll do what I want" logic right back — effective, but doubles down on the impasse rather than bridging it.'
+    },
+    {
+      segmentIndex: 10,
+      label: 'threats over sharing',
+      category: 'destructive',
+      detail:
+        'Instead of negotiating terms, escalates directly to threatening harm — the ultimate failure to cooperate.'
+    },
+    {
+      segmentIndex: 12,
+      label: 'standing firm on fairness',
+      category: 'assertive',
+      detail:
+        'Holds to the conditional trade despite threats — at least one side is trying to maintain a framework for exchange.'
+    },
+    {
+      segmentIndex: 15,
+      label: 'fake generosity',
+      category: 'evasive',
+      detail:
+        'Pretends to be "Conrad the Trustworthy" then reveals it was a trick — poisoning any trust that could enable sharing.'
+    },
+    {
+      segmentIndex: 21,
+      label: 'punishing attempts to reach',
+      category: 'destructive',
+      detail:
+        'Threatens death for literally reaching toward the shared space — treats any approach as aggression, not cooperation.'
+    },
+    {
+      segmentIndex: 23,
+      label: 'drawing territorial lines',
+      category: 'destructive',
+      detail:
+        '"No touching zone" — creates a physical barrier to sharing rather than finding common ground.'
+    },
+    {
+      segmentIndex: 29,
+      label: 'leveraging with calm',
+      category: 'constructive',
+      detail:
+        'Calmly reminds the pharaoh that cooperation is required because only they know the combination — power through interdependence.'
+    },
+    {
+      segmentIndex: 38,
+      label: 'silencing dissent',
+      category: 'destructive',
+      detail:
+        'Forbids the other party from even speaking — the most extreme form of refusing to engage in cooperative dialogue.'
+    },
+    {
+      segmentIndex: 39,
+      label: 'insisting on fair trade',
+      category: 'constructive',
+      detail:
+        'Despite being told to shut up, calmly restates the fair exchange: "after you give me Jed and release my friends."'
+    },
+    {
+      segmentIndex: 47,
+      label: 'coercion over cooperation',
+      category: 'destructive',
+      detail:
+        'Final ultimatum with a countdown — when sharing fails entirely, all that remains is force.'
+    }
+  ],
+  summary:
+    'A complete failure of cooperation. Speaker A treats the artifact as solely his and responds to every sharing proposal with threats. Speaker C/D consistently propose fair exchanges but are met with escalation. The only constructive moments come from the non-pharaoh side, and even those are eventually drowned out by coercion.'
+};

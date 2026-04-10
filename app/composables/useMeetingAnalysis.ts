@@ -6,6 +6,7 @@ import type {
   DominanceInsight,
   Interruption,
   VolumeAnalysis,
+  BehaviorAnalysis,
   UploadStatus
 } from '~/types/meeting';
 import {
@@ -22,6 +23,14 @@ import {
 import { mockTranscript } from '~/data/mock-transcript';
 import { mockVolumeAnalysis } from '~/data/mock-volume';
 import { demoTranscript } from '~/data/demo-transcript';
+import { demoLabels, demoContext } from '~/data/demo-labels';
+
+/**
+ * Simple cache key from segment count + context string.
+ * Good enough for client-side dedup without pulling in a hash lib.
+ */
+const behaviorCacheKey = (segmentCount: number, context: string): string =>
+  `${segmentCount}:${context.trim()}`;
 
 /**
  * Core composable for the meeting analysis workflow.
@@ -30,6 +39,10 @@ import { demoTranscript } from '~/data/demo-transcript';
 export const useMeetingAnalysis = () => {
   const transcript = ref<TranscriptResponse | null>(null);
   const volumeAnalysis = ref<VolumeAnalysis | null>(null);
+  const behaviorAnalysis = ref<BehaviorAnalysis | null>(null);
+  const behaviorContext = ref('');
+  const analyzingBehavior = ref(false);
+  const behaviorCache = new Map<string, BehaviorAnalysis>();
   const uploadStatus = ref<UploadStatus>('idle');
   const errorMessage = ref('');
   const audioFile = ref<File | null>(null);
@@ -110,8 +123,14 @@ export const useMeetingAnalysis = () => {
   const loadDemo = async (videoUrl: string) => {
     transcript.value = demoTranscript;
     volumeAnalysis.value = null;
+    behaviorAnalysis.value = demoLabels;
+    behaviorContext.value = demoContext;
     uploadStatus.value = 'done';
     audioFile.value = null;
+
+    // Seed the behavior cache so re-analyze with same prompt is instant
+    const key = behaviorCacheKey(demoTranscript.segments.length, demoContext);
+    behaviorCache.set(key, demoLabels);
 
     try {
       const response = await fetch(videoUrl);
@@ -125,9 +144,45 @@ export const useMeetingAnalysis = () => {
     }
   };
 
+  const analyzeBehavior = async (context?: string) => {
+    if (!transcript.value) return;
+    const prompt = context ?? '';
+    const key = behaviorCacheKey(transcript.value.segments.length, prompt);
+
+    // Return cached result if same transcript + prompt
+    const cached = behaviorCache.get(key);
+    if (cached) {
+      behaviorAnalysis.value = cached;
+      behaviorContext.value = prompt;
+      return;
+    }
+
+    analyzingBehavior.value = true;
+    try {
+      const result = await $fetch<BehaviorAnalysis>('/api/analyze', {
+        method: 'POST',
+        body: {
+          segments: transcript.value.segments,
+          context: prompt || undefined
+        }
+      });
+      result.context = prompt;
+      behaviorAnalysis.value = result;
+      behaviorContext.value = prompt;
+      behaviorCache.set(key, result);
+    } catch (err) {
+      console.error('Behavior analysis failed:', err);
+    } finally {
+      analyzingBehavior.value = false;
+    }
+  };
+
   const reset = () => {
     transcript.value = null;
     volumeAnalysis.value = null;
+    behaviorAnalysis.value = null;
+    behaviorContext.value = '';
+    analyzingBehavior.value = false;
     uploadStatus.value = 'idle';
     errorMessage.value = '';
     audioFile.value = null;
@@ -137,6 +192,9 @@ export const useMeetingAnalysis = () => {
   return {
     transcript,
     volumeAnalysis,
+    behaviorAnalysis,
+    behaviorContext,
+    analyzingBehavior,
     interruptions,
     interruptionThreshold,
     uploadStatus,
@@ -148,6 +206,7 @@ export const useMeetingAnalysis = () => {
     insights,
     hasData,
     uploadAudio,
+    analyzeBehavior,
     loadMockData,
     loadDemo,
     reset

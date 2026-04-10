@@ -1,14 +1,24 @@
 <script setup lang="ts">
-import type { TranscriptSegment, Interruption } from '~/types/meeting';
+import type {
+  TranscriptSegment,
+  Interruption,
+  BehaviorLabel
+} from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
 interface Props {
   segments: TranscriptSegment[];
   currentTime: number;
   interruptions?: Interruption[];
+  labels?: BehaviorLabel[];
 }
 
-const { segments, currentTime = 0, interruptions = [] } = defineProps<Props>();
+const {
+  segments,
+  currentTime = 0,
+  interruptions = [],
+  labels = []
+} = defineProps<Props>();
 
 /* ── Speaker colors ── */
 const colorClasses = [
@@ -43,6 +53,19 @@ const getInterruption = (index: number): Interruption | undefined => {
     (int) =>
       int.interrupter === seg.speaker && Math.abs(int.time - seg.start) < 0.01
   );
+};
+
+/** Look up behavioral label for a segment */
+const getLabel = (index: number): BehaviorLabel | undefined => {
+  return labels.find((l) => l.segmentIndex === index);
+};
+
+const categoryColorClass: Record<string, string> = {
+  constructive: 'labelConstructive',
+  destructive: 'labelDestructive',
+  neutral: 'labelNeutral',
+  assertive: 'labelAssertive',
+  evasive: 'labelEvasive'
 };
 </script>
 
@@ -80,6 +103,14 @@ const getInterruption = (index: number): Interruption | undefined => {
           <span class="CardTime mono">{{ formatSeconds(seg.start) }}</span>
         </div>
         <p class="CardText">{{ seg.text }}</p>
+        <span
+          v-if="getLabel(index)"
+          class="CardLabel"
+          :class="categoryColorClass[getLabel(index)!.category]"
+          :title="getLabel(index)!.detail"
+        >
+          {{ getLabel(index)!.label }}
+        </span>
       </div>
     </TransitionGroup>
   </div>
@@ -160,6 +191,43 @@ const getInterruption = (index: number): Interruption | undefined => {
   font-size: 0.9375rem;
   line-height: 1.55;
   color: var(--base-100);
+}
+
+.CardLabel {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 2px var(--space-bit-2);
+  border-radius: var(--radius-inner);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: help;
+}
+
+.labelConstructive {
+  background: color-mix(in srgb, var(--success) 25%, transparent);
+  color: var(--success-80);
+}
+
+.labelDestructive {
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--accent-80);
+}
+
+.labelNeutral {
+  background: color-mix(in srgb, var(--base-50) 25%, transparent);
+  color: var(--base-80);
+}
+
+.labelAssertive {
+  background: color-mix(in srgb, var(--info) 25%, transparent);
+  color: var(--info-80);
+}
+
+.labelEvasive {
+  background: color-mix(in srgb, var(--warning) 25%, transparent);
+  color: var(--warning-80);
 }
 
 /* ── Transition ── */

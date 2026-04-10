@@ -102,6 +102,35 @@ export interface DominanceInsight {
   tone: 'neutral' | 'warning' | 'accent';
 }
 
+/** Behavioral category used for colorizing labels */
+export type BehaviorCategory =
+  | 'constructive'
+  | 'destructive'
+  | 'neutral'
+  | 'assertive'
+  | 'evasive';
+
+/** AI-generated behavioral label for a transcript segment */
+export interface BehaviorLabel {
+  /** Index into the segments array */
+  segmentIndex: number;
+  /** Short label, e.g. "passive-aggressive", "diplomatic" */
+  label: string;
+  /** Category bucket for color-coding */
+  category: BehaviorCategory;
+  /** One-line reasoning from the AI */
+  detail: string;
+}
+
+/** Full behavioral analysis response */
+export interface BehaviorAnalysis {
+  labels: BehaviorLabel[];
+  /** Optional overall summary of behavioral dynamics */
+  summary?: string;
+  /** The context prompt that produced these labels (used for caching) */
+  context?: string;
+}
+
 /** Upload state machine */
 export type UploadStatus =
   | 'idle'
