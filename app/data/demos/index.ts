@@ -21,14 +21,16 @@ const loaders: Record<
   museum: () => import('~/data/demos/museum'),
   'mean-girls': () => import('~/data/demos/mean-girls'),
   'love-spectrum': () => import('~/data/demos/love-spectrum'),
-  'the-office': () => import('~/data/demos/the-office')
+  'the-office': () => import('~/data/demos/the-office'),
+  cosmic: () => import('~/data/demos/cosmic')
 };
 
 export const demos: { slug: string; title: string }[] = [
   { slug: 'museum', title: 'Night at the Museum' },
   { slug: 'mean-girls', title: 'Mean Girls' },
   { slug: 'love-spectrum', title: 'Love on the Spectrum' },
-  { slug: 'the-office', title: 'The Office' }
+  { slug: 'the-office', title: 'The Office' },
+  { slug: 'cosmic', title: 'Cosmic Skeptic' }
 ];
 
 export const DEFAULT_DEMO = 'museum';

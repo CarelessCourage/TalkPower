@@ -1,0 +1,230 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " Repeat your claim one more time.",
+      "speaker": "A",
+      "start": 0,
+      "end": 1.1500000000000001,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That suffering is unexpected if a good God exists.",
+      "speaker": "B",
+      "start": 1.1500000000000001,
+      "end": 3.499999999999999,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And you know, the most beautiful thing is that our God is not unfamiliar with suffering as he suffered himself. So would you say that there is like some beauty in suffering in some way?",
+      "speaker": "A",
+      "start": 3.499999999999999,
+      "end": 12.25,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I would say that there can be sort of poetically you can look at suffering and think that's a beautiful story,",
+      "speaker": "B",
+      "start": 12.25,
+      "end": 16.35,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but I don't think that the person suffering,",
+      "speaker": "B",
+      "start": 16.400000000000002,
+      "end": 18.05,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " especially if they die as a direct result,",
+      "speaker": "B",
+      "start": 18.2,
+      "end": 19.5,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " might think that.",
+      "speaker": "B",
+      "start": 19.6,
+      "end": 20.25,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Also,",
+      "speaker": "B",
+      "start": 20.3,
+      "end": 20.55,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I think that if I knew someone whose child died of leukemia and suffered for it and I went to them and said, but hey,",
+      "speaker": "B",
+      "start": 20.6,
+      "end": 26.650000000000002,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " there's some beauty in the suffering, isn't there? I think I'd be kicked out of",
+      "speaker": "B",
+      "start": 26.700000000000003,
+      "end": 28.900000000000002,
+      "id": "seg_9"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the.",
+      "speaker": "@",
+      "start": 28.900000000000002,
+      "end": 29.400000000000002,
+      "id": "seg_10"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Out of the funeral.",
+      "speaker": "B",
+      "start": 28.724,
+      "end": 28.974,
+      "id": "seg_11"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Right. Well,",
+      "speaker": "A",
+      "start": 28.974,
+      "end": 29.774,
+      "id": "seg_12"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I would say like the same thing for a woman giving birth, right?",
+      "speaker": "A",
+      "start": 29.824,
+      "end": 32.474000000000004,
+      "id": "seg_13"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It's suffering,",
+      "speaker": "A",
+      "start": 32.574,
+      "end": 33.124,
+      "id": "seg_14"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " like it sucks, it hurts.",
+      "speaker": "A",
+      "start": 33.274,
+      "end": 34.524,
+      "id": "seg_15"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Sure.",
+      "speaker": "B",
+      "start": 34.524,
+      "end": 34.824,
+      "id": "seg_16"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But imagine you could have the giving birth without the pain of giving birth.",
+      "speaker": "B",
+      "start": 35.024,
+      "end": 38.024,
+      "id": "seg_17"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Right.",
+      "speaker": "A",
+      "start": 38.024,
+      "end": 38.174,
+      "id": "seg_18"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Would you prefer that?",
+      "speaker": "B",
+      "start": 38.174,
+      "end": 38.924,
+      "id": "seg_19"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Of course. Yeah,",
+      "speaker": "A",
+      "start": 39.174,
+      "end": 40.024,
+      "id": "seg_20"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " So",
+      "speaker": "B",
+      "start": 40.024,
+      "end": 40.124,
+      "id": "seg_21"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you would prefer",
+      "speaker": "A",
+      "start": 40.124,
+      "end": 40.324,
+      "id": "seg_22"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " then",
+      "speaker": "B",
+      "start": 40.324,
+      "end": 40.424,
+      "id": "seg_23"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " that.",
+      "speaker": "A",
+      "start": 40.424,
+      "end": 40.623999999999995,
+      "id": "seg_24"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " if God can bring about the good stuff without the bad stuff,",
+      "speaker": "B",
+      "start": 40.623999999999995,
+      "end": 43.623999999999995,
+      "id": "seg_25"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Right.",
+      "speaker": "A",
+      "start": 43.623999999999995,
+      "end": 43.774,
+      "id": "seg_26"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " then there's no reason to bring about the bad stuff. So what we have to show is why the bad stuff is necessary to bring about the good stuff.",
+      "speaker": "B",
+      "start": 43.774,
+      "end": 49.474,
+      "id": "seg_27"
+    }
+  ],
+  "duration": 49.474,
+  "text": "Repeat your claim one more time. That suffering is unexpected if a good God exists. And you know, the most beautiful thing is that our God is not unfamiliar with suffering as he suffered himself. So would you say that there is like some beauty in suffering in some way? I would say that there can be sort of poetically you can look at suffering and think that's a beautiful story, but I don't think that the person suffering, especially if they die as a direct result, might think that. Also, I think that if I knew someone whose child died of leukemia and suffered for it and I went to them and said, but hey, there's some beauty in the suffering, isn't there? I think I'd be kicked out of the.\nOut of the funeral. Right. Well, I would say like the same thing for a woman giving birth, right? It's suffering, like it sucks, it hurts. Sure. But imagine you could have the giving birth without the pain of giving birth. Right. Would you prefer that? Of course. Yeah, So you would prefer then that. if God can bring about the good stuff without the bad stuff, Right. then there's no reason to bring about the bad stuff. So what we have to show is why the bad stuff is necessary to bring about the good stuff."
+}
