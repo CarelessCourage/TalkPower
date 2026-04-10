@@ -121,7 +121,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
   <div class="MeetingPlayer surface">
     <!-- Video + subtitle overlay -->
     <div class="PlayerViewport">
-      <MagicPlayerProvider :id="playerId" :options="playerOptions">
+      <MagicPlayerProvider :key="src" :id="playerId" :options="playerOptions">
         <MagicPlayerVideo />
       </MagicPlayerProvider>
 

@@ -251,6 +251,44 @@ const tabs = [
   border-bottom-color: var(--accent);
 }
 
+.MeetingActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-bit-3);
+}
+
+.DemoSwitcher {
+  display: flex;
+  gap: var(--space-bit-2);
+}
+
+.DemoBtn {
+  padding: var(--space-bit-1) var(--space-bit-4);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--base-50);
+  background: var(--base-10);
+  border: 1px solid var(--base-20);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    color var(--time-2) var(--timing),
+    background var(--time-2) var(--timing),
+    border-color var(--time-2) var(--timing);
+}
+
+.DemoBtn:hover {
+  color: var(--base-80);
+  background: var(--base-20);
+}
+
+.DemoBtn.demoBtnActive {
+  color: var(--accent-text);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .MeetingMain {
   display: flex;
   flex-direction: column;
