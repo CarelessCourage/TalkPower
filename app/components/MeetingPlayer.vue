@@ -5,7 +5,8 @@ import type {
   TranscriptSegment,
   Interruption,
   BehaviorLabel,
-  EmotionLabel
+  EmotionLabel,
+  CoachingCard
 } from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
@@ -16,6 +17,7 @@ interface Props {
   interruptions?: Interruption[];
   labels?: BehaviorLabel[];
   emotions?: EmotionLabel[];
+  coaching?: CoachingCard[];
   displayName?: (raw: string) => string;
 }
 
@@ -26,6 +28,7 @@ const {
   interruptions = [],
   labels = [],
   emotions = [],
+  coaching = [],
   displayName = (raw: string) => raw
 } = defineProps<Props>();
 
@@ -137,6 +140,14 @@ defineExpose({ currentTime, duration: playerDuration, seek });
           :display-name="displayName"
         />
       </div>
+
+      <div class="PlayerCoaching">
+        <CoachingCards
+          :cards="coaching"
+          :current-time="currentTime ?? 0"
+          :display-name="displayName"
+        />
+      </div>
     </div>
 
     <!-- Controls + scrubber -->
@@ -206,6 +217,20 @@ defineExpose({ currentTime, duration: playerDuration, seek });
 }
 
 .PlayerSubtitles::-webkit-scrollbar {
+  display: none;
+}
+
+.PlayerCoaching {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--space-2) var(--space-3);
+  max-height: 60%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.PlayerCoaching::-webkit-scrollbar {
   display: none;
 }
 

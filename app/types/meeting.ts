@@ -146,6 +146,20 @@ export interface TherapistNote {
   addressedTo: string;
 }
 
+/** A real-time coaching card — the AI's "Jiminy Cricket" commentary */
+export interface CoachingCard {
+  /** When this card should appear (seconds) */
+  start: number;
+  /** When this card should disappear (seconds) */
+  end: number;
+  /** The coaching advice or observation */
+  text: string;
+  /** Tone of the card */
+  tone: 'praise' | 'warning' | 'tip' | 'insight';
+  /** Which speaker this is about (raw label, e.g. "Speaker A") */
+  speaker?: string;
+}
+
 /** Full behavioral analysis response */
 export interface BehaviorAnalysis {
   labels: BehaviorLabel[];
@@ -155,6 +169,8 @@ export interface BehaviorAnalysis {
   summary?: string;
   /** Therapist-style notes with observations and recommendations */
   notes?: TherapistNote[];
+  /** Real-time coaching cards synced to video playback */
+  coaching?: CoachingCard[];
   /** The context prompt that produced these labels (used for caching) */
   context?: string;
   /** AI-inferred or user-edited speaker display names, keyed by raw label e.g. "Speaker A" */

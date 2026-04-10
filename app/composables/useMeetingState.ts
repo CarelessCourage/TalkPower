@@ -7,7 +7,8 @@ import type {
   VolumeAnalysis,
   BehaviorAnalysis,
   BehaviorLabel,
-  EmotionLabel
+  EmotionLabel,
+  CoachingCard
 } from '~/types/meeting';
 
 /** Shape of the shared meeting state provided by the parent page */
@@ -34,6 +35,7 @@ export interface MeetingState {
   duration: ComputedRef<number>;
   behaviorLabels: ComputedRef<BehaviorLabel[]>;
   emotionLabels: ComputedRef<EmotionLabel[]>;
+  coachingCards: ComputedRef<CoachingCard[]>;
   hardInterruptions: ComputedRef<number>;
   softInterruptions: ComputedRef<number>;
 

@@ -196,5 +196,74 @@ export const loveSpectrumLabels: BehaviorAnalysis = {
     'Speaker A': 'Subodh',
     'Speaker B': 'Waitress',
     'Speaker C': 'Kate'
-  }
+  },
+  coaching: [
+    {
+      start: 0,
+      end: 5,
+      text: "Opening with a direct personal question — that takes courage. He's leading with vulnerability, which sets a tone of honesty for the whole date.",
+      tone: 'praise',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 4.7,
+      end: 10,
+      text: "Asking about bullying so early could feel intense, but he's genuinely trying to understand her experience. The intent is empathy, not interrogation.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 18,
+      end: 25,
+      text: "Notice who's doing the emotional labor here — Subodh is asking every question, driving the conversation. Kate's silence isn't disinterest; first dates are terrifying.",
+      tone: 'insight'
+    },
+    {
+      start: 34,
+      end: 42,
+      text: "The spontaneous prayer is the most authentic moment so far. He's completely unselfconscious about his faith. This kind of vulnerability builds real connection.",
+      tone: 'praise',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 38,
+      end: 44,
+      text: "'Keep mommy and daddy safe' — he's sharing his deepest priorities: family, faith, safety. This is who he really is, unfiltered.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 55,
+      end: 62,
+      text: "Tip for quieter conversationalists: you don't need to match his energy. One genuine question back — 'what do you like most about your job?' — would mean the world.",
+      tone: 'tip',
+      speaker: 'Speaker C'
+    },
+    {
+      start: 70,
+      end: 77,
+      text: "'Have you ever been on a date before?' — and the answer creates the most genuinely mutual moment. The shared newness removes the power imbalance entirely.",
+      tone: 'praise',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 79,
+      end: 86,
+      text: "Kate mentioning wanting a Christian partner is her most assertive moment. When she does speak, her words carry weight — because she uses them sparingly.",
+      tone: 'praise',
+      speaker: 'Speaker C'
+    },
+    {
+      start: 92,
+      end: 99,
+      text: "The conversation is winding down warmly. Both people showed up authentically — that matters more than any technique or strategy.",
+      tone: 'insight'
+    },
+    {
+      start: 100,
+      end: 104,
+      text: "Dating takeaway: lead with curiosity, share honestly, and don't be afraid of silence. Subodh did the first two perfectly. Kate owned the third.",
+      tone: 'tip'
+    }
+  ]
 };

@@ -64,6 +64,25 @@ Infer the most likely real name or role for each speaker based on transcript con
 Return a "speakerNames" object mapping raw speaker labels to inferred names, e.g.:
 { "Speaker A": "Michael", "Speaker B": "Ryan" }
 
+## 5. Coaching Cards (Jiminy Cricket)
+Generate real-time coaching cards — brief, time-synced advice that appears over the video as it plays. Think of yourself as a wise advisor whispering guidance in the viewer's ear at the exact right moment.
+
+Each card should:
+- Be tied to a specific time window (start/end in seconds) matching a moment in the transcript
+- Give actionable advice, praise good behavior, warn about mistakes, or offer insight
+- Be 1-2 sentences max — punchy and direct
+- Have a tone: "praise" (they did something right), "warning" (they're making a mistake), "tip" (here's what they should do), or "insight" (here's what's really happening beneath the surface)
+- Optionally reference a specific speaker
+
+Generate 6-12 coaching cards spread across the conversation. Don't cluster them — space them throughout so the viewer gets steady commentary. If a context prompt focuses on a specific person or topic (e.g. "analyze Michael as a boss"), tailor the cards to that lens.
+
+For each card, return:
+- "start": when to show (seconds)
+- "end": when to hide (seconds) — typically 4-8 seconds after start
+- "text": the coaching advice
+- "tone": one of "praise", "warning", "tip", "insight"
+- "speaker" (optional): which speaker label this is about (e.g. "Speaker A")
+
 If a context prompt is provided, tailor your labels and notes to highlight behaviors relevant to that context.
 
 Respond with valid JSON matching this schema:
@@ -71,6 +90,7 @@ Respond with valid JSON matching this schema:
   "labels": [{ "segmentIndex": number, "label": string, "category": string, "detail": string, "deception"?: string }],
   "emotions": [{ "segmentIndex": number, "emotion": string, "trigger": string, "surface"?: string }],
   "notes": [{ "heading": string, "body": string, "addressedTo": string }],
+  "coaching": [{ "start": number, "end": number, "text": string, "tone": string, "speaker"?: string }],
   "summary": string,
   "speakerNames": { "Speaker X": "Name or Role" }
 }`;

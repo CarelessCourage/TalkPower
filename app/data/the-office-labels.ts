@@ -257,5 +257,77 @@ export const theOfficeLabels: BehaviorAnalysis = {
     'Speaker F': 'Toby Flenderson',
     'Speaker G': 'Kevin Malone',
     'Speaker H': 'Pam Beesly'
-  }
+  },
+  coaching: [
+    {
+      start: 0.1,
+      end: 5,
+      text: "Classic delegation dodge. A good manager would own the presentation and ask Ryan to coach them through it — not push it off entirely.",
+      tone: 'tip',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 3.5,
+      end: 10,
+      text: "Ryan is being patient and constructive here. This is exactly how you should handle an avoidant boss — redirect focus back to the actual goal.",
+      tone: 'praise',
+      speaker: 'Speaker B'
+    },
+    {
+      start: 11.86,
+      end: 16,
+      text: "And just like that, actual work is forgotten. When a grammar correction derails a meeting, that's a leadership failure — the boss should refocus.",
+      tone: 'warning',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 15,
+      end: 21,
+      text: "Dwight's loyalty is automatic, not informed. Good management means building a team that challenges ideas, not one that agrees reflexively.",
+      tone: 'insight',
+      speaker: 'Speaker D'
+    },
+    {
+      start: 24,
+      end: 30,
+      text: "Notice how everyone is arguing about grammar instead of the presentation. A strong manager would say 'we can settle this later — let's get back to work.'",
+      tone: 'tip',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 34.7,
+      end: 40,
+      text: "Kelly turning this into a personal grievance about her band? That's what happens when meetings have no structure — anyone can hijack the agenda.",
+      tone: 'insight',
+      speaker: 'Speaker E'
+    },
+    {
+      start: 36.8,
+      end: 42,
+      text: "Toby gives the correct answer calmly and clearly. This is model behavior — but watch what happens to the person who's actually right.",
+      tone: 'praise',
+      speaker: 'Speaker F'
+    },
+    {
+      start: 48,
+      end: 55,
+      text: "Ryan is doing a rigorous grammatical breakdown. Solid reasoning — but in a dysfunctional office, being right doesn't give you power. Being liked does.",
+      tone: 'insight',
+      speaker: 'Speaker B'
+    },
+    {
+      start: 58,
+      end: 64,
+      text: "Dwight just described stabbing a coworker with a letter opener. In a real office, this is an HR incident. Michael doesn't even blink — that's a massive leadership failure.",
+      tone: 'warning',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 62.8,
+      end: 66.37,
+      text: "Management takeaway: if your meetings end with threats instead of action items, you've lost control of the room. Own the agenda, respect expertise, and never punish the person with the right answer.",
+      tone: 'tip',
+      speaker: 'Speaker A'
+    }
+  ]
 };

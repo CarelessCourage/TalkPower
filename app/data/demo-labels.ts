@@ -238,5 +238,75 @@ export const demoLabels: BehaviorAnalysis = {
     'Speaker B': 'Pharaoh Ahkmenrah',
     'Speaker C': 'Larry (Night Guard)',
     'Speaker D': 'Larry (Night Guard)'
-  }
+  },
+  coaching: [
+    {
+      start: 0.35,
+      end: 6,
+      text: "Opening with threats immediately poisons the negotiation. Never lead with coercion — it puts the other side on the defensive permanently.",
+      tone: 'warning',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 10,
+      end: 17,
+      text: "Larry stays calm under pressure and keeps proposing solutions. This is textbook de-escalation — name the problem, propose a trade.",
+      tone: 'praise',
+      speaker: 'Speaker C'
+    },
+    {
+      start: 32,
+      end: 39,
+      text: "Death threats in a negotiation? This is pure intimidation. The moment you threaten someone's life, you've abandoned any claim to legitimacy.",
+      tone: 'warning',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 42,
+      end: 49,
+      text: "Notice how Larry keeps returning to a fair-trade framing despite the aggression. This patience is the only reason the conversation hasn't collapsed entirely.",
+      tone: 'praise',
+      speaker: 'Speaker C'
+    },
+    {
+      start: 49,
+      end: 57,
+      text: "'Conrad the Bloodthirsty' — when someone invokes their own violent history, they're using fear as leverage. Don't match the energy; stay in problem-solving mode.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 68,
+      end: 76,
+      text: "Another death threat over touching an object. The real issue isn't the artifact — it's control. Every threat is about maintaining dominance, not solving the problem.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 85,
+      end: 93,
+      text: "When someone refuses every proposal, try reframing: 'What would need to be true for you to agree?' Put the burden of solution on them.",
+      tone: 'tip',
+      speaker: 'Speaker C'
+    },
+    {
+      start: 105,
+      end: 113,
+      text: "The impasse isn't about the items — it's about trust. Neither side will go first. A neutral third party or simultaneous exchange would break this deadlock.",
+      tone: 'tip'
+    },
+    {
+      start: 120,
+      end: 128,
+      text: "Despite facing sustained intimidation, Larry never retaliates or escalates. This emotional regulation is the single most important negotiation skill on display here.",
+      tone: 'praise',
+      speaker: 'Speaker C'
+    },
+    {
+      start: 128,
+      end: 135,
+      text: "Final takeaway: you can't negotiate with someone who treats threats as their first tool. But you can model the behavior you want to see — and Larry did exactly that.",
+      tone: 'insight'
+    }
+  ]
 };

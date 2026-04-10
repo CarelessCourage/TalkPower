@@ -111,5 +111,49 @@ export const meanGirlsLabels: BehaviorAnalysis = {
   ],
   speakerNames: {
     'Speaker A': 'Gretchen Wieners'
-  }
+  },
+  coaching: [
+    {
+      start: 1.15,
+      end: 7,
+      text: "Strong opening — she's framing the argument as a fairness issue. This is classic persuasion: make the audience feel like they share your grievance.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 7.95,
+      end: 11,
+      text: "'Just as cute, just as smart' — notice the pivot from politics to personal comparison. This isn't about fairness anymore; it's about jealousy.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 11.7,
+      end: 15,
+      text: "She's building momentum by stacking claims. Each one sounds reasonable alone, but together they're creating an emotional avalanche heading somewhere dangerous.",
+      tone: 'warning',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 15.9,
+      end: 19,
+      text: "'When did it become okay for one person to be the boss of everybody?' — a genuinely fair question. But watch where she takes it.",
+      tone: 'tip',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 19,
+      end: 21,
+      text: "The 'huh?' pause — she's reading the room, making sure they're with her before the final escalation. Master crowd work.",
+      tone: 'insight',
+      speaker: 'Speaker A'
+    },
+    {
+      start: 20.85,
+      end: 22.5,
+      text: "And there it is — 'let's stab Caesar.' A legitimate grievance just became a call to violence. The speech was never about justice; it was about revenge dressed as revolution.",
+      tone: 'warning',
+      speaker: 'Speaker A'
+    }
+  ]
 };
