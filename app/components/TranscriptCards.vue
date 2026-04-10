@@ -2,7 +2,8 @@
 import type {
   TranscriptSegment,
   Interruption,
-  BehaviorLabel
+  BehaviorLabel,
+  EmotionLabel
 } from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
@@ -11,13 +12,15 @@ interface Props {
   currentTime: number;
   interruptions?: Interruption[];
   labels?: BehaviorLabel[];
+  emotions?: EmotionLabel[];
 }
 
 const {
   segments,
   currentTime = 0,
   interruptions = [],
-  labels = []
+  labels = [],
+  emotions = []
 } = defineProps<Props>();
 
 /* ── Speaker colors ── */
@@ -58,6 +61,11 @@ const getInterruption = (index: number): Interruption | undefined => {
 /** Look up behavioral label for a segment */
 const getLabel = (index: number): BehaviorLabel | undefined => {
   return labels.find((l) => l.segmentIndex === index);
+};
+
+/** Look up emotional state for a segment */
+const getEmotion = (index: number): EmotionLabel | undefined => {
+  return emotions.find((e) => e.segmentIndex === index);
 };
 
 const categoryColorClass: Record<string, string> = {
@@ -103,14 +111,31 @@ const categoryColorClass: Record<string, string> = {
           <span class="CardTime mono">{{ formatSeconds(seg.start) }}</span>
         </div>
         <p class="CardText">{{ seg.text }}</p>
-        <span
-          v-if="getLabel(index)"
-          class="CardLabel"
-          :class="categoryColorClass[getLabel(index)!.category]"
-          :title="getLabel(index)!.detail"
-        >
-          {{ getLabel(index)!.label }}
-        </span>
+        <div class="CardChips">
+          <span
+            v-if="getLabel(index)"
+            class="CardLabel"
+            :class="categoryColorClass[getLabel(index)!.category]"
+            :title="getLabel(index)!.detail"
+          >
+            {{ getLabel(index)!.label }}
+          </span>
+          <span
+            v-if="getEmotion(index)"
+            class="CardEmotion"
+            :class="{ emotionMasked: getEmotion(index)!.surface }"
+            :title="
+              getEmotion(index)!.surface
+                ? `Appears ${getEmotion(index)!.surface} but actually ${getEmotion(index)!.emotion} — ${getEmotion(index)!.trigger}`
+                : getEmotion(index)!.trigger
+            "
+          >
+            {{ getEmotion(index)!.emotion }}
+            <span v-if="getEmotion(index)!.surface" class="EmotionSurface">
+              looks {{ getEmotion(index)!.surface }}
+            </span>
+          </span>
+        </div>
       </div>
     </TransitionGroup>
   </div>
@@ -194,7 +219,6 @@ const categoryColorClass: Record<string, string> = {
 }
 
 .CardLabel {
-  align-self: flex-start;
   display: inline-block;
   padding: 2px var(--space-bit-2);
   border-radius: var(--radius-inner);
@@ -203,6 +227,43 @@ const categoryColorClass: Record<string, string> = {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   cursor: help;
+}
+
+.CardEmotion {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-bit-1);
+  padding: 2px var(--space-bit-2);
+  border-radius: var(--radius-inner);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  cursor: help;
+  background: color-mix(in srgb, var(--base-50) 15%, transparent);
+  color: var(--base-80);
+  border: 1px solid color-mix(in srgb, var(--base-50) 25%, transparent);
+}
+
+.CardEmotion.emotionMasked {
+  background: color-mix(in srgb, var(--warning) 12%, transparent);
+  border-color: color-mix(in srgb, var(--warning) 30%, transparent);
+  color: var(--warning-80);
+}
+
+.EmotionSurface {
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0.65;
+  font-size: 0.625rem;
+  text-decoration: line-through;
+}
+
+.CardChips {
+  display: flex;
+  align-items: center;
+  gap: var(--space-bit-2);
+  flex-wrap: wrap;
 }
 
 .labelConstructive {

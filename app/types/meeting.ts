@@ -122,6 +122,18 @@ export interface BehaviorLabel {
   detail: string;
 }
 
+/** AI-detected emotional state for a transcript segment */
+export interface EmotionLabel {
+  /** Index into the segments array */
+  segmentIndex: number;
+  /** The TRUE underlying emotion — what they actually feel */
+  emotion: string;
+  /** What provoked it — "unprovoked" if initiated, or a short description if reactive */
+  trigger: string;
+  /** The performed/surface emotion when it differs from the true one (e.g. laughing while angry) */
+  surface?: string;
+}
+
 /** A therapist-style observation or recommendation */
 export interface TherapistNote {
   /** Short heading for the note */
@@ -135,6 +147,8 @@ export interface TherapistNote {
 /** Full behavioral analysis response */
 export interface BehaviorAnalysis {
   labels: BehaviorLabel[];
+  /** Emotional state readings per segment */
+  emotions?: EmotionLabel[];
   /** Optional overall summary of behavioral dynamics */
   summary?: string;
   /** Therapist-style notes with observations and recommendations */

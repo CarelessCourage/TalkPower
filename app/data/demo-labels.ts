@@ -124,6 +124,79 @@ export const demoLabels: BehaviorAnalysis = {
         'Final ultimatum with a countdown — when sharing fails entirely, all that remains is force.'
     }
   ],
+  emotions: [
+    { segmentIndex: 0, emotion: 'commanding', trigger: 'unprovoked' },
+    { segmentIndex: 3, emotion: 'calm', trigger: 'unprovoked' },
+    { segmentIndex: 6, emotion: 'entitled', trigger: 'unprovoked' },
+    {
+      segmentIndex: 7,
+      emotion: 'resolute',
+      trigger: 'after being demanded from'
+    },
+    {
+      segmentIndex: 8,
+      emotion: 'contemptuous',
+      trigger: 'after fair trade proposed'
+    },
+    { segmentIndex: 9, emotion: 'defiant', trigger: 'reactive to contempt' },
+    {
+      segmentIndex: 10,
+      emotion: 'angry',
+      trigger: 'unprovoked — escalates to threats when negotiation stalls'
+    },
+    {
+      segmentIndex: 12,
+      emotion: 'confident',
+      trigger: 'after being threatened'
+    },
+    {
+      segmentIndex: 15,
+      emotion: 'contemptuous',
+      surface: 'amused',
+      trigger: 'unprovoked — uses humor as a weapon to mock and intimidate'
+    },
+    {
+      segmentIndex: 21,
+      emotion: 'enraged',
+      trigger: 'reactive to physical boundary being crossed'
+    },
+    {
+      segmentIndex: 22,
+      emotion: 'calm',
+      trigger: 'after being threatened with death'
+    },
+    {
+      segmentIndex: 25,
+      emotion: 'exasperated',
+      trigger: 'reactive to repeated boundary crossing'
+    },
+    {
+      segmentIndex: 29,
+      emotion: 'angry',
+      trigger: 'unprovoked — escalating frustration'
+    },
+    { segmentIndex: 30, emotion: 'patient', trigger: 'after being threatened' },
+    {
+      segmentIndex: 33,
+      emotion: 'indignant',
+      trigger: 'reactive to Speaker D speaking'
+    },
+    {
+      segmentIndex: 39,
+      emotion: 'threatening',
+      trigger: 'unprovoked — silencing someone for speaking'
+    },
+    {
+      segmentIndex: 41,
+      emotion: 'calm',
+      trigger: "after being told they'd be killed for speaking"
+    },
+    {
+      segmentIndex: 48,
+      emotion: 'enraged',
+      trigger: 'unprovoked — final escalation to ultimatum'
+    }
+  ],
   summary:
     "A lopsided negotiation where one side consistently undermines cooperation while the other shows real communication skill. Speaker A treats the artifact as solely his and responds to proposals with threats. However, Speaker C/D demonstrate patience, fair-trade framing, and emotional regulation throughout — they keep proposing solutions even under coercion. The healthy behaviors are there; they're just being overwhelmed by one party's refusal to engage.",
   notes: [

@@ -35,6 +35,7 @@ const segments = computed(() => transcript.value?.segments ?? []);
 const duration = computed(() => transcript.value?.duration ?? 0);
 const playerSrc = computed(() => audioUrl.value ?? demoVideo);
 const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
+const emotionLabels = computed(() => behaviorAnalysis.value?.emotions ?? []);
 
 const hardInterruptions = computed(
   () => interruptions.value.filter((i) => i.severity === 'hard').length
@@ -64,6 +65,7 @@ provide(meetingStateKey, {
   segments,
   duration,
   behaviorLabels,
+  emotionLabels,
   hardInterruptions,
   softInterruptions,
   currentTime,
@@ -100,6 +102,7 @@ const tabs = [
           :duration="duration"
           :interruptions="interruptions"
           :labels="behaviorLabels"
+          :emotions="emotionLabels"
           @seek="onSeek"
         />
       </section>

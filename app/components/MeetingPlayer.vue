@@ -4,7 +4,8 @@ import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import type {
   TranscriptSegment,
   Interruption,
-  BehaviorLabel
+  BehaviorLabel,
+  EmotionLabel
 } from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
@@ -14,6 +15,7 @@ interface Props {
   duration?: number;
   interruptions?: Interruption[];
   labels?: BehaviorLabel[];
+  emotions?: EmotionLabel[];
 }
 
 const {
@@ -21,7 +23,8 @@ const {
   segments = [],
   duration = 0,
   interruptions = [],
-  labels = []
+  labels = [],
+  emotions = []
 } = defineProps<Props>();
 
 const emit = defineEmits<{
@@ -128,6 +131,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
           :current-time="currentTime ?? 0"
           :interruptions="interruptions"
           :labels="labels"
+          :emotions="emotions"
         />
       </div>
     </div>

@@ -46,6 +46,7 @@ const onSeek = (time: number) => {
 };
 
 const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
+const emotionLabels = computed(() => behaviorAnalysis.value?.emotions ?? []);
 </script>
 
 <template>
@@ -82,6 +83,7 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
             :duration="duration"
             :interruptions="interruptions"
             :labels="behaviorLabels"
+            :emotions="emotionLabels"
             @seek="onSeek"
           />
           <AnalysisSettings
