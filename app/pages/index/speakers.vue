@@ -8,10 +8,13 @@ const {
   interruptions,
   interruptionThreshold,
   hardInterruptions,
-  softInterruptions
+  softInterruptions,
+  segments,
+  behaviorLabels,
+  emotionLabels
 } = useMeetingState();
 
-const speakerTab = ref<'airtime' | 'volume'>('airtime');
+const speakerTab = ref<'airtime' | 'volume' | 'labels'>('airtime');
 </script>
 
 <template>
@@ -32,6 +35,14 @@ const speakerTab = ref<'airtime' | 'volume'>('airtime');
       >
         Volume profile
       </button>
+      <button
+        v-if="behaviorLabels.length || emotionLabels.length"
+        class="SpeakersTab"
+        :class="{ tabActive: speakerTab === 'labels' }"
+        @click="speakerTab = 'labels'"
+      >
+        Label breakdown
+      </button>
     </div>
 
     <SpeakingTimeBars
@@ -41,6 +52,12 @@ const speakerTab = ref<'airtime' | 'volume'>('airtime');
     <VolumeProfile
       v-if="speakerTab === 'volume' && volumeAnalysis"
       :speakers="volumeAnalysis.speakers"
+    />
+    <SpeakerBreakdown
+      v-if="speakerTab === 'labels'"
+      :segments="segments"
+      :labels="behaviorLabels"
+      :emotions="emotionLabels"
     />
 
     <AnalysisSettings
