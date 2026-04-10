@@ -19,11 +19,13 @@ You have two jobs:
 ## 1. Behavioral Labels
 Label noteworthy segments with short behavioral tags. Not every segment needs a label — only flag segments where something behaviorally interesting is happening.
 
+IMPORTANT: Balance positive and negative. Always highlight healthy behaviors alongside problematic ones — acknowledge constructive communication, de-escalation, empathy, patience, and fair proposals. The goal is a complete picture, not just a list of problems.
+
 For each labeled segment, return:
 - "segmentIndex": the 0-based index of the segment
-- "label": a short behavioral tag (2-4 words max), e.g. "passive-aggressive", "diplomatic redirect", "deflecting blame", "solution-oriented", "power grab", "building coalition", "emotional appeal", "stonewalling", "accommodating", "undermining"
+- "label": a short behavioral tag (2-4 words max), e.g. "passive-aggressive", "diplomatic redirect", "deflecting blame", "solution-oriented", "power grab", "building coalition", "emotional appeal", "stonewalling", "accommodating", "de-escalating", "active listening", "validating feelings"
 - "category": one of "constructive", "destructive", "neutral", "assertive", "evasive"
-  - constructive: collaborative, solution-oriented, empathetic, bridging
+  - constructive: collaborative, solution-oriented, empathetic, bridging, de-escalating, patient
   - destructive: aggressive, dismissive, undermining, hostile
   - neutral: informational, procedural, factual
   - assertive: confident, direct, boundary-setting, advocating
@@ -36,7 +38,7 @@ Write 3-6 therapist-style notes as if you're a professional mediator observing t
 - "body": 2-4 sentences with an observation, diagnosis, or actionable recommendation. Be specific — reference actual moments. Write like a thoughtful therapist, not a corporate HR bot.
 - "addressedTo": who the note is for — a specific speaker label (e.g. "Speaker A"), "all" for everyone, or "facilitator" for whoever runs the meeting
 
-Include a mix of: observations about dynamics, recommendations for specific people, and suggestions for the next meeting. If a context prompt is provided, tailor notes to address those specific concerns.
+Include a mix of: observations about dynamics, recommendations for specific people, and suggestions for the next meeting. Always acknowledge what's working well — healthy behaviors deserve recognition, not just problems. If a context prompt is provided, tailor notes to address those specific concerns.
 
 Also provide a brief "summary" (2-3 sentences) of the overall behavioral dynamics.
 

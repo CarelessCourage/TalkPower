@@ -2,7 +2,7 @@ import type { BehaviorAnalysis } from '~/types/meeting';
 
 /** Demo context prompt for the Night at the Museum argument. */
 export const demoContext =
-  "This is a negotiation between a pharaoh and a night guard over sharing a magical artifact. I'm concerned about the complete inability to cooperate — one side refuses to share or compromise, using threats instead of finding a mutual solution. Look for patterns around failure to share, refusal to cooperate, and whether anyone attempts a constructive path.";
+  "This is a negotiation between a pharaoh and a night guard over sharing a magical artifact. I'm concerned about the complete inability to cooperate — one side refuses to share or compromise, using threats instead of finding a mutual solution. Look for patterns around failure to share, refusal to cooperate, and whether anyone attempts a constructive path. But also highlight healthy moments — who stays calm under pressure, who proposes fair exchanges, who de-escalates? Give credit where it's due.";
 
 /**
  * Pre-generated behavioral labels for the demo transcript.
@@ -38,6 +38,13 @@ export const demoLabels: BehaviorAnalysis = {
       category: 'destructive',
       detail:
         'Explicitly states he will release things only on his own terms — refuses the mutual exchange just proposed.'
+    },
+    {
+      segmentIndex: 3,
+      label: 'calm under pressure',
+      category: 'constructive',
+      detail:
+        'Despite facing an aggressive opener, responds without matching the hostility — keeps the conversation possible instead of escalating.'
     },
     {
       segmentIndex: 9,
@@ -89,6 +96,13 @@ export const demoLabels: BehaviorAnalysis = {
         'Calmly reminds the pharaoh that cooperation is required because only they know the combination — power through interdependence.'
     },
     {
+      segmentIndex: 33,
+      label: 'patient persistence',
+      category: 'constructive',
+      detail:
+        'Keeps returning to the fair-trade framework despite repeated rejection — shows emotional regulation and commitment to a workable outcome.'
+    },
+    {
       segmentIndex: 38,
       label: 'silencing dissent',
       category: 'destructive',
@@ -111,7 +125,7 @@ export const demoLabels: BehaviorAnalysis = {
     }
   ],
   summary:
-    'A complete failure of cooperation. Speaker A treats the artifact as solely his and responds to every sharing proposal with threats. Speaker C/D consistently propose fair exchanges but are met with escalation. The only constructive moments come from the non-pharaoh side, and even those are eventually drowned out by coercion.',
+    "A lopsided negotiation where one side consistently undermines cooperation while the other shows real communication skill. Speaker A treats the artifact as solely his and responds to proposals with threats. However, Speaker C/D demonstrate patience, fair-trade framing, and emotional regulation throughout — they keep proposing solutions even under coercion. The healthy behaviors are there; they're just being overwhelmed by one party's refusal to engage.",
   notes: [
     {
       heading: 'Threats replace negotiation',
@@ -137,6 +151,11 @@ export const demoLabels: BehaviorAnalysis = {
       heading: 'Try a structured exchange next time',
       body: "This negotiation failed because both sides tried to get their thing first. A facilitator should propose a simultaneous exchange or a neutral third-party handoff. The impasse isn't about the items themselves — it's about trust. Neither party will go first because they (correctly) don't trust the other to follow through.",
       addressedTo: 'facilitator'
+    },
+    {
+      heading: 'Speaker C/D are modeling good communication',
+      body: 'Despite facing threats, silencing, and bad-faith tricks, Speaker C/D consistently return to calm, conditional proposals. They never match the aggression level. This is exactly the kind of de-escalation and emotional regulation that keeps negotiations from collapsing entirely. Recognize and reinforce these behaviors — they are the foundation for any future resolution.',
+      addressedTo: 'all'
     }
   ]
 };
