@@ -1,0 +1,78 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "direct inquiry",
+      "category": "assertive",
+      "detail": "Speaker A initiates the conversation with a direct question about Speaker B's condition, showing engagement."
+    },
+    {
+      "segmentIndex": 4,
+      "label": "sharing vulnerability",
+      "category": "constructive",
+      "detail": "Speaker A shares a personal experience of being bullied, which fosters a sense of connection."
+    },
+    {
+      "segmentIndex": 20,
+      "label": "leading the conversation",
+      "category": "assertive",
+      "detail": "Speaker A takes the initiative to suggest a prayer, demonstrating leadership in the social interaction."
+    },
+    {
+      "segmentIndex": 38,
+      "label": "reciprocal sharing",
+      "category": "constructive",
+      "detail": "Speaker B responds to Speaker A's question about dating, contributing to the conversation."
+    },
+    {
+      "segmentIndex": 48,
+      "label": "expressing preferences",
+      "category": "constructive",
+      "detail": "Speaker A articulates what they are looking for in a partner, which encourages Speaker B to share as well."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 4,
+      "emotion": "vulnerable",
+      "trigger": "sharing personal experience",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 20,
+      "emotion": "confident",
+      "trigger": "taking initiative",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 38,
+      "emotion": "curious",
+      "trigger": "asking about dating",
+      "surface": "neutral"
+    },
+    {
+      "segmentIndex": 48,
+      "emotion": "hopeful",
+      "trigger": "expressing preferences",
+      "surface": "enthusiastic"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Encouraging Vulnerability",
+      "body": "Speaker A's willingness to share their experience of being bullied is a strong moment of vulnerability that can help build rapport. Encouraging similar openness from Speaker B could deepen their connection. Consider prompting Speaker B to share their own experiences to foster mutual understanding.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Taking Initiative",
+      "body": "Speaker A demonstrates strong leadership by suggesting a prayer before the meal. This not only sets a positive tone but also shows care for the shared experience. It may be beneficial for Speaker B to be encouraged to take similar initiatives to balance the conversation.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Exploring Interests Together",
+      "body": "The discussion about the qualities they seek in a partner is a great way to explore personal values and desires. Both speakers should be encouraged to elaborate on their preferences, as this can lead to deeper conversations and connections. Future discussions could include more about their hobbies and interests.",
+      "addressedTo": "all"
+    }
+  ],
+  "summary": "The meeting showcased a blend of healthy communication and social navigation, particularly through Speaker A's proactive engagement and vulnerability. While Speaker A led most of the conversation, moments of reciprocal sharing from Speaker B indicated potential for deeper connection. Encouraging balanced participation could enhance their interaction further."
+}
