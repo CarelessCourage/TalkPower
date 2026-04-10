@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, provide, onMounted } from 'vue';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import { useMeetingAnalysis } from '~/composables/useMeetingAnalysis';
 import { useTranscriptSync } from '~/composables/useTranscriptSync';
+import { meetingStateKey } from '~/composables/useMeetingState';
 import demoVideo from '~/assets/video/argumentAtTheMuseum.mp4';
+
+const analysis = useMeetingAnalysis();
 
 const {
   transcript,
@@ -13,13 +16,13 @@ const {
   behaviorAnalysis,
   behaviorContext,
   analyzingBehavior,
-  audioUrl,
   metrics,
   insights,
   hasData,
+  audioUrl,
   loadDemo,
   analyzeBehavior
-} = useMeetingAnalysis();
+} = analysis;
 
 onMounted(() => {
   if (!hasData.value) loadDemo(demoVideo);
@@ -30,26 +33,50 @@ const { currentTime, audioApi } = useMagicPlayer(playerId);
 
 const segments = computed(() => transcript.value?.segments ?? []);
 const duration = computed(() => transcript.value?.duration ?? 0);
-
 const playerSrc = computed(() => audioUrl.value ?? demoVideo);
-
-const { activeIndex } = useTranscriptSync(segments, currentTime);
-
-const speakerTab = ref<'airtime' | 'volume'>('airtime');
+const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 
 const hardInterruptions = computed(
   () => interruptions.value.filter((i) => i.severity === 'hard').length
 );
-
 const softInterruptions = computed(
   () => interruptions.value.filter((i) => i.severity === 'soft').length
 );
+
+const { activeIndex } = useTranscriptSync(segments, currentTime);
 
 const onSeek = (time: number) => {
   audioApi.seek(time);
 };
 
-const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
+provide(meetingStateKey, {
+  transcript,
+  volumeAnalysis,
+  behaviorAnalysis,
+  behaviorContext,
+  analyzingBehavior,
+  interruptions,
+  interruptionThreshold,
+  metrics,
+  insights,
+  hasData,
+  analyzeBehavior,
+  segments,
+  duration,
+  behaviorLabels,
+  hardInterruptions,
+  softInterruptions,
+  currentTime,
+  activeIndex,
+  onSeek
+});
+
+const tabs = [
+  { to: '/', label: 'Overview', icon: 'lucide:layout-dashboard' },
+  { to: '/behavior', label: 'Behavior', icon: 'lucide:brain' },
+  { to: '/speakers', label: 'Speakers', icon: 'lucide:users' },
+  { to: '/transcript', label: 'Transcript', icon: 'lucide:scroll-text' }
+];
 </script>
 
 <template>
@@ -64,97 +91,38 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
       </NuxtLink>
     </header>
 
-    <main class="MeetingMain">
-      <!-- Analysis dashboard -->
-      <template v-if="hasData && metrics">
-        <!-- Player with subtitle cards + scrubber -->
-        <section class="MeetingSection MeetingHero">
-          <MeetingPlayer
-            :src="playerSrc"
-            :segments="segments"
-            :duration="duration"
-            :interruptions="interruptions"
-            :labels="behaviorLabels"
-            @seek="onSeek"
-          />
-
-          <!-- Behavior analysis -->
-          <section class="MeetingSection">
-            <h2 class="MeetingSectionTitle">Behavior analysis</h2>
-            <BehaviorPrompt
-              v-model="behaviorContext"
-              :analyzing="analyzingBehavior"
-              :has-labels="behaviorLabels.length > 0"
-              @analyze="analyzeBehavior"
-            />
-            <TherapistNotes
-              v-if="
-                behaviorAnalysis?.notes?.length || behaviorAnalysis?.summary
-              "
-              :notes="behaviorAnalysis?.notes ?? []"
-              :summary="behaviorAnalysis?.summary"
-            />
-          </section>
-        </section>
-
-        <!-- Summary row -->
-        <MeetingSummary :metrics="metrics" />
-
-        <!-- Dominance insights -->
-        <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Power dynamics</h2>
-          <InsightCards :insights="insights" />
-        </section>
-
-        <!-- Speaker analysis (tabbed) -->
-        <section class="MeetingSection">
-          <div class="MeetingTabs">
-            <button
-              class="MeetingTab"
-              :class="{ tabActive: speakerTab === 'airtime' }"
-              @click="speakerTab = 'airtime'"
-            >
-              Airtime breakdown
-            </button>
-            <button
-              v-if="volumeAnalysis"
-              class="MeetingTab"
-              :class="{ tabActive: speakerTab === 'volume' }"
-              @click="speakerTab = 'volume'"
-            >
-              Volume profile
-            </button>
-          </div>
-          <SpeakingTimeBars
-            v-if="speakerTab === 'airtime'"
-            :speakers="metrics.speakers"
-          />
-          <VolumeProfile
-            v-if="speakerTab === 'volume' && volumeAnalysis"
-            :speakers="volumeAnalysis.speakers"
-          />
-        </section>
-
-        <AnalysisSettings
-          :threshold="interruptionThreshold"
-          :interruption-count="interruptions.length"
-          :hard-count="hardInterruptions"
-          :soft-count="softInterruptions"
-          @update:threshold="interruptionThreshold = $event"
+    <template v-if="hasData && metrics">
+      <!-- Persistent player -->
+      <section class="MeetingHero">
+        <MeetingPlayer
+          :src="playerSrc"
+          :segments="segments"
+          :duration="duration"
+          :interruptions="interruptions"
+          :labels="behaviorLabels"
+          @seek="onSeek"
         />
+      </section>
 
-        <!-- Transcript -->
-        <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Full transcript</h2>
-          <TranscriptView
-            :segments="segments"
-            :active-index="activeIndex"
-            :interruptions="interruptions"
-            @seek="onSeek"
-          />
-        </section>
-      </template>
-    </main>
+      <!-- Tab navigation -->
+      <nav class="MeetingNav">
+        <NuxtLink
+          v-for="tab in tabs"
+          :key="tab.to"
+          :to="tab.to"
+          class="NavTab"
+          :class="{ navTabActive: $route.path === tab.to }"
+        >
+          <Icon :name="tab.icon" size="16" />
+          {{ tab.label }}
+        </NuxtLink>
+      </nav>
+
+      <!-- Routed content -->
+      <main class="MeetingMain">
+        <NuxtPage />
+      </main>
+    </template>
   </div>
 </template>
 
@@ -162,7 +130,7 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 .MeetingPage {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-4);
   max-width: var(--panel-2);
   margin: 0 auto;
   padding: var(--space-5) var(--space-3);
@@ -205,25 +173,6 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
   color: var(--base-100);
 }
 
-.MeetingMain {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-.MeetingSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.MeetingSectionTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--base-90);
-  letter-spacing: -0.01em;
-}
-
 .MeetingHero {
   background: var(--base-10);
   border-radius: var(--radius-outer);
@@ -231,28 +180,41 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
   overflow: hidden;
 }
 
-.MeetingTabs {
+.MeetingNav {
   display: flex;
   gap: var(--space-bit-1);
+  border-bottom: 1px solid var(--base-20);
+  padding-bottom: 0;
 }
 
-.MeetingTab {
-  font-size: var(--caption-text-height);
+.NavTab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-bit-2);
+  padding: var(--space-bit-2) var(--space-bit-4);
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--base-50);
-  padding: var(--space-bit-1) var(--space-bit-3);
-  border-radius: var(--radius) var(--radius) 0 0;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
   transition:
     color var(--time-2) var(--timing),
-    background var(--time-2) var(--timing);
+    border-color var(--time-2) var(--timing);
 }
 
-.MeetingTab:hover {
+.NavTab:hover {
   color: var(--base-80);
 }
 
-.MeetingTab.tabActive {
-  color: var(--base-110);
-  background: var(--base-20);
+.NavTab.navTabActive {
+  color: var(--base-text);
+  border-bottom-color: var(--accent);
+}
+
+.MeetingMain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 </style>
