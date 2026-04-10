@@ -161,6 +161,7 @@ const categoryColorClass: Record<string, string> = {
   gap: var(--space-bit-1);
   justify-content: flex-end;
   min-height: 0;
+  position: relative;
 }
 
 .TranscriptCard {
@@ -320,13 +321,25 @@ const categoryColorClass: Record<string, string> = {
 }
 
 /* ── Transition ── */
+.card-move,
 .card-enter-active,
 .card-leave-active {
-  transition: opacity 0.12s var(--timing);
+  transition:
+    all var(--time-3) var(--timing);
 }
 
-.card-enter-from,
+.card-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.card-leave-active {
+  position: absolute;
+  width: 100%;
+}
+
 .card-leave-to {
   opacity: 0;
+  transform: translateY(-4px);
 }
 </style>
