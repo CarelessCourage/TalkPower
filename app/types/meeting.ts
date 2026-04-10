@@ -122,11 +122,23 @@ export interface BehaviorLabel {
   detail: string;
 }
 
+/** A therapist-style observation or recommendation */
+export interface TherapistNote {
+  /** Short heading for the note */
+  heading: string;
+  /** The note body — observation, recommendation, or action item */
+  body: string;
+  /** Who the note is addressed to: a specific speaker, "all", or "facilitator" */
+  addressedTo: string;
+}
+
 /** Full behavioral analysis response */
 export interface BehaviorAnalysis {
   labels: BehaviorLabel[];
   /** Optional overall summary of behavioral dynamics */
   summary?: string;
+  /** Therapist-style notes with observations and recommendations */
+  notes?: TherapistNote[];
   /** The context prompt that produced these labels (used for caching) */
   context?: string;
 }

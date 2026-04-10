@@ -97,14 +97,16 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 
         <section class="UploadSection">
           <h2 class="UploadSectionTitle">Behavior analysis</h2>
-          <p v-if="behaviorAnalysis?.summary" class="UploadBehaviorSummary">
-            {{ behaviorAnalysis.summary }}
-          </p>
           <BehaviorPrompt
             v-model="behaviorContext"
             :analyzing="analyzingBehavior"
             :has-labels="behaviorLabels.length > 0"
             @analyze="analyzeBehavior"
+          />
+          <TherapistNotes
+            v-if="behaviorAnalysis?.notes?.length || behaviorAnalysis?.summary"
+            :notes="behaviorAnalysis?.notes ?? []"
+            :summary="behaviorAnalysis?.summary"
           />
         </section>
 
@@ -261,11 +263,5 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
 .UploadTab.tabActive {
   color: var(--base-110);
   background: var(--base-20);
-}
-
-.UploadBehaviorSummary {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--base-80);
 }
 </style>

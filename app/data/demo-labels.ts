@@ -111,5 +111,32 @@ export const demoLabels: BehaviorAnalysis = {
     }
   ],
   summary:
-    'A complete failure of cooperation. Speaker A treats the artifact as solely his and responds to every sharing proposal with threats. Speaker C/D consistently propose fair exchanges but are met with escalation. The only constructive moments come from the non-pharaoh side, and even those are eventually drowned out by coercion.'
+    'A complete failure of cooperation. Speaker A treats the artifact as solely his and responds to every sharing proposal with threats. Speaker C/D consistently propose fair exchanges but are met with escalation. The only constructive moments come from the non-pharaoh side, and even those are eventually drowned out by coercion.',
+  notes: [
+    {
+      heading: 'Threats replace negotiation',
+      body: "Speaker A defaults to threats the moment cooperation is required. This pattern appears at least five times — each time Speaker C/D propose a fair exchange, Speaker A responds with escalation rather than engagement. This isn't a negotiation; it's an attempt to coerce compliance through fear. In a real workplace, this dynamic would shut down all honest input from the team.",
+      addressedTo: 'Speaker A'
+    },
+    {
+      heading: 'You have more leverage than you think',
+      body: 'Speaker C/D hold the combination — the one thing Speaker A actually needs. Yet they keep offering fair trades instead of pressing this advantage harder. The calm conditional offers ("I\'ll give you X when you give me Y") are the healthiest communication in this entire exchange. Keep doing that, but consider being more explicit about consequences: "If you won\'t cooperate, neither of us gets what we want."',
+      addressedTo: 'Speaker C'
+    },
+    {
+      heading: 'No one is listening',
+      body: 'Neither party pauses to acknowledge what the other actually wants. Speaker A never says "I understand you want your friends back." Speaker C/D never say "I get that the tablet is important to you." Without basic acknowledgment, every exchange becomes a zero-sum power struggle. Start the next conversation by restating each other\'s needs before proposing solutions.',
+      addressedTo: 'all'
+    },
+    {
+      heading: 'The silencing pattern is the biggest red flag',
+      body: 'At the 100-second mark, Speaker A forbids Speaker D from even speaking. This is the most damaging moment — it signals that one party believes the other has no right to participate. If this dynamic exists in your meetings, it needs to be addressed immediately. Everyone at the table must have the right to speak, regardless of power dynamics.',
+      addressedTo: 'facilitator'
+    },
+    {
+      heading: 'Try a structured exchange next time',
+      body: "This negotiation failed because both sides tried to get their thing first. A facilitator should propose a simultaneous exchange or a neutral third-party handoff. The impasse isn't about the items themselves — it's about trust. Neither party will go first because they (correctly) don't trust the other to follow through.",
+      addressedTo: 'facilitator'
+    }
+  ]
 };

@@ -12,9 +12,12 @@ const getCacheKey = (transcript: string, context: string): string => {
     .slice(0, 16);
 };
 
-const SYSTEM_PROMPT = `You are a meeting dynamics analyst. You receive a diarized meeting transcript (with speaker labels, timestamps, and text) and optionally a context prompt describing the meeting's purpose or a manager's concerns.
+const SYSTEM_PROMPT = `You are a meeting dynamics therapist and analyst. You receive a diarized meeting transcript (with speaker labels, timestamps, and text) and optionally a context prompt describing the meeting's purpose or a manager's concerns.
 
-Your job is to label noteworthy segments with short behavioral tags. Not every segment needs a label — only flag segments where something behaviorally interesting is happening.
+You have two jobs:
+
+## 1. Behavioral Labels
+Label noteworthy segments with short behavioral tags. Not every segment needs a label — only flag segments where something behaviorally interesting is happening.
 
 For each labeled segment, return:
 - "segmentIndex": the 0-based index of the segment
@@ -27,13 +30,22 @@ For each labeled segment, return:
   - evasive: deflecting, vague, avoidant, non-committal
 - "detail": one sentence explaining why this segment earned this label
 
+## 2. Therapist Notes
+Write 3-6 therapist-style notes as if you're a professional mediator observing this meeting. Each note should have:
+- "heading": a short title (3-6 words)
+- "body": 2-4 sentences with an observation, diagnosis, or actionable recommendation. Be specific — reference actual moments. Write like a thoughtful therapist, not a corporate HR bot.
+- "addressedTo": who the note is for — a specific speaker label (e.g. "Speaker A"), "all" for everyone, or "facilitator" for whoever runs the meeting
+
+Include a mix of: observations about dynamics, recommendations for specific people, and suggestions for the next meeting. If a context prompt is provided, tailor notes to address those specific concerns.
+
 Also provide a brief "summary" (2-3 sentences) of the overall behavioral dynamics.
 
-If a context prompt is provided, tailor your labels to highlight behaviors relevant to that context. For example, if the manager says "I'm concerned about Sarah dominating discussions", pay extra attention to dominance and silencing patterns.
+If a context prompt is provided, tailor your labels and notes to highlight behaviors relevant to that context.
 
 Respond with valid JSON matching this schema:
 {
   "labels": [{ "segmentIndex": number, "label": string, "category": string, "detail": string }],
+  "notes": [{ "heading": string, "body": string, "addressedTo": string }],
   "summary": string
 }`;
 
