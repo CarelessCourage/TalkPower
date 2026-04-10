@@ -10,6 +10,8 @@ const route = useRoute();
 const router = useRouter();
 const analysis = useMeetingAnalysis();
 
+const isSplash = computed(() => route.path === '/');
+
 const {
   transcript,
   volumeAnalysis,
@@ -104,7 +106,6 @@ provide(meetingStateKey, {
 });
 
 const tabs = [
-  { to: '/', label: 'Overview', icon: 'lucide:layout-dashboard' },
   { to: '/behavior', label: 'Behavior', icon: 'lucide:brain' },
   { to: '/speakers', label: 'Speakers', icon: 'lucide:users' },
   { to: '/transcript', label: 'Transcript', icon: 'lucide:scroll-text' }
@@ -112,8 +113,8 @@ const tabs = [
 </script>
 
 <template>
-  <div class="MeetingPage">
-    <header class="MeetingHeader">
+  <div class="MeetingPage" :class="{ meetingPageSplash: isSplash }">
+    <header v-if="!isSplash" class="MeetingHeader">
       <div class="MeetingBrand">
         <h1 class="MeetingTitle">TalkPower</h1>
         <p class="MeetingTagline">Reveal who runs the room</p>
@@ -136,7 +137,7 @@ const tabs = [
       </div>
     </header>
 
-    <template v-if="hasData && metrics">
+    <template v-if="!isSplash && hasData && metrics">
       <!-- Persistent player -->
       <section class="MeetingHero">
         <MeetingPlayer
@@ -165,12 +166,12 @@ const tabs = [
           {{ tab.label }}
         </NuxtLink>
       </nav>
-
-      <!-- Routed content -->
-      <main class="MeetingMain">
-        <NuxtPage />
-      </main>
     </template>
+
+    <!-- Routed content (splash page OR meeting sub-page) -->
+    <main :class="{ MeetingMain: !isSplash }">
+      <NuxtPage />
+    </main>
   </div>
 </template>
 
@@ -202,12 +203,14 @@ const tabs = [
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--base-120);
+  view-transition-name: meeting-title;
 }
 
 .MeetingTagline {
   font-size: var(--caption-text-height);
   color: var(--base-50);
   font-style: italic;
+  view-transition-name: meeting-tagline;
 }
 
 .MeetingUploadLink {

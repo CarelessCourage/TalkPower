@@ -2,7 +2,7 @@ import type { BehaviorAnalysis } from '~/types/meeting';
 
 /** Demo context prompt for the Cosmic Skeptic debate clip. */
 export const cosmicContext =
-  'A philosophical debate about the problem of suffering and the existence of God. Speaker A is a Christian apologist defending the idea that suffering can coexist with a good God, using emotional appeals and personal analogies. Speaker B (Cosmic Skeptic / Alex O\'Connor) is an atheist presenting the logical problem of evil — if God is all-powerful and good, suffering should not exist. The debate is respectful but intellectually pointed. Roughly 49 seconds of dense philosophical exchange.';
+  "A philosophical debate about the problem of suffering and the existence of God. Speaker A is a Christian apologist defending the idea that suffering can coexist with a good God, using emotional appeals and personal analogies. Speaker B (Cosmic Skeptic / Alex O'Connor) is an atheist presenting the logical problem of evil — if God is all-powerful and good, suffering should not exist. The debate is respectful but intellectually pointed. Roughly 49 seconds of dense philosophical exchange.";
 
 /**
  * Pre-generated behavioral labels for the Cosmic Skeptic debate demo.
@@ -67,7 +67,7 @@ export const cosmicLabels: BehaviorAnalysis = {
       label: 'analogy shift to childbirth',
       category: 'constructive',
       detail:
-        'Speaker A introduces childbirth as a case where suffering leads to something good. It\'s a much stronger case than the leukemia example because the suffering is temporary and purposeful. Smart recovery.'
+        "Speaker A introduces childbirth as a case where suffering leads to something good. It's a much stronger case than the leukemia example because the suffering is temporary and purposeful. Smart recovery."
     },
     {
       segmentIndex: 17,
@@ -81,7 +81,7 @@ export const cosmicLabels: BehaviorAnalysis = {
       label: 'falling into the trap',
       category: 'evasive',
       detail:
-        '"Of course. Yeah." — Speaker A agrees too quickly, not realizing they\'ve just conceded Speaker B\'s core point. If painless childbirth would be preferable, and God could make it so, then suffering isn\'t necessary — which means allowing it demands justification.',
+        "\"Of course. Yeah.\" — Speaker A agrees too quickly, not realizing they've just conceded Speaker B's core point. If painless childbirth would be preferable, and God could make it so, then suffering isn't necessary — which means allowing it demands justification.",
       deception:
         'The quick agreement sounds casual and confident, masking the fact that it undermines their own position'
     },
@@ -116,7 +116,7 @@ export const cosmicLabels: BehaviorAnalysis = {
     {
       segmentIndex: 3,
       emotion: 'intellectual engagement',
-      trigger: 'finding the weakness in the opponent\'s framing'
+      trigger: "finding the weakness in the opponent's framing"
     },
     {
       segmentIndex: 8,
@@ -150,11 +150,11 @@ export const cosmicLabels: BehaviorAnalysis = {
     }
   ],
   summary:
-    'A compact but philosophically dense exchange about the problem of evil. Speaker A (the apologist) leads with emotional and theological framing — suffering as divine solidarity, childbirth as purposeful pain. Speaker B (the skeptic) systematically dismantles each analogy using the Socratic method: concede the point, follow the logic, reveal the contradiction. The key moment is the childbirth trap — Speaker A agrees that painless birth would be preferable, inadvertently conceding that suffering is not necessary, which is the skeptic\'s entire thesis. The debate is remarkably civil; both speakers listen and respond to actual arguments rather than talking past each other.',
+    "A compact but philosophically dense exchange about the problem of evil. Speaker A (the apologist) leads with emotional and theological framing — suffering as divine solidarity, childbirth as purposeful pain. Speaker B (the skeptic) systematically dismantles each analogy using the Socratic method: concede the point, follow the logic, reveal the contradiction. The key moment is the childbirth trap — Speaker A agrees that painless birth would be preferable, inadvertently conceding that suffering is not necessary, which is the skeptic's entire thesis. The debate is remarkably civil; both speakers listen and respond to actual arguments rather than talking past each other.",
   notes: [
     {
       heading: 'The emotional vs. logical divide',
-      body: 'Speaker A\'s strongest moments are emotional (divine suffering, childbirth). Speaker B\'s strongest moments are logical (the funeral test, the childbirth trap). Neither approach is wrong, but they\'re playing different games — and in this exchange, the logical game wins because Speaker A keeps conceding logical ground while scoring emotional points that don\'t address the core question.',
+      body: "Speaker A's strongest moments are emotional (divine suffering, childbirth). Speaker B's strongest moments are logical (the funeral test, the childbirth trap). Neither approach is wrong, but they're playing different games — and in this exchange, the logical game wins because Speaker A keeps conceding logical ground while scoring emotional points that don't address the core question.",
       addressedTo: 'all'
     },
     {
@@ -164,7 +164,7 @@ export const cosmicLabels: BehaviorAnalysis = {
     },
     {
       heading: 'The Socratic trap was elegant',
-      body: 'The childbirth sequence was a textbook Socratic argument: start with a shared premise (suffering is real), get agreement on a specific case (childbirth hurts), introduce a hypothetical (what if it didn\'t?), extract a concession (you\'d prefer no pain), then generalize (so suffering isn\'t necessary). Each step was small and reasonable. The conclusion was devastating.',
+      body: "The childbirth sequence was a textbook Socratic argument: start with a shared premise (suffering is real), get agreement on a specific case (childbirth hurts), introduce a hypothetical (what if it didn't?), extract a concession (you'd prefer no pain), then generalize (so suffering isn't necessary). Each step was small and reasonable. The conclusion was devastating.",
       addressedTo: 'Speaker B'
     },
     {
@@ -210,7 +210,7 @@ export const cosmicLabels: BehaviorAnalysis = {
     {
       start: 29,
       end: 35,
-      text: 'Good recovery — pivoting from a lost point to a stronger analogy (childbirth). Don\'t defend weak ground; move to where you\'re stronger.',
+      text: "Good recovery — pivoting from a lost point to a stronger analogy (childbirth). Don't defend weak ground; move to where you're stronger.",
       tone: 'praise',
       speaker: 'Speaker A'
     },

@@ -1,37 +1,62 @@
 <script setup lang="ts">
-import { useMeetingState } from '~/composables/useMeetingState';
+const router = useRouter();
 
-const { metrics, insights, displayName } = useMeetingState();
+const enter = () => {
+  router.push('/behavior');
+};
 </script>
 
 <template>
-  <div class="OverviewPage">
-    <MeetingSummary v-if="metrics" :metrics="metrics" />
-
-    <section class="OverviewSection">
-      <h2 class="OverviewSectionTitle">Power dynamics</h2>
-      <InsightCards :insights="insights" :display-name="displayName" />
-    </section>
+  <div class="SplashPage" @click="enter">
+    <h1 class="SplashTitle">TalkPower</h1>
+    <p class="SplashTagline">Reveal who runs the room</p>
+    <span class="SplashHint">Click anywhere to begin</span>
   </div>
 </template>
 
 <style scoped>
-.OverviewPage {
+.SplashPage {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  cursor: pointer;
+  gap: var(--space-bit-3);
+  user-select: none;
 }
 
-.OverviewSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+.SplashTitle {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--base-120);
+  view-transition-name: meeting-title;
 }
 
-.OverviewSectionTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--base-90);
-  letter-spacing: -0.01em;
+.SplashTagline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--base-50);
+  font-style: italic;
+  view-transition-name: meeting-tagline;
+}
+
+.SplashHint {
+  margin-top: var(--space-4);
+  font-size: 0.75rem;
+  color: var(--base-30);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 </style>

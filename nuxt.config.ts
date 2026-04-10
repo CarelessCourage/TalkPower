@@ -25,5 +25,9 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: ['gsap']
     }
+  },
+
+  experimental: {
+    viewTransition: true
   }
 });
