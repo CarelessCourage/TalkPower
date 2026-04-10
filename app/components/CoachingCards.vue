@@ -13,8 +13,17 @@ const {
   displayName = (raw: string) => raw
 } = defineProps<Props>();
 
+/** Sort cards by start time so we can extend each card until the next one begins */
+const sorted = computed(() => [...cards].sort((a, b) => a.start - b.start));
+
 const activeCards = computed(() =>
-  cards.filter((c) => currentTime >= c.start && currentTime < c.end)
+  sorted.value.filter((card, i) => {
+    if (currentTime < card.start) return false;
+    // Card stays visible until the next card starts (or its own end if it's the last)
+    const next = sorted.value[i + 1];
+    const hideAt = next ? next.start : card.end;
+    return currentTime < hideAt;
+  })
 );
 
 const toneIcon = (tone: CoachingCard['tone']): string => {
@@ -35,7 +44,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
   <TransitionGroup name="coach" tag="div" class="CoachingCards">
     <div
       v-for="(card, i) in activeCards"
-      :key="`${card.start}-${i}`"
+      :key="card.start"
       class="CoachCard"
       :class="`coachTone-${card.tone}`"
     >
@@ -54,7 +63,8 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 <style scoped>
 .CoachingCards {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   gap: var(--space-bit-2);
   pointer-events: none;
 }
@@ -137,7 +147,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 
 .coach-enter-from {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(-20px);
 }
 
 .coach-leave-to {
@@ -145,8 +155,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
   transform: translateX(20px);
 }
 
-.coach-leave-active {
-  position: absolute;
-  right: 0;
+.coach-move {
+  transition: transform var(--time-3, 0.25s) var(--timing, ease-in-out);
 }
 </style>

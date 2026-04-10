@@ -262,14 +262,14 @@ export const theOfficeLabels: BehaviorAnalysis = {
     {
       start: 0.1,
       end: 5,
-      text: "Classic delegation dodge. A good manager would own the presentation and ask Ryan to coach them through it — not push it off entirely.",
+      text: 'Classic delegation dodge. A good manager would own the presentation and ask Ryan to coach them through it — not push it off entirely.',
       tone: 'tip',
       speaker: 'Speaker A'
     },
     {
       start: 3.5,
       end: 10,
-      text: "Ryan is being patient and constructive here. This is exactly how you should handle an avoidant boss — redirect focus back to the actual goal.",
+      text: 'Ryan is being patient and constructive here. This is exactly how you should handle an avoidant boss — redirect focus back to the actual goal.',
       tone: 'praise',
       speaker: 'Speaker B'
     },

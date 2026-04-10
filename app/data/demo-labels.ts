@@ -243,14 +243,14 @@ export const demoLabels: BehaviorAnalysis = {
     {
       start: 0.35,
       end: 6,
-      text: "Opening with threats immediately poisons the negotiation. Never lead with coercion — it puts the other side on the defensive permanently.",
+      text: 'Opening with threats immediately poisons the negotiation. Never lead with coercion — it puts the other side on the defensive permanently.',
       tone: 'warning',
       speaker: 'Speaker A'
     },
     {
       start: 10,
       end: 17,
-      text: "Larry stays calm under pressure and keeps proposing solutions. This is textbook de-escalation — name the problem, propose a trade.",
+      text: 'Larry stays calm under pressure and keeps proposing solutions. This is textbook de-escalation — name the problem, propose a trade.',
       tone: 'praise',
       speaker: 'Speaker C'
     },
@@ -298,7 +298,7 @@ export const demoLabels: BehaviorAnalysis = {
     {
       start: 120,
       end: 128,
-      text: "Despite facing sustained intimidation, Larry never retaliates or escalates. This emotional regulation is the single most important negotiation skill on display here.",
+      text: 'Despite facing sustained intimidation, Larry never retaliates or escalates. This emotional regulation is the single most important negotiation skill on display here.',
       tone: 'praise',
       speaker: 'Speaker C'
     },

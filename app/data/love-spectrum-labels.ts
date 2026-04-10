@@ -249,14 +249,14 @@ export const loveSpectrumLabels: BehaviorAnalysis = {
     {
       start: 79,
       end: 86,
-      text: "Kate mentioning wanting a Christian partner is her most assertive moment. When she does speak, her words carry weight — because she uses them sparingly.",
+      text: 'Kate mentioning wanting a Christian partner is her most assertive moment. When she does speak, her words carry weight — because she uses them sparingly.',
       tone: 'praise',
       speaker: 'Speaker C'
     },
     {
       start: 92,
       end: 99,
-      text: "The conversation is winding down warmly. Both people showed up authentically — that matters more than any technique or strategy.",
+      text: 'The conversation is winding down warmly. Both people showed up authentically — that matters more than any technique or strategy.',
       tone: 'insight'
     },
     {

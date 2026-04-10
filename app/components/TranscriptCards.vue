@@ -324,8 +324,7 @@ const categoryColorClass: Record<string, string> = {
 .card-move,
 .card-enter-active,
 .card-leave-active {
-  transition:
-    all var(--time-3) var(--timing);
+  transition: all var(--time-3) var(--timing);
 }
 
 .card-enter-from {
