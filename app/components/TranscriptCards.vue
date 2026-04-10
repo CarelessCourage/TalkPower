@@ -119,9 +119,11 @@ const categoryColorClass: Record<string, string> = {
               categoryColorClass[getLabel(index)!.category],
               { labelDeceptive: getLabel(index)!.deception }
             ]"
-            :title="getLabel(index)!.deception
-              ? `${getLabel(index)!.detail} ⚠ ${getLabel(index)!.deception}`
-              : getLabel(index)!.detail"
+            :title="
+              getLabel(index)!.deception
+                ? `${getLabel(index)!.detail} ⚠ ${getLabel(index)!.deception}`
+                : getLabel(index)!.detail
+            "
           >
             {{ getLabel(index)!.label }}
             <span v-if="getLabel(index)!.deception" class="LabelDeception">
