@@ -1,0 +1,398 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " Why don't you do",
+      "speaker": "A",
+      "start": 0.10000000000000009,
+      "end": 0.7500000000000002,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Honestly.",
+      "speaker": "B",
+      "start": 0.7500000000000002,
+      "end": 0.8500000000000003,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the presentation?",
+      "speaker": "A",
+      "start": 0.8500000000000003,
+      "end": 1.7000000000000004,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Because",
+      "speaker": "B",
+      "start": 1.7000000000000004,
+      "end": 1.9000000000000006,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I mean,",
+      "speaker": "A",
+      "start": 1.9000000000000006,
+      "end": 2.1000000000000005,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I don't",
+      "speaker": "B",
+      "start": 2.1000000000000005,
+      "end": 2.3500000000000005,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you know",
+      "speaker": "A",
+      "start": 2.3500000000000005,
+      "end": 2.5500000000000007,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " want what",
+      "speaker": "B",
+      "start": 2.5500000000000007,
+      "end": 2.8500000000000005,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " how to do it.",
+      "speaker": "A",
+      "start": 2.8500000000000005,
+      "end": 3.500000000000001,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I really want honestly Michael is for you to know it so that you can communicate it to the people here, to your clients, to whomever.",
+      "speaker": "B",
+      "start": 3.500000000000001,
+      "end": 9.500000000000002,
+      "id": "seg_9"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay.",
+      "speaker": "C",
+      "start": 9.800000000000002,
+      "end": 10.100000000000003,
+      "id": "seg_10"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay.",
+      "speaker": "A",
+      "start": 10.100000000000003,
+      "end": 10.600000000000003,
+      "id": "seg_11"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What?",
+      "speaker": "B",
+      "start": 10.600000000000003,
+      "end": 11.000000000000004,
+      "id": "seg_12"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It's whoever,",
+      "speaker": "B",
+      "start": 11.86,
+      "end": 12.66,
+      "id": "seg_13"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " not whomever.",
+      "speaker": "B",
+      "start": 12.76,
+      "end": 13.41,
+      "id": "seg_14"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That's whomever.",
+      "speaker": "D",
+      "start": 13.41,
+      "end": 14.11,
+      "id": "seg_15"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " No,",
+      "speaker": "B",
+      "start": 14.11,
+      "end": 14.66,
+      "id": "seg_16"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " whomever is never actually right.",
+      "speaker": "B",
+      "start": 14.709999999999999,
+      "end": 16.36,
+      "id": "seg_17"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Well, sometimes it's right.",
+      "speaker": "D",
+      "start": 16.36,
+      "end": 17.709999999999997,
+      "id": "seg_18"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Michael is right.",
+      "speaker": "E",
+      "start": 17.709999999999997,
+      "end": 18.56,
+      "id": "seg_19"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It's a made-up word used to trick students.",
+      "speaker": "E",
+      "start": 18.659999999999997,
+      "end": 20.909999999999997,
+      "id": "seg_20"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " No, actually whomever is the formal version of the word.",
+      "speaker": "D",
+      "start": 20.909999999999997,
+      "end": 24.759999999999998,
+      "id": "seg_21"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Obviously it's a real word,",
+      "speaker": "B",
+      "start": 24.759999999999998,
+      "end": 26.159999999999997,
+      "id": "seg_22"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but I don't know when to use it correctly. Not a native speaker.",
+      "speaker": "B",
+      "start": 26.46,
+      "end": 29.009999999999998,
+      "id": "seg_23"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I know what's right,",
+      "speaker": "E",
+      "start": 29.009999999999998,
+      "end": 29.909999999999997,
+      "id": "seg_24"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but I'm not going to say because you're all jerks who didn't come see my band last night.",
+      "speaker": "E",
+      "start": 30.209999999999997,
+      "end": 34.709999999999994,
+      "id": "seg_25"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Do you really know which one is correct?",
+      "speaker": "B",
+      "start": 34.709999999999994,
+      "end": 35.709999999999994,
+      "id": "seg_26"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I don't know.",
+      "speaker": "E",
+      "start": 35.709999999999994,
+      "end": 36.56,
+      "id": "seg_27"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It's whom when it's the object of the sentence and who when it's",
+      "speaker": "F",
+      "start": 36.81,
+      "end": 39.709999999999994,
+      "id": "seg_28"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " is the subject.",
+      "speaker": "F",
+      "start": 39.54,
+      "end": 40.089999999999996,
+      "id": "seg_29"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That sounds right.",
+      "speaker": "G",
+      "start": 40.089999999999996,
+      "end": 41.089999999999996,
+      "id": "seg_30"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Well, it sounds right, but is it",
+      "speaker": "B",
+      "start": 41.089999999999996,
+      "end": 42.29,
+      "id": "seg_31"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How did Ryan use it as an object?",
+      "speaker": "H",
+      "start": 42.29,
+      "end": 43.79,
+      "id": "seg_32"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " as an object?",
+      "speaker": "B",
+      "start": 43.79,
+      "end": 44.339999999999996,
+      "id": "seg_33"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Ryan used me as an object.",
+      "speaker": "F",
+      "start": 44.44,
+      "end": 45.739999999999995,
+      "id": "seg_34"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Is he right about that?",
+      "speaker": "D",
+      "start": 45.89,
+      "end": 47.19,
+      "id": "seg_35"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How did he use it again?",
+      "speaker": "F",
+      "start": 47.19,
+      "end": 48.14,
+      "id": "seg_36"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It was, Ryan wanted Michael,",
+      "speaker": "B",
+      "start": 48.14,
+      "end": 49.89,
+      "id": "seg_37"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the subject,",
+      "speaker": "B",
+      "start": 49.94,
+      "end": 50.49,
+      "id": "seg_38"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " to explain the computer system,",
+      "speaker": "B",
+      "start": 50.69,
+      "end": 52.34,
+      "id": "seg_39"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the object,",
+      "speaker": "B",
+      "start": 52.44,
+      "end": 52.94,
+      "id": "seg_40"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Thank you.",
+      "speaker": "D",
+      "start": 52.94,
+      "end": 53.34,
+      "id": "seg_41"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " to whomever, meaning us,",
+      "speaker": "B",
+      "start": 53.34,
+      "end": 55.239999999999995,
+      "id": "seg_42"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the indirect object,",
+      "speaker": "B",
+      "start": 55.29,
+      "end": 56.14,
+      "id": "seg_43"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " which is the correct usage of the word.",
+      "speaker": "B",
+      "start": 56.29,
+      "end": 58.54,
+      "id": "seg_44"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " No one asked you anything ever,",
+      "speaker": "D",
+      "start": 58.54,
+      "end": 60.94,
+      "id": "seg_45"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " so whomever's name is Toby,",
+      "speaker": "D",
+      "start": 61.04,
+      "end": 62.739999999999995,
+      "id": "seg_46"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " why don't you take a letter opener and stick it into your skull?",
+      "speaker": "D",
+      "start": 62.84,
+      "end": 65.34,
+      "id": "seg_47"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Go. Hey, this doesn't matter.",
+      "speaker": "B",
+      "start": 65.268,
+      "end": 66.368,
+      "id": "seg_48"
+    }
+  ],
+  "duration": 66.368,
+  "text": "Why don't you do Honestly. the presentation? Because I mean, I don't you know want what how to do it. I really want honestly Michael is for you to know it so that you can communicate it to the people here, to your clients, to whomever. Okay. Okay. What?\nIt's whoever, not whomever. That's whomever. No, whomever is never actually right. Well, sometimes it's right. Michael is right. It's a made-up word used to trick students. No, actually whomever is the formal version of the word. Obviously it's a real word, but I don't know when to use it correctly. Not a native speaker. I know what's right, but I'm not going to say because you're all jerks who didn't come see my band last night. Do you really know which one is correct? I don't know. It's whom when it's the object of the sentence and who when it's\nis the subject. That sounds right. Well, it sounds right, but is it How did Ryan use it as an object? as an object? Ryan used me as an object. Is he right about that? How did he use it again? It was, Ryan wanted Michael, the subject, to explain the computer system, the object, Thank you. to whomever, meaning us, the indirect object, which is the correct usage of the word. No one asked you anything ever, so whomever's name is Toby, why don't you take a letter opener and stick it into your skull?\nGo. Hey, this doesn't matter."
+}

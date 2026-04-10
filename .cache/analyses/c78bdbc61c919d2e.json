@@ -1,0 +1,112 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 3,
+      "label": "frustrated clarification",
+      "category": "constructive",
+      "detail": "Ryan is trying to clarify his point about the presentation, showing his desire for effective communication.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 12,
+      "label": "defensive challenge",
+      "category": "assertive",
+      "detail": "Ryan challenges Michael's suggestion, asserting his knowledge on the subject.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 20,
+      "label": "petty deflection",
+      "category": "destructive",
+      "detail": "Kelly dismisses the grammar debate by referencing personal grievances, diverting attention from the topic.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 25,
+      "label": "passive-aggressive remark",
+      "category": "destructive",
+      "detail": "Kelly's comment about not sharing her knowledge due to perceived slights reflects passive-aggressive behavior.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 46,
+      "label": "hostile dismissal",
+      "category": "destructive",
+      "detail": "Dwight's aggressive comment towards Toby shows hostility and a lack of respect for differing opinions.",
+      "deception": null
+    },
+    {
+      "segmentIndex": 48,
+      "label": "deflecting importance",
+      "category": "evasive",
+      "detail": "Ryan attempts to downplay the significance of the argument, signaling frustration with the ongoing debate.",
+      "deception": null
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 3,
+      "emotion": "frustrated",
+      "trigger": "unprovoked",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "defensive",
+      "trigger": "challenged by Michael",
+      "surface": "assertive"
+    },
+    {
+      "segmentIndex": 20,
+      "emotion": "petty",
+      "trigger": "feeling ignored",
+      "surface": "dismissive"
+    },
+    {
+      "segmentIndex": 25,
+      "emotion": "resentful",
+      "trigger": "past grievances",
+      "surface": "playful"
+    },
+    {
+      "segmentIndex": 46,
+      "emotion": "hostile",
+      "trigger": "disagreement with Toby",
+      "surface": "dismissive"
+    },
+    {
+      "segmentIndex": 48,
+      "emotion": "frustrated",
+      "trigger": "ongoing argument",
+      "surface": "calm"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Frustration in Communication",
+      "body": "Ryan's repeated attempts to clarify his points reveal his frustration with the lack of understanding from his colleagues. It may be beneficial for him to express his feelings more openly to encourage a more constructive dialogue.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Hostility Towards Dissent",
+      "body": "Dwight's aggressive comment towards Toby indicates a toxic dynamic where differing opinions are met with hostility. Encouraging a culture of respect for all contributions, regardless of hierarchy, would improve group cohesion.",
+      "addressedTo": "Speaker D"
+    },
+    {
+      "heading": "Petty Behavior Undermines Discussion",
+      "body": "Kelly's comments about personal grievances detract from the debate at hand. It would be helpful for her to focus on the topic rather than personal feelings to foster a more productive environment.",
+      "addressedTo": "Speaker E"
+    },
+    {
+      "heading": "Power Dynamics at Play",
+      "body": "Michael's confident yet clueless demeanor creates a power imbalance that frustrates knowledgeable team members like Ryan. It may be helpful for Michael to seek input and validate others' expertise to balance the dynamics.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Need for Constructive Engagement",
+      "body": "The overall tone of the meeting suggests a need for more constructive engagement. Encouraging open dialogue and valuing each person's input could lead to more effective communication and collaboration.",
+      "addressedTo": "all"
+    }
+  ],
+  "summary": "The meeting showcased a mix of constructive and destructive behaviors, with Ryan's frustration and Dwight's hostility standing out. While some members attempted to clarify and engage, others resorted to petty remarks and aggression, highlighting the need for a more respectful and collaborative environment."
+}
