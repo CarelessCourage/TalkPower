@@ -31,6 +31,7 @@ For each labeled segment, return:
   - assertive: confident, direct, boundary-setting, advocating
   - evasive: deflecting, vague, avoidant, non-committal
 - "detail": one sentence explaining why this segment earned this label
+- "deception" (optional): only include when the behavior involves deliberate dishonesty, manipulation, or bad-faith tactics. Describe what's deceptive in plain language (e.g. "pretends to offer cooperation with no intent to follow through", "frames a threat as a joke", "claims authority they don't have"). This is critical for people who take words at face value and need explicit flags when someone is being dishonest.
 
 ## 2. Emotional State
 Read the emotional undercurrent of each noteworthy segment. These are the feelings beneath the words — the kind of cues that aren't always obvious from text alone. Not every segment needs one; skip segments with unremarkable emotional states.
@@ -61,7 +62,7 @@ If a context prompt is provided, tailor your labels and notes to highlight behav
 
 Respond with valid JSON matching this schema:
 {
-  "labels": [{ "segmentIndex": number, "label": string, "category": string, "detail": string }],
+  "labels": [{ "segmentIndex": number, "label": string, "category": string, "detail": string, "deception"?: string }],
   "emotions": [{ "segmentIndex": number, "emotion": string, "trigger": string, "surface"?: string }],
   "notes": [{ "heading": string, "body": string, "addressedTo": string }],
   "summary": string

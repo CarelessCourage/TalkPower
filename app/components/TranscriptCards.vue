@@ -115,10 +115,18 @@ const categoryColorClass: Record<string, string> = {
           <span
             v-if="getLabel(index)"
             class="CardLabel"
-            :class="categoryColorClass[getLabel(index)!.category]"
-            :title="getLabel(index)!.detail"
+            :class="[
+              categoryColorClass[getLabel(index)!.category],
+              { labelDeceptive: getLabel(index)!.deception }
+            ]"
+            :title="getLabel(index)!.deception
+              ? `${getLabel(index)!.detail} ⚠ ${getLabel(index)!.deception}`
+              : getLabel(index)!.detail"
           >
             {{ getLabel(index)!.label }}
+            <span v-if="getLabel(index)!.deception" class="LabelDeception">
+              deceptive
+            </span>
           </span>
           <span
             v-if="getEmotion(index)"
@@ -219,7 +227,8 @@ const categoryColorClass: Record<string, string> = {
 }
 
 .CardLabel {
-  display: inline-block;
+  align-items: center;
+  gap: var(--space-bit-1);
   padding: 2px var(--space-bit-2);
   border-radius: var(--radius-inner);
   font-size: 0.6875rem;
@@ -227,6 +236,20 @@ const categoryColorClass: Record<string, string> = {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   cursor: help;
+}
+
+.CardLabel.labelDeceptive {
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.LabelDeception {
+  font-weight: 500;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.75;
+  font-size: 0.625rem;
+  color: var(--accent-80);
 }
 
 .CardEmotion {

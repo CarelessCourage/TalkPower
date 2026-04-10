@@ -72,7 +72,9 @@ export const demoLabels: BehaviorAnalysis = {
       label: 'fake generosity',
       category: 'evasive',
       detail:
-        'Pretends to be "Conrad the Trustworthy" then reveals it was a trick — poisoning any trust that could enable sharing.'
+        'Pretends to be "Conrad the Trustworthy" then reveals it was a trick — poisoning any trust that could enable sharing.',
+      deception:
+        'Claims to be trustworthy as a setup — the "generosity" is a trick to get the other person to lower their guard'
     },
     {
       segmentIndex: 21,

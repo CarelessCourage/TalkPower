@@ -120,6 +120,8 @@ export interface BehaviorLabel {
   category: BehaviorCategory;
   /** One-line reasoning from the AI */
   detail: string;
+  /** When present, describes what's deceptive about this behavior */
+  deception?: string;
 }
 
 /** AI-detected emotional state for a transcript segment */
