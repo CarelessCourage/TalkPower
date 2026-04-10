@@ -77,31 +77,24 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
             :labels="behaviorLabels"
             @seek="onSeek"
           />
-          <AnalysisSettings
-            :threshold="interruptionThreshold"
-            :interruption-count="interruptions.length"
-            :hard-count="hardInterruptions"
-            :soft-count="softInterruptions"
-            @update:threshold="interruptionThreshold = $event"
-          />
+
+          <!-- Behavior analysis -->
+          <section class="MeetingSection">
+            <h2 class="MeetingSectionTitle">Behavior analysis</h2>
+            <p v-if="behaviorAnalysis?.summary" class="MeetingBehaviorSummary">
+              {{ behaviorAnalysis.summary }}
+            </p>
+            <BehaviorPrompt
+              v-model="behaviorContext"
+              :analyzing="analyzingBehavior"
+              :has-labels="behaviorLabels.length > 0"
+              @analyze="analyzeBehavior"
+            />
+          </section>
         </section>
 
         <!-- Summary row -->
         <MeetingSummary :metrics="metrics" />
-
-        <!-- Behavior analysis -->
-        <section class="MeetingSection">
-          <h2 class="MeetingSectionTitle">Behavior analysis</h2>
-          <p v-if="behaviorAnalysis?.summary" class="MeetingBehaviorSummary">
-            {{ behaviorAnalysis.summary }}
-          </p>
-          <BehaviorPrompt
-            v-model="behaviorContext"
-            :analyzing="analyzingBehavior"
-            :has-labels="behaviorLabels.length > 0"
-            @analyze="analyzeBehavior"
-          />
-        </section>
 
         <!-- Dominance insights -->
         <section class="MeetingSection">
@@ -137,6 +130,14 @@ const behaviorLabels = computed(() => behaviorAnalysis.value?.labels ?? []);
             :speakers="volumeAnalysis.speakers"
           />
         </section>
+
+        <AnalysisSettings
+          :threshold="interruptionThreshold"
+          :interruption-count="interruptions.length"
+          :hard-count="hardInterruptions"
+          :soft-count="softInterruptions"
+          @update:threshold="interruptionThreshold = $event"
+        />
 
         <!-- Transcript -->
         <section class="MeetingSection">
