@@ -61,29 +61,21 @@ const onSeek = (time: number) => {
     <main class="MeetingMain">
       <!-- Analysis dashboard -->
       <template v-if="hasData && metrics">
-        <!-- Player -->
-        <MeetingPlayer :src="playerSrc" />
-
-        <!-- Conversation flow — hero feature -->
+        <!-- Player with subtitle cards + scrubber -->
         <section class="MeetingSection MeetingHero">
-          <h2 class="MeetingHeroTitle">Conversation flow</h2>
-          <p class="MeetingHeroSub">
-            Scrub through the meeting to see who spoke, when, and how they
-            interacted
-          </p>
+          <MeetingPlayer
+            :src="playerSrc"
+            :segments="segments"
+            :duration="duration"
+            :interruptions="interruptions"
+            @seek="onSeek"
+          />
           <AnalysisSettings
             :threshold="interruptionThreshold"
             :interruption-count="interruptions.length"
             :hard-count="hardInterruptions"
             :soft-count="softInterruptions"
             @update:threshold="interruptionThreshold = $event"
-          />
-          <ConversationTimeline
-            :segments="segments"
-            :duration="duration"
-            :current-time="currentTime ?? 0"
-            :interruptions="interruptions"
-            @seek="onSeek"
           />
         </section>
 
@@ -207,22 +199,10 @@ const onSeek = (time: number) => {
 }
 
 .MeetingHero {
-  padding: var(--space-3);
   background: var(--base-10);
   border-radius: var(--radius-outer);
   border: 1px solid var(--base-20);
-}
-
-.MeetingHeroTitle {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--base-120);
-  letter-spacing: -0.02em;
-}
-
-.MeetingHeroSub {
-  font-size: var(--caption-text-height);
-  color: var(--base-50);
+  overflow: hidden;
 }
 
 .MeetingTabs {

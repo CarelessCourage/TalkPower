@@ -69,16 +69,14 @@ const onSeek = (time: number) => {
 
       <!-- Analysis dashboard -->
       <template v-if="hasData && metrics">
-        <MeetingPlayer v-if="audioUrl" :src="audioUrl" />
-
-        <MeetingSummary :metrics="metrics" />
-
-        <section class="UploadSection UploadHero">
-          <h2 class="UploadHeroTitle">Conversation flow</h2>
-          <p class="UploadHeroSub">
-            Scrub through the meeting to see who spoke, when, and how they
-            interacted
-          </p>
+        <section v-if="audioUrl" class="UploadSection UploadHero">
+          <MeetingPlayer
+            :src="audioUrl"
+            :segments="segments"
+            :duration="duration"
+            :interruptions="interruptions"
+            @seek="onSeek"
+          />
           <AnalysisSettings
             :threshold="interruptionThreshold"
             :interruption-count="interruptions.length"
@@ -86,14 +84,9 @@ const onSeek = (time: number) => {
             :soft-count="softInterruptions"
             @update:threshold="interruptionThreshold = $event"
           />
-          <ConversationTimeline
-            :segments="segments"
-            :duration="duration"
-            :current-time="currentTime ?? 0"
-            :interruptions="interruptions"
-            @seek="onSeek"
-          />
         </section>
+
+        <MeetingSummary :metrics="metrics" />
 
         <section class="UploadSection">
           <h2 class="UploadSectionTitle">Power dynamics</h2>
@@ -214,22 +207,10 @@ const onSeek = (time: number) => {
 }
 
 .UploadHero {
-  padding: var(--space-3);
   background: var(--base-10);
   border-radius: var(--radius-outer);
   border: 1px solid var(--base-20);
-}
-
-.UploadHeroTitle {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--base-120);
-  letter-spacing: -0.02em;
-}
-
-.UploadHeroSub {
-  font-size: var(--caption-text-height);
-  color: var(--base-50);
+  overflow: hidden;
 }
 
 .UploadError {

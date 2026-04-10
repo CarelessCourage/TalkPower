@@ -1,13 +1,26 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
+import type { TranscriptSegment, Interruption } from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
 interface Props {
   src: string;
+  segments?: TranscriptSegment[];
+  duration?: number;
+  interruptions?: Interruption[];
 }
 
-const { src } = defineProps<Props>();
+const {
+  src,
+  segments = [],
+  duration = 0,
+  interruptions = []
+} = defineProps<Props>();
+
+const emit = defineEmits<{
+  seek: [time: number];
+}>();
 
 const playerId = ref('meeting-player');
 
@@ -19,48 +32,130 @@ const playerOptions = computed(() => ({
   autoplay: false
 }));
 
-const { currentTime, duration, playing, audioApi } = useMagicPlayer(playerId);
+const {
+  currentTime,
+  duration: playerDuration,
+  playing,
+  audioApi
+} = useMagicPlayer(playerId);
+
+const effectiveDuration = computed(() => duration || playerDuration.value || 0);
 
 const progress = computed(() => {
-  if (!duration.value || duration.value === 0) return 0;
-  return (currentTime.value / duration.value) * 100;
+  if (!effectiveDuration.value || effectiveDuration.value === 0) return '0%';
+  return `${((currentTime.value ?? 0) / effectiveDuration.value) * 100}%`;
 });
 
 const seek = (time: number) => {
   audioApi.seek(time);
+  emit('seek', time);
 };
 
-defineExpose({ currentTime, duration, seek });
+/* ── Scrub track ── */
+const trackEl = ref<HTMLElement | null>(null);
+const isDragging = ref(false);
+
+const colorClasses = [
+  'base-accent',
+  'base-info',
+  'base-warning',
+  'base-success',
+  'base-yellow'
+];
+const speakerColorMap: Record<string, string> = {};
+
+const getSpeakerColor = (speaker: string): string => {
+  if (!(speaker in speakerColorMap)) {
+    const idx = Object.keys(speakerColorMap).length % colorClasses.length;
+    speakerColorMap[speaker] = colorClasses[idx]!;
+  }
+  return speakerColorMap[speaker]!;
+};
+
+const getSegmentStyle = (segment: TranscriptSegment) => {
+  const d = effectiveDuration.value;
+  if (d <= 0) return { left: '0%', width: '0%' };
+  const left = (segment.start / d) * 100;
+  const width = ((segment.end - segment.start) / d) * 100;
+  return {
+    left: `${left}%`,
+    width: `${Math.max(width, 0.3)}%`
+  };
+};
+
+const getTimeFromEvent = (e: MouseEvent | PointerEvent): number => {
+  if (!trackEl.value) return 0;
+  const rect = trackEl.value.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min((e.clientX - rect.left) / rect.width, 1));
+  return ratio * effectiveDuration.value;
+};
+
+const onPointerDown = (e: PointerEvent) => {
+  isDragging.value = true;
+  seek(getTimeFromEvent(e));
+  (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+};
+
+const onPointerMove = (e: PointerEvent) => {
+  if (!isDragging.value) return;
+  seek(getTimeFromEvent(e));
+};
+
+const onPointerUp = () => {
+  isDragging.value = false;
+};
+
+defineExpose({ currentTime, duration: playerDuration, seek });
 </script>
 
 <template>
   <div class="MeetingPlayer surface">
-    <MagicPlayerProvider :id="playerId" :options="playerOptions">
-      <MagicPlayerVideo />
-    </MagicPlayerProvider>
+    <!-- Video + subtitle overlay -->
+    <div class="PlayerViewport">
+      <MagicPlayerProvider :id="playerId" :options="playerOptions">
+        <MagicPlayerVideo />
+      </MagicPlayerProvider>
 
+      <div class="PlayerSubtitles">
+        <TranscriptCards
+          :segments="segments"
+          :current-time="currentTime ?? 0"
+          :interruptions="interruptions"
+        />
+      </div>
+    </div>
+
+    <!-- Controls + scrubber -->
     <div class="PlayerControls">
-      <button class="PlayerPlayBtn base-accent" @click="audioApi.togglePlay()">
-        {{ playing ? 'Pause' : 'Play' }}
+      <button class="PlayerPlayBtn" @click="audioApi.togglePlay()">
+        <Icon v-if="playing" name="lucide:pause" size="18" />
+        <Icon v-else name="lucide:play" size="18" />
       </button>
 
+      <span class="PlayerTimestamp mono">
+        {{ formatSeconds(currentTime ?? 0) }}
+      </span>
+
       <div
-        class="PlayerProgress"
-        @click="
-          (e: MouseEvent) => {
-            const el = e.currentTarget as HTMLElement;
-            const rect = el.getBoundingClientRect();
-            const ratio = (e.clientX - rect.left) / rect.width;
-            seek(ratio * (duration ?? 0));
-          }
-        "
+        ref="trackEl"
+        class="PlayerTrack"
+        @pointerdown="onPointerDown"
+        @pointermove="onPointerMove"
+        @pointerup="onPointerUp"
       >
-        <div class="PlayerProgressFill" :style="{ width: progress + '%' }" />
+        <div
+          v-for="(segment, i) in segments"
+          :key="i"
+          class="TrackSegment"
+          :class="getSpeakerColor(segment.speaker)"
+          :style="getSegmentStyle(segment)"
+        />
+        <div class="TrackProgress" :style="{ width: progress }" />
+        <div class="TrackPlayhead" :style="{ left: progress }" />
       </div>
 
-      <span class="PlayerTime mono">
-        {{ formatSeconds(currentTime ?? 0) }} /
-        {{ formatSeconds(duration ?? 0) }}
+      <span class="PlayerTimestamp mono">
+        {{ formatSeconds(effectiveDuration) }}
       </span>
     </div>
   </div>
@@ -71,61 +166,111 @@ defineExpose({ currentTime, duration, seek });
   display: flex;
   flex-direction: column;
   gap: var(--space-bit-2);
-  padding: var(--space-bit-3) var(--space-bit-4);
   border-radius: var(--radius-outer);
   overflow: hidden;
 }
 
+/* ── Viewport: video + subtitle overlay ── */
+.PlayerViewport {
+  position: relative;
+}
+
 .MeetingPlayer :deep(video) {
   width: 100%;
-  border-radius: var(--radius);
   display: block;
 }
 
+.PlayerSubtitles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-2) var(--space-3);
+  max-height: 50%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.PlayerSubtitles::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Controls row ── */
 .PlayerControls {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-bit-3);
+  padding: var(--space-bit-2) var(--space-bit-3);
 }
 
 .PlayerPlayBtn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: var(--block-2);
-  padding: 0 var(--space-bit-3);
-  border-radius: var(--radius);
-  background: var(--base-70);
-  color: var(--base-text);
-  font-weight: 600;
-  font-size: var(--caption-text-height);
-  min-width: 64px;
-  transition: background var(--time-2) var(--timing);
+  width: var(--block-1);
+  height: var(--block-1);
+  border-radius: 50%;
+  background: var(--base-20);
+  color: var(--base-100);
+  flex-shrink: 0;
+  transition:
+    background var(--time-2) var(--timing),
+    color var(--time-2) var(--timing);
 }
 
 .PlayerPlayBtn:hover {
-  background: var(--base-80);
+  background: var(--base-30);
+  color: var(--base-120);
 }
 
-.PlayerProgress {
+.PlayerTimestamp {
+  font-size: var(--caption-text-height);
+  color: var(--base-50);
+  flex-shrink: 0;
+  min-width: 3ch;
+  text-align: center;
+}
+
+/* ── Combined scrubber track ── */
+.PlayerTrack {
+  position: relative;
   flex: 1;
-  height: var(--space-bit-2);
-  background: var(--base-30);
+  height: var(--space-3);
+  background: var(--base-20);
   border-radius: var(--radius-inner);
   cursor: pointer;
+  touch-action: none;
   overflow: hidden;
 }
 
-.PlayerProgressFill {
+.TrackSegment {
+  position: absolute;
+  top: 0;
   height: 100%;
-  background: var(--accent-70);
+  background: var(--base-60);
   border-radius: var(--radius-inner);
-  transition: width 0.1s linear;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
-.PlayerTime {
-  font-size: var(--caption-text-height);
-  color: var(--base-60);
-  white-space: nowrap;
+.TrackProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--base-40);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.TrackPlayhead {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 3px;
+  background: var(--base-text);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
 }
 </style>
