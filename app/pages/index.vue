@@ -36,6 +36,7 @@ const speakerTab = ref<'airtime' | 'volume'>('airtime');
 const hardInterruptions = computed(
   () => interruptions.value.filter((i) => i.severity === 'hard').length
 );
+
 const softInterruptions = computed(
   () => interruptions.value.filter((i) => i.severity === 'soft').length
 );

@@ -13,7 +13,7 @@ const playerId = ref('meeting-player');
 
 const playerOptions = computed(() => ({
   src,
-  mode: 'audio' as const,
+  mode: 'video' as const,
   srcType: 'native' as const,
   preload: 'metadata' as const,
   autoplay: false
@@ -36,7 +36,7 @@ defineExpose({ currentTime, duration, seek });
 <template>
   <div class="MeetingPlayer surface">
     <MagicPlayerProvider :id="playerId" :options="playerOptions">
-      <MagicPlayerAudio />
+      <MagicPlayerVideo />
     </MagicPlayerProvider>
 
     <div class="PlayerControls">
@@ -72,6 +72,14 @@ defineExpose({ currentTime, duration, seek });
   flex-direction: column;
   gap: var(--space-bit-2);
   padding: var(--space-bit-3) var(--space-bit-4);
+  border-radius: var(--radius-outer);
+  overflow: hidden;
+}
+
+.MeetingPlayer :deep(video) {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
 }
 
 .PlayerControls {
