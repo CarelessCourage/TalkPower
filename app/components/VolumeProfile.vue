@@ -5,9 +5,10 @@ import type { SpeakerVolume } from '~/types/meeting';
 
 interface Props {
   speakers: SpeakerVolume[];
+  displayName?: (raw: string) => string;
 }
 
-const { speakers } = defineProps<Props>();
+const { speakers, displayName = (raw: string) => raw } = defineProps<Props>();
 
 const colorClasses = [
   'base-accent',
@@ -47,7 +48,7 @@ onMounted(() => {
     >
       <div class="VolumeLabel">
         <span class="VolumeName" :class="getSpeakerColor(i)">{{
-          speaker.speaker
+          displayName(speaker.speaker)
         }}</span>
         <span class="VolumeAvg mono"
           >{{ Math.round(speaker.averageRms * 100) }}%</span

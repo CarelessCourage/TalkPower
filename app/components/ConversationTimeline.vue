@@ -9,13 +9,15 @@ interface Props {
   duration: number;
   currentTime: number;
   interruptions?: Interruption[];
+  displayName?: (raw: string) => string;
 }
 
 const {
   segments,
   duration,
   currentTime = 0,
-  interruptions = []
+  interruptions = [],
+  displayName = (raw: string) => raw
 } = defineProps<Props>();
 
 const emit = defineEmits<{
@@ -189,7 +191,7 @@ watch(
                 <span
                   :class="getSpeakerColor(getInterruption(index)!.interrupter)"
                 >
-                  {{ getInterruption(index)!.interrupter }}
+                  {{ displayName(getInterruption(index)!.interrupter) }}
                 </span>
                 <span class="CardCutOff">
                   {{
@@ -201,13 +203,13 @@ watch(
                 <span
                   :class="getSpeakerColor(getInterruption(index)!.interrupted)"
                 >
-                  {{ getInterruption(index)!.interrupted }}
+                  {{ displayName(getInterruption(index)!.interrupted) }}
                 </span>
               </span>
             </div>
             <div class="CardMeta">
               <span class="CardSpeaker" :class="getSpeakerColor(seg.speaker)">
-                {{ seg.speaker }}
+                {{ displayName(seg.speaker) }}
               </span>
               <span class="CardTime mono">{{ formatSeconds(seg.start) }}</span>
             </div>

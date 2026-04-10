@@ -157,6 +157,8 @@ export interface BehaviorAnalysis {
   notes?: TherapistNote[];
   /** The context prompt that produced these labels (used for caching) */
   context?: string;
+  /** AI-inferred or user-edited speaker display names, keyed by raw label e.g. "Speaker A" */
+  speakerNames?: Record<string, string>;
 }
 
 /** Upload state machine */

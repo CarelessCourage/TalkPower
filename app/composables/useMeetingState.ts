@@ -24,6 +24,11 @@ export interface MeetingState {
   hasData: ComputedRef<boolean>;
   analyzeBehavior: (context?: string) => Promise<void>;
 
+  /** Reactive speaker display names map */
+  speakerNames: Ref<Record<string, string>>;
+  /** Resolve a raw speaker label to its display name */
+  displayName: (raw: string) => string;
+
   /** Derived values provided by the parent page */
   segments: ComputedRef<TranscriptSegment[]>;
   duration: ComputedRef<number>;

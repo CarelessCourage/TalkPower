@@ -13,6 +13,7 @@ interface Props {
   interruptions?: Interruption[];
   labels?: BehaviorLabel[];
   emotions?: EmotionLabel[];
+  displayName?: (raw: string) => string;
 }
 
 const {
@@ -20,7 +21,8 @@ const {
   currentTime = 0,
   interruptions = [],
   labels = [],
-  emotions = []
+  emotions = [],
+  displayName = (raw: string) => raw
 } = defineProps<Props>();
 
 /* ── Speaker colors ── */
@@ -92,7 +94,7 @@ const categoryColorClass: Record<string, string> = {
         <div v-if="getInterruption(index)" class="CardInterruptionBanner">
           <span class="CardInterruptionLabel">
             <span :class="getSpeakerColor(getInterruption(index)!.interrupter)">
-              {{ getInterruption(index)!.interrupter }}
+              {{ displayName(getInterruption(index)!.interrupter) }}
             </span>
             <span class="CardCutOff">
               {{
@@ -100,13 +102,13 @@ const categoryColorClass: Record<string, string> = {
               }}
             </span>
             <span :class="getSpeakerColor(getInterruption(index)!.interrupted)">
-              {{ getInterruption(index)!.interrupted }}
+              {{ displayName(getInterruption(index)!.interrupted) }}
             </span>
           </span>
         </div>
         <div class="CardMeta">
           <span class="CardSpeaker" :class="getSpeakerColor(seg.speaker)">
-            {{ seg.speaker }}
+            {{ displayName(seg.speaker) }}
           </span>
           <span class="CardTime mono">{{ formatSeconds(seg.start) }}</span>
         </div>

@@ -16,6 +16,7 @@ interface Props {
   interruptions?: Interruption[];
   labels?: BehaviorLabel[];
   emotions?: EmotionLabel[];
+  displayName?: (raw: string) => string;
 }
 
 const {
@@ -24,7 +25,8 @@ const {
   duration = 0,
   interruptions = [],
   labels = [],
-  emotions = []
+  emotions = [],
+  displayName = (raw: string) => raw
 } = defineProps<Props>();
 
 const emit = defineEmits<{
@@ -132,6 +134,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
           :interruptions="interruptions"
           :labels="labels"
           :emotions="emotions"
+          :display-name="displayName"
         />
       </div>
     </div>

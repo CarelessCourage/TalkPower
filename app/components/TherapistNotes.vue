@@ -5,9 +5,14 @@ import type { TherapistNote } from '~/types/meeting';
 interface Props {
   notes: TherapistNote[];
   summary?: string;
+  displayName?: (raw: string) => string;
 }
 
-const { notes, summary } = defineProps<Props>();
+const {
+  notes,
+  summary,
+  displayName = (raw: string) => raw
+} = defineProps<Props>();
 
 const addresseeIcon = (to: string): string => {
   if (to === 'all') return 'lucide:users';
@@ -18,7 +23,7 @@ const addresseeIcon = (to: string): string => {
 const addresseeLabel = (to: string): string => {
   if (to === 'all') return 'Everyone';
   if (to === 'facilitator') return 'Facilitator';
-  return to;
+  return displayName(to);
 };
 
 /** Group notes: individual speakers first, then "all", then "facilitator" */

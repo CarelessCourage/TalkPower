@@ -6,9 +6,15 @@ interface Props {
   segments: TranscriptSegment[];
   activeIndex: number;
   interruptions?: Interruption[];
+  displayName?: (raw: string) => string;
 }
 
-const { segments, activeIndex = -1, interruptions = [] } = defineProps<Props>();
+const {
+  segments,
+  activeIndex = -1,
+  interruptions = [],
+  displayName = (raw: string) => raw
+} = defineProps<Props>();
 
 const emit = defineEmits<{
   seek: [time: number];
@@ -60,13 +66,13 @@ const getInterruption = (index: number): Interruption | undefined => {
       <div v-if="getInterruption(i)" class="InterruptionBanner">
         <span class="InterruptionLabel">
           <span :class="getSpeakerColor(getInterruption(i)!.interrupter)">
-            {{ getInterruption(i)!.interrupter }}
+            {{ displayName(getInterruption(i)!.interrupter) }}
           </span>
           <span class="InterruptionCutOff">
             {{ getInterruption(i)!.severity === 'hard' ? 'cut off' : 'soft' }}
           </span>
           <span :class="getSpeakerColor(getInterruption(i)!.interrupted)">
-            {{ getInterruption(i)!.interrupted }}
+            {{ displayName(getInterruption(i)!.interrupted) }}
           </span>
         </span>
         <span class="InterruptionOverlap mono">
@@ -83,7 +89,7 @@ const getInterruption = (index: number): Interruption | undefined => {
           class="TranscriptSpeaker"
           :class="getSpeakerColor(segment.speaker)"
         >
-          {{ segment.speaker }}
+          {{ displayName(segment.speaker) }}
         </span>
         <span class="TranscriptTime mono">{{
           formatSeconds(segment.start)

@@ -108,5 +108,8 @@ export const meanGirlsLabels: BehaviorAnalysis = {
       body: 'The pivot from "just as cute" to "just as smart" reveals that this isn\'t purely about fairness — it\'s personal. Speaker A is comparing herself to the popular girl on every dimension. Acknowledging the jealousy honestly would be more productive than channeling it into political rhetoric. It\'s okay to feel envious; it\'s not okay to weaponize a classroom.',
       addressedTo: 'Speaker A'
     }
-  ]
+  ],
+  speakerNames: {
+    'Speaker A': 'Gretchen Wieners'
+  }
 };

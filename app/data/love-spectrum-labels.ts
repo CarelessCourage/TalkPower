@@ -191,5 +191,10 @@ export const loveSpectrumLabels: BehaviorAnalysis = {
       body: "You were mostly quiet — and that's perfectly okay. First dates are nerve-wracking, especially the actual first one. But when you did speak (\"It's my first time\"), it created the best moment of the conversation. Your words have weight precisely because you use them sparingly. As you get more comfortable, try sharing one thing you're excited about — you don't need to match his energy, just add your own.",
       addressedTo: 'Speaker C'
     }
-  ]
+  ],
+  speakerNames: {
+    'Speaker A': 'Subodh',
+    'Speaker B': 'Waitress',
+    'Speaker C': 'Kate'
+  }
 };

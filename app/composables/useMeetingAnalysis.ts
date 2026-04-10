@@ -48,6 +48,9 @@ export const useMeetingAnalysis = () => {
 
   const audioUrl = useObjectUrl(audioFile);
 
+  /** Reactive speaker display names — keyed by raw label (e.g. "Speaker A") */
+  const speakerNames = ref<Record<string, string>>({});
+
   const interruptionThreshold = ref(DEFAULT_INTERRUPTION_THRESHOLD);
 
   const metrics = computed<MeetingMetrics | null>(() => {
@@ -130,6 +133,11 @@ export const useMeetingAnalysis = () => {
     demoVideoUrl.value = demo.video;
     activeDemo.value = demo.slug;
 
+    // Seed speaker names from demo labels (AI-inferred or hand-written)
+    speakerNames.value = demo.labels.speakerNames
+      ? { ...demo.labels.speakerNames }
+      : {};
+
     // Seed the behavior cache so re-analyze with same prompt is instant
     if (demo.labels.labels.length) {
       const key = behaviorCacheKey(
@@ -177,6 +185,10 @@ export const useMeetingAnalysis = () => {
       behaviorAnalysis.value = result;
       behaviorContext.value = prompt;
       behaviorCache.set(key, result);
+      // Seed speaker names from AI if not already customized
+      if (result.speakerNames && !Object.keys(speakerNames.value).length) {
+        speakerNames.value = { ...result.speakerNames };
+      }
     } catch (err) {
       console.error('Behavior analysis failed:', err);
     } finally {
@@ -195,6 +207,7 @@ export const useMeetingAnalysis = () => {
     audioFile.value = null;
     demoVideoUrl.value = null;
     activeDemo.value = null;
+    speakerNames.value = {};
   };
 
   return {
@@ -211,6 +224,7 @@ export const useMeetingAnalysis = () => {
     audioUrl,
     demoVideoUrl,
     activeDemo,
+    speakerNames,
     metrics,
     insights,
     hasData,

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useMeetingState } from '~/composables/useMeetingState';
 
-const { metrics, insights } = useMeetingState();
+const { metrics, insights, displayName } = useMeetingState();
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const { metrics, insights } = useMeetingState();
 
     <section class="OverviewSection">
       <h2 class="OverviewSectionTitle">Power dynamics</h2>
-      <InsightCards :insights="insights" />
+      <InsightCards :insights="insights" :display-name="displayName" />
     </section>
   </div>
 </template>

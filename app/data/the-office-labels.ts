@@ -16,14 +16,14 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'delegation dodge',
       category: 'evasive',
       detail:
-        'Michael opens by trying to push the presentation onto Ryan. This is his core move: avoid work he doesn\'t understand by framing it as an opportunity for someone else.'
+        "Michael opens by trying to push the presentation onto Ryan. This is his core move: avoid work he doesn't understand by framing it as an opportunity for someone else."
     },
     {
       segmentIndex: 9,
       label: 'patient explanation',
       category: 'constructive',
       detail:
-        'Ryan\'s longest turn — calmly explaining that the goal is for Michael to understand the system himself. This is the only moment where actual work is being discussed. It is immediately derailed.'
+        "Ryan's longest turn — calmly explaining that the goal is for Michael to understand the system himself. This is the only moment where actual work is being discussed. It is immediately derailed."
     },
     {
       segmentIndex: 13,
@@ -85,14 +85,14 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'correct answer, wrong audience',
       category: 'constructive',
       detail:
-        'Toby provides the actual grammatical rule: "whom when it\'s the object, who when it\'s the subject." He is completely correct and completely ignored. The scene\'s central irony — the person with the answer has the least social capital.'
+        "Toby provides the actual grammatical rule: \"whom when it's the object, who when it's the subject.\" He is completely correct and completely ignored. The scene's central irony — the person with the answer has the least social capital."
     },
     {
       segmentIndex: 30,
       label: 'crowd validation',
       category: 'neutral',
       detail:
-        'Kevin\'s "that sounds right" is the room\'s consensus mechanism — vibes over analysis. Nobody actually evaluates Toby\'s answer; they just sense it sounds correct.'
+        "Kevin's \"that sounds right\" is the room's consensus mechanism — vibes over analysis. Nobody actually evaluates Toby's answer; they just sense it sounds correct."
     },
     {
       segmentIndex: 31,
@@ -106,7 +106,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'self-deprecating deflection',
       category: 'neutral',
       detail:
-        '"Ryan used me as an object" — Toby turns the grammar discussion into a dry joke about how he\'s treated. It\'s funny, but underneath it\'s a genuine observation about his status in the office.'
+        "\"Ryan used me as an object\" — Toby turns the grammar discussion into a dry joke about how he's treated. It's funny, but underneath it's a genuine observation about his status in the office."
     },
     {
       segmentIndex: 37,
@@ -127,7 +127,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'violent threat as comedy',
       category: 'destructive',
       detail:
-        'The letter opener threat is played for laughs, but it\'s Michael speaking through Dwight: the person who was right gets punished for being right. In any real workplace, this would be a serious HR issue — which is ironic because Toby is HR.'
+        "The letter opener threat is played for laughs, but it's Michael speaking through Dwight: the person who was right gets punished for being right. In any real workplace, this would be a serious HR issue — which is ironic because Toby is HR."
     },
     {
       segmentIndex: 48,
@@ -143,7 +143,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       emotion: 'avoidant',
       surface: 'casual',
       trigger:
-        'the presentation requires knowledge Michael doesn\'t have — easier to delegate than to learn'
+        "the presentation requires knowledge Michael doesn't have — easier to delegate than to learn"
     },
     {
       segmentIndex: 9,
@@ -157,13 +157,13 @@ export const theOfficeLabels: BehaviorAnalysis = {
       emotion: 'irritated',
       surface: 'matter-of-fact',
       trigger:
-        'the grammar correction is a displacement for broader frustration with Michael\'s incompetence'
+        "the grammar correction is a displacement for broader frustration with Michael's incompetence"
     },
     {
       segmentIndex: 15,
       emotion: 'protective',
       trigger:
-        'Dwight\'s instinct to defend Michael overrides any actual opinion about grammar'
+        "Dwight's instinct to defend Michael overrides any actual opinion about grammar"
     },
     {
       segmentIndex: 20,
@@ -176,20 +176,20 @@ export const theOfficeLabels: BehaviorAnalysis = {
       segmentIndex: 22,
       emotion: 'humbled',
       trigger:
-        'Ryan realizes he started an argument he can\'t finish — the admission of ignorance is genuine and momentarily vulnerable'
+        "Ryan realizes he started an argument he can't finish — the admission of ignorance is genuine and momentarily vulnerable"
     },
     {
       segmentIndex: 25,
       emotion: 'resentful',
       surface: 'playful',
       trigger:
-        'the band snub is a real wound — Kelly uses humor to express hurt she can\'t voice directly'
+        "the band snub is a real wound — Kelly uses humor to express hurt she can't voice directly"
     },
     {
       segmentIndex: 28,
       emotion: 'calm',
       trigger:
-        'Toby states the correct answer without drama — he\'s used to not being heard'
+        "Toby states the correct answer without drama — he's used to not being heard"
     },
     {
       segmentIndex: 34,
@@ -209,7 +209,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       emotion: 'hostile',
       surface: 'dismissive',
       trigger:
-        'Dwight channels Michael\'s contempt for Toby — the aggression is borrowed authority'
+        "Dwight channels Michael's contempt for Toby — the aggression is borrowed authority"
     },
     {
       segmentIndex: 48,
@@ -234,18 +234,28 @@ export const theOfficeLabels: BehaviorAnalysis = {
     },
     {
       heading: 'Loyalty is not agreement',
-      body: 'Dwight (Speaker D) defends Michael\'s position reflexively — not because he understands the grammar, but because defending the boss is his identity. This kind of automatic allegiance feels supportive but actually undermines the group: it adds noise, entrenches wrong answers, and in this case ends with a violent threat against the person who was right. Real loyalty would be helping Michael learn, not shielding him from correction.',
+      body: "Dwight (Speaker D) defends Michael's position reflexively — not because he understands the grammar, but because defending the boss is his identity. This kind of automatic allegiance feels supportive but actually undermines the group: it adds noise, entrenches wrong answers, and in this case ends with a violent threat against the person who was right. Real loyalty would be helping Michael learn, not shielding him from correction.",
       addressedTo: 'Speaker D'
     },
     {
       heading: 'Grievances are real even when petty',
-      body: 'Kelly\'s (Speaker E) refusal to share knowledge because nobody came to her band show reads as petty — and it is. But the underlying feeling is real: she doesn\'t feel valued by her colleagues. The band grievance is a proxy for a deeper sense of being ignored. Addressing the small stuff (showing interest in each other\'s lives) prevents it from weaponizing the big stuff (withholding helpful information).',
+      body: "Kelly's (Speaker E) refusal to share knowledge because nobody came to her band show reads as petty — and it is. But the underlying feeling is real: she doesn't feel valued by her colleagues. The band grievance is a proxy for a deeper sense of being ignored. Addressing the small stuff (showing interest in each other's lives) prevents it from weaponizing the big stuff (withholding helpful information).",
       addressedTo: 'Speaker E'
     },
     {
       heading: 'The forgotten task',
-      body: 'The scene opens with an actual work question — who should do the presentation? — and it is abandoned within 10 seconds, never to return. The grammar debate consumes everyone because arguing about who is right is more engaging than doing actual work. This is the office\'s core dysfunction: the drama is always more interesting than the job.',
+      body: "The scene opens with an actual work question — who should do the presentation? — and it is abandoned within 10 seconds, never to return. The grammar debate consumes everyone because arguing about who is right is more engaging than doing actual work. This is the office's core dysfunction: the drama is always more interesting than the job.",
       addressedTo: 'all'
     }
-  ]
+  ],
+  speakerNames: {
+    'Speaker A': 'Michael Scott',
+    'Speaker B': 'Ryan Howard',
+    'Speaker C': 'Oscar Martinez',
+    'Speaker D': 'Dwight Schrute',
+    'Speaker E': 'Kelly Kapoor',
+    'Speaker F': 'Toby Flenderson',
+    'Speaker G': 'Kevin Malone',
+    'Speaker H': 'Pam Beesly'
+  }
 };

@@ -6,9 +6,10 @@ import { formatDuration } from '~/utils/metrics';
 
 interface Props {
   speakers: SpeakerMetrics[];
+  displayName?: (raw: string) => string;
 }
 
-const { speakers } = defineProps<Props>();
+const { speakers, displayName = (raw: string) => raw } = defineProps<Props>();
 
 const barsRef = ref<HTMLElement | null>(null);
 
@@ -49,7 +50,7 @@ onMounted(() => {
     >
       <div class="SpeakingTimeLabel">
         <span class="SpeakingTimeName" :class="getSpeakerColor(i)">
-          {{ speaker.speaker }}
+          {{ displayName(speaker.speaker) }}
         </span>
         <span class="SpeakingTimeValue mono">
           {{ speaker.percentage.toFixed(0) }}% ·

@@ -24,9 +24,12 @@ const {
   audioUrl,
   demoVideoUrl,
   activeDemo,
+  speakerNames,
   loadDemo,
   analyzeBehavior
 } = analysis;
+
+const displayName = (raw: string): string => speakerNames.value[raw] || raw;
 
 const currentDemoSlug = computed(
   () => (route.query.demo as string) || DEFAULT_DEMO
@@ -85,6 +88,8 @@ provide(meetingStateKey, {
   insights,
   hasData,
   analyzeBehavior,
+  speakerNames,
+  displayName,
   segments,
   duration,
   behaviorLabels,
@@ -139,6 +144,7 @@ const tabs = [
           :interruptions="interruptions"
           :labels="behaviorLabels"
           :emotions="emotionLabels"
+          :display-name="displayName"
           @seek="onSeek"
         />
       </section>

@@ -6,7 +6,8 @@ const {
   behaviorContext,
   analyzingBehavior,
   behaviorLabels,
-  analyzeBehavior
+  analyzeBehavior,
+  displayName
 } = useMeetingState();
 </script>
 
@@ -22,6 +23,7 @@ const {
       v-if="behaviorAnalysis?.notes?.length || behaviorAnalysis?.summary"
       :notes="behaviorAnalysis?.notes ?? []"
       :summary="behaviorAnalysis?.summary"
+      :display-name="displayName"
     />
   </div>
 </template>

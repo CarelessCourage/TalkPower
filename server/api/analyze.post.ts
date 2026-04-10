@@ -58,6 +58,12 @@ Include a mix of: observations about dynamics, recommendations for specific peop
 
 Also provide a brief "summary" (2-3 sentences) of the overall behavioral dynamics.
 
+## 4. Speaker Names
+Infer the most likely real name or role for each speaker based on transcript content, context prompt, and conversational cues. If a speaker's name is mentioned ("Thanks, Sarah" or "Michael, you should..."), use that. If a context prompt names the participants, match speakers to those names. If you can't determine a name, use a descriptive role (e.g. "Team Lead", "Skeptic", "Mediator"). Never leave a speaker as "Speaker A" if you can do better.
+
+Return a "speakerNames" object mapping raw speaker labels to inferred names, e.g.:
+{ "Speaker A": "Michael", "Speaker B": "Ryan" }
+
 If a context prompt is provided, tailor your labels and notes to highlight behaviors relevant to that context.
 
 Respond with valid JSON matching this schema:
@@ -65,7 +71,8 @@ Respond with valid JSON matching this schema:
   "labels": [{ "segmentIndex": number, "label": string, "category": string, "detail": string, "deception"?: string }],
   "emotions": [{ "segmentIndex": number, "emotion": string, "trigger": string, "surface"?: string }],
   "notes": [{ "heading": string, "body": string, "addressedTo": string }],
-  "summary": string
+  "summary": string,
+  "speakerNames": { "Speaker X": "Name or Role" }
 }`;
 
 export default defineEventHandler(async (event) => {

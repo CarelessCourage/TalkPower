@@ -232,5 +232,11 @@ export const demoLabels: BehaviorAnalysis = {
       body: 'Despite facing threats, silencing, and bad-faith tricks, Speaker C/D consistently return to calm, conditional proposals. They never match the aggression level. This is exactly the kind of de-escalation and emotional regulation that keeps negotiations from collapsing entirely. Recognize and reinforce these behaviors — they are the foundation for any future resolution.',
       addressedTo: 'all'
     }
-  ]
+  ],
+  speakerNames: {
+    'Speaker A': 'Pharaoh Ahkmenrah',
+    'Speaker B': 'Pharaoh Ahkmenrah',
+    'Speaker C': 'Larry (Night Guard)',
+    'Speaker D': 'Larry (Night Guard)'
+  }
 };

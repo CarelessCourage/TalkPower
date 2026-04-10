@@ -9,9 +9,15 @@ interface Props {
   segments: TranscriptSegment[];
   labels: BehaviorLabel[];
   emotions: EmotionLabel[];
+  displayName?: (raw: string) => string;
 }
 
-const { segments, labels, emotions } = defineProps<Props>();
+const {
+  segments,
+  labels,
+  emotions,
+  displayName = (raw: string) => raw
+} = defineProps<Props>();
 
 const speakers = computed(() => {
   const map = new Map<
@@ -72,7 +78,7 @@ const categoryColorClass: Record<string, string> = {
   <div class="SpeakerBreakdown">
     <div v-for="entry in speakers" :key="entry.speaker" class="SpeakerSection">
       <h3 class="SpeakerName" :class="getSpeakerColor(entry.speaker)">
-        {{ entry.speaker }}
+        {{ displayName(entry.speaker) }}
       </h3>
 
       <div v-if="entry.labels.length" class="LabelGroup">

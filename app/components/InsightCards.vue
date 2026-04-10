@@ -5,9 +5,10 @@ import { useGsapReveal } from '~/composables/useGsapReveal';
 
 interface Props {
   insights: DominanceInsight[];
+  displayName?: (raw: string) => string;
 }
 
-const { insights } = defineProps<Props>();
+const { insights, displayName = (raw: string) => raw } = defineProps<Props>();
 
 const cardsRef = ref<HTMLElement | null>(null);
 useGsapReveal(cardsRef, { stagger: 0.12, duration: 0.5 });
@@ -31,7 +32,7 @@ const toneClass = (tone: DominanceInsight['tone']) => {
       :class="toneClass(insight.tone)"
     >
       <span class="InsightLabel label">{{ insight.label }}</span>
-      <span class="InsightValue">{{ insight.value }}</span>
+      <span class="InsightValue">{{ displayName(insight.value) }}</span>
       <span class="InsightDetail">{{ insight.detail }}</span>
     </div>
   </div>
