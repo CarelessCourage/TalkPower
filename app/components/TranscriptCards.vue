@@ -227,6 +227,7 @@ const categoryColorClass: Record<string, string> = {
 }
 
 .CardLabel {
+  display: inline-flex;
   align-items: center;
   gap: var(--space-bit-1);
   padding: 2px var(--space-bit-2);
