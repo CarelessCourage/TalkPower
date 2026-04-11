@@ -415,10 +415,12 @@ watch(isSplash, async (nowSplash, prevSplash) => {
   from {
     clip-path: inset(5% 5% 80% 5% round 12px);
     opacity: 0;
+    filter: blur(8px);
   }
   to {
     clip-path: inset(0% 0% 0% 0% round 0px);
     opacity: 1;
+    filter: blur(0px);
   }
 }
 
@@ -426,10 +428,12 @@ watch(isSplash, async (nowSplash, prevSplash) => {
   from {
     clip-path: inset(0% 0% 0% 0% round 0px);
     opacity: 1;
+    filter: blur(0px);
   }
   to {
     clip-path: inset(5% 5% 80% 5% round 12px);
     opacity: 0;
+    filter: blur(8px);
   }
 }
 
