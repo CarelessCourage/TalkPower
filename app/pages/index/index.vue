@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import auraLogoVideo from '~/assets/video/auraLogo.mp4';
+
 const router = useRouter();
 
 const enter = () => {
@@ -8,37 +10,22 @@ const enter = () => {
 
 <template>
   <div class="SplashPage" @click="enter">
+    <video
+      class="SplashVideo"
+      autoplay
+      loop
+      muted
+      playsinline
+      :src="auraLogoVideo"
+    />
     <h1 class="SplashTitle">aura</h1>
     <p class="SplashTagline">read the room</p>
-    <!-- <div class="SplashRing">
-      <div class="SplashRingCap"></div>
-    </div> -->
   </div>
 </template>
 
 <style scoped>
-.SplashRing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  background-color: aqua;
-  border-radius: 50%;
-  --size: 700px;
-  width: var(--size);
-  height: var(--size);
-  clip-path: polygon(100% 0%, 100% 50%, 0% 50%, 0% 0%);
-}
-
-.SplashRingCap {
-  --size: 90%;
-  width: var(--size);
-  height: var(--size);
-  background-color: var(--base);
-  border-radius: 100%;
-}
-
 .SplashPage {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +34,18 @@ const enter = () => {
   cursor: pointer;
   gap: var(--space-bit-4);
   user-select: none;
+  overflow: hidden;
+}
+
+.SplashVideo {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(120px);
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .SplashTitle {
@@ -69,15 +68,5 @@ const enter = () => {
   color: var(--base-100);
   font-style: italic;
   view-transition-name: meeting-tagline;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
 }
 </style>
