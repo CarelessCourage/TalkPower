@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import type { TranscriptSegment, Interruption } from '~/types/meeting';
 import { formatSeconds } from '~/utils/metrics';
 
@@ -47,12 +48,35 @@ const getInterruption = (index: number): Interruption | undefined => {
       int.interrupter === seg.speaker && Math.abs(int.time - seg.start) < 0.01
   );
 };
+
+const search = ref('');
+
+const filteredSegments = computed(() => {
+  const q = search.value.trim().toLowerCase();
+  if (!q) return segments.map((seg, i) => ({ seg, i }));
+  return segments
+    .map((seg, i) => ({ seg, i }))
+    .filter(
+      ({ seg }) =>
+        seg.text.toLowerCase().includes(q) ||
+        displayName(seg.speaker).toLowerCase().includes(q)
+    );
+});
 </script>
 
 <template>
   <div class="TranscriptView">
+    <div class="TranscriptSearch">
+      <Icon name="lucide:search" size="14" class="SearchIcon" />
+      <input
+        v-model="search"
+        class="SearchInput"
+        type="text"
+        placeholder="Search transcript…"
+      />
+    </div>
     <div
-      v-for="(segment, i) in segments"
+      v-for="{ seg: segment, i } in filteredSegments"
       :key="i"
       class="TranscriptSegment"
       :class="{
@@ -105,6 +129,39 @@ const getInterruption = (index: number): Interruption | undefined => {
   display: flex;
   flex-direction: column;
   gap: var(--space-bit-1);
+  width: var(--panel-1);
+}
+
+.TranscriptSearch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-bit-2);
+  padding: var(--space-bit-2) var(--space-bit-3);
+  border-radius: var(--radius);
+  border: var(--border);
+  background: var(--base);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: var(--space-2);
+}
+
+.SearchIcon {
+  color: var(--base-40);
+  flex-shrink: 0;
+}
+
+.SearchInput {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: var(--base-text);
+  outline: none;
+}
+
+.SearchInput::placeholder {
+  color: var(--base-40);
 }
 
 .TranscriptSegment {
