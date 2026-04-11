@@ -115,10 +115,10 @@ const tabs = [
 <template>
   <div class="MeetingPage" :class="{ meetingPageSplash: isSplash }">
     <header v-if="!isSplash" class="MeetingHeader">
-      <div class="MeetingBrand">
-        <h1 class="MeetingTitle">TalkPower</h1>
-        <p class="MeetingTagline">Reveal who runs the room</p>
-      </div>
+      <NuxtLink to="/" class="MeetingBrand">
+        <h1 class="MeetingTitle">aura</h1>
+        <p class="MeetingTagline">read the room</p>
+      </NuxtLink>
       <div class="MeetingActions">
         <div class="DemoSwitcher">
           <button
@@ -137,7 +137,7 @@ const tabs = [
       </div>
     </header>
 
-    <template v-if="!isSplash && hasData && metrics">
+    <div v-if="!isSplash && hasData && metrics" class="MeetingContent">
       <!-- Persistent player -->
       <section class="MeetingHero">
         <MeetingPlayer
@@ -166,10 +166,15 @@ const tabs = [
           {{ tab.label }}
         </NuxtLink>
       </nav>
-    </template>
 
-    <!-- Routed content (splash page OR meeting sub-page) -->
-    <main :class="{ MeetingMain: !isSplash }">
+      <!-- Routed content -->
+      <main class="MeetingMain">
+        <NuxtPage />
+      </main>
+    </div>
+
+    <!-- Splash child page -->
+    <main v-else>
       <NuxtPage />
     </main>
   </div>
@@ -196,11 +201,13 @@ const tabs = [
   display: flex;
   flex-direction: column;
   gap: var(--space-bit-0);
+  text-decoration: none;
 }
 
 .MeetingTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--base-120);
   view-transition-name: meeting-title;
@@ -305,5 +312,63 @@ const tabs = [
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+}
+
+/* ── View Transition: clip-path reveal for content ── */
+.MeetingContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  view-transition-name: content-reveal;
+}
+</style>
+
+<style>
+/* Global (unscoped) view transition keyframes */
+::view-transition-old(content-reveal) {
+  animation: clipExit 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+::view-transition-new(content-reveal) {
+  animation: clipReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@keyframes clipReveal {
+  from {
+    clip-path: inset(5% 5% 80% 5% round 12px);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0% 0% 0% 0% round 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes clipExit {
+  from {
+    clip-path: inset(0% 0% 0% 0% round 0px);
+    opacity: 1;
+  }
+  to {
+    clip-path: inset(5% 5% 80% 5% round 12px);
+    opacity: 0;
+  }
+}
+
+/* Splash hint fades up and out */
+::view-transition-old(splash-hint) {
+  animation: hintExit 0.35s ease-in both;
+}
+
+::view-transition-new(splash-hint) {
+  animation: none;
+  display: none;
+}
+
+@keyframes hintExit {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 </style>
