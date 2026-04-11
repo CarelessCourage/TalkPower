@@ -221,6 +221,8 @@ defineExpose({ currentTime, duration: playerDuration, seek });
 .MeetingPlayer :deep(video) {
   width: 100%;
   display: block;
+  object-fit: contain;
+  background: var(--base);
 }
 
 .PlayerSubtitles {
