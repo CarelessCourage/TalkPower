@@ -1,0 +1,160 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "vulnerable inquiry",
+      "category": "constructive",
+      "detail": "The squire expresses his dream and insecurity, opening the door for connection."
+    },
+    {
+      "segmentIndex": 1,
+      "label": "encouraging response",
+      "category": "constructive",
+      "detail": "The knight responds positively, fostering a supportive atmosphere."
+    },
+    {
+      "segmentIndex": 7,
+      "label": "shared vulnerability",
+      "category": "constructive",
+      "detail": "The knight reveals his own past struggles, creating a bond through mutual insecurity."
+    },
+    {
+      "segmentIndex": 11,
+      "label": "defensive dismissal",
+      "category": "destructive",
+      "detail": "The knight deflects the squire's inquiry, indicating discomfort with vulnerability."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "stonewalling",
+      "category": "destructive",
+      "detail": "The knight insists his problems are private, shutting down the conversation."
+    },
+    {
+      "segmentIndex": 13,
+      "label": "seeking guidance",
+      "category": "constructive",
+      "detail": "The squire asks for help, demonstrating his desire for mentorship."
+    },
+    {
+      "segmentIndex": 15,
+      "label": "sarcastic retort",
+      "category": "destructive",
+      "detail": "The knight's response comes off as dismissive, undermining the squire's request."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "anxious",
+      "trigger": "unprovoked",
+      "surface": "hopeful"
+    },
+    {
+      "segmentIndex": 7,
+      "emotion": "vulnerable",
+      "trigger": "unprovoked",
+      "surface": "gruff"
+    },
+    {
+      "segmentIndex": 11,
+      "emotion": "defensive",
+      "trigger": "squire's inquiry",
+      "surface": "dismissive"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "resigned",
+      "trigger": "squire's persistence",
+      "surface": "stoic"
+    },
+    {
+      "segmentIndex": 13,
+      "emotion": "pleading",
+      "trigger": "knight's defensiveness",
+      "surface": "determined"
+    },
+    {
+      "segmentIndex": 15,
+      "emotion": "frustrated",
+      "trigger": "squire's request for help",
+      "surface": "sarcastic"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Building Connection",
+      "body": "The initial exchange between the squire and knight shows a desire for connection, particularly when the squire expresses his dreams. Encouraging responses from the knight can further strengthen this bond.",
+      "addressedTo": "B"
+    },
+    {
+      "heading": "Deflection as a Barrier",
+      "body": "Sir Dunkan's defensive responses indicate a struggle with vulnerability. Encouraging him to share more openly could foster deeper mentorship and trust.",
+      "addressedTo": "B"
+    },
+    {
+      "heading": "Squire's Initiative",
+      "body": "The squire's request for help demonstrates his eagerness to learn and grow. Acknowledging this initiative can help him feel valued and supported.",
+      "addressedTo": "A"
+    },
+    {
+      "heading": "Navigating Vulnerability",
+      "body": "Both characters exhibit deflection as a protective mechanism. Exploring this dynamic in future conversations may help them confront their insecurities together.",
+      "addressedTo": "all"
+    },
+    {
+      "heading": "Encouraging Openness",
+      "body": "Future discussions should focus on creating a safe space for both characters to express their vulnerabilities. This will enhance their mentorship dynamic.",
+      "addressedTo": "all"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Great job expressing vulnerability, Squire. This opens the door for connection!",
+      "tone": "praise",
+      "speaker": "A"
+    },
+    {
+      "start": 1,
+      "end": 5,
+      "text": "Encouraging words can help build trust. Keep it up, Knight!",
+      "tone": "praise",
+      "speaker": "B"
+    },
+    {
+      "start": 7,
+      "end": 11,
+      "text": "Sharing your past can strengthen your bond. Consider being more open, Knight.",
+      "tone": "tip",
+      "speaker": "B"
+    },
+    {
+      "start": 12,
+      "end": 16,
+      "text": "Avoid shutting down the conversation. It may push the Squire away.",
+      "tone": "warning",
+      "speaker": "B"
+    },
+    {
+      "start": 13,
+      "end": 17,
+      "text": "Your request for help is a strong move. Keep seeking guidance!",
+      "tone": "praise",
+      "speaker": "A"
+    },
+    {
+      "start": 15,
+      "end": 19,
+      "text": "Sarcasm can undermine your message. Try to be more direct with your feelings.",
+      "tone": "warning",
+      "speaker": "B"
+    }
+  ],
+  "summary": "The meeting reveals a complex dynamic between the squire and the knight, marked by mutual vulnerability and deflection. While both characters exhibit a desire for connection, their defensive behaviors hinder deeper communication. Encouraging openness and addressing insecurities could enhance their mentorship relationship.",
+  "speakerNames": {
+    "Speaker A": "Squire",
+    "Speaker B": "Sir Dunkan"
+  }
+}

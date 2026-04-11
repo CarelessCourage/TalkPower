@@ -1,0 +1,134 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " Do you think I'll ever make a knight one day?",
+      "speaker": "A",
+      "start": 0.564,
+      "end": 2.314,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Sure, why not?",
+      "speaker": "B",
+      "start": 2.814,
+      "end": 3.864,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're a likely lad.",
+      "speaker": "B",
+      "start": 4.014,
+      "end": 4.964,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm a bit puny.",
+      "speaker": "A",
+      "start": 5.364000000000001,
+      "end": 6.414000000000001,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You'll grow.",
+      "speaker": "B",
+      "start": 7.364,
+      "end": 8.063999999999998,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Even for my age,",
+      "speaker": "A",
+      "start": 8.664,
+      "end": 9.863999999999999,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " everyone's always told me so.",
+      "speaker": "A",
+      "start": 10.063999999999998,
+      "end": 11.313999999999998,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Everyone's always told me I was stupid.",
+      "speaker": "B",
+      "start": 14.863999999999999,
+      "end": 17.114,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Hmm? What?",
+      "speaker": "A",
+      "start": 29.012,
+      "end": 29.712,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What?",
+      "speaker": "B",
+      "start": 29.862000000000002,
+      "end": 30.362000000000002,
+      "id": "seg_9"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What did he do when people said you were stupid, sir?",
+      "speaker": "A",
+      "start": 31.762,
+      "end": 34.662,
+      "id": "seg_10"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What business is that of yours?",
+      "speaker": "B",
+      "start": 36.112,
+      "end": 37.912000000000006,
+      "id": "seg_11"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " My problems are my own.",
+      "speaker": "B",
+      "start": 38.362,
+      "end": 39.812,
+      "id": "seg_12"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Why don't you try and help me?",
+      "speaker": "A",
+      "start": 41.962,
+      "end": 43.112,
+      "id": "seg_13"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Help you what?",
+      "speaker": "B",
+      "start": 43.262,
+      "end": 44.312,
+      "id": "seg_14"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Grow?",
+      "speaker": "B",
+      "start": 44.512,
+      "end": 45.112,
+      "id": "seg_15"
+    }
+  ],
+  "duration": 45.112,
+  "text": "Do you think I'll ever make a knight one day? Sure, why not? You're a likely lad. I'm a bit puny. You'll grow. Even for my age, everyone's always told me so. Everyone's always told me I was stupid.\nHmm? What? What? What did he do when people said you were stupid, sir? What business is that of yours? My problems are my own. Why don't you try and help me? Help you what? Grow?"
+}
