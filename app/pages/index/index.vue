@@ -53,7 +53,7 @@ const enter = () => {
   position: relative;
   z-index: 10;
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: clamp(3rem, 10vw, 12rem);
+  font-size: clamp(3rem, 20vw, 32rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   color: var(--base-120);
