@@ -1,0 +1,181 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "accusatory framing",
+      "category": "destructive",
+      "detail": "Speaker A begins by blaming the opposing side for breaking a ceasefire, which sets a confrontational tone."
+    },
+    {
+      "segmentIndex": 4,
+      "label": "dismissive response",
+      "category": "destructive",
+      "detail": "Speaker B dismisses Speaker A's concerns, framing them as irrelevant to the larger issue of ending destruction."
+    },
+    {
+      "segmentIndex": 11,
+      "label": "public shaming",
+      "category": "destructive",
+      "detail": "Speaker B accuses Speaker A of being disrespectful in front of the media, attempting to undermine his credibility."
+    },
+    {
+      "segmentIndex": 13,
+      "label": "bullying tactic",
+      "category": "destructive",
+      "detail": "Speaker B suggests Speaker A should be thankful, using guilt as a means of control."
+    },
+    {
+      "segmentIndex": 36,
+      "label": "defensive posture",
+      "category": "assertive",
+      "detail": "Speaker A asserts his position by questioning Speaker B's knowledge of Ukraine, attempting to regain control of the narrative."
+    },
+    {
+      "segmentIndex": 142,
+      "label": "emotional appeal",
+      "category": "constructive",
+      "detail": "Speaker A tries to connect emotionally by emphasizing the dire situation in Ukraine, appealing for understanding."
+    },
+    {
+      "segmentIndex": 248,
+      "label": "assertive rebuttal",
+      "category": "assertive",
+      "detail": "Speaker A firmly states that people are dying, countering Speaker C's dismissive comments."
+    },
+    {
+      "segmentIndex": 375,
+      "label": "gaslighting",
+      "category": "destructive",
+      "detail": "Speaker C accuses Speaker A of being ungrateful, attempting to manipulate the perception of the situation."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "frustrated",
+      "trigger": "unprovoked",
+      "surface": "accusatory"
+    },
+    {
+      "segmentIndex": 4,
+      "emotion": "dismissive",
+      "trigger": "Speaker A's accusations",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 11,
+      "emotion": "hostile",
+      "trigger": "Speaker A's challenge",
+      "surface": "disrespectful"
+    },
+    {
+      "segmentIndex": 13,
+      "emotion": "bullying",
+      "trigger": "power dynamic",
+      "surface": "assertive"
+    },
+    {
+      "segmentIndex": 36,
+      "emotion": "defensive",
+      "trigger": "Speaker B's dismissal",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 142,
+      "emotion": "desperate",
+      "trigger": "desperate situation in Ukraine",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 248,
+      "emotion": "determined",
+      "trigger": "Speaker C's dismissiveness",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 375,
+      "emotion": "manipulative",
+      "trigger": "Speaker A's rebuttal",
+      "surface": "assertive"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Power Imbalance",
+      "body": "The power dynamic is heavily skewed in favor of Speaker B, who uses his position to bully Speaker A. This is evident in the way Speaker B and C dismiss and undermine Speaker A's legitimate concerns about the war.",
+      "addressedTo": "all"
+    },
+    {
+      "heading": "Need for Empathy",
+      "body": "Speaker A attempts to maintain composure despite the aggressive tactics used against him. Encouraging a more empathetic approach from all parties could help de-escalate the situation and foster a more productive dialogue.",
+      "addressedTo": "all"
+    },
+    {
+      "heading": "Addressing Falsehoods",
+      "body": "It is crucial to address the factual inaccuracies presented by Speaker B. Allowing misinformation to go unchallenged can undermine the legitimacy of the conversation and further harm Speaker A's position.",
+      "addressedTo": "Speaker C"
+    },
+    {
+      "heading": "Recognizing Contributions",
+      "body": "Speaker C's insistence on gratitude from Speaker A is misplaced, given the context of the war. Acknowledging the sacrifices made by Ukraine could foster a more collaborative atmosphere.",
+      "addressedTo": "Speaker C"
+    },
+    {
+      "heading": "Encourage Constructive Dialogue",
+      "body": "Future discussions should focus on constructive solutions rather than blame. This will help in finding common ground and moving towards a resolution.",
+      "addressedTo": "all"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Avoid accusatory language; it escalates conflict.",
+      "tone": "warning",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 4,
+      "end": 8,
+      "text": "Dismissive responses can alienate your counterpart.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 11,
+      "end": 15,
+      "text": "Publicly shaming someone can backfire; aim for respect.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 142,
+      "end": 146,
+      "text": "Use emotional appeals carefully; they can resonate.",
+      "tone": "tip",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 248,
+      "end": 252,
+      "text": "Assert your position confidently; it's crucial.",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 375,
+      "end": 379,
+      "text": "Avoid gaslighting; it undermines trust.",
+      "tone": "warning",
+      "speaker": "Speaker C"
+    }
+  ],
+  "summary": "The meeting is characterized by a stark power imbalance, with Speaker B and C using aggressive tactics to undermine Speaker A's credibility. Speaker A attempts to assert his position and appeal for understanding, but the overall dynamic is hostile and dismissive, complicating any potential for constructive dialogue.",
+  "speakerNames": {
+    "Speaker A": "President Zelensky",
+    "Speaker B": "President Trump",
+    "Speaker C": "Vice President Vance",
+    "Speaker D": "Secretary Rubio",
+    "Speaker E": "Press Handler"
+  }
+}

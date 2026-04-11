@@ -23,7 +23,8 @@ const loaders: Record<
   'love-spectrum': () => import('~/data/demos/love-spectrum'),
   'the-office': () => import('~/data/demos/the-office'),
   cosmic: () => import('~/data/demos/cosmic'),
-  'sir-dunkan': () => import('~/data/demos/sir-dunkan')
+  'sir-dunkan': () => import('~/data/demos/sir-dunkan'),
+  trump: () => import('~/data/demos/trump')
 };
 
 export const demos: { slug: string; title: string }[] = [
@@ -32,7 +33,8 @@ export const demos: { slug: string; title: string }[] = [
   { slug: 'love-spectrum', title: 'Love on the Spectrum' },
   { slug: 'the-office', title: 'The Office' },
   { slug: 'cosmic', title: 'Cosmic Skeptic' },
-  { slug: 'sir-dunkan', title: 'Sir Dunkan' }
+  { slug: 'sir-dunkan', title: 'Sir Dunkan' },
+  { slug: 'trump', title: 'Trump v Zelensky' }
 ];
 
 export const DEFAULT_DEMO = 'museum';

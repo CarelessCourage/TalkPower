@@ -1,0 +1,3214 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " He broken this ceasefire,",
+      "speaker": "A",
+      "start": 0,
+      "end": 1.8,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " he killed our people and he didn't exchange prisoners. We signed the exchange of prisoners, but he didn't do it.",
+      "speaker": "A",
+      "start": 2,
+      "end": 8.95,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What kind of diplomacy,",
+      "speaker": "A",
+      "start": 9.908,
+      "end": 11.458,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " J.G., you are speaking about? What do you mean?",
+      "speaker": "A",
+      "start": 11.908,
+      "end": 15.008,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm talking about the kind of diplomacy that's going to end the destruction of your country.",
+      "speaker": "B",
+      "start": 15.508,
+      "end": 19.058,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Yes, but if you",
+      "speaker": "A",
+      "start": 19.058,
+      "end": 19.858000000000004,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr.",
+      "speaker": "B",
+      "start": 19.858000000000004,
+      "end": 19.908,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " are not",
+      "speaker": "A",
+      "start": 19.908,
+      "end": 20.108000000000004,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " President,",
+      "speaker": "B",
+      "start": 20.108000000000004,
+      "end": 20.258000000000003,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " involved...",
+      "speaker": "A",
+      "start": 20.258000000000003,
+      "end": 20.458000000000002,
+      "id": "seg_9"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr. President, with respect,",
+      "speaker": "B",
+      "start": 20.458000000000002,
+      "end": 21.558,
+      "id": "seg_10"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I think it's disrespectful for you to come into the Oval Office and try to litigate this in front of the American media.",
+      "speaker": "B",
+      "start": 21.808,
+      "end": 26.108000000000004,
+      "id": "seg_11"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Right now you guys are going around and forcing conscripts to the front lines because you have manpower problems.",
+      "speaker": "B",
+      "start": 26.358000000000004,
+      "end": 32.508,
+      "id": "seg_12"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You should be thanking the President for trying to bring an end to this conflict.",
+      "speaker": "B",
+      "start": 32.608000000000004,
+      "end": 35.958000000000006,
+      "id": "seg_13"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Have you ever been to Ukraine?",
+      "speaker": "A",
+      "start": 35.958000000000006,
+      "end": 37.008,
+      "id": "seg_14"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " To Ukraine that you say what problems we have.",
+      "speaker": "A",
+      "start": 36.756,
+      "end": 39.056,
+      "id": "seg_15"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I have been to,",
+      "speaker": "B",
+      "start": 39.256,
+      "end": 40.406,
+      "id": "seg_16"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But come once.",
+      "speaker": "A",
+      "start": 40.406,
+      "end": 41.156,
+      "id": "seg_17"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I have actually watched and seen the stories and I know what happens is you bring people,",
+      "speaker": "B",
+      "start": 41.156,
+      "end": 47.056,
+      "id": "seg_18"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you bring them on a propaganda tour,",
+      "speaker": "B",
+      "start": 47.156,
+      "end": 49.006,
+      "id": "seg_19"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr. President.",
+      "speaker": "B",
+      "start": 49.056,
+      "end": 49.756,
+      "id": "seg_20"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Do you disagree that you've had problems bringing people into your military?",
+      "speaker": "B",
+      "start": 50.256,
+      "end": 54.106,
+      "id": "seg_21"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " We have problems.",
+      "speaker": "A",
+      "start": 54.106,
+      "end": 54.556,
+      "id": "seg_22"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And do you think that it's respectful",
+      "speaker": "B",
+      "start": 54.556,
+      "end": 55.756,
+      "id": "seg_23"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I will answer.",
+      "speaker": "A",
+      "start": 55.756,
+      "end": 56.106,
+      "id": "seg_24"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " to come to the Oval Office",
+      "speaker": "B",
+      "start": 56.106,
+      "end": 57.656000000000006,
+      "id": "seg_25"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "A",
+      "start": 57.656000000000006,
+      "end": 57.856,
+      "id": "seg_26"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " of",
+      "speaker": "B",
+      "start": 57.856,
+      "end": 57.906000000000006,
+      "id": "seg_27"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " will answer.",
+      "speaker": "A",
+      "start": 57.906000000000006,
+      "end": 58.056,
+      "id": "seg_28"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the United States of America and attack the administration that is trying to prevent the destruction of your country?",
+      "speaker": "B",
+      "start": 58.056,
+      "end": 63.506,
+      "id": "seg_29"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " A lot of a lot of questions,",
+      "speaker": "A",
+      "start": 63.506,
+      "end": 65.056,
+      "id": "seg_30"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " let's start.",
+      "speaker": "A",
+      "start": 65.106,
+      "end": 65.506,
+      "id": "seg_31"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Start from the beginning.",
+      "speaker": "A",
+      "start": 65.396,
+      "end": 66.246,
+      "id": "seg_32"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Sure.",
+      "speaker": "B",
+      "start": 66.246,
+      "end": 66.446,
+      "id": "seg_33"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " First of all, during the war everybody has problems, even you, but you have nice ocean and don't feel now, but you will feel it in the future. Good. God bless,",
+      "speaker": "A",
+      "start": 66.446,
+      "end": 77.146,
+      "id": "seg_34"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You don't know that.",
+      "speaker": "C",
+      "start": 77.146,
+      "end": 77.946,
+      "id": "seg_35"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " God bless,",
+      "speaker": "A",
+      "start": 77.946,
+      "end": 78.396,
+      "id": "seg_36"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You don't",
+      "speaker": "C",
+      "start": 78.396,
+      "end": 78.746,
+      "id": "seg_37"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " God",
+      "speaker": "A",
+      "start": 78.746,
+      "end": 78.846,
+      "id": "seg_38"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " know that.",
+      "speaker": "C",
+      "start": 78.846,
+      "end": 78.996,
+      "id": "seg_39"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " bless, you",
+      "speaker": "A",
+      "start": 78.996,
+      "end": 79.546,
+      "id": "seg_40"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Don't",
+      "speaker": "C",
+      "start": 79.546,
+      "end": 79.596,
+      "id": "seg_41"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " will not have",
+      "speaker": "A",
+      "start": 79.596,
+      "end": 79.946,
+      "id": "seg_42"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you gotta",
+      "speaker": "C",
+      "start": 79.946,
+      "end": 80.096,
+      "id": "seg_43"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the war.",
+      "speaker": "A",
+      "start": 80.096,
+      "end": 80.296,
+      "id": "seg_44"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " s don't tell us what we're gonna feel. We're trying to solve a problem. Don't tell us what we're gonna feel.",
+      "speaker": "C",
+      "start": 80.296,
+      "end": 85.49600000000001,
+      "id": "seg_45"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm not telling",
+      "speaker": "A",
+      "start": 85.49600000000001,
+      "end": 86.24600000000001,
+      "id": "seg_46"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Because",
+      "speaker": "C",
+      "start": 86.24600000000001,
+      "end": 86.396,
+      "id": "seg_47"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you, I'm",
+      "speaker": "A",
+      "start": 86.396,
+      "end": 86.696,
+      "id": "seg_48"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you're",
+      "speaker": "C",
+      "start": 86.696,
+      "end": 86.846,
+      "id": "seg_49"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " answering",
+      "speaker": "A",
+      "start": 86.846,
+      "end": 87.04599999999999,
+      "id": "seg_50"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in no position",
+      "speaker": "C",
+      "start": 87.04599999999999,
+      "end": 87.29599999999999,
+      "id": "seg_51"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " on this question.",
+      "speaker": "A",
+      "start": 87.29599999999999,
+      "end": 87.746,
+      "id": "seg_52"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " to dictate that.",
+      "speaker": "C",
+      "start": 87.746,
+      "end": 88.346,
+      "id": "seg_53"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That's exactly",
+      "speaker": "B",
+      "start": 88.346,
+      "end": 88.746,
+      "id": "seg_54"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Remember",
+      "speaker": "C",
+      "start": 88.746,
+      "end": 89.096,
+      "id": "seg_55"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " what I'm",
+      "speaker": "A",
+      "start": 89.096,
+      "end": 89.146,
+      "id": "seg_56"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " that.",
+      "speaker": "C",
+      "start": 89.146,
+      "end": 89.24600000000001,
+      "id": "seg_57"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm doing.",
+      "speaker": "B",
+      "start": 89.24600000000001,
+      "end": 89.396,
+      "id": "seg_58"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " not",
+      "speaker": "A",
+      "start": 89.396,
+      "end": 89.54599999999999,
+      "id": "seg_59"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're",
+      "speaker": "C",
+      "start": 89.54599999999999,
+      "end": 89.646,
+      "id": "seg_60"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " dictating.",
+      "speaker": "A",
+      "start": 89.646,
+      "end": 89.946,
+      "id": "seg_61"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in no position.",
+      "speaker": "C",
+      "start": 89.946,
+      "end": 91.046,
+      "id": "seg_62"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " dictate what we're going to feel.",
+      "speaker": "C",
+      "start": 91.348,
+      "end": 93.798,
+      "id": "seg_63"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You",
+      "speaker": "A",
+      "start": 94.098,
+      "end": 94.448,
+      "id": "seg_64"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " We're",
+      "speaker": "C",
+      "start": 94.448,
+      "end": 94.598,
+      "id": "seg_65"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " will feel",
+      "speaker": "A",
+      "start": 94.598,
+      "end": 94.748,
+      "id": "seg_66"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " going to feel very good.",
+      "speaker": "C",
+      "start": 94.748,
+      "end": 95.848,
+      "id": "seg_67"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " influence.",
+      "speaker": "A",
+      "start": 95.848,
+      "end": 96.348,
+      "id": "seg_68"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " We're going to feel",
+      "speaker": "C",
+      "start": 96.348,
+      "end": 97.298,
+      "id": "seg_69"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm",
+      "speaker": "A",
+      "start": 97.298,
+      "end": 97.398,
+      "id": "seg_70"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " very good",
+      "speaker": "C",
+      "start": 97.398,
+      "end": 97.748,
+      "id": "seg_71"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " telling",
+      "speaker": "A",
+      "start": 97.748,
+      "end": 98.048,
+      "id": "seg_72"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and very strong.",
+      "speaker": "C",
+      "start": 98.048,
+      "end": 98.548,
+      "id": "seg_73"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you, you will feel influence from",
+      "speaker": "A",
+      "start": 98.548,
+      "end": 100.048,
+      "id": "seg_74"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're right now not in a very good position.",
+      "speaker": "C",
+      "start": 100.048,
+      "end": 102.048,
+      "id": "seg_75"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You've allowed yourself",
+      "speaker": "C",
+      "start": 102.648,
+      "end": 103.348,
+      "id": "seg_76"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the very",
+      "speaker": "A",
+      "start": 103.348,
+      "end": 103.648,
+      "id": "seg_77"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " to",
+      "speaker": "C",
+      "start": 103.648,
+      "end": 103.898,
+      "id": "seg_78"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " beginning",
+      "speaker": "A",
+      "start": 103.898,
+      "end": 103.94800000000001,
+      "id": "seg_79"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " be in a very bad position",
+      "speaker": "C",
+      "start": 103.94800000000001,
+      "end": 104.998,
+      "id": "seg_80"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " of",
+      "speaker": "A",
+      "start": 104.998,
+      "end": 105.248,
+      "id": "seg_81"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and he happens to be right about it.",
+      "speaker": "C",
+      "start": 105.248,
+      "end": 106.69800000000001,
+      "id": "seg_82"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the very beginning of the war,",
+      "speaker": "A",
+      "start": 106.69800000000001,
+      "end": 108.248,
+      "id": "seg_83"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're not",
+      "speaker": "C",
+      "start": 108.248,
+      "end": 108.548,
+      "id": "seg_84"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr.",
+      "speaker": "A",
+      "start": 108.548,
+      "end": 108.648,
+      "id": "seg_85"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in a good position.",
+      "speaker": "C",
+      "start": 108.648,
+      "end": 109.598,
+      "id": "seg_86"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I was...",
+      "speaker": "A",
+      "start": 109.598,
+      "end": 109.998,
+      "id": "seg_87"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You don't have the cards right now.",
+      "speaker": "C",
+      "start": 109.998,
+      "end": 111.69800000000001,
+      "id": "seg_88"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " With us you start having",
+      "speaker": "C",
+      "start": 112.19800000000001,
+      "end": 113.098,
+      "id": "seg_89"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What",
+      "speaker": "A",
+      "start": 113.098,
+      "end": 113.298,
+      "id": "seg_90"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " cards.",
+      "speaker": "C",
+      "start": 113.298,
+      "end": 113.348,
+      "id": "seg_91"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " playing cards?",
+      "speaker": "A",
+      "start": 113.348,
+      "end": 113.74799999999999,
+      "id": "seg_92"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But right now you",
+      "speaker": "C",
+      "start": 113.74799999999999,
+      "end": 114.74799999999999,
+      "id": "seg_93"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm",
+      "speaker": "A",
+      "start": 114.74799999999999,
+      "end": 114.848,
+      "id": "seg_94"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " don't... you're",
+      "speaker": "C",
+      "start": 114.848,
+      "end": 115.098,
+      "id": "seg_95"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " very serious,",
+      "speaker": "A",
+      "start": 115.098,
+      "end": 115.298,
+      "id": "seg_96"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " playing cards.",
+      "speaker": "C",
+      "start": 115.298,
+      "end": 115.798,
+      "id": "seg_97"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr. President.",
+      "speaker": "A",
+      "start": 115.798,
+      "end": 116.49799999999999,
+      "id": "seg_98"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're I'm playing cards.",
+      "speaker": "C",
+      "start": 116.49799999999999,
+      "end": 117.048,
+      "id": "seg_99"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " very serious.",
+      "speaker": "A",
+      "start": 117.048,
+      "end": 117.49799999999999,
+      "id": "seg_100"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're gambling with",
+      "speaker": "C",
+      "start": 117.49799999999999,
+      "end": 118.49799999999999,
+      "id": "seg_101"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm",
+      "speaker": "A",
+      "start": 118.49799999999999,
+      "end": 118.598,
+      "id": "seg_102"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the",
+      "speaker": "C",
+      "start": 118.598,
+      "end": 118.69800000000001,
+      "id": "seg_103"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " President",
+      "speaker": "A",
+      "start": 118.69800000000001,
+      "end": 118.748,
+      "id": "seg_104"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " lives in of",
+      "speaker": "C",
+      "start": 118.748,
+      "end": 119.19800000000001,
+      "id": "seg_105"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " war.",
+      "speaker": "A",
+      "start": 119.19800000000001,
+      "end": 119.298,
+      "id": "seg_106"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " millions.",
+      "speaker": "C",
+      "start": 119.298,
+      "end": 119.548,
+      "id": "seg_107"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " for",
+      "speaker": "A",
+      "start": 119.412,
+      "end": 119.412,
+      "id": "seg_108"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Millions of people.",
+      "speaker": "C",
+      "start": 119.412,
+      "end": 120.262,
+      "id": "seg_109"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You think",
+      "speaker": "A",
+      "start": 120.262,
+      "end": 120.512,
+      "id": "seg_110"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're",
+      "speaker": "C",
+      "start": 120.512,
+      "end": 120.762,
+      "id": "seg_111"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you",
+      "speaker": "A",
+      "start": 120.762,
+      "end": 120.86200000000001,
+      "id": "seg_112"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " gambling with World War III.",
+      "speaker": "C",
+      "start": 120.86200000000001,
+      "end": 122.662,
+      "id": "seg_113"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " just, what do You're you speak",
+      "speaker": "A",
+      "start": 122.662,
+      "end": 123.412,
+      "id": "seg_114"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " gambling",
+      "speaker": "C",
+      "start": 123.412,
+      "end": 123.56200000000001,
+      "id": "seg_115"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " about?",
+      "speaker": "A",
+      "start": 123.56200000000001,
+      "end": 124.012,
+      "id": "seg_116"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " with",
+      "speaker": "C",
+      "start": 124.012,
+      "end": 124.262,
+      "id": "seg_117"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What",
+      "speaker": "A",
+      "start": 124.262,
+      "end": 124.36200000000001,
+      "id": "seg_118"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " World",
+      "speaker": "C",
+      "start": 124.36200000000001,
+      "end": 124.412,
+      "id": "seg_119"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " do you speak about?",
+      "speaker": "A",
+      "start": 124.412,
+      "end": 124.762,
+      "id": "seg_120"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " War III.",
+      "speaker": "C",
+      "start": 124.762,
+      "end": 125.462,
+      "id": "seg_121"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Hey,",
+      "speaker": "B",
+      "start": 126.1,
+      "end": 126.1,
+      "id": "seg_122"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And what you're doing is very disrespectful to the country,",
+      "speaker": "C",
+      "start": 126.1,
+      "end": 130.04999999999998,
+      "id": "seg_123"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " this country that's",
+      "speaker": "C",
+      "start": 130.15,
+      "end": 131.35,
+      "id": "seg_124"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm with back all to respect to your country,",
+      "speaker": "A",
+      "start": 131.35,
+      "end": 132.95,
+      "id": "seg_125"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " far more than",
+      "speaker": "C",
+      "start": 132.95,
+      "end": 133.6,
+      "id": "seg_126"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "A",
+      "start": 133.6,
+      "end": 133.65,
+      "id": "seg_127"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " a lot of people said they should have.",
+      "speaker": "C",
+      "start": 133.65,
+      "end": 135.65,
+      "id": "seg_128"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Have you said thank you once this entire",
+      "speaker": "B",
+      "start": 135.65,
+      "end": 137.45,
+      "id": "seg_129"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " lot",
+      "speaker": "A",
+      "start": 137.45,
+      "end": 137.54999999999998,
+      "id": "seg_130"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " meeting?",
+      "speaker": "B",
+      "start": 137.54999999999998,
+      "end": 137.6,
+      "id": "seg_131"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " of times.",
+      "speaker": "A",
+      "start": 137.6,
+      "end": 138,
+      "id": "seg_132"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " No,",
+      "speaker": "B",
+      "start": 138.1,
+      "end": 138.45,
+      "id": "seg_133"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Even",
+      "speaker": "A",
+      "start": 138.45,
+      "end": 138.5,
+      "id": "seg_134"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in this entire",
+      "speaker": "B",
+      "start": 138.5,
+      "end": 138.95,
+      "id": "seg_135"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " today.",
+      "speaker": "A",
+      "start": 138.95,
+      "end": 139.15,
+      "id": "seg_136"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " meeting,",
+      "speaker": "B",
+      "start": 139.15,
+      "end": 139.4,
+      "id": "seg_137"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": "",
+      "speaker": "A",
+      "start": 139.4,
+      "end": 139.45,
+      "id": "seg_138"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " have you said thank you?",
+      "speaker": "B",
+      "start": 139.45,
+      "end": 140.35,
+      "id": "seg_139"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Even today.",
+      "speaker": "A",
+      "start": 140.35,
+      "end": 140.5,
+      "id": "seg_140"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You went to Pennsylvania and campaigned for the opposition in October.",
+      "speaker": "B",
+      "start": 140.5,
+      "end": 144.45,
+      "id": "seg_141"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Offer some words of appreciation for the United States of America and the president who's trying to save your country.",
+      "speaker": "B",
+      "start": 144.7,
+      "end": 151.8,
+      "id": "seg_142"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Please, you think that if you will speak very loudly about the war, you",
+      "speaker": "A",
+      "start": 153.172,
+      "end": 158.022,
+      "id": "seg_143"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " He's",
+      "speaker": "C",
+      "start": 158.022,
+      "end": 158.12199999999999,
+      "id": "seg_144"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " can",
+      "speaker": "A",
+      "start": 158.12199999999999,
+      "end": 158.222,
+      "id": "seg_145"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " not speaking loudly. He's not speaking loudly. Your country is in big trouble.",
+      "speaker": "C",
+      "start": 158.222,
+      "end": 162.022,
+      "id": "seg_146"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Can I have",
+      "speaker": "A",
+      "start": 162.022,
+      "end": 162.62199999999999,
+      "id": "seg_147"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Wait a",
+      "speaker": "C",
+      "start": 162.62199999999999,
+      "end": 162.772,
+      "id": "seg_148"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " a",
+      "speaker": "A",
+      "start": 162.772,
+      "end": 162.87199999999999,
+      "id": "seg_149"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " minute.",
+      "speaker": "C",
+      "start": 162.87199999999999,
+      "end": 162.922,
+      "id": "seg_150"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " s",
+      "speaker": "A",
+      "start": 162.922,
+      "end": 163.022,
+      "id": "seg_151"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " No, no.",
+      "speaker": "C",
+      "start": 163.022,
+      "end": 163.37199999999999,
+      "id": "seg_152"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " can I",
+      "speaker": "A",
+      "start": 163.37199999999999,
+      "end": 163.472,
+      "id": "seg_153"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You've done a lot of talking. Your country is in big trouble.",
+      "speaker": "C",
+      "start": 163.472,
+      "end": 166.522,
+      "id": "seg_154"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I know,",
+      "speaker": "A",
+      "start": 166.522,
+      "end": 167.222,
+      "id": "seg_155"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're not",
+      "speaker": "C",
+      "start": 167.222,
+      "end": 167.62199999999999,
+      "id": "seg_156"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "A",
+      "start": 167.62199999999999,
+      "end": 167.772,
+      "id": "seg_157"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " winning.",
+      "speaker": "C",
+      "start": 167.772,
+      "end": 167.87199999999999,
+      "id": "seg_158"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " know.",
+      "speaker": "A",
+      "start": 167.87199999999999,
+      "end": 168.12199999999999,
+      "id": "seg_159"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're not winning this.",
+      "speaker": "C",
+      "start": 168.12199999999999,
+      "end": 169.272,
+      "id": "seg_160"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "A",
+      "start": 169.272,
+      "end": 169.572,
+      "id": "seg_161"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You have a damn",
+      "speaker": "C",
+      "start": 169.572,
+      "end": 170.522,
+      "id": "seg_162"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " we",
+      "speaker": "A",
+      "start": 170.522,
+      "end": 170.72199999999998,
+      "id": "seg_163"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " good chance of",
+      "speaker": "C",
+      "start": 170.72199999999998,
+      "end": 171.37199999999999,
+      "id": "seg_164"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " we",
+      "speaker": "A",
+      "start": 171.37199999999999,
+      "end": 171.47199999999998,
+      "id": "seg_165"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " coming",
+      "speaker": "C",
+      "start": 171.47199999999998,
+      "end": 171.522,
+      "id": "seg_166"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " are staying",
+      "speaker": "A",
+      "start": 171.522,
+      "end": 171.72199999999998,
+      "id": "seg_167"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " out okay because",
+      "speaker": "C",
+      "start": 171.72199999999998,
+      "end": 172.72199999999998,
+      "id": "seg_168"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Mr.",
+      "speaker": "A",
+      "start": 172.72199999999998,
+      "end": 172.772,
+      "id": "seg_169"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " of us.",
+      "speaker": "C",
+      "start": 172.772,
+      "end": 173.172,
+      "id": "seg_170"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " President, we are staying in our country, staying strong from the very beginning of the war, we've been alone and we are thankful.",
+      "speaker": "A",
+      "start": 173.172,
+      "end": 179.772,
+      "id": "seg_171"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I said tanks",
+      "speaker": "A",
+      "start": 179.636,
+      "end": 180.33599999999998,
+      "id": "seg_172"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You haven't",
+      "speaker": "C",
+      "start": 180.33599999999998,
+      "end": 180.886,
+      "id": "seg_173"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in this",
+      "speaker": "A",
+      "start": 180.886,
+      "end": 181.08599999999998,
+      "id": "seg_174"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " been allowed.",
+      "speaker": "C",
+      "start": 181.08599999999998,
+      "end": 181.386,
+      "id": "seg_175"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " cabinet,",
+      "speaker": "A",
+      "start": 181.386,
+      "end": 181.936,
+      "id": "seg_176"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You haven't",
+      "speaker": "C",
+      "start": 181.936,
+      "end": 182.08599999999998,
+      "id": "seg_177"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and openly",
+      "speaker": "A",
+      "start": 182.08599999999998,
+      "end": 182.33599999999998,
+      "id": "seg_178"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " been allowed.",
+      "speaker": "C",
+      "start": 182.33599999999998,
+      "end": 182.58599999999998,
+      "id": "seg_179"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in this cabinet.",
+      "speaker": "A",
+      "start": 182.58599999999998,
+      "end": 183.08599999999998,
+      "id": "seg_180"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " We gave you",
+      "speaker": "C",
+      "start": 183.08599999999998,
+      "end": 183.686,
+      "id": "seg_181"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "A",
+      "start": 183.686,
+      "end": 183.786,
+      "id": "seg_182"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " through this",
+      "speaker": "C",
+      "start": 183.786,
+      "end": 183.986,
+      "id": "seg_183"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " said",
+      "speaker": "A",
+      "start": 183.986,
+      "end": 184.33599999999998,
+      "id": "seg_184"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " stupid",
+      "speaker": "C",
+      "start": 184.33599999999998,
+      "end": 184.486,
+      "id": "seg_185"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " tanks.",
+      "speaker": "A",
+      "start": 184.486,
+      "end": 184.83599999999998,
+      "id": "seg_186"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " president, three hundred and fifty billion You dollars,",
+      "speaker": "C",
+      "start": 184.83599999999998,
+      "end": 187.536,
+      "id": "seg_187"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " voted",
+      "speaker": "A",
+      "start": 187.536,
+      "end": 187.736,
+      "id": "seg_188"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " we gave",
+      "speaker": "C",
+      "start": 187.736,
+      "end": 188.236,
+      "id": "seg_189"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " for",
+      "speaker": "A",
+      "start": 188.236,
+      "end": 188.43599999999998,
+      "id": "seg_190"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you your military",
+      "speaker": "C",
+      "start": 188.43599999999998,
+      "end": 188.636,
+      "id": "seg_191"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " president.",
+      "speaker": "A",
+      "start": 188.636,
+      "end": 189.036,
+      "id": "seg_192"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " equipment and",
+      "speaker": "C",
+      "start": 189.036,
+      "end": 189.986,
+      "id": "seg_193"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You voted",
+      "speaker": "A",
+      "start": 189.986,
+      "end": 190.236,
+      "id": "seg_194"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " your men",
+      "speaker": "C",
+      "start": 190.236,
+      "end": 190.486,
+      "id": "seg_195"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " for your",
+      "speaker": "A",
+      "start": 190.486,
+      "end": 190.68599999999998,
+      "id": "seg_196"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " are",
+      "speaker": "C",
+      "start": 190.68599999999998,
+      "end": 190.786,
+      "id": "seg_197"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " president.",
+      "speaker": "A",
+      "start": 190.786,
+      "end": 190.83599999999998,
+      "id": "seg_198"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " brave but they had to use our military",
+      "speaker": "C",
+      "start": 190.83599999999998,
+      "end": 192.33599999999998,
+      "id": "seg_199"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " So what",
+      "speaker": "A",
+      "start": 192.33599999999998,
+      "end": 192.786,
+      "id": "seg_200"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " if",
+      "speaker": "C",
+      "start": 192.786,
+      "end": 192.986,
+      "id": "seg_201"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " about rescuing?",
+      "speaker": "A",
+      "start": 192.986,
+      "end": 193.386,
+      "id": "seg_202"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " if you didn't",
+      "speaker": "C",
+      "start": 193.386,
+      "end": 193.986,
+      "id": "seg_203"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You invited",
+      "speaker": "A",
+      "start": 193.986,
+      "end": 194.236,
+      "id": "seg_204"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " have our military",
+      "speaker": "C",
+      "start": 194.236,
+      "end": 194.786,
+      "id": "seg_205"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " me,",
+      "speaker": "A",
+      "start": 194.786,
+      "end": 195.036,
+      "id": "seg_206"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " equipment,",
+      "speaker": "C",
+      "start": 195.036,
+      "end": 195.236,
+      "id": "seg_207"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you invited",
+      "speaker": "A",
+      "start": 195.236,
+      "end": 195.93599999999998,
+      "id": "seg_208"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " if",
+      "speaker": "C",
+      "start": 195.93599999999998,
+      "end": 196.286,
+      "id": "seg_209"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " me",
+      "speaker": "A",
+      "start": 196.286,
+      "end": 196.43599999999998,
+      "id": "seg_210"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you",
+      "speaker": "C",
+      "start": 196.43599999999998,
+      "end": 196.486,
+      "id": "seg_211"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " to",
+      "speaker": "A",
+      "start": 196.486,
+      "end": 196.636,
+      "id": "seg_212"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " didn't",
+      "speaker": "C",
+      "start": 196.636,
+      "end": 196.68599999999998,
+      "id": "seg_213"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " speak.",
+      "speaker": "A",
+      "start": 196.68599999999998,
+      "end": 196.886,
+      "id": "seg_214"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " have our military equipment,",
+      "speaker": "C",
+      "start": 196.886,
+      "end": 198.58599999999998,
+      "id": "seg_215"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " this war would have been over in two weeks,",
+      "speaker": "C",
+      "start": 198.636,
+      "end": 201.286,
+      "id": "seg_216"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " In",
+      "speaker": "A",
+      "start": 201.286,
+      "end": 201.386,
+      "id": "seg_217"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " okay?",
+      "speaker": "C",
+      "start": 201.386,
+      "end": 201.486,
+      "id": "seg_218"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " three days, I heard it from Putin,",
+      "speaker": "A",
+      "start": 201.486,
+      "end": 203.386,
+      "id": "seg_219"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in three days. This is something",
+      "speaker": "A",
+      "start": 203.43599999999998,
+      "end": 205.036,
+      "id": "seg_220"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Maybe",
+      "speaker": "C",
+      "start": 205.036,
+      "end": 205.18599999999998,
+      "id": "seg_221"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " new",
+      "speaker": "A",
+      "start": 205.18599999999998,
+      "end": 205.33599999999998,
+      "id": "seg_222"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " less.",
+      "speaker": "C",
+      "start": 205.33599999999998,
+      "end": 205.536,
+      "id": "seg_223"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " in two weeks of course.",
+      "speaker": "A",
+      "start": 205.536,
+      "end": 206.83599999999998,
+      "id": "seg_224"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Of course yes,",
+      "speaker": "A",
+      "start": 206.644,
+      "end": 207.394,
+      "id": "seg_225"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It's going to be a very hard thing to do business like this,",
+      "speaker": "C",
+      "start": 207.394,
+      "end": 210.094,
+      "id": "seg_226"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " again.",
+      "speaker": "A",
+      "start": 210.094,
+      "end": 210.19400000000002,
+      "id": "seg_227"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I tell",
+      "speaker": "C",
+      "start": 210.19400000000002,
+      "end": 210.494,
+      "id": "seg_228"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Do",
+      "speaker": "B",
+      "start": 210.494,
+      "end": 210.544,
+      "id": "seg_229"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you this.",
+      "speaker": "C",
+      "start": 210.544,
+      "end": 210.744,
+      "id": "seg_230"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " say thank you except",
+      "speaker": "B",
+      "start": 210.744,
+      "end": 212.44400000000002,
+      "id": "seg_231"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I said a lot of times,",
+      "speaker": "A",
+      "start": 212.44400000000002,
+      "end": 213.794,
+      "id": "seg_232"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " that they're",
+      "speaker": "B",
+      "start": 213.794,
+      "end": 214.094,
+      "id": "seg_233"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " thank you to American people.",
+      "speaker": "A",
+      "start": 214.094,
+      "end": 215.69400000000002,
+      "id": "seg_234"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " except that there are disagreements and let's go litigate those disagreements rather than trying to fight it out in the American media when you're wrong.",
+      "speaker": "B",
+      "start": 215.69400000000002,
+      "end": 222.994,
+      "id": "seg_235"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " We know that you're",
+      "speaker": "B",
+      "start": 223.294,
+      "end": 224.094,
+      "id": "seg_236"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But",
+      "speaker": "C",
+      "start": 224.094,
+      "end": 224.244,
+      "id": "seg_237"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " wrong.",
+      "speaker": "B",
+      "start": 224.244,
+      "end": 224.44400000000002,
+      "id": "seg_238"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you see, I think it's good for the American people to see what's",
+      "speaker": "C",
+      "start": 224.44400000000002,
+      "end": 227.244,
+      "id": "seg_239"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "B",
+      "start": 227.244,
+      "end": 227.344,
+      "id": "seg_240"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " going on over",
+      "speaker": "C",
+      "start": 227.344,
+      "end": 227.744,
+      "id": "seg_241"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " understand,",
+      "speaker": "B",
+      "start": 227.744,
+      "end": 227.844,
+      "id": "seg_242"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " here.",
+      "speaker": "C",
+      "start": 227.844,
+      "end": 228.044,
+      "id": "seg_243"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " sir.",
+      "speaker": "B",
+      "start": 228.044,
+      "end": 228.19400000000002,
+      "id": "seg_244"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I think it's very important. That's why I kept this going so long.",
+      "speaker": "C",
+      "start": 228.19400000000002,
+      "end": 230.594,
+      "id": "seg_245"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You have to be thankful.",
+      "speaker": "C",
+      "start": 232.084,
+      "end": 233.184,
+      "id": "seg_246"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You don't have the cards.",
+      "speaker": "C",
+      "start": 233.484,
+      "end": 234.734,
+      "id": "seg_247"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " thankful I'm",
+      "speaker": "A",
+      "start": 234.734,
+      "end": 235.334,
+      "id": "seg_248"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're buried there.",
+      "speaker": "C",
+      "start": 235.334,
+      "end": 236.434,
+      "id": "seg_249"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm",
+      "speaker": "A",
+      "start": 236.434,
+      "end": 236.584,
+      "id": "seg_250"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " People are",
+      "speaker": "C",
+      "start": 236.584,
+      "end": 237.734,
+      "id": "seg_251"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I",
+      "speaker": "A",
+      "start": 237.734,
+      "end": 237.784,
+      "id": "seg_252"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " dying.",
+      "speaker": "C",
+      "start": 237.784,
+      "end": 238.034,
+      "id": "seg_253"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " can tell you again",
+      "speaker": "A",
+      "start": 238.034,
+      "end": 238.684,
+      "id": "seg_254"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're running low on soldiers.",
+      "speaker": "C",
+      "start": 238.684,
+      "end": 239.734,
+      "id": "seg_255"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " don't",
+      "speaker": "A",
+      "start": 239.734,
+      "end": 240.234,
+      "id": "seg_256"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Listen,",
+      "speaker": "C",
+      "start": 240.234,
+      "end": 240.334,
+      "id": "seg_257"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " don't please",
+      "speaker": "A",
+      "start": 240.334,
+      "end": 241.13400000000001,
+      "id": "seg_258"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you're running low on soldiers.",
+      "speaker": "C",
+      "start": 241.13400000000001,
+      "end": 242.684,
+      "id": "seg_259"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It would be a damn good thing. And then you tell us, I don't want a ceasefire. I don't want a ceasefire.",
+      "speaker": "C",
+      "start": 242.934,
+      "end": 248.53400000000002,
+      "id": "seg_260"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I want to go and I wanted this.",
+      "speaker": "C",
+      "start": 248.63400000000001,
+      "end": 250.28400000000002,
+      "id": "seg_261"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Look.",
+      "speaker": "C",
+      "start": 250.334,
+      "end": 250.984,
+      "id": "seg_262"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " If you could get a ceasefire right now, I tell you, you take it so the bullets stop flying and your men stop",
+      "speaker": "C",
+      "start": 252.02,
+      "end": 257.37,
+      "id": "seg_263"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Of",
+      "speaker": "A",
+      "start": 257.37,
+      "end": 257.42,
+      "id": "seg_264"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " getting",
+      "speaker": "C",
+      "start": 257.42,
+      "end": 257.52,
+      "id": "seg_265"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " course, of",
+      "speaker": "A",
+      "start": 257.52,
+      "end": 257.77,
+      "id": "seg_266"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " killed.",
+      "speaker": "C",
+      "start": 257.77,
+      "end": 258.02,
+      "id": "seg_267"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " course, we want to stop the war,",
+      "speaker": "A",
+      "start": 258.02,
+      "end": 259.47,
+      "id": "seg_268"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But",
+      "speaker": "C",
+      "start": 259.47,
+      "end": 259.52000000000004,
+      "id": "seg_269"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but",
+      "speaker": "A",
+      "start": 259.52000000000004,
+      "end": 259.67,
+      "id": "seg_270"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you're saying you don't want a ceasefire.",
+      "speaker": "C",
+      "start": 259.67,
+      "end": 260.62,
+      "id": "seg_271"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I said to you,",
+      "speaker": "A",
+      "start": 260.62,
+      "end": 261.47,
+      "id": "seg_272"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I want",
+      "speaker": "C",
+      "start": 261.47,
+      "end": 261.67,
+      "id": "seg_273"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " with",
+      "speaker": "A",
+      "start": 261.67,
+      "end": 261.82,
+      "id": "seg_274"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " a ceasefire.",
+      "speaker": "C",
+      "start": 261.82,
+      "end": 262.32,
+      "id": "seg_275"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " guarantees.",
+      "speaker": "A",
+      "start": 262.32,
+      "end": 262.62,
+      "id": "seg_276"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Because you'll get a ceasefire faster than an agreement.",
+      "speaker": "C",
+      "start": 262.62,
+      "end": 265.22,
+      "id": "seg_277"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Ask our people about ceasefire, what they think.",
+      "speaker": "A",
+      "start": 265.22,
+      "end": 267.87,
+      "id": "seg_278"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That wasn't",
+      "speaker": "C",
+      "start": 267.87,
+      "end": 268.57,
+      "id": "seg_279"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It doesn't",
+      "speaker": "A",
+      "start": 268.57,
+      "end": 268.87,
+      "id": "seg_280"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " with me.",
+      "speaker": "C",
+      "start": 268.87,
+      "end": 269.12,
+      "id": "seg_281"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " matter for you what",
+      "speaker": "A",
+      "start": 269.12,
+      "end": 269.87,
+      "id": "seg_282"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That",
+      "speaker": "C",
+      "start": 269.87,
+      "end": 270.02,
+      "id": "seg_283"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " they",
+      "speaker": "A",
+      "start": 270.02,
+      "end": 270.07,
+      "id": "seg_284"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " wasn't with",
+      "speaker": "C",
+      "start": 270.07,
+      "end": 270.52,
+      "id": "seg_285"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " need.",
+      "speaker": "A",
+      "start": 270.52,
+      "end": 270.67,
+      "id": "seg_286"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " me.",
+      "speaker": "C",
+      "start": 270.67,
+      "end": 271.02,
+      "id": "seg_287"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It That wasn't",
+      "speaker": "C",
+      "start": 271.57,
+      "end": 271.82,
+      "id": "seg_288"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " was with",
+      "speaker": "A",
+      "start": 271.82,
+      "end": 272.17,
+      "id": "seg_289"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " a",
+      "speaker": "C",
+      "start": 272.17,
+      "end": 272.22,
+      "id": "seg_290"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " your",
+      "speaker": "A",
+      "start": 272.22,
+      "end": 272.27,
+      "id": "seg_291"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " guy",
+      "speaker": "C",
+      "start": 272.27,
+      "end": 272.57,
+      "id": "seg_292"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " president.",
+      "speaker": "A",
+      "start": 272.57,
+      "end": 272.82,
+      "id": "seg_293"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " named Biden who is not a smart person.",
+      "speaker": "C",
+      "start": 272.82,
+      "end": 275.12,
+      "id": "seg_294"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But",
+      "speaker": "A",
+      "start": 275.12,
+      "end": 275.37,
+      "id": "seg_295"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That",
+      "speaker": "C",
+      "start": 275.37,
+      "end": 275.42,
+      "id": "seg_296"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " this is",
+      "speaker": "A",
+      "start": 275.42,
+      "end": 275.62,
+      "id": "seg_297"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " was with",
+      "speaker": "C",
+      "start": 275.62,
+      "end": 275.82,
+      "id": "seg_298"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " your president.",
+      "speaker": "A",
+      "start": 275.82,
+      "end": 276.02,
+      "id": "seg_299"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Obama.",
+      "speaker": "C",
+      "start": 276.02,
+      "end": 276.92,
+      "id": "seg_300"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It was your president.",
+      "speaker": "A",
+      "start": 276.92,
+      "end": 278.22,
+      "id": "seg_301"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Excuse me.",
+      "speaker": "C",
+      "start": 278.22,
+      "end": 278.62,
+      "id": "seg_302"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Excuse me, that was with Obama who gave you sheets and I gave you javelins.",
+      "speaker": "C",
+      "start": 278.484,
+      "end": 282.13399999999996,
+      "id": "seg_303"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Yes.",
+      "speaker": "A",
+      "start": 282.13399999999996,
+      "end": 282.38399999999996,
+      "id": "seg_304"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I gave you the javelins to take out all those tanks.",
+      "speaker": "C",
+      "start": 282.38399999999996,
+      "end": 285.534,
+      "id": "seg_305"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Obama gave you sheets.",
+      "speaker": "C",
+      "start": 285.93399999999997,
+      "end": 287.484,
+      "id": "seg_306"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " In fact, the statement is Obama gave sheets and Trump gave javelins.",
+      "speaker": "C",
+      "start": 288.084,
+      "end": 292.734,
+      "id": "seg_307"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You got to be more thankful because let me tell you, you don't have the cards.",
+      "speaker": "C",
+      "start": 293.63399999999996,
+      "end": 298.13399999999996,
+      "id": "seg_308"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " With us, you have the cards,",
+      "speaker": "C",
+      "start": 298.18399999999997,
+      "end": 299.88399999999996,
+      "id": "seg_309"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but without us, you don't have any cards.",
+      "speaker": "C",
+      "start": 299.984,
+      "end": 302.18399999999997,
+      "id": "seg_310"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Because the attitudes have to change.",
+      "speaker": "C",
+      "start": 308.244,
+      "end": 310.04400000000004,
+      "id": "seg_311"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What if Russia breaks ceasefire? What if Russia breaks peace talks?",
+      "speaker": "D",
+      "start": 310.34400000000005,
+      "end": 315.54400000000004,
+      "id": "seg_312"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What do you do then?",
+      "speaker": "D",
+      "start": 315.694,
+      "end": 316.54400000000004,
+      "id": "seg_313"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I understand that it's a heated conversation right",
+      "speaker": "D",
+      "start": 316.894,
+      "end": 319.994,
+      "id": "seg_314"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What",
+      "speaker": "C",
+      "start": 319.994,
+      "end": 320.144,
+      "id": "seg_315"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " now.",
+      "speaker": "D",
+      "start": 320.144,
+      "end": 320.244,
+      "id": "seg_316"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " are you saying?",
+      "speaker": "C",
+      "start": 320.244,
+      "end": 320.694,
+      "id": "seg_317"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What",
+      "speaker": "D",
+      "start": 321.09400000000005,
+      "end": 321.34400000000005,
+      "id": "seg_318"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " She's asking what if Russia breaks the ceasefire.",
+      "speaker": "B",
+      "start": 321.34400000000005,
+      "end": 324.04400000000004,
+      "id": "seg_319"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Oh, what if they, what if anything?",
+      "speaker": "C",
+      "start": 324.04400000000004,
+      "end": 325.84400000000005,
+      "id": "seg_320"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What if a bomb drops on your head right now?",
+      "speaker": "C",
+      "start": 326.04400000000004,
+      "end": 328.694,
+      "id": "seg_321"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But they have",
+      "speaker": "D",
+      "start": 328.694,
+      "end": 329.29400000000004,
+      "id": "seg_322"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay?",
+      "speaker": "C",
+      "start": 329.29400000000004,
+      "end": 329.394,
+      "id": "seg_323"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " broken the",
+      "speaker": "D",
+      "start": 329.394,
+      "end": 329.694,
+      "id": "seg_324"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " What",
+      "speaker": "C",
+      "start": 329.694,
+      "end": 329.994,
+      "id": "seg_325"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " ceasefire already.",
+      "speaker": "D",
+      "start": 329.994,
+      "end": 330.144,
+      "id": "seg_326"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " if they broke it?",
+      "speaker": "C",
+      "start": 330.144,
+      "end": 330.84400000000005,
+      "id": "seg_327"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But",
+      "speaker": "D",
+      "start": 331.348,
+      "end": 331.348,
+      "id": "seg_328"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I don't",
+      "speaker": "C",
+      "start": 331.348,
+      "end": 331.69800000000004,
+      "id": "seg_329"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I...",
+      "speaker": "D",
+      "start": 331.69800000000004,
+      "end": 331.848,
+      "id": "seg_330"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " know, they broke it with Biden because Biden,",
+      "speaker": "C",
+      "start": 331.848,
+      "end": 333.898,
+      "id": "seg_331"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " they didn't respect him. They didn't respect Obama.",
+      "speaker": "C",
+      "start": 333.94800000000004,
+      "end": 336.19800000000004,
+      "id": "seg_332"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " They respect me.",
+      "speaker": "C",
+      "start": 336.498,
+      "end": 337.848,
+      "id": "seg_333"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Let me tell you, Putin went through a hell of a lot with me. He went through a phony witch hunt where they used him and Russia,",
+      "speaker": "C",
+      "start": 338.848,
+      "end": 344.94800000000004,
+      "id": "seg_334"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Russia, Russia, Russia. You ever hear of that deal?",
+      "speaker": "C",
+      "start": 345.098,
+      "end": 348.098,
+      "id": "seg_335"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That was a phony Hunter Biden,",
+      "speaker": "C",
+      "start": 348.148,
+      "end": 350.748,
+      "id": "seg_336"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Joe Biden scam.",
+      "speaker": "C",
+      "start": 350.94800000000004,
+      "end": 352.498,
+      "id": "seg_337"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Hillary Clinton,",
+      "speaker": "C",
+      "start": 352.848,
+      "end": 353.798,
+      "id": "seg_338"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Shifty Adam Schiff,",
+      "speaker": "C",
+      "start": 353.94800000000004,
+      "end": 355.648,
+      "id": "seg_339"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " it was a Democrat scam.",
+      "speaker": "C",
+      "start": 355.69800000000004,
+      "end": 357.19800000000004,
+      "id": "seg_340"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And he had to go through that.",
+      "speaker": "C",
+      "start": 358.164,
+      "end": 359.464,
+      "id": "seg_341"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And he did go through it. We didn't end up in a war.",
+      "speaker": "C",
+      "start": 359.56399999999996,
+      "end": 362.114,
+      "id": "seg_342"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And he went through it. He was accused of all that stuff.",
+      "speaker": "C",
+      "start": 362.864,
+      "end": 365.264,
+      "id": "seg_343"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " He had nothing to do with it. It came out of Hunter Biden's bathroom.",
+      "speaker": "C",
+      "start": 365.414,
+      "end": 369.114,
+      "id": "seg_344"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It came out of Hunter Biden's bedroom.",
+      "speaker": "C",
+      "start": 369.614,
+      "end": 372.014,
+      "id": "seg_345"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " It was disgusting.",
+      "speaker": "C",
+      "start": 372.614,
+      "end": 373.964,
+      "id": "seg_346"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And then they said,",
+      "speaker": "C",
+      "start": 374.56399999999996,
+      "end": 375.56399999999996,
+      "id": "seg_347"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " oh,",
+      "speaker": "C",
+      "start": 375.664,
+      "end": 375.864,
+      "id": "seg_348"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " oh,",
+      "speaker": "C",
+      "start": 376.06399999999996,
+      "end": 376.714,
+      "id": "seg_349"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the laptop from hell was made by Russia.",
+      "speaker": "C",
+      "start": 376.81399999999996,
+      "end": 379.764,
+      "id": "seg_350"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " The 51 agents.",
+      "speaker": "C",
+      "start": 380.364,
+      "end": 381.914,
+      "id": "seg_351"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " The whole thing was a scam.",
+      "speaker": "C",
+      "start": 382.164,
+      "end": 383.81399999999996,
+      "id": "seg_352"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And he had to put up with that.",
+      "speaker": "C",
+      "start": 383.964,
+      "end": 385.214,
+      "id": "seg_353"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " He was being accused of all that stuff.",
+      "speaker": "C",
+      "start": 385.264,
+      "end": 386.914,
+      "id": "seg_354"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " All I can say is this.",
+      "speaker": "C",
+      "start": 387.956,
+      "end": 389.55600000000004,
+      "id": "seg_355"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " He might have broken deals with Obama and Bush,",
+      "speaker": "C",
+      "start": 389.706,
+      "end": 393.05600000000004,
+      "id": "seg_356"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and he might have broken them with Biden.",
+      "speaker": "C",
+      "start": 393.156,
+      "end": 395.356,
+      "id": "seg_357"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " He did, maybe.",
+      "speaker": "C",
+      "start": 395.406,
+      "end": 396.106,
+      "id": "seg_358"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Maybe he did. I don't know what happened,",
+      "speaker": "C",
+      "start": 396.206,
+      "end": 397.80600000000004,
+      "id": "seg_359"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but he didn't break them with me.",
+      "speaker": "C",
+      "start": 397.856,
+      "end": 399.356,
+      "id": "seg_360"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " He wants to make a deal.",
+      "speaker": "C",
+      "start": 399.606,
+      "end": 400.906,
+      "id": "seg_361"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I don't know if you can make a deal.",
+      "speaker": "C",
+      "start": 401.00600000000003,
+      "end": 402.30600000000004,
+      "id": "seg_362"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " The problem is I've empowered you to be a tough guy,",
+      "speaker": "C",
+      "start": 402.706,
+      "end": 406.50600000000003,
+      "id": "seg_363"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and I don't think you'd be a tough guy without the United States.",
+      "speaker": "C",
+      "start": 406.606,
+      "end": 410.606,
+      "id": "seg_364"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And your people are very brave, but you're either going to make a deal or we're out.",
+      "speaker": "C",
+      "start": 410.80600000000004,
+      "end": 415.206,
+      "id": "seg_365"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And if we're out.",
+      "speaker": "C",
+      "start": 415.30600000000004,
+      "end": 416.106,
+      "id": "seg_366"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You'll fight it out.",
+      "speaker": "C",
+      "start": 416.66,
+      "end": 417.71000000000004,
+      "id": "seg_367"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I don't think it's going to be pretty,",
+      "speaker": "C",
+      "start": 418.16,
+      "end": 419.76000000000005,
+      "id": "seg_368"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but you'll fight it out.",
+      "speaker": "C",
+      "start": 419.81,
+      "end": 421.26000000000005,
+      "id": "seg_369"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But you don't have the cards.",
+      "speaker": "C",
+      "start": 421.91,
+      "end": 423.31,
+      "id": "seg_370"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " But once we sign that deal,",
+      "speaker": "C",
+      "start": 423.46000000000004,
+      "end": 425.16,
+      "id": "seg_371"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " you're in a much better position,",
+      "speaker": "C",
+      "start": 425.26000000000005,
+      "end": 426.86,
+      "id": "seg_372"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but you're not acting at all thankful.",
+      "speaker": "C",
+      "start": 427.11,
+      "end": 429.26000000000005,
+      "id": "seg_373"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And that's not a nice thing.",
+      "speaker": "C",
+      "start": 429.46000000000004,
+      "end": 430.86,
+      "id": "seg_374"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'll be honest,",
+      "speaker": "C",
+      "start": 430.91,
+      "end": 431.46000000000004,
+      "id": "seg_375"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " that's not a nice thing.",
+      "speaker": "C",
+      "start": 431.56,
+      "end": 432.56,
+      "id": "seg_376"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Alright, uh I think we've seen enough. What do you think? Uh?",
+      "speaker": "C",
+      "start": 433.14,
+      "end": 436.39,
+      "id": "seg_377"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " This negotiation",
+      "speaker": "D",
+      "start": 436.39,
+      "end": 437.28999999999996,
+      "id": "seg_378"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " This is this is gonna be great television,",
+      "speaker": "C",
+      "start": 437.28999999999996,
+      "end": 439.19,
+      "id": "seg_379"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " is illegal.",
+      "speaker": "D",
+      "start": 439.19,
+      "end": 439.49,
+      "id": "seg_380"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I will say that. Alright, but",
+      "speaker": "C",
+      "start": 439.49,
+      "end": 441.34,
+      "id": "seg_381"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay,",
+      "speaker": "E",
+      "start": 441.34,
+      "end": 441.53999999999996,
+      "id": "seg_382"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " alright,",
+      "speaker": "C",
+      "start": 441.53999999999996,
+      "end": 442.03999999999996,
+      "id": "seg_383"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but not a",
+      "speaker": "E",
+      "start": 442.03999999999996,
+      "end": 442.39,
+      "id": "seg_384"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " well we'll see what we can do about",
+      "speaker": "C",
+      "start": 442.39,
+      "end": 444.28999999999996,
+      "id": "seg_385"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Yeah,",
+      "speaker": "E",
+      "start": 444.28999999999996,
+      "end": 444.34,
+      "id": "seg_386"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " putting",
+      "speaker": "C",
+      "start": 444.34,
+      "end": 444.44,
+      "id": "seg_387"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " but why",
+      "speaker": "E",
+      "start": 444.44,
+      "end": 444.74,
+      "id": "seg_388"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " it together.",
+      "speaker": "C",
+      "start": 444.74,
+      "end": 444.94,
+      "id": "seg_389"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " do you go against the point?",
+      "speaker": "E",
+      "start": 444.94,
+      "end": 445.49,
+      "id": "seg_390"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Thank you.",
+      "speaker": "C",
+      "start": 445.49,
+      "end": 446.14,
+      "id": "seg_391"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Well, they lie. Guys, let's go.",
+      "speaker": "E",
+      "start": 446.14,
+      "end": 447.99,
+      "id": "seg_392"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Come on now.",
+      "speaker": "B",
+      "start": 447.99,
+      "end": 448.19,
+      "id": "seg_393"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Guys,",
+      "speaker": "E",
+      "start": 448.19,
+      "end": 448.78999999999996,
+      "id": "seg_394"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm in.",
+      "speaker": "B",
+      "start": 448.78999999999996,
+      "end": 448.84,
+      "id": "seg_395"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " come on now. Guys, come on,",
+      "speaker": "E",
+      "start": 448.84,
+      "end": 450.94,
+      "id": "seg_396"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " If you negotiate, give a non-compete.",
+      "speaker": "D",
+      "start": 450.94,
+      "end": 452.99,
+      "id": "seg_397"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " we'll see. I don't know.",
+      "speaker": "C",
+      "start": 452.99,
+      "end": 454.03999999999996,
+      "id": "seg_398"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Alright guys, guys, come on, please.",
+      "speaker": "E",
+      "start": 454.09,
+      "end": 456.44,
+      "id": "seg_399"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Like a president. Hey!",
+      "speaker": "E",
+      "start": 456.59,
+      "end": 457.53999999999996,
+      "id": "seg_400"
+    }
+  ],
+  "duration": 457.53999999999996,
+  "text": "He broken this ceasefire, he killed our people and he didn't exchange prisoners. We signed the exchange of prisoners, but he didn't do it.\nWhat kind of diplomacy, J.G., you are speaking about? What do you mean? I'm talking about the kind of diplomacy that's going to end the destruction of your country. Yes, but if you Mr. are not President, involved... Mr. President, with respect, I think it's disrespectful for you to come into the Oval Office and try to litigate this in front of the American media. Right now you guys are going around and forcing conscripts to the front lines because you have manpower problems. You should be thanking the President for trying to bring an end to this conflict. Have you ever been to Ukraine?\nTo Ukraine that you say what problems we have. I have been to, But come once. I have actually watched and seen the stories and I know what happens is you bring people, you bring them on a propaganda tour, Mr. President. Do you disagree that you've had problems bringing people into your military? We have problems. And do you think that it's respectful I will answer. to come to the Oval Office I of will answer. the United States of America and attack the administration that is trying to prevent the destruction of your country? A lot of a lot of questions, let's start.\nStart from the beginning. Sure. First of all, during the war everybody has problems, even you, but you have nice ocean and don't feel now, but you will feel it in the future. Good. God bless, You don't know that. God bless, You don't God know that. bless, you Don't will not have you gotta the war. s don't tell us what we're gonna feel. We're trying to solve a problem. Don't tell us what we're gonna feel. I'm not telling Because you, I'm you're answering in no position on this question. to dictate that. That's exactly Remember what I'm that. I'm doing. not You're dictating. in no position.\ndictate what we're going to feel. You We're will feel going to feel very good. influence. We're going to feel I'm very good telling and very strong. you, you will feel influence from You're right now not in a very good position. You've allowed yourself the very to beginning be in a very bad position of and he happens to be right about it. the very beginning of the war, You're not Mr. in a good position. I was... You don't have the cards right now. With us you start having What cards. playing cards? But right now you I'm don't... you're very serious, playing cards. Mr. President. You're I'm playing cards. very serious. You're gambling with I'm the President lives in of war. millions.\nfor Millions of people. You think You're you gambling with World War III. just, what do You're you speak gambling about? with What World do you speak about? War III.\nHey, And what you're doing is very disrespectful to the country, this country that's I'm with back all to respect to your country, far more than I a lot of people said they should have. Have you said thank you once this entire lot meeting? of times. No, Even in this entire today. meeting, have you said thank you? Even today. You went to Pennsylvania and campaigned for the opposition in October. Offer some words of appreciation for the United States of America and the president who's trying to save your country.\nPlease, you think that if you will speak very loudly about the war, you He's can not speaking loudly. He's not speaking loudly. Your country is in big trouble. Can I have Wait a a minute. s No, no. can I You've done a lot of talking. Your country is in big trouble. I know, You're not I winning. know. You're not winning this. I You have a damn we good chance of we coming are staying out okay because Mr. of us. President, we are staying in our country, staying strong from the very beginning of the war, we've been alone and we are thankful.\nI said tanks You haven't in this been allowed. cabinet, You haven't and openly been allowed. in this cabinet. We gave you I through this said stupid tanks. president, three hundred and fifty billion You dollars, voted we gave for you your military president. equipment and You voted your men for your are president. brave but they had to use our military So what if about rescuing? if you didn't You invited have our military me, equipment, you invited if me you to didn't speak. have our military equipment, this war would have been over in two weeks, In okay? three days, I heard it from Putin, in three days. This is something Maybe new less. in two weeks of course.\nOf course yes, It's going to be a very hard thing to do business like this, again. I tell Do you this. say thank you except I said a lot of times, that they're thank you to American people. except that there are disagreements and let's go litigate those disagreements rather than trying to fight it out in the American media when you're wrong. We know that you're But wrong. you see, I think it's good for the American people to see what's I going on over understand, here. sir. I think it's very important. That's why I kept this going so long.\nYou have to be thankful. You don't have the cards. thankful I'm You're buried there. I'm People are I dying. can tell you again You're running low on soldiers. don't Listen, don't please you're running low on soldiers. It would be a damn good thing. And then you tell us, I don't want a ceasefire. I don't want a ceasefire. I want to go and I wanted this. Look.\nIf you could get a ceasefire right now, I tell you, you take it so the bullets stop flying and your men stop Of getting course, of killed. course, we want to stop the war, But but you're saying you don't want a ceasefire. I said to you, I want with a ceasefire. guarantees. Because you'll get a ceasefire faster than an agreement. Ask our people about ceasefire, what they think. That wasn't It doesn't with me. matter for you what That they wasn't with need. me. It That wasn't was with a your guy president. named Biden who is not a smart person. But That this is was with your president. Obama. It was your president. Excuse me.\nExcuse me, that was with Obama who gave you sheets and I gave you javelins. Yes. I gave you the javelins to take out all those tanks. Obama gave you sheets. In fact, the statement is Obama gave sheets and Trump gave javelins. You got to be more thankful because let me tell you, you don't have the cards. With us, you have the cards, but without us, you don't have any cards.\nBecause the attitudes have to change. What if Russia breaks ceasefire? What if Russia breaks peace talks? What do you do then? I understand that it's a heated conversation right What now. are you saying? What She's asking what if Russia breaks the ceasefire. Oh, what if they, what if anything? What if a bomb drops on your head right now? But they have Okay? broken the What ceasefire already. if they broke it?\nBut I don't I... know, they broke it with Biden because Biden, they didn't respect him. They didn't respect Obama. They respect me. Let me tell you, Putin went through a hell of a lot with me. He went through a phony witch hunt where they used him and Russia, Russia, Russia, Russia. You ever hear of that deal? That was a phony Hunter Biden, Joe Biden scam. Hillary Clinton, Shifty Adam Schiff, it was a Democrat scam.\nAnd he had to go through that. And he did go through it. We didn't end up in a war. And he went through it. He was accused of all that stuff. He had nothing to do with it. It came out of Hunter Biden's bathroom. It came out of Hunter Biden's bedroom. It was disgusting. And then they said, oh, oh, the laptop from hell was made by Russia. The 51 agents. The whole thing was a scam. And he had to put up with that. He was being accused of all that stuff.\nAll I can say is this. He might have broken deals with Obama and Bush, and he might have broken them with Biden. He did, maybe. Maybe he did. I don't know what happened, but he didn't break them with me. He wants to make a deal. I don't know if you can make a deal. The problem is I've empowered you to be a tough guy, and I don't think you'd be a tough guy without the United States. And your people are very brave, but you're either going to make a deal or we're out. And if we're out.\nYou'll fight it out. I don't think it's going to be pretty, but you'll fight it out. But you don't have the cards. But once we sign that deal, you're in a much better position, but you're not acting at all thankful. And that's not a nice thing. I'll be honest, that's not a nice thing.\nAlright, uh I think we've seen enough. What do you think? Uh? This negotiation This is this is gonna be great television, is illegal. I will say that. Alright, but Okay, alright, but not a well we'll see what we can do about Yeah, putting but why it together. do you go against the point? Thank you. Well, they lie. Guys, let's go. Come on now. Guys, I'm in. come on now. Guys, come on, If you negotiate, give a non-compete. we'll see. I don't know. Alright guys, guys, come on, please. Like a president. Hey!"
+}

@@ -84,6 +84,7 @@ const categoryColorClass: Record<string, string> = {
             : label.detail
         "
       >
+        <span class="Subtle">action: </span>
         {{ label.label }}
         <span v-if="label.deception" class="LabelDeception">deceptive</span>
       </span>
@@ -97,6 +98,7 @@ const categoryColorClass: Record<string, string> = {
             : emotion.trigger
         "
       >
+        <span class="Subtle">emotion: </span>
         {{ emotion.emotion }}
         <span v-if="emotion.surface" class="EmotionSurface">
           looks {{ emotion.surface }}
@@ -107,6 +109,10 @@ const categoryColorClass: Record<string, string> = {
 </template>
 
 <style scoped>
+.Subtle {
+  opacity: 0.5;
+}
+
 .TranscriptCard {
   display: flex;
   flex-direction: column;
