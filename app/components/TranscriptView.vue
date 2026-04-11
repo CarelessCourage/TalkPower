@@ -93,7 +93,7 @@ const filteredSegments = computed(() => {
 .TranscriptView {
   display: flex;
   flex-direction: column;
-  gap: var(--space-bit-1);
+  gap: var(--space-bit-3);
   width: var(--panel-1);
 }
 
