@@ -2,7 +2,7 @@ import type { BehaviorAnalysis } from '~/types/meeting';
 
 /** Demo context prompt for The Office who/whomever scene. */
 export const theOfficeContext =
-  'This is the famous "who vs whomever" grammar debate scene from The Office. Michael (A) tries to delegate a presentation to Ryan (B), who uses "whomever" — triggering a group grammar argument. The scene reveals office power dynamics: Michael is clueless but confident, Ryan is frustrated and knowledgeable, Jim Halpert (D) is loyal but wrong, Kevin Malone (E) is petty, Toby Flenderson (F) is correct but ignored, and Michael ends by threatening Toby. 8 speakers, roughly 66 seconds of escalating absurdity.';
+  'This is the famous "who vs whomever" grammar debate scene from The Office. Michael (A) tries to delegate a presentation to Ryan (B), who uses "whomever" — triggering a group grammar argument. The scene reveals office power dynamics: Michael is clueless but confident, Ryan is frustrated and knowledgeable, Dwight (D) is loyal but wrong, Kelly (E) is petty, Toby (F) is correct but ignored, and Michael ends by threatening Toby. 8 speakers, roughly 66 seconds of escalating absurdity.';
 
 /**
  * Pre-generated behavioral labels for The Office demo.
@@ -39,7 +39,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'reflexive loyalty',
       category: 'neutral',
       detail:
-        'Jim immediately takes the opposing side to Ryan — not because he knows the answer, but because siding with Michael feels like the safer play in this moment. The grammar is irrelevant; the allegiance is the point.'
+        'Dwight immediately takes the opposing side to Ryan — not because he knows the answer, but because defending Michael is his default mode. The grammar is irrelevant; the allegiance is the point.'
     },
     {
       segmentIndex: 17,
@@ -55,16 +55,16 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'social allegiance over truth',
       category: 'neutral',
       detail:
-        'Kevin\'s "Michael is right" has nothing to do with grammar — he\'s picking a side based on social hierarchy. Then he escalates with "it\'s a made-up word used to trick students," which is absurd but delivered with total conviction.',
+        'Kelly\'s "Michael is right" has nothing to do with grammar — she\'s picking a side based on social hierarchy. Then she escalates with "it\'s a made-up word used to trick students," which is absurd but delivered with total conviction.',
       deception:
-        'Treats social loyalty as grammatical expertise — he has no idea which is correct'
+        'Treats social loyalty as grammatical expertise — she has no idea which is correct'
     },
     {
       segmentIndex: 21,
       label: 'confident misinformation',
       category: 'neutral',
       detail:
-        'Jim offers "whomever is the formal version of the word" — not quite right, but closer to truth than anyone else at this point. His confidence outpaces his accuracy, which is the entire room\'s problem.'
+        'Dwight offers "whomever is the formal version of the word" — not quite right, but closer to truth than anyone else at this point. His confidence outpaces his accuracy, which is the entire room\'s problem.'
     },
     {
       segmentIndex: 22,
@@ -78,7 +78,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'weaponized withholding',
       category: 'destructive',
       detail:
-        'Kevin claims to know the answer but refuses to share because no one came to his band performance. Using knowledge as a bargaining chip for social grievances — petty but revealing about how he experiences the office.'
+        'Kelly claims to know the answer but refuses to share because no one came to her band performance. Using knowledge as a bargaining chip for social grievances — petty but revealing about how she experiences the office.'
     },
     {
       segmentIndex: 28,
@@ -92,7 +92,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'crowd validation',
       category: 'neutral',
       detail:
-        "Angela's 'that sounds right' is the room's consensus mechanism — vibes over analysis. Nobody actually evaluates Toby's answer; they just sense it sounds correct."
+        "Kevin's \"that sounds right\" is the room's consensus mechanism — vibes over analysis. Nobody actually evaluates Toby's answer; they just sense it sounds correct."
     },
     {
       segmentIndex: 31,
@@ -120,14 +120,14 @@ export const theOfficeLabels: BehaviorAnalysis = {
       label: 'hostile dismissal',
       category: 'destructive',
       detail:
-        "'No one asked you anything ever' — Jim's attack on Toby is disproportionate and personal. The grammar debate was already resolved; this is pure social aggression from someone channeling Michael's contempt."
+        '"No one asked you anything ever" — Dwight\'s attack on Toby is disproportionate and personal. The grammar debate was already resolved; this is pure social aggression from someone channeling Michael\'s contempt.'
     },
     {
       segmentIndex: 47,
       label: 'violent threat as comedy',
       category: 'destructive',
       detail:
-        "The letter opener threat is played for laughs, but it's Michael speaking through Jim: the person who was right gets punished for being right. In any real workplace, this would be a serious HR issue — which is ironic because Toby is HR."
+        "The letter opener threat is played for laughs, but it's Michael speaking through Dwight: the person who was right gets punished for being right. In any real workplace, this would be a serious HR issue — which is ironic because Toby is HR."
     },
     {
       segmentIndex: 48,
@@ -163,14 +163,14 @@ export const theOfficeLabels: BehaviorAnalysis = {
       segmentIndex: 15,
       emotion: 'protective',
       trigger:
-        "Jim's instinct to side with Michael overrides any actual opinion about grammar"
+        "Dwight's instinct to defend Michael overrides any actual opinion about grammar"
     },
     {
       segmentIndex: 20,
       emotion: 'confident',
       surface: 'authoritative',
       trigger:
-        'Kevin presents complete nonsense with the certainty of an expert — he genuinely believes social intuition equals knowledge'
+        'Kelly presents complete nonsense with the certainty of an expert — she genuinely believes social intuition equals knowledge'
     },
     {
       segmentIndex: 22,
@@ -183,7 +183,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       emotion: 'resentful',
       surface: 'playful',
       trigger:
-        "the band snub is a real wound — Kevin uses humor to express hurt he can't voice directly"
+        "the band snub is a real wound — Kelly uses humor to express hurt she can't voice directly"
     },
     {
       segmentIndex: 28,
@@ -209,7 +209,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
       emotion: 'hostile',
       surface: 'dismissive',
       trigger:
-        "Jim channels Michael's contempt for Toby — the aggression is borrowed authority"
+        "Dwight channels Michael's contempt for Toby — the aggression is borrowed authority"
     },
     {
       segmentIndex: 48,
@@ -220,7 +220,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
     }
   ],
   summary:
-    'A 66-second grammar argument that is really about power, loyalty, and who gets to be right. Ryan starts correctly, talks himself into being wrong, then works his way back to being right — and nobody cares. Jim defends Michael reflexively, Kevin weaponizes a band grievance, and Toby provides the correct answer only to be threatened with a letter opener. The original work task (a presentation) is never mentioned again. The scene is a perfect miniature of office dynamics: competence is irrelevant, social hierarchy determines truth, and the person who actually knows the answer has the least power.',
+    'A 66-second grammar argument that is really about power, loyalty, and who gets to be right. Ryan starts correctly, talks himself into being wrong, then works his way back to being right — and nobody cares. Dwight defends Michael reflexively, Kelly weaponizes a band grievance, and Toby provides the correct answer only to be threatened with a letter opener. The original work task (a presentation) is never mentioned again. The scene is a perfect miniature of office dynamics: competence is irrelevant, social hierarchy determines truth, and the person who actually knows the answer has the least power.',
   notes: [
     {
       heading: 'Competence ≠ authority',
@@ -234,12 +234,12 @@ export const theOfficeLabels: BehaviorAnalysis = {
     },
     {
       heading: 'Loyalty is not agreement',
-      body: "Jim (Speaker D) defends Michael's position reflexively — not because he understands the grammar, but because siding with the boss feels like the path of least resistance. This kind of automatic allegiance feels supportive but actually undermines the group: it adds noise, entrenches wrong answers, and in this case ends with a violent threat against the person who was right. Real loyalty would be helping Michael learn, not shielding him from correction.",
+      body: "Dwight (Speaker D) defends Michael's position reflexively — not because he understands the grammar, but because defending the boss is his identity. This kind of automatic allegiance feels supportive but actually undermines the group: it adds noise, entrenches wrong answers, and in this case ends with a violent threat against the person who was right. Real loyalty would be helping Michael learn, not shielding him from correction.",
       addressedTo: 'Speaker D'
     },
     {
       heading: 'Grievances are real even when petty',
-      body: "Kevin's (Speaker E) refusal to share knowledge because nobody came to his band show reads as petty — and it is. But the underlying feeling is real: he doesn't feel valued by his colleagues. The band grievance is a proxy for a deeper sense of being ignored. Addressing the small stuff (showing interest in each other's lives) prevents it from weaponizing the big stuff (withholding helpful information).",
+      body: "Kelly's (Speaker E) refusal to share knowledge because nobody came to her band show reads as petty — and it is. But the underlying feeling is real: she doesn't feel valued by her colleagues. The band grievance is a proxy for a deeper sense of being ignored. Addressing the small stuff (showing interest in each other's lives) prevents it from weaponizing the big stuff (withholding helpful information).",
       addressedTo: 'Speaker E'
     },
     {
@@ -252,10 +252,10 @@ export const theOfficeLabels: BehaviorAnalysis = {
     'Speaker A': 'Michael Scott',
     'Speaker B': 'Ryan Howard',
     'Speaker C': 'Oscar Martinez',
-    'Speaker D': 'Jim Halpert',
-    'Speaker E': 'Kevin Malone',
+    'Speaker D': 'Dwight Schrute',
+    'Speaker E': 'Kelly Kapoor',
     'Speaker F': 'Toby Flenderson',
-    'Speaker G': 'Angela Martin',
+    'Speaker G': 'Kevin Malone',
     'Speaker H': 'Pam Beesly'
   },
   coaching: [
@@ -283,7 +283,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
     {
       start: 15,
       end: 21,
-      text: "Jim's loyalty is automatic, not informed. Good management means building a team that challenges ideas, not one that agrees reflexively.",
+      text: "Dwight's loyalty is automatic, not informed. Good management means building a team that challenges ideas, not one that agrees reflexively.",
       tone: 'insight',
       speaker: 'Speaker D'
     },
@@ -297,7 +297,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
     {
       start: 34.7,
       end: 40,
-      text: "Kevin turning this into a personal grievance about his band? That's what happens when meetings have no structure — anyone can hijack the agenda.",
+      text: "Kelly turning this into a personal grievance about her band? That's what happens when meetings have no structure — anyone can hijack the agenda.",
       tone: 'insight',
       speaker: 'Speaker E'
     },
@@ -318,7 +318,7 @@ export const theOfficeLabels: BehaviorAnalysis = {
     {
       start: 58,
       end: 64,
-      text: "Jim just described stabbing a coworker with a letter opener. In a real office, this is an HR incident. Michael doesn't even blink — that's a massive leadership failure.",
+      text: "Dwight just described stabbing a coworker with a letter opener. In a real office, this is an HR incident. Michael doesn't even blink — that's a massive leadership failure.",
       tone: 'warning',
       speaker: 'Speaker A'
     },
