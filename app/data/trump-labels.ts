@@ -9,7 +9,7 @@ import type { BehaviorAnalysis } from '~/types/meeting';
  * Speaker E = Press Handler
  */
 export const trumpContext =
-  "The infamous February 2025 Oval Office confrontation between President Trump (Speaker C) and Ukrainian President Zelensky (Speaker A), with Vice President Vance (Speaker B) acting as enforcer. Trump is factually wrong on nearly everything he claims — Ukraine did not start the war, Zelensky did not refuse to negotiate, and the US minerals deal was a concrete offer. This is not a meeting of two equally good-faith parties. Trump is bullying a wartime leader whose country is under active Russian invasion, using debunked talking points. Zelensky is desperately trying to maintain diplomatic composure while being publicly humiliated by his most important ally. The power dynamic is wildly asymmetric — Trump holds the aid Ukraine needs to survive and uses that leverage to browbeat Zelensky on camera.";
+  'The infamous February 2025 Oval Office confrontation between President Trump (Speaker C) and Ukrainian President Zelensky (Speaker A), with Vice President Vance (Speaker B) acting as enforcer. Trump is factually wrong on nearly everything he claims — Ukraine did not start the war, Zelensky did not refuse to negotiate, and the US minerals deal was a concrete offer. This is not a meeting of two equally good-faith parties. Trump is bullying a wartime leader whose country is under active Russian invasion, using debunked talking points. Zelensky is desperately trying to maintain diplomatic composure while being publicly humiliated by his most important ally. The power dynamic is wildly asymmetric — Trump holds the aid Ukraine needs to survive and uses that leverage to browbeat Zelensky on camera.';
 
 /**
  * Pre-generated behavioral labels for the Trump–Zelensky confrontation.
@@ -41,7 +41,7 @@ export const trumpLabels: BehaviorAnalysis = {
       detail:
         '"I think it\'s disrespectful for you to come into the Oval Office and try to litigate this in front of the American media." Vance frames Zelensky\'s factual statements as disrespect. This is textbook DARVO — the aggressor (who is publicly humiliating a guest) accuses the victim of being disrespectful.',
       deception:
-        'Reverses the dynamic — Vance is the one being disrespectful by ambushing an invited ally on camera, but frames it as Zelensky\'s fault'
+        "Reverses the dynamic — Vance is the one being disrespectful by ambushing an invited ally on camera, but frames it as Zelensky's fault"
     },
     {
       segmentIndex: 12,
@@ -50,7 +50,7 @@ export const trumpLabels: BehaviorAnalysis = {
       detail:
         '"You guys are going around and forcing conscripts to the front lines because you have manpower problems." Vance frames wartime conscription (which every country at war uses, including the US in WWII) as evidence of Ukrainian dysfunction. This is a Russian talking point, not a legitimate criticism.',
       deception:
-        'Presents normal wartime mobilization as something shameful to weaken Zelensky\'s moral standing'
+        "Presents normal wartime mobilization as something shameful to weaken Zelensky's moral standing"
     },
     {
       segmentIndex: 13,
@@ -66,7 +66,7 @@ export const trumpLabels: BehaviorAnalysis = {
       label: 'dignified pushback',
       category: 'assertive',
       detail:
-        '"Have you ever been to Ukraine?" — Zelensky doesn\'t yell, doesn\'t insult. He asks a simple question that exposes the gap between Vance\'s confident lecturing and his actual knowledge of the situation on the ground.'
+        "\"Have you ever been to Ukraine?\" — Zelensky doesn't yell, doesn't insult. He asks a simple question that exposes the gap between Vance's confident lecturing and his actual knowledge of the situation on the ground."
     },
     {
       segmentIndex: 19,
@@ -91,16 +91,15 @@ export const trumpLabels: BehaviorAnalysis = {
       label: 'composure under fire',
       category: 'constructive',
       detail:
-        '"During the war everybody has problems, even you, but you have nice ocean and don\'t feel now, but you will feel it in the future." Zelensky maintains remarkable composure. Despite being publicly humiliated, he doesn\'t retreat — he calmly points out that America\'s geographic safety is not permanent.'
+        "\"During the war everybody has problems, even you, but you have nice ocean and don't feel now, but you will feel it in the future.\" Zelensky maintains remarkable composure. Despite being publicly humiliated, he doesn't retreat — he calmly points out that America's geographic safety is not permanent."
     },
     {
       segmentIndex: 45,
       label: 'bullying escalation',
       category: 'destructive',
       detail:
-        '"Don\'t tell us what we\'re gonna feel. We\'re trying to solve a problem." Trump interrupts Zelensky\'s answer to shut down his point about future consequences. The phrase "we\'re trying to solve a problem" implies Zelensky is the problem.',
-      deception:
-        'Frames the victim of an invasion as the obstacle to peace'
+        "\"Don't tell us what we're gonna feel. We're trying to solve a problem.\" Trump interrupts Zelensky's answer to shut down his point about future consequences. The phrase \"we're trying to solve a problem\" implies Zelensky is the problem.",
+      deception: 'Frames the victim of an invasion as the obstacle to peace'
     },
     {
       segmentIndex: 75,
@@ -116,14 +115,14 @@ export const trumpLabels: BehaviorAnalysis = {
       detail:
         '"You don\'t have the cards right now." Trump reduces a genocidal invasion to a card game. The metaphor strips away the human dimension — the dead, the displaced, the tortured — and turns it into a transaction where only leverage matters.',
       deception:
-        'The card game framing normalizes the idea that a country\'s survival is a negotiating chip rather than a moral imperative'
+        "The card game framing normalizes the idea that a country's survival is a negotiating chip rather than a moral imperative"
     },
     {
       segmentIndex: 92,
       label: 'cutting through rhetoric',
       category: 'assertive',
       detail:
-        '"What playing cards?" — Zelensky refuses to accept Trump\'s poker metaphor for his country\'s survival. This is a dignified moment of pushback: I\'m not playing a game, my people are dying.'
+        "\"What playing cards?\" — Zelensky refuses to accept Trump's poker metaphor for his country's survival. This is a dignified moment of pushback: I'm not playing a game, my people are dying."
     },
     {
       segmentIndex: 113,
@@ -132,14 +131,14 @@ export const trumpLabels: BehaviorAnalysis = {
       detail:
         '"You\'re gambling with World War III." Trump accuses the invaded country of risking world war — not the country that actually invaded. This is a direct inversion of cause and effect.',
       deception:
-        'Blames the victim for the consequences of the aggressor\'s actions'
+        "Blames the victim for the consequences of the aggressor's actions"
     },
     {
       segmentIndex: 129,
       label: 'loyalty test',
       category: 'destructive',
       detail:
-        '"Have you said thank you once this entire meeting?" Trump demands performative gratitude from a wartime leader in the middle of being publicly bullied. The point isn\'t whether Zelensky is grateful — it\'s whether he\'ll submit on camera.'
+        "\"Have you said thank you once this entire meeting?\" Trump demands performative gratitude from a wartime leader in the middle of being publicly bullied. The point isn't whether Zelensky is grateful — it's whether he'll submit on camera."
     },
     {
       segmentIndex: 141,
@@ -148,7 +147,7 @@ export const trumpLabels: BehaviorAnalysis = {
       detail:
         '"You went to Pennsylvania and campaigned for the opposition in October." Trump brings up a domestic political grievance to signal that aid to Ukraine is conditional on personal loyalty to Trump, not US strategic interests.',
       deception:
-        'Conflates US foreign policy with personal political loyalty — aid depends on Trump\'s feelings, not national interest'
+        "Conflates US foreign policy with personal political loyalty — aid depends on Trump's feelings, not national interest"
     },
     {
       segmentIndex: 142,
@@ -164,7 +163,7 @@ export const trumpLabels: BehaviorAnalysis = {
       label: 'silencing tactic',
       category: 'destructive',
       detail:
-        '"He\'s not speaking loudly. Your country is in big trouble." Trump dismisses Zelensky\'s objection and immediately reasserts dominance by reminding him of Ukraine\'s vulnerability. The subtext: you can\'t afford to disagree with me.'
+        "\"He's not speaking loudly. Your country is in big trouble.\" Trump dismisses Zelensky's objection and immediately reasserts dominance by reminding him of Ukraine's vulnerability. The subtext: you can't afford to disagree with me."
     },
     {
       segmentIndex: 154,
@@ -208,9 +207,9 @@ export const trumpLabels: BehaviorAnalysis = {
       label: 'strawman attack',
       category: 'destructive',
       detail:
-        '"I don\'t want a ceasefire. I don\'t want a ceasefire." Trump puts words in Zelensky\'s mouth. Zelensky never said he doesn\'t want a ceasefire — he said he wants one with security guarantees. The difference is everything.',
+        "\"I don't want a ceasefire. I don't want a ceasefire.\" Trump puts words in Zelensky's mouth. Zelensky never said he doesn't want a ceasefire — he said he wants one with security guarantees. The difference is everything.",
       deception:
-        'Misrepresents Zelensky\'s position to make him look like the obstacle to peace'
+        "Misrepresents Zelensky's position to make him look like the obstacle to peace"
     },
     {
       segmentIndex: 268,
@@ -258,16 +257,16 @@ export const trumpLabels: BehaviorAnalysis = {
       detail:
         '"He didn\'t break them with me." Trump says Putin kept promises to him while breaking them with everyone else. This is not evidence of diplomatic skill — it\'s evidence that Trump believes personal flattery over documented behavior.',
       deception:
-        'Claims special relationship with Putin as proof of deal-making ability while ignoring that Putin\'s concessions to Trump were strategic manipulation'
+        "Claims special relationship with Putin as proof of deal-making ability while ignoring that Putin's concessions to Trump were strategic manipulation"
     },
     {
       segmentIndex: 363,
       label: 'patronizing ownership',
       category: 'destructive',
       detail:
-        '"I\'ve empowered you to be a tough guy." Trump takes credit for Zelensky\'s resistance to a full-scale invasion. Zelensky\'s toughness comes from defending his country against genocide, not from Trump\'s permission.',
+        "\"I've empowered you to be a tough guy.\" Trump takes credit for Zelensky's resistance to a full-scale invasion. Zelensky's toughness comes from defending his country against genocide, not from Trump's permission.",
       deception:
-        'Claims ownership of another leader\'s courage and resilience as if it were a gift he gave'
+        "Claims ownership of another leader's courage and resilience as if it were a gift he gave"
     },
     {
       segmentIndex: 365,
@@ -330,7 +329,7 @@ export const trumpLabels: BehaviorAnalysis = {
     {
       segmentIndex: 11,
       emotion: 'calculated aggression',
-      trigger: "Zelensky refusing to be silenced",
+      trigger: 'Zelensky refusing to be silenced',
       surface: 'measured indignation'
     },
     {
@@ -354,7 +353,7 @@ export const trumpLabels: BehaviorAnalysis = {
     {
       segmentIndex: 88,
       emotion: 'cold intimidation',
-      trigger: "Zelensky refusing to submit",
+      trigger: 'Zelensky refusing to submit',
       surface: 'casual observation'
     },
     {
@@ -366,7 +365,7 @@ export const trumpLabels: BehaviorAnalysis = {
     {
       segmentIndex: 129,
       emotion: 'petulant anger',
-      trigger: "Zelensky not performing submission",
+      trigger: 'Zelensky not performing submission',
       surface: 'righteous indignation'
     },
     {
@@ -378,7 +377,7 @@ export const trumpLabels: BehaviorAnalysis = {
     {
       segmentIndex: 171,
       emotion: 'dignified pain',
-      trigger: 'being forced to justify his country\'s survival',
+      trigger: "being forced to justify his country's survival",
       surface: 'composed gratitude'
     },
     {

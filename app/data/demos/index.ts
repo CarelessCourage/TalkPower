@@ -24,17 +24,19 @@ const loaders: Record<
   'the-office': () => import('~/data/demos/the-office'),
   cosmic: () => import('~/data/demos/cosmic'),
   'sir-dunkan': () => import('~/data/demos/sir-dunkan'),
-  trump: () => import('~/data/demos/trump')
+  trump: () => import('~/data/demos/trump'),
+  destiny: () => import('~/data/demos/destiny')
 };
 
 export const demos: { slug: string; title: string }[] = [
   { slug: 'museum', title: 'Night at the Museum' },
-  { slug: 'mean-girls', title: 'Mean Girls' },
+  //   { slug: 'mean-girls', title: 'Mean Girls' },
   { slug: 'love-spectrum', title: 'Love on the Spectrum' },
   { slug: 'the-office', title: 'The Office' },
   { slug: 'cosmic', title: 'Cosmic Skeptic' },
   { slug: 'sir-dunkan', title: 'Sir Dunkan' },
-  { slug: 'trump', title: 'Trump v Zelensky' }
+  { slug: 'trump', title: 'Trump v Zelensky' },
+  { slug: 'destiny', title: 'Destiny' }
 ];
 
 export const DEFAULT_DEMO = 'museum';

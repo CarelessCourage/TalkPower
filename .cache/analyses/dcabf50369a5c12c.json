@@ -1,0 +1,111 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 6,
+      "label": "dismissive response",
+      "category": "destructive",
+      "detail": "Speaker B dismisses Speaker A's argument as 'stupid' without engaging with the content, indicating a failure to participate constructively."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "assertive critique",
+      "category": "assertive",
+      "detail": "Speaker A confidently critiques presuppositionalism, clearly articulating the circular nature of grounding morality in divine revelation."
+    },
+    {
+      "segmentIndex": 22,
+      "label": "deflecting criticism",
+      "category": "evasive",
+      "detail": "Speaker B accuses Speaker A of straw-manning instead of addressing the core argument, avoiding a direct response."
+    },
+    {
+      "segmentIndex": 25,
+      "label": "persistent questioning",
+      "category": "constructive",
+      "detail": "Speaker A continues to ask clarifying questions, demonstrating patience and a commitment to understanding the disagreement."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 6,
+      "emotion": "contemptuous",
+      "trigger": "dismissive of argument",
+      "surface": "amused"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "confident",
+      "trigger": "asserting critique",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 22,
+      "emotion": "defensive",
+      "trigger": "feeling attacked",
+      "surface": "dismissive"
+    },
+    {
+      "segmentIndex": 25,
+      "emotion": "patient",
+      "trigger": "seeking clarity",
+      "surface": "calm"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Engagement vs. Dismissal",
+      "body": "Speaker B's initial dismissal of Speaker A's argument as 'stupid' reflects a lack of engagement that can hinder productive dialogue. Encouraging Speaker B to address the content of the argument rather than dismiss it could lead to a more meaningful exchange.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Assertiveness in Argumentation",
+      "body": "Speaker A's assertive critique of presuppositionalism is a strong example of effective argumentation. This approach can be beneficial in future discussions, as it encourages clarity and challenges unexamined beliefs.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Addressing Defensiveness",
+      "body": "Speaker B's defensiveness in response to criticism indicates a need for more openness to critique. Fostering a mindset of curiosity rather than defensiveness could enhance the quality of the debate.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Value of Persistence",
+      "body": "Speaker A's persistence in questioning demonstrates patience and a commitment to clarity. This is a valuable trait in debates and should be encouraged to maintain focus on resolving disagreements.",
+      "addressedTo": "Speaker A"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 6,
+      "end": 10,
+      "text": "Avoid dismissive language; engage with the argument instead.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 12,
+      "end": 16,
+      "text": "Great job asserting your critique clearly; keep it up!",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 22,
+      "end": 26,
+      "text": "Deflecting criticism can stall progress; consider addressing the argument directly.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 25,
+      "end": 29,
+      "text": "Your persistent questioning is effective; it shows commitment to understanding.",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    }
+  ],
+  "summary": "The meeting showcased a stark contrast in engagement styles, with Speaker B often dismissing arguments while Speaker A remained patient and persistent in questioning. This dynamic highlighted the importance of addressing content rather than resorting to dismissal, ultimately affecting the quality of the debate.",
+  "speakerNames": {
+    "Speaker A": "Destiny",
+    "Speaker B": "Christian Presuppositionalist"
+  }
+}

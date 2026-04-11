@@ -174,9 +174,7 @@ watch(isSplash, async (nowSplash, prevSplash) => {
             {{ demo.title }}
           </button>
         </div>
-        <NuxtLink to="/upload" class="MeetingUploadLink">
-          Try your own recording
-        </NuxtLink>
+
         <button
           class="ThemeToggle"
           @click="toggleTheme"
@@ -230,6 +228,10 @@ watch(isSplash, async (nowSplash, prevSplash) => {
     <main v-else>
       <NuxtPage />
     </main>
+
+    <NuxtLink to="/upload" class="MeetingUploadLink">
+      Try your own recording
+    </NuxtLink>
   </div>
 </template>
 

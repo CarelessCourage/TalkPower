@@ -1,0 +1,230 @@
+{
+  "segments": [
+    {
+      "type": "transcript.text.segment",
+      "text": " Let's say somebody comes up to you, and they say murder is good.",
+      "speaker": "A",
+      "start": 0,
+      "end": 3,
+      "id": "seg_0"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And then you say murder is bad.",
+      "speaker": "A",
+      "start": 3.3499999999999996,
+      "end": 4.999999999999999,
+      "id": "seg_1"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And then he says, well, how do you know murder is bad?",
+      "speaker": "A",
+      "start": 5.1499999999999995,
+      "end": 7.1499999999999995,
+      "id": "seg_2"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And you go, because God told me. And then you ask him, why do you think murder is good?",
+      "speaker": "A",
+      "start": 7.3999999999999995,
+      "end": 10.8,
+      "id": "seg_3"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " And he says, because God told me.",
+      "speaker": "A",
+      "start": 10.9,
+      "end": 12.200000000000001,
+      "id": "seg_4"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How do you resolve that disagreement?",
+      "speaker": "A",
+      "start": 12.350000000000001,
+      "end": 13.750000000000002,
+      "id": "seg_5"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " this is the stupidest hypothetical that's not an argument at all dude can you just can you do that again that was really fun",
+      "speaker": "B",
+      "start": 14.74,
+      "end": 21.89,
+      "id": "seg_6"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Sure, I'll repeat the question to you. Two people try to resolve a moral quandary. Two people have a moral question,",
+      "speaker": "A",
+      "start": 21.89,
+      "end": 26.89,
+      "id": "seg_7"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and they come to the answer,",
+      "speaker": "A",
+      "start": 26.990000000000002,
+      "end": 28.34,
+      "id": "seg_8"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and totally they have two different answers for it. But they both say that they've received revelation through God.",
+      "speaker": "A",
+      "start": 28.39,
+      "end": 33.690000000000005,
+      "id": "seg_9"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " How do you resolve that disagreement and figure out who's right and who's wrong?",
+      "speaker": "A",
+      "start": 33.84,
+      "end": 36.190000000000005,
+      "id": "seg_10"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " This is the problem with grounding your meta-ethics with divine revelation,",
+      "speaker": "A",
+      "start": 39.156,
+      "end": 42.256,
+      "id": "seg_11"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " and it's why presuppositionalism sucks. It's ultimately circular at a foundation",
+      "speaker": "A",
+      "start": 42.355999999999995,
+      "end": 45.756,
+      "id": "seg_12"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're right.",
+      "speaker": "B",
+      "start": 45.756,
+      "end": 46.156,
+      "id": "seg_13"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " that is inaccessible to external parties, you understand?",
+      "speaker": "A",
+      "start": 46.156,
+      "end": 49.006,
+      "id": "seg_14"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I could tell you that God has revealed anything to me, and I automatically win the argument. Do you understand the problem with that?",
+      "speaker": "A",
+      "start": 49.306,
+      "end": 54.355999999999995,
+      "id": "seg_15"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " That's",
+      "speaker": "B",
+      "start": 54.355999999999995,
+      "end": 54.406,
+      "id": "seg_16"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Do you see why",
+      "speaker": "A",
+      "start": 54.406,
+      "end": 54.706,
+      "id": "seg_17"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " not",
+      "speaker": "B",
+      "start": 54.706,
+      "end": 54.855999999999995,
+      "id": "seg_18"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " that's",
+      "speaker": "A",
+      "start": 54.855999999999995,
+      "end": 54.906,
+      "id": "seg_19"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the idea.",
+      "speaker": "B",
+      "start": 54.906,
+      "end": 55.056,
+      "id": "seg_20"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " an issue?",
+      "speaker": "A",
+      "start": 55.056,
+      "end": 55.355999999999995,
+      "id": "seg_21"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " You're straw-manning",
+      "speaker": "B",
+      "start": 55.355999999999995,
+      "end": 56.206,
+      "id": "seg_22"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Okay,",
+      "speaker": "A",
+      "start": 56.206,
+      "end": 56.355999999999995,
+      "id": "seg_23"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " the argument.",
+      "speaker": "B",
+      "start": 56.355999999999995,
+      "end": 56.506,
+      "id": "seg_24"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " I'm not str- then can you tell me, then answer the question.",
+      "speaker": "A",
+      "start": 56.506,
+      "end": 58.40599999999999,
+      "id": "seg_25"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " Two people that both believe in God,",
+      "speaker": "A",
+      "start": 58.506,
+      "end": 60.006,
+      "id": "seg_26"
+    },
+    {
+      "type": "transcript.text.segment",
+      "text": " two people that both believe in God have a different answer to a moral question. How do you figure out which one is right and which one is wrong?",
+      "speaker": "A",
+      "start": 60.355999999999995,
+      "end": 65.856,
+      "id": "seg_27"
+    }
+  ],
+  "duration": 65.856,
+  "text": "Let's say somebody comes up to you, and they say murder is good. And then you say murder is bad. And then he says, well, how do you know murder is bad? And you go, because God told me. And then you ask him, why do you think murder is good? And he says, because God told me. How do you resolve that disagreement?\nthis is the stupidest hypothetical that's not an argument at all dude can you just can you do that again that was really fun Sure, I'll repeat the question to you. Two people try to resolve a moral quandary. Two people have a moral question, and they come to the answer, and totally they have two different answers for it. But they both say that they've received revelation through God. How do you resolve that disagreement and figure out who's right and who's wrong?\nThis is the problem with grounding your meta-ethics with divine revelation, and it's why presuppositionalism sucks. It's ultimately circular at a foundation You're right. that is inaccessible to external parties, you understand? I could tell you that God has revealed anything to me, and I automatically win the argument. Do you understand the problem with that? That's Do you see why not that's the idea. an issue? You're straw-manning Okay, the argument. I'm not str- then can you tell me, then answer the question. Two people that both believe in God, two people that both believe in God have a different answer to a moral question. How do you figure out which one is right and which one is wrong?"
+}
