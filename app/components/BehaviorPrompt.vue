@@ -23,19 +23,20 @@ const onInput = (e: Event) => {
 
 <template>
   <div class="BehaviorPrompt">
-    <div class="PromptHeader">
-      <h3 class="PromptTitle">AI Behavior Analysis</h3>
-      <span v-if="hasLabels" class="PromptBadge">Labels active</span>
+    <div>
+      <div class="PromptHeader">
+        <h3 class="PromptTitle">AI Behavior Analysis</h3>
+        <span v-if="hasLabels" class="PromptBadge">Labels active</span>
+      </div>
+      <p class="PromptDesc">
+        Optionally describe the meeting's purpose or your concerns — the AI will
+        tailor behavioral labels to what matters to you.
+      </p>
     </div>
-    <p class="PromptDesc">
-      Optionally describe the meeting's purpose or your concerns — the AI will
-      tailor behavioral labels to what matters to you.
-    </p>
     <textarea
       :value="modelValue"
       class="PromptTextarea"
       placeholder="e.g. &quot;This is a budget review. I'm concerned about one team lead dismissing others' proposals without real consideration.&quot;"
-      rows="3"
       @input="onInput"
     />
     <button
@@ -61,8 +62,8 @@ const onInput = (e: Event) => {
 .BehaviorPrompt {
   display: flex;
   flex-direction: column;
-  gap: var(--space-bit-2);
-  padding: var(--space-2) var(--space-3);
+  gap: var(--space-bit-3);
+  padding: var(--space-bit-3);
   border-radius: var(--radius);
   background: var(--base-10);
 }
@@ -96,11 +97,14 @@ const onInput = (e: Event) => {
   color: var(--base-60);
   line-height: 1.5;
   margin: 0;
+  max-width: 480px;
 }
 
 .PromptTextarea {
+  field-sizing: content;
+  min-height: calc(1.5em * 3 + var(--space-bit-2) * 2);
   width: 100%;
-  padding: var(--space-bit-2) var(--space-bit-3);
+  padding: var(--space-bit-3) var(--space-bit-4);
   border-radius: var(--radius-inner);
   border: var(--border);
   background: var(--base);
