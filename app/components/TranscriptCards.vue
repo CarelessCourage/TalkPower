@@ -105,7 +105,8 @@ const getEmotion = (index: number): EmotionLabel | undefined => {
 
 .card-leave-active {
   position: absolute;
-  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .card-leave-to {
