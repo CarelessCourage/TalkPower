@@ -68,6 +68,7 @@ const categoryColorClass: Record<string, string> = {
       :key="entry.speaker"
       :name="displayName(entry.speaker)"
       :color-class="getSpeakerColor(entry.index)"
+      style="padding-bottom: var(--space-2)"
     >
       <div v-if="entry.labels.length" class="LabelGroup">
         <p class="GroupHeading">Behaviors</p>
@@ -92,7 +93,11 @@ const categoryColorClass: Record<string, string> = {
         </div>
       </div>
 
-      <div v-if="entry.emotions.length" class="LabelGroup">
+      <div
+        v-if="entry.emotions.length"
+        class="LabelGroup"
+        style="padding-top: var(--space-1)"
+      >
         <p class="GroupHeading">Emotions</p>
         <div class="ChipList">
           <span
@@ -125,13 +130,13 @@ const categoryColorClass: Record<string, string> = {
 .SpeakerBreakdown {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-3);
 }
 
 .LabelGroup {
   display: flex;
   flex-direction: column;
-  gap: var(--space-bit-3);
+  gap: var(--space-bit-1);
 }
 
 .GroupHeading {

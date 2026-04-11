@@ -11,7 +11,7 @@ const { name, value, colorClass } = defineProps<Props>();
 <template>
   <div class="SpeakerRow">
     <div class="SpeakerRowHeader">
-      <span class="SpeakerRowName" :class="colorClass">{{ name }}</span>
+      <h3 class="SpeakerRowName" :class="colorClass">{{ name }}</h3>
       <span v-if="value" class="SpeakerRowValue mono">{{ value }}</span>
     </div>
     <slot />
@@ -30,6 +30,11 @@ const { name, value, colorClass } = defineProps<Props>();
   border-bottom: var(--border);
 }
 
+.SpeakerRow:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 .SpeakerRowHeader {
   display: flex;
   align-items: baseline;
@@ -39,7 +44,7 @@ const { name, value, colorClass } = defineProps<Props>();
 
 .SpeakerRowName {
   font-weight: 700;
-  font-size: var(--caption-text-height);
+  font-size: 1.5rem;
 }
 
 .SpeakerRowValue {
