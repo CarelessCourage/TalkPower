@@ -155,20 +155,6 @@ const activeNotes = computed(() => grouped.value[activeTab.value]?.[1] ?? []);
   color: var(--base-text);
   cursor: pointer;
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: var(--space-bit-2);
-}
-
-.NoteHeading::before {
-  content: '▸';
-  font-size: 0.625rem;
-  color: var(--base-40);
-  transition: transform var(--time-2) var(--timing);
-}
-
-.NoteCard[open] > .NoteHeading::before {
-  transform: rotate(90deg);
 }
 
 .NoteHeading::-webkit-details-marker {
