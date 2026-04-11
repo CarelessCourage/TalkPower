@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, computed, provide, onMounted, watch } from 'vue';
+import { ref, computed, provide, onMounted, watch, nextTick } from 'vue';
+import gsap from 'gsap';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import { useMeetingAnalysis } from '~/composables/useMeetingAnalysis';
 import { useTranscriptSync } from '~/composables/useTranscriptSync';
@@ -110,6 +111,46 @@ const tabs = [
   { to: '/speakers', label: 'Speakers', icon: 'lucide:users' },
   { to: '/transcript', label: 'Transcript', icon: 'lucide:scroll-text' }
 ];
+
+/* ── GSAP staggered entrance from splash ── */
+const actionsEl = ref<HTMLElement | null>(null);
+const heroEl = ref<HTMLElement | null>(null);
+const navEl = ref<HTMLElement | null>(null);
+const wasOnSplash = ref(true);
+
+watch(isSplash, async (nowSplash, prevSplash) => {
+  if (prevSplash && !nowSplash) {
+    wasOnSplash.value = true;
+    await nextTick();
+    await nextTick();
+    const tl = gsap.timeline({ defaults: { ease: 'back.out(1.4)' } });
+
+    if (actionsEl.value) {
+      const items = actionsEl.value.querySelectorAll(
+        '.DemoBtn, .MeetingUploadLink'
+      );
+      gsap.set(items, { opacity: 0, scale: 0.8, y: 12 });
+      tl.to(
+        items,
+        { opacity: 1, scale: 1, y: 0, duration: 0.4, stagger: 0.06 },
+        0.15
+      );
+    }
+
+    if (heroEl.value) {
+      gsap.set(heroEl.value, { opacity: 0, scale: 0.96, y: 20 });
+      tl.to(heroEl.value, { opacity: 1, scale: 1, y: 0, duration: 0.5 }, 0.3);
+    }
+
+    if (navEl.value) {
+      const navItems = navEl.value.querySelectorAll('.NavTab');
+      gsap.set(navItems, { opacity: 0, y: 10 });
+      tl.to(navItems, { opacity: 1, y: 0, duration: 0.35, stagger: 0.05 }, 0.5);
+    }
+  } else {
+    wasOnSplash.value = false;
+  }
+});
 </script>
 
 <template>
@@ -119,7 +160,7 @@ const tabs = [
         <h1 class="MeetingTitle">aura</h1>
         <p class="MeetingTagline">read the room</p>
       </NuxtLink>
-      <div class="MeetingActions">
+      <div ref="actionsEl" class="MeetingActions">
         <div class="DemoSwitcher">
           <button
             v-for="demo in demos"
@@ -139,7 +180,7 @@ const tabs = [
 
     <div v-if="!isSplash && hasData && metrics" class="MeetingContent">
       <!-- Persistent player -->
-      <section class="MeetingHero">
+      <section ref="heroEl" class="MeetingHero">
         <MeetingPlayer
           :src="playerSrc"
           :segments="segments"
@@ -154,7 +195,7 @@ const tabs = [
       </section>
 
       <!-- Tab navigation -->
-      <nav class="MeetingNav">
+      <nav ref="navEl" class="MeetingNav">
         <NuxtLink
           v-for="tab in tabs"
           :key="tab.to"
