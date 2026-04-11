@@ -5,11 +5,13 @@ import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import { useMeetingAnalysis } from '~/composables/useMeetingAnalysis';
 import { useTranscriptSync } from '~/composables/useTranscriptSync';
 import { meetingStateKey } from '~/composables/useMeetingState';
+import { useTheme } from '~/composables/useTheme';
 import { demos, DEFAULT_DEMO, loadDemoData } from '~/data/demos';
 
 const route = useRoute();
 const router = useRouter();
 const analysis = useMeetingAnalysis();
+const { theme, toggle: toggleTheme } = useTheme();
 
 const isSplash = computed(() => route.path === '/');
 
@@ -156,10 +158,10 @@ watch(isSplash, async (nowSplash, prevSplash) => {
 <template>
   <div class="MeetingPage" :class="{ meetingPageSplash: isSplash }">
     <header v-if="!isSplash" class="MeetingHeader">
-      <NuxtLink to="/" class="MeetingBrand">
-        <h1 class="MeetingTitle">aura</h1>
-      </NuxtLink>
-      <div ref="actionsEl" class="MeetingActions">
+      <div ref="actionsEl" class="MeetingHeaderRow">
+        <NuxtLink to="/" class="MeetingBrand">
+          <h1 class="MeetingTitle">aura</h1>
+        </NuxtLink>
         <div class="DemoSwitcher">
           <button
             v-for="demo in demos"
@@ -174,6 +176,16 @@ watch(isSplash, async (nowSplash, prevSplash) => {
         <NuxtLink to="/upload" class="MeetingUploadLink">
           Try your own recording
         </NuxtLink>
+        <button
+          class="ThemeToggle"
+          @click="toggleTheme"
+          :title="theme === 'dark' ? 'Switch to light' : 'Switch to dark'"
+        >
+          <Icon
+            :name="theme === 'dark' ? 'lucide:sun' : 'lucide:moon'"
+            size="16"
+          />
+        </button>
       </div>
     </header>
 
@@ -232,16 +244,41 @@ watch(isSplash, async (nowSplash, prevSplash) => {
 
 .MeetingHeader {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--space-3);
+  flex-direction: column;
+  gap: var(--space-bit-2);
+}
+
+.MeetingHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-bit-3);
+  flex-wrap: wrap;
 }
 
 .MeetingBrand {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-bit-0);
   text-decoration: none;
+}
+
+.ThemeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--block-1);
+  height: var(--block-1);
+  border: none;
+  background: none;
+  color: var(--base-50);
+  cursor: pointer;
+  border-radius: var(--radius-inner);
+  flex-shrink: 0;
+  transition:
+    color var(--time-2) var(--timing),
+    background var(--time-2) var(--timing);
+}
+
+.ThemeToggle:hover {
+  color: var(--base-80);
+  background: var(--base-10);
 }
 
 .MeetingTitle {
@@ -310,11 +347,8 @@ watch(isSplash, async (nowSplash, prevSplash) => {
   border-bottom-color: var(--accent);
 }
 
-.MeetingActions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--space-bit-3);
+.MeetingUploadLink {
+  margin-left: auto;
 }
 
 .DemoSwitcher {

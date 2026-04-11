@@ -257,3 +257,96 @@
   --base-120: var(--yellow-120);
   --base-text: var(--yellow-text);
 }
+
+/* --- Light theme --- */
+.light {
+  --base: #f8f8f8;
+  --base-10: #f0f0f0;
+  --base-20: #e4e4e4;
+  --base-30: #d6d6d6;
+  --base-40: #c0c0c0;
+  --base-50: #aaaaaa;
+  --base-60: #888888;
+  --base-70: #666666;
+  --base-80: #444444;
+  --base-90: #333333;
+  --base-100: #222222;
+  --base-110: #1a1a1a;
+  --base-120: #111111;
+  --base-text: #111111;
+
+  --accent: #d03030;
+  --accent-10: #fce6e6;
+  --accent-20: #f9cccc;
+  --accent-30: #f5aaaa;
+  --accent-40: #f08a8a;
+  --accent-50: #e86565;
+  --accent-60: #e03e3e;
+  --accent-70: #d03030;
+  --accent-80: #b02828;
+  --accent-90: #901e1e;
+  --accent-100: #701818;
+  --accent-110: #501010;
+  --accent-120: #3a0a0a;
+  --accent-text: #ffffff;
+
+  --warning: #c07800;
+  --warning-10: #fcf1e0;
+  --warning-20: #f9e3c2;
+  --warning-30: #f5d29a;
+  --warning-40: #f2be6d;
+  --warning-50: #eda83d;
+  --warning-60: #e8920d;
+  --warning-70: #c07800;
+  --warning-80: #9d6200;
+  --warning-90: #7a4c00;
+  --warning-100: #5a3800;
+  --warning-110: #3f2700;
+  --warning-120: #2e1c00;
+  --warning-text: #ffffff;
+
+  --success: #1e8030;
+  --success-10: #e6f4e9;
+  --success-20: #ceead3;
+  --success-30: #a8dab1;
+  --success-40: #80c88c;
+  --success-50: #55b165;
+  --success-60: #2b9a3e;
+  --success-70: #1e8030;
+  --success-80: #186828;
+  --success-90: #125020;
+  --success-100: #0c3a16;
+  --success-110: #08280e;
+  --success-120: #041a08;
+  --success-text: #ffffff;
+
+  --info: #1e6aaa;
+  --info-10: #e7f0f8;
+  --info-20: #cfe1f2;
+  --info-30: #aacbe7;
+  --info-40: #83b1dc;
+  --info-50: #5997d0;
+  --info-60: #2f7dc4;
+  --info-70: #1e6aaa;
+  --info-80: #185690;
+  --info-90: #124276;
+  --info-100: #0c305c;
+  --info-110: #082040;
+  --info-120: #04142a;
+  --info-text: #ffffff;
+
+  --yellow: #b09800;
+  --yellow-10: #faf6e3;
+  --yellow-20: #f5edc7;
+  --yellow-30: #ede199;
+  --yellow-40: #e6d566;
+  --yellow-50: #ddc633;
+  --yellow-60: #d4b800;
+  --yellow-70: #b09800;
+  --yellow-80: #8c7a00;
+  --yellow-90: #6a5c00;
+  --yellow-100: #504600;
+  --yellow-110: #383200;
+  --yellow-120: #242000;
+  --yellow-text: #ffffff;
+}

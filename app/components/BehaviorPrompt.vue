@@ -23,7 +23,7 @@ const onInput = (e: Event) => {
 
 <template>
   <div class="BehaviorPrompt">
-    <div>
+    <div class="PromptHeaderWrapper">
       <div class="PromptHeader">
         <h3 class="PromptTitle">AI Behavior Analysis</h3>
         <span v-if="hasLabels" class="PromptBadge">Labels active</span>
@@ -59,6 +59,12 @@ const onInput = (e: Event) => {
 </template>
 
 <style scoped>
+.PromptHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-bit-2);
+}
+
 .BehaviorPrompt {
   display: flex;
   flex-direction: column;
@@ -104,7 +110,7 @@ const onInput = (e: Event) => {
   field-sizing: content;
   min-height: calc(1.5em * 3 + var(--space-bit-2) * 2);
   width: 100%;
-  padding: var(--space-bit-3) var(--space-bit-4);
+  padding: var(--space-bit-3);
   border-radius: var(--radius-inner);
   border: var(--border);
   background: var(--base);

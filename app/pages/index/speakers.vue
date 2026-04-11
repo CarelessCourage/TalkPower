@@ -113,6 +113,7 @@ const updateName = (raw: string, name: string) => {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  width: var(--panel-1);
 }
 
 .SpeakerNames {

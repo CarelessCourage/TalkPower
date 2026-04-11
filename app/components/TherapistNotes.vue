@@ -86,7 +86,7 @@ const activeNotes = computed(() => grouped.value[activeTab.value]?.[1] ?? []);
 .TherapistNotes {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-bit-3);
 }
 
 .NotesSummary {
@@ -94,6 +94,7 @@ const activeNotes = computed(() => grouped.value[activeTab.value]?.[1] ?? []);
   line-height: 1.6;
   color: var(--base-80);
   font-style: italic;
+  margin-bottom: var(--space-4);
 }
 
 .NotesTabs {
@@ -140,6 +141,7 @@ const activeNotes = computed(() => grouped.value[activeTab.value]?.[1] ?? []);
   display: flex;
   flex-direction: column;
   gap: var(--space-bit-2);
+  min-height: 500px;
 }
 
 .NoteCard {
