@@ -402,6 +402,10 @@ watch(isSplash, async (nowSplash, prevSplash) => {
 </style>
 
 <style>
+:root {
+  --blur: blur(100px);
+}
+
 /* Global (unscoped) view transition keyframes */
 ::view-transition-old(content-reveal) {
   animation: clipExit 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
@@ -415,7 +419,7 @@ watch(isSplash, async (nowSplash, prevSplash) => {
   from {
     clip-path: inset(5% 5% 80% 5% round 12px);
     opacity: 0;
-    filter: blur(8px);
+    filter: var(--blur);
   }
   to {
     clip-path: inset(0% 0% 0% 0% round 0px);
@@ -433,7 +437,7 @@ watch(isSplash, async (nowSplash, prevSplash) => {
   to {
     clip-path: inset(5% 5% 80% 5% round 12px);
     opacity: 0;
-    filter: blur(8px);
+    filter: var(--blur);
   }
 }
 
