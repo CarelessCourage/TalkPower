@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { useMeetingState } from '~/composables/useMeetingState';
 
-const { segments, activeIndex, interruptions, onSeek, displayName } =
-  useMeetingState();
+const {
+  segments,
+  activeIndex,
+  interruptions,
+  onSeek,
+  displayName,
+  behaviorLabels,
+  emotionLabels
+} = useMeetingState();
 </script>
 
 <template>
@@ -11,6 +18,8 @@ const { segments, activeIndex, interruptions, onSeek, displayName } =
       :segments="segments"
       :active-index="activeIndex"
       :interruptions="interruptions"
+      :labels="behaviorLabels"
+      :emotions="emotionLabels"
       :display-name="displayName"
       @seek="onSeek"
     />

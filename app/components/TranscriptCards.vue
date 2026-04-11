@@ -5,7 +5,6 @@ import type {
   BehaviorLabel,
   EmotionLabel
 } from '~/types/meeting';
-import { formatSeconds } from '~/utils/metrics';
 
 interface Props {
   segments: TranscriptSegment[];
@@ -24,24 +23,6 @@ const {
   emotions = [],
   displayName = (raw: string) => raw
 } = defineProps<Props>();
-
-/* ── Speaker colors ── */
-const colorClasses = [
-  'base-accent',
-  'base-info',
-  'base-warning',
-  'base-success',
-  'base-yellow'
-];
-const speakerColorMap: Record<string, string> = {};
-
-const getSpeakerColor = (speaker: string): string => {
-  if (!(speaker in speakerColorMap)) {
-    const idx = Object.keys(speakerColorMap).length % colorClasses.length;
-    speakerColorMap[speaker] = colorClasses[idx]!;
-  }
-  return speakerColorMap[speaker]!;
-};
 
 /* ── Active segments at current time ── */
 const activeSegments = computed(() => {
@@ -69,14 +50,6 @@ const getLabel = (index: number): BehaviorLabel | undefined => {
 const getEmotion = (index: number): EmotionLabel | undefined => {
   return emotions.find((e) => e.segmentIndex === index);
 };
-
-const categoryColorClass: Record<string, string> = {
-  constructive: 'labelConstructive',
-  destructive: 'labelDestructive',
-  neutral: 'labelNeutral',
-  assertive: 'labelAssertive',
-  evasive: 'labelEvasive'
-};
 </script>
 
 <template>
@@ -85,64 +58,15 @@ const categoryColorClass: Record<string, string> = {
       <div
         v-for="{ seg, index } in activeSegments"
         :key="index"
-        class="TranscriptCard"
-        :class="{
-          cardHardInterruption: getInterruption(index)?.severity === 'hard',
-          cardSoftInterruption: getInterruption(index)?.severity === 'soft'
-        }"
+        class="TranscriptCardWrapper"
       >
-        <div class="CardMeta">
-          <span class="CardSpeaker" :class="getSpeakerColor(seg.speaker)">
-            {{ displayName(seg.speaker) }}
-          </span>
-          <span v-if="getInterruption(index)" class="CardCutOff">
-            {{
-              getInterruption(index)!.severity === 'hard'
-                ? 'cut off'
-                : 'talked over'
-            }}
-            <span :class="getSpeakerColor(getInterruption(index)!.interrupted)">
-              {{ displayName(getInterruption(index)!.interrupted) }}
-            </span>
-          </span>
-          <span class="CardTime mono">{{ formatSeconds(seg.start) }}</span>
-        </div>
-        <p class="CardText">{{ seg.text }}</p>
-        <div class="CardChips">
-          <span
-            v-if="getLabel(index)"
-            class="CardLabel"
-            :class="[
-              categoryColorClass[getLabel(index)!.category],
-              { labelDeceptive: getLabel(index)!.deception }
-            ]"
-            :title="
-              getLabel(index)!.deception
-                ? `${getLabel(index)!.detail} ⚠ ${getLabel(index)!.deception}`
-                : getLabel(index)!.detail
-            "
-          >
-            {{ getLabel(index)!.label }}
-            <span v-if="getLabel(index)!.deception" class="LabelDeception">
-              deceptive
-            </span>
-          </span>
-          <span
-            v-if="getEmotion(index)"
-            class="CardEmotion"
-            :class="{ emotionMasked: getEmotion(index)!.surface }"
-            :title="
-              getEmotion(index)!.surface
-                ? `Appears ${getEmotion(index)!.surface} but actually ${getEmotion(index)!.emotion} — ${getEmotion(index)!.trigger}`
-                : getEmotion(index)!.trigger
-            "
-          >
-            {{ getEmotion(index)!.emotion }}
-            <span v-if="getEmotion(index)!.surface" class="EmotionSurface">
-              looks {{ getEmotion(index)!.surface }}
-            </span>
-          </span>
-        </div>
+        <TranscriptCard
+          :segment="seg"
+          :interruption="getInterruption(index)"
+          :label="getLabel(index)"
+          :emotion="getEmotion(index)"
+          :display-name="displayName"
+        />
       </div>
     </TransitionGroup>
   </div>
@@ -159,149 +83,10 @@ const categoryColorClass: Record<string, string> = {
   position: relative;
 }
 
-.TranscriptCard {
+.TranscriptCardWrapper {
   pointer-events: auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-bit-1);
-  padding: var(--space-bit-2) var(--space-bit-3);
   background: color-mix(in srgb, var(--base) 85%, transparent);
   backdrop-filter: blur(8px);
-}
-
-.TranscriptCard.cardHardInterruption {
-  border-left: 3px solid var(--accent-60);
-  padding-left: calc(var(--space-bit-3) - 3px);
-  background: color-mix(
-    in srgb,
-    var(--accent) 12%,
-    color-mix(in srgb, var(--base) 80%, transparent)
-  );
-}
-
-.TranscriptCard.cardSoftInterruption {
-  border-left: 3px solid var(--base-50);
-  padding-left: calc(var(--space-bit-3) - 3px);
-}
-
-.CardCutOff {
-  color: var(--accent-70);
-  font-size: var(--caption-text-height);
-  font-style: italic;
-  font-weight: 400;
-}
-
-.CardMeta {
-  display: flex;
-  align-items: center;
-  gap: var(--space-bit-2);
-}
-
-.CardSpeaker {
-  font-size: var(--caption-text-height);
-  font-weight: 700;
-  color: var(--base-80);
-}
-
-.CardTime {
-  font-size: var(--caption-text-height);
-  color: var(--base-50);
-  margin-left: auto;
-}
-
-.CardText {
-  font-size: 0.9375rem;
-  line-height: 1.55;
-  color: var(--base-100);
-}
-
-.CardLabel {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-bit-1);
-  padding: 2px var(--space-bit-2);
-  border-radius: var(--radius-inner);
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  cursor: help;
-}
-
-.CardLabel.labelDeceptive {
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-}
-
-.LabelDeception {
-  font-weight: 500;
-  font-style: italic;
-  text-transform: none;
-  letter-spacing: 0;
-  opacity: 0.75;
-  font-size: 0.625rem;
-  color: var(--accent-80);
-}
-
-.CardEmotion {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-bit-1);
-  padding: 2px var(--space-bit-2);
-  border-radius: var(--radius-inner);
-  font-size: 1rem;
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: 0.02em;
-  cursor: help;
-  background: color-mix(in srgb, var(--base-50) 15%, transparent);
-  color: var(--base-80);
-  border: 1px solid color-mix(in srgb, var(--base-50) 25%, transparent);
-}
-
-.CardEmotion.emotionMasked {
-  background: color-mix(in srgb, var(--warning) 12%, transparent);
-  border-color: color-mix(in srgb, var(--warning) 30%, transparent);
-  color: var(--warning-80);
-}
-
-.EmotionSurface {
-  font-weight: 400;
-  font-style: normal;
-  opacity: 0.65;
-  font-size: 0.625rem;
-  text-decoration: line-through;
-}
-
-.CardChips {
-  display: flex;
-  align-items: center;
-  gap: var(--space-bit-2);
-  flex-wrap: wrap;
-}
-
-.labelConstructive {
-  background: color-mix(in srgb, var(--success) 25%, transparent);
-  color: var(--success-80);
-}
-
-.labelDestructive {
-  background: color-mix(in srgb, var(--accent) 25%, transparent);
-  color: var(--accent-80);
-}
-
-.labelNeutral {
-  background: color-mix(in srgb, var(--base-50) 25%, transparent);
-  color: var(--base-80);
-}
-
-.labelAssertive {
-  background: color-mix(in srgb, var(--info) 25%, transparent);
-  color: var(--info-80);
-}
-
-.labelEvasive {
-  background: color-mix(in srgb, var(--warning) 25%, transparent);
-  color: var(--warning-80);
 }
 
 /* ── Transition ── */
