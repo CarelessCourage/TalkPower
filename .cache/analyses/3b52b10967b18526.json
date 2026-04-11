@@ -1,0 +1,100 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "seeking validation",
+      "category": "constructive",
+      "detail": "Egg is expressing a desire for reassurance about his future."
+    },
+    {
+      "segmentIndex": 11,
+      "label": "defensive response",
+      "category": "destructive",
+      "detail": "Dunk reacts defensively to Egg's inquiry about his past experiences."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "shutting down conversation",
+      "category": "destructive",
+      "detail": "Dunk insists that his problems are his own, dismissing Egg's request for guidance."
+    },
+    {
+      "segmentIndex": 13,
+      "label": "seeking guidance",
+      "category": "constructive",
+      "detail": "Egg is actively asking Dunk for help, showing his eagerness to learn."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 11,
+      "emotion": "defensive",
+      "trigger": "reactive to inquiry",
+      "surface": "surprised"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "dismissive",
+      "trigger": "Egg's request for help",
+      "surface": "blunt"
+    },
+    {
+      "segmentIndex": 13,
+      "emotion": "confused",
+      "trigger": "Dunk's lack of support",
+      "surface": "pleading"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Encouraging Egg's Growth",
+      "body": "Egg is clearly looking for mentorship and support from Dunk, as seen in his question about becoming a knight. Dunk should recognize this opportunity to guide Egg rather than shutting down the conversation.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Dunk's Defensive Behavior",
+      "body": "Dunk's defensiveness when asked about his past indicates discomfort with vulnerability. Encouraging him to share experiences could foster a more supportive dynamic with Egg.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Egg's Initiative",
+      "body": "Egg's persistence in seeking guidance shows his eagerness to learn and grow. This is a positive trait that Dunk should nurture rather than dismiss.",
+      "addressedTo": "Speaker A"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Great job, Egg! You're showing initiative by asking about your future.",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 11,
+      "end": 15,
+      "text": "Dunk, consider sharing your experiences instead of shutting down the conversation.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 13,
+      "end": 17,
+      "text": "Egg, keep asking questions! Your curiosity is key to learning.",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 12,
+      "end": 16,
+      "text": "Dunk, avoid dismissive responses; they can discourage Egg's growth.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    }
+  ],
+  "summary": "The meeting dynamics reveal a mix of constructive and destructive interactions. Egg seeks validation and guidance, while Dunk exhibits defensiveness and dismissiveness, which hinders the mentoring relationship. Encouraging Dunk to embrace vulnerability could enhance their connection and support Egg's development.",
+  "speakerNames": {
+    "Speaker A": "Egg",
+    "Speaker B": "Dunk"
+  }
+}
