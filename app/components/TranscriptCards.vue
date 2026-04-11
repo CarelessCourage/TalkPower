@@ -87,6 +87,8 @@ const getEmotion = (index: number): EmotionLabel | undefined => {
   pointer-events: auto;
   background: color-mix(in srgb, var(--base) 85%, transparent);
   backdrop-filter: blur(8px);
+  width: max-content;
+  max-width: 100%;
 }
 
 /* ── Transition ── */

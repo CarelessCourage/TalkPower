@@ -57,50 +57,52 @@ const categoryColorClass: Record<string, string> = {
       cardSoftInterruption: interruption?.severity === 'soft'
     }"
   >
-  <div class="CardMeta">
-    <span class="CardSpeaker" :class="colorFor(segment.speaker)">
-      {{ displayName(segment.speaker) }}
-    </span>
-    <span v-if="interruption" class="CardCutOff">
-      {{ interruption.severity === 'hard' ? 'cut off' : 'talked over' }}
-      <span :class="colorFor(interruption.interrupted)">
-        {{ displayName(interruption.interrupted) }}
+    <div class="CardMeta">
+      <span class="CardSpeaker" :class="colorFor(segment.speaker)">
+        {{ displayName(segment.speaker) }}
       </span>
-    </span>
-    <span class="CardTime mono">{{ formatSeconds(segment.start) }}</span>
-  </div>
-  <p class="CardText">{{ segment.text }}</p>
-  <div v-if="label || emotion" class="CardChips">
-    <span
-      v-if="label"
-      class="CardLabel"
-      :class="[
-        categoryColorClass[label.category],
-        { labelDeceptive: label.deception }
-      ]"
-      :title="
-        label.deception ? `${label.detail} ⚠ ${label.deception}` : label.detail
-      "
-    >
-      {{ label.label }}
-      <span v-if="label.deception" class="LabelDeception">deceptive</span>
-    </span>
-    <span
-      v-if="emotion"
-      class="CardEmotion"
-      :class="{ emotionMasked: emotion.surface }"
-      :title="
-        emotion.surface
-          ? `Appears ${emotion.surface} but actually ${emotion.emotion} — ${emotion.trigger}`
-          : emotion.trigger
-      "
-    >
-      {{ emotion.emotion }}
-      <span v-if="emotion.surface" class="EmotionSurface">
-        looks {{ emotion.surface }}
+      <span v-if="interruption" class="CardCutOff">
+        {{ interruption.severity === 'hard' ? 'cut off' : 'talked over' }}
+        <span :class="colorFor(interruption.interrupted)">
+          {{ displayName(interruption.interrupted) }}
+        </span>
       </span>
-    </span>
-  </div>
+      <span class="CardTime mono">{{ formatSeconds(segment.start) }}</span>
+    </div>
+    <p class="CardText">{{ segment.text }}</p>
+    <div v-if="label || emotion" class="CardChips">
+      <span
+        v-if="label"
+        class="CardLabel"
+        :class="[
+          categoryColorClass[label.category],
+          { labelDeceptive: label.deception }
+        ]"
+        :title="
+          label.deception
+            ? `${label.detail} ⚠ ${label.deception}`
+            : label.detail
+        "
+      >
+        {{ label.label }}
+        <span v-if="label.deception" class="LabelDeception">deceptive</span>
+      </span>
+      <span
+        v-if="emotion"
+        class="CardEmotion"
+        :class="{ emotionMasked: emotion.surface }"
+        :title="
+          emotion.surface
+            ? `Appears ${emotion.surface} but actually ${emotion.emotion} — ${emotion.trigger}`
+            : emotion.trigger
+        "
+      >
+        {{ emotion.emotion }}
+        <span v-if="emotion.surface" class="EmotionSurface">
+          looks {{ emotion.surface }}
+        </span>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -172,6 +174,7 @@ const categoryColorClass: Record<string, string> = {
   align-items: center;
   gap: var(--space-bit-2);
   flex-wrap: wrap;
+  padding-top: var(--space-bit-2);
 }
 
 .CardLabel {
