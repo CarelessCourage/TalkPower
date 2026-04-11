@@ -191,7 +191,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
   display: flex;
   flex-direction: column;
   gap: var(--space-bit-2);
-  border-radius: var(--radius-outer);
+  border-radius: 0px;
   overflow: hidden;
 }
 
@@ -287,8 +287,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
   top: 0;
   height: 100%;
   background: var(--base-60);
-  border-radius: var(--radius-inner);
-  opacity: 0.5;
+  /* opacity: 0.5; */
   pointer-events: none;
 }
 

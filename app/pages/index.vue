@@ -237,7 +237,7 @@ watch(isSplash, async (nowSplash, prevSplash) => {
 .MeetingPage {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-bit-1);
   max-width: var(--panel-2);
   margin: 0 auto;
   padding: var(--space-5) var(--space-3);
@@ -311,7 +311,7 @@ watch(isSplash, async (nowSplash, prevSplash) => {
 
 .MeetingHero {
   background: var(--base-10);
-  border-radius: var(--radius-outer);
+  /* border-radius: var(--radius-outer); */
   border: 1px solid var(--base-20);
   overflow: hidden;
 }

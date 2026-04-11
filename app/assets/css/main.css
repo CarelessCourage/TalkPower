@@ -82,7 +82,7 @@ svg {
 
 .surface {
   background: var(--base-10);
-  border: var(--border);
+  border: none;
   border-radius: var(--radius);
 }
 
