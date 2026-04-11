@@ -30,14 +30,14 @@ export const sirDunkanLabels: BehaviorAnalysis = {
       label: 'preemptive self-deprecation',
       category: 'evasive',
       detail:
-        '"I\'m a bit puny." — Egg immediately undermines the encouragement he just received. He\'s putting the obvious objection on the table himself — if Dunk still believes in him after hearing it, maybe it\'s really true.'
+        "\"I'm a bit puny.\" — Egg immediately undermines the encouragement he just received. He's putting the obvious objection on the table himself — if Dunk still believes in him after hearing it, maybe it's really true."
     },
     {
       segmentIndex: 4,
       label: 'plain reassurance',
       category: 'constructive',
       detail:
-        "\"You'll grow.\" — Two words, no hesitation. Dunk doesn't argue or over-explain. He treats the worry as temporary. This brevity carries more conviction than a speech would."
+        '"You\'ll grow." — Two words, no hesitation. Dunk doesn\'t argue or over-explain. He treats the worry as temporary. This brevity carries more conviction than a speech would.'
     },
     {
       segmentIndex: 6,
@@ -67,7 +67,7 @@ export const sirDunkanLabels: BehaviorAnalysis = {
       label: 'defensive deflection',
       category: 'evasive',
       detail:
-        '"What?" — Dunk pretends he doesn\'t know what Egg is referring to. He wasn\'t prepared for his offhand remark to be taken as a teaching moment, and now he doesn\'t know what to do with it.'
+        "\"What?\" — Dunk pretends he doesn't know what Egg is referring to. He wasn't prepared for his offhand remark to be taken as a teaching moment, and now he doesn't know what to do with it."
     },
     {
       segmentIndex: 11,
@@ -95,7 +95,7 @@ export const sirDunkanLabels: BehaviorAnalysis = {
       label: 'blunt callback',
       category: 'evasive',
       detail:
-        "\"Grow?\" — Dunk collapses the emotional weight of the moment into a one-word callback to their earlier exchange about being puny. He's not being clever or cruel — he genuinely doesn't know what other help to offer. It's the most honest thing he's said: the only advice he has is \"keep going.\""
+        '"Grow?" — Dunk collapses the emotional weight of the moment into a one-word callback to their earlier exchange about being puny. He\'s not being clever or cruel — he genuinely doesn\'t know what other help to offer. It\'s the most honest thing he\'s said: the only advice he has is "keep going."'
     }
   ],
   emotions: [
@@ -159,7 +159,7 @@ export const sirDunkanLabels: BehaviorAnalysis = {
   notes: [
     {
       heading: 'The accidental parallel',
-      body: "The scene turns on a structural echo: \"everyone's always told me [I was puny]\" / \"everyone's always told me I was stupid.\" Egg shares deliberately. Dunk mirrors the phrasing without thinking. The result is a moment that feels like mutual disclosure — but only one of them meant it that way. Egg hears a mentor opening up. Dunk hears himself saying too much.",
+      body: 'The scene turns on a structural echo: "everyone\'s always told me [I was puny]" / "everyone\'s always told me I was stupid." Egg shares deliberately. Dunk mirrors the phrasing without thinking. The result is a moment that feels like mutual disclosure — but only one of them meant it that way. Egg hears a mentor opening up. Dunk hears himself saying too much.',
       addressedTo: 'all'
     },
     {
@@ -242,7 +242,7 @@ export const sirDunkanLabels: BehaviorAnalysis = {
     {
       start: 43,
       end: 45.2,
-      text: '"Grow?" — You don\'t have wisdom to offer, so you offer the one thing you\'re sure of. It\'s not poetry, but it\'s honest.',
+      text: "\"Grow?\" — You don't have wisdom to offer, so you offer the one thing you're sure of. It's not poetry, but it's honest.",
       tone: 'insight',
       speaker: 'Speaker B'
     }
