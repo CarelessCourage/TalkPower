@@ -91,24 +91,17 @@ const categoryColorClass: Record<string, string> = {
           cardSoftInterruption: getInterruption(index)?.severity === 'soft'
         }"
       >
-        <div v-if="getInterruption(index)" class="CardInterruptionBanner">
-          <span class="CardInterruptionLabel">
-            <span :class="getSpeakerColor(getInterruption(index)!.interrupter)">
-              {{ displayName(getInterruption(index)!.interrupter) }}
-            </span>
-            <span class="CardCutOff">
-              {{
-                getInterruption(index)!.severity === 'hard' ? 'cut off' : 'soft'
-              }}
-            </span>
-            <span :class="getSpeakerColor(getInterruption(index)!.interrupted)">
-              {{ displayName(getInterruption(index)!.interrupted) }}
-            </span>
-          </span>
-        </div>
         <div class="CardMeta">
           <span class="CardSpeaker" :class="getSpeakerColor(seg.speaker)">
             {{ displayName(seg.speaker) }}
+          </span>
+          <span v-if="getInterruption(index)" class="CardCutOff">
+            {{
+              getInterruption(index)!.severity === 'hard' ? 'cut off' : 'talked over'
+            }}
+            <span :class="getSpeakerColor(getInterruption(index)!.interrupted)">
+              {{ displayName(getInterruption(index)!.interrupted) }}
+            </span>
           </span>
           <span class="CardTime mono">{{ formatSeconds(seg.start) }}</span>
         </div>
@@ -190,20 +183,9 @@ const categoryColorClass: Record<string, string> = {
   padding-left: calc(var(--space-bit-3) - 3px);
 }
 
-.CardInterruptionBanner {
-  padding-bottom: var(--space-bit-0);
-}
-
-.CardInterruptionLabel {
-  display: flex;
-  align-items: center;
-  gap: var(--space-bit-2);
-  font-size: var(--caption-text-height);
-  font-weight: 700;
-}
-
 .CardCutOff {
   color: var(--accent-70);
+  font-size: var(--caption-text-height);
   font-style: italic;
   font-weight: 400;
 }
@@ -211,7 +193,7 @@ const categoryColorClass: Record<string, string> = {
 .CardMeta {
   display: flex;
   align-items: center;
-  gap: var(--space-bit-3);
+  gap: var(--space-bit-2);
 }
 
 .CardSpeaker {
@@ -223,6 +205,7 @@ const categoryColorClass: Record<string, string> = {
 .CardTime {
   font-size: var(--caption-text-height);
   color: var(--base-50);
+  margin-left: auto;
 }
 
 .CardText {
