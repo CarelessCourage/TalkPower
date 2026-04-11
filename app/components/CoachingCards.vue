@@ -53,7 +53,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
         <span v-if="card.speaker" class="CoachSpeaker">
           {{ displayName(card.speaker) }}
         </span>
-        <span class="CoachToneLabel">{{ card.tone }}</span>
+        <!-- <span class="CoachToneLabel">{{ card.tone }}</span> -->
       </div>
       <p class="CoachText">{{ card.text }}</p>
     </div>
@@ -74,7 +74,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: var(--space-bit-2) var(--space-bit-3);
-  max-width: 280px;
+  max-width: 350px;
   border-left: 3px solid var(--accent);
   pointer-events: auto;
 }
@@ -82,13 +82,13 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 .CoachHeader {
   display: flex;
   align-items: center;
-  gap: var(--space-bit-1);
+  gap: var(--space-bit-2);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  opacity: 0.8;
   margin-bottom: var(--space-bit-0);
+  padding-bottom: var(--space-bit-2);
+  border-bottom: 1px solid var(--base-80);
 }
 
 .CoachSpeaker {
@@ -96,12 +96,13 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 }
 
 .CoachToneLabel {
+  font-size: 1.2rem;
   margin-left: auto;
   opacity: 0.6;
 }
 
 .CoachText {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   margin: 0;
   color: var(--base-text);
