@@ -158,7 +158,6 @@ watch(isSplash, async (nowSplash, prevSplash) => {
     <header v-if="!isSplash" class="MeetingHeader">
       <NuxtLink to="/" class="MeetingBrand">
         <h1 class="MeetingTitle">aura</h1>
-        <p class="MeetingTagline">read the room</p>
       </NuxtLink>
       <div ref="actionsEl" class="MeetingActions">
         <div class="DemoSwitcher">
@@ -352,6 +351,8 @@ watch(isSplash, async (nowSplash, prevSplash) => {
 .MeetingMain {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: var(--space-4);
 }
 

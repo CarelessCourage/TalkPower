@@ -32,6 +32,9 @@ const {
 .BehaviorPage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: var(--space-4);
+  width: var(--panel-1);
 }
 </style>
