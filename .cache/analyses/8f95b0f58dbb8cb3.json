@@ -1,0 +1,136 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "seeking validation",
+      "category": "constructive",
+      "detail": "Egg expresses a desire for reassurance about his future as a knight."
+    },
+    {
+      "segmentIndex": 1,
+      "label": "encouraging response",
+      "category": "constructive",
+      "detail": "Dunk provides a positive affirmation to Egg's question."
+    },
+    {
+      "segmentIndex": 7,
+      "label": "defensive dismissal",
+      "category": "destructive",
+      "detail": "Dunk reacts defensively to Egg's inquiry about his past experiences."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "shutting down conversation",
+      "category": "destructive",
+      "detail": "Dunk insists that his problems are his own, closing off the possibility of mentorship."
+    },
+    {
+      "segmentIndex": 13,
+      "label": "pleading for guidance",
+      "category": "constructive",
+      "detail": "Egg directly asks Dunk for help, indicating a desire for mentorship."
+    },
+    {
+      "segmentIndex": 15,
+      "label": "blunt response",
+      "category": "neutral",
+      "detail": "Dunk gives a straightforward answer that lacks depth and mentorship."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "anxious",
+      "trigger": "seeking reassurance about future",
+      "surface": "hopeful"
+    },
+    {
+      "segmentIndex": 11,
+      "emotion": "defensive",
+      "trigger": "questioning of past experiences",
+      "surface": "dismissive"
+    },
+    {
+      "segmentIndex": 13,
+      "emotion": "frustrated",
+      "trigger": "lack of guidance from Dunk",
+      "surface": "pleading"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Encouraging Reassurance",
+      "body": "Dunk's initial response to Egg's question about becoming a knight was supportive and encouraging. This sets a positive tone for their interaction, which is crucial for Egg's development.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Defensiveness as a Barrier",
+      "body": "Dunk's defensiveness when Egg asks about his past experiences indicates a reluctance to engage in mentorship. This could hinder Egg's growth and understanding if Dunk doesn't open up.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Egg's Need for Guidance",
+      "body": "Egg's repeated requests for help highlight his eagerness to learn and grow. Dunk should recognize this need and consider how he can provide meaningful guidance.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Opportunity for Deeper Connection",
+      "body": "The conversation presents an opportunity for Dunk to share his experiences and lessons learned, which could strengthen their bond and foster Egg's development.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Clarifying Intentions",
+      "body": "Egg's confusion about Dunk's willingness to help suggests a need for clearer communication. Dunk should articulate his intentions to avoid misunderstandings.",
+      "addressedTo": "Speaker B"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Egg is seeking validation; acknowledge his feelings to build trust.",
+      "tone": "tip",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 2,
+      "end": 6,
+      "text": "Dunk's encouragement is a great start; keep it up!",
+      "tone": "praise",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 36,
+      "end": 40,
+      "text": "Dunk, consider sharing your experiences instead of shutting down.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 42,
+      "end": 46,
+      "text": "Egg is eager for guidance; try to offer more than just blunt responses.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 14,
+      "end": 18,
+      "text": "Dunk, be mindful of how your defensiveness affects Egg's learning.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 44,
+      "end": 48,
+      "text": "Acknowledge Egg's request for help; it’s a chance for mentorship.",
+      "tone": "insight",
+      "speaker": "Speaker B"
+    }
+  ],
+  "summary": "The meeting dynamics reveal a mix of encouragement and defensiveness. Dunk starts positively but becomes defensive when asked to share personal experiences, which confuses and frustrates Egg. There is a clear opportunity for Dunk to embrace a mentoring role and provide valuable guidance to Egg, who is eager to learn and grow.",
+  "speakerNames": {
+    "Speaker A": "Egg",
+    "Speaker B": "Dunk"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "deflecting blame",
+      "category": "destructive",
+      "detail": "Speaker A shifts responsibility for the presentation onto Speaker B without offering support or collaboration."
+    },
+    {
+      "segmentIndex": 9,
+      "label": "solution-oriented",
+      "category": "constructive",
+      "detail": "Speaker B expresses a desire for clear communication, aiming to facilitate understanding among the team."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "dismissive correction",
+      "category": "destructive",
+      "detail": "Speaker B interrupts to correct Speaker D, undermining the flow of conversation and creating tension."
+    },
+    {
+      "segmentIndex": 25,
+      "label": "emotional appeal",
+      "category": "constructive",
+      "detail": "Speaker E expresses frustration in a humorous way, attempting to connect with the group despite feeling slighted."
+    },
+    {
+      "segmentIndex": 46,
+      "label": "hostile remark",
+      "category": "destructive",
+      "detail": "Speaker D makes a violent comment directed at Speaker B, escalating the conflict and creating a hostile environment."
+    },
+    {
+      "segmentIndex": 48,
+      "label": "de-escalating",
+      "category": "constructive",
+      "detail": "Speaker B attempts to redirect the conversation away from the conflict by stating that the discussion is not important."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "frustrated",
+      "trigger": "unprovoked",
+      "surface": "assertive"
+    },
+    {
+      "segmentIndex": 9,
+      "emotion": "hopeful",
+      "trigger": "unprovoked"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "contemptuous",
+      "trigger": "after being interrupted",
+      "surface": "defensive"
+    },
+    {
+      "segmentIndex": 25,
+      "emotion": "frustrated",
+      "trigger": "after feeling ignored",
+      "surface": "humorous"
+    },
+    {
+      "segmentIndex": 46,
+      "emotion": "hostile",
+      "trigger": "after feeling dismissed"
+    },
+    {
+      "segmentIndex": 48,
+      "emotion": "anxious",
+      "trigger": "reactive to hostility"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Addressing Blame Shifting",
+      "body": "Speaker A's initial deflection of responsibility sets a negative tone for the meeting. It would be beneficial for A to take a more collaborative approach by offering support rather than placing blame on others.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Encouraging Positive Communication",
+      "body": "Speaker B's attempt to clarify communication is a constructive step. Encouraging this behavior can help foster a more collaborative environment where team members feel supported.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Managing Hostility",
+      "body": "The hostile remark from Speaker D escalates the conflict unnecessarily. It's important for the team to establish ground rules for respectful communication to prevent such outbursts in the future.",
+      "addressedTo": "Speaker D"
+    },
+    {
+      "heading": "Humor as a Connection Tool",
+      "body": "Speaker E's use of humor to express frustration can be a powerful tool for connection, but it should be balanced with constructive dialogue. Encouraging E to share feelings more directly could enhance team cohesion.",
+      "addressedTo": "Speaker E"
+    },
+    {
+      "heading": "De-escalation Strategies",
+      "body": "Speaker B's effort to de-escalate the situation is commendable. This kind of intervention can help maintain a more positive atmosphere, and B should continue to practice this skill.",
+      "addressedTo": "Speaker B"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Avoid shifting blame; collaborate instead.",
+      "tone": "tip",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 9,
+      "end": 13,
+      "text": "Great job focusing on clear communication!",
+      "tone": "praise",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 12,
+      "end": 16,
+      "text": "Watch out for dismissive corrections; they can escalate tension.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 25,
+      "end": 29,
+      "text": "Using humor can help ease frustration; keep it constructive.",
+      "tone": "tip",
+      "speaker": "Speaker E"
+    },
+    {
+      "start": 46,
+      "end": 50,
+      "text": "Hostility can derail discussions; aim for respectful dialogue.",
+      "tone": "warning",
+      "speaker": "Speaker D"
+    },
+    {
+      "start": 48,
+      "end": 52,
+      "text": "Good move to de-escalate; keep redirecting negativity.",
+      "tone": "praise",
+      "speaker": "Speaker B"
+    }
+  ],
+  "summary": "The meeting displayed a mix of constructive and destructive behaviors, with moments of deflection and hostility overshadowing attempts at collaboration. While some speakers made efforts to clarify and de-escalate, the overall atmosphere was tense, highlighting the need for improved communication strategies and respect among team members.",
+  "speakerNames": {
+    "Speaker A": "Michael",
+    "Speaker B": "Ryan",
+    "Speaker C": "Sarah",
+    "Speaker D": "Toby",
+    "Speaker E": "Jessica",
+    "Speaker F": "Chris",
+    "Speaker G": "Jordan",
+    "Speaker H": "Alex"
+  }
+}

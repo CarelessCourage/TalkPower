@@ -9,10 +9,10 @@ import type { TranscriptResponse } from '~/types/meeting';
  *  A = Michael Scott (boss, clueless but confident)
  *  B = Ryan Howard (frustrated, knowledgeable)
  *  C = Oscar Martinez (brief interjection)
- *  D = Dwight Schrute (loyal, overconfident)
- *  E = Kelly Kapoor (petty, passive-aggressive)
+ *  D = Jim Halpert (loyal but wrong)
+ *  E = Kevin Malone (petty, social grievances)
  *  F = Toby Flenderson (correct, ignored)
- *  G = Kevin Malone (goes with the crowd)
+ *  G = Angela Martin (goes with the crowd)
  *  H = Pam Beesly (cuts through the noise)
  */
 export const theOfficeTranscript: TranscriptResponse = {
