@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useMagicPlayer } from '@maas/vue-equipment/plugins/MagicPlayer';
 import type {
   TranscriptSegment,
@@ -119,13 +119,30 @@ const onPointerUp = () => {
   isDragging.value = false;
 };
 
+const togglePlay = () => audioApi.togglePlay();
+
+const onKeydown = (e: KeyboardEvent) => {
+  if (e.code === 'Space' && !isInputFocused()) {
+    e.preventDefault();
+    togglePlay();
+  }
+};
+
+const isInputFocused = () => {
+  const tag = document.activeElement?.tagName;
+  return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+};
+
+onMounted(() => window.addEventListener('keydown', onKeydown));
+onUnmounted(() => window.removeEventListener('keydown', onKeydown));
+
 defineExpose({ currentTime, duration: playerDuration, seek });
 </script>
 
 <template>
   <div class="MeetingPlayer surface">
     <!-- Video + subtitle overlay -->
-    <div class="PlayerViewport">
+    <div class="PlayerViewport" @click="togglePlay">
       <MagicPlayerProvider :key="src" :id="playerId" :options="playerOptions">
         <MagicPlayerVideo />
       </MagicPlayerProvider>
@@ -198,6 +215,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
 /* ── Viewport: video + subtitle overlay ── */
 .PlayerViewport {
   position: relative;
+  cursor: pointer;
 }
 
 .MeetingPlayer :deep(video) {
