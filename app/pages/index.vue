@@ -389,13 +389,14 @@ watch(isSplash, async (nowSplash, prevSplash) => {
   justify-content: center;
   align-items: center;
   gap: var(--space-4);
+  padding-top: var(--space-3);
 }
 
 /* ── View Transition: clip-path reveal for content ── */
 .MeetingContent {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-bit-2);
   view-transition-name: content-reveal;
 }
 </style>

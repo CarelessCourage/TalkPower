@@ -168,7 +168,7 @@ const categoryColorClass: Record<string, string> = {
   pointer-events: auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-bit-0);
+  gap: var(--space-bit-1);
   padding: var(--space-bit-2) var(--space-bit-3);
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--base) 85%, transparent);
@@ -237,7 +237,7 @@ const categoryColorClass: Record<string, string> = {
   gap: var(--space-bit-1);
   padding: 2px var(--space-bit-2);
   border-radius: var(--radius-inner);
-  font-size: 0.6875rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -264,7 +264,7 @@ const categoryColorClass: Record<string, string> = {
   gap: var(--space-bit-1);
   padding: 2px var(--space-bit-2);
   border-radius: var(--radius-inner);
-  font-size: 0.6875rem;
+  font-size: 1rem;
   font-weight: 500;
   font-style: italic;
   letter-spacing: 0.02em;

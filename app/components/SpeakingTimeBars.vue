@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 import type { SpeakerMetrics } from '~/types/meeting';
 import { formatDuration } from '~/utils/metrics';
+import { useSpeakerColors } from '~/composables/useSpeakerColors';
 
 interface Props {
   speakers: SpeakerMetrics[];
@@ -11,18 +12,8 @@ interface Props {
 
 const { speakers, displayName = (raw: string) => raw } = defineProps<Props>();
 
+const { getSpeakerColor } = useSpeakerColors();
 const barsRef = ref<HTMLElement | null>(null);
-
-/** Speaker color mapping */
-const colorClasses = [
-  'base-accent',
-  'base-info',
-  'base-warning',
-  'base-success',
-  'base-yellow'
-];
-const getSpeakerColor = (index: number): string =>
-  colorClasses[index % colorClasses.length]!;
 
 onMounted(() => {
   if (!barsRef.value) return;
@@ -43,20 +34,13 @@ onMounted(() => {
 
 <template>
   <div class="SpeakingTimeBars" ref="barsRef">
-    <div
+    <SpeakerRow
       v-for="(speaker, i) in speakers"
       :key="speaker.speaker"
-      class="SpeakingTimeRow"
+      :name="displayName(speaker.speaker)"
+      :value="`${speaker.percentage.toFixed(0)}% · ${formatDuration(speaker.totalTime)}`"
+      :color-class="getSpeakerColor(i)"
     >
-      <div class="SpeakingTimeLabel">
-        <span class="SpeakingTimeName" :class="getSpeakerColor(i)">
-          {{ displayName(speaker.speaker) }}
-        </span>
-        <span class="SpeakingTimeValue mono">
-          {{ speaker.percentage.toFixed(0) }}% ·
-          {{ formatDuration(speaker.totalTime) }}
-        </span>
-      </div>
       <div class="SpeakingTimeTrack">
         <div
           class="SpeakingTimeBar"
@@ -64,21 +48,16 @@ onMounted(() => {
           :style="{ width: speaker.percentage + '%' }"
         />
       </div>
-      <div class="SpeakingTimeStats">
-        <span class="SpeakingTimeStat">{{ speaker.turns }} turns</span>
-        <span class="SpeakingTimeStat"
-          >{{ formatDuration(speaker.averageTurnDuration) }} avg</span
-        >
-        <span
-          v-if="speaker.interruptions > 0"
-          class="SpeakingTimeStat statInterrupt"
-        >
+      <template #stats>
+        <span>{{ speaker.turns }} turns</span>
+        <span>{{ formatDuration(speaker.averageTurnDuration) }} avg</span>
+        <span v-if="speaker.interruptions > 0" class="statInterrupt">
           {{ speaker.interruptions }} interruption{{
             speaker.interruptions === 1 ? '' : 's'
           }}
         </span>
-      </div>
-    </div>
+      </template>
+    </SpeakerRow>
   </div>
 </template>
 
@@ -86,31 +65,7 @@ onMounted(() => {
 .SpeakingTimeBars {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-}
-
-.SpeakingTimeRow {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-bit-1);
-}
-
-.SpeakingTimeLabel {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-2);
-}
-
-.SpeakingTimeName {
-  font-weight: 700;
-  font-size: var(--caption-text-height);
-  color: var(--base-80);
-}
-
-.SpeakingTimeValue {
-  font-size: var(--caption-text-height);
-  color: var(--base-60);
+  gap: var(--space-1);
 }
 
 .SpeakingTimeTrack {
@@ -127,17 +82,7 @@ onMounted(() => {
   min-width: 2px;
 }
 
-.SpeakingTimeStats {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.SpeakingTimeStat {
-  font-size: var(--caption-text-height);
-  color: var(--base-50);
-}
-
-.SpeakingTimeStat.statInterrupt {
+.statInterrupt {
   color: var(--accent-70);
 }
 </style>

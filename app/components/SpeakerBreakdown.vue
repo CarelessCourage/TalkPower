@@ -4,6 +4,7 @@ import type {
   BehaviorLabel,
   EmotionLabel
 } from '~/types/meeting';
+import { useSpeakerColors } from '~/composables/useSpeakerColors';
 
 interface Props {
   segments: TranscriptSegment[];
@@ -18,6 +19,8 @@ const {
   emotions,
   displayName = (raw: string) => raw
 } = defineProps<Props>();
+
+const { getSpeakerColor } = useSpeakerColors();
 
 const speakers = computed(() => {
   const map = new Map<
@@ -41,29 +44,13 @@ const speakers = computed(() => {
     map.get(seg.speaker)!.emotions.push(emotion);
   }
 
-  return [...map.entries()].map(([speaker, data]) => ({
+  return [...map.entries()].map(([speaker, data], index) => ({
     speaker,
+    index,
     labels: data.labels,
     emotions: data.emotions
   }));
 });
-
-const colorClasses = [
-  'base-accent',
-  'base-info',
-  'base-warning',
-  'base-success',
-  'base-yellow'
-];
-const speakerColorMap: Record<string, string> = {};
-
-const getSpeakerColor = (speaker: string): string => {
-  if (!(speaker in speakerColorMap)) {
-    const idx = Object.keys(speakerColorMap).length % colorClasses.length;
-    speakerColorMap[speaker] = colorClasses[idx]!;
-  }
-  return speakerColorMap[speaker]!;
-};
 
 const categoryColorClass: Record<string, string> = {
   constructive: 'labelConstructive',
@@ -76,11 +63,12 @@ const categoryColorClass: Record<string, string> = {
 
 <template>
   <div class="SpeakerBreakdown">
-    <div v-for="entry in speakers" :key="entry.speaker" class="SpeakerSection">
-      <h3 class="SpeakerName" :class="getSpeakerColor(entry.speaker)">
-        {{ displayName(entry.speaker) }}
-      </h3>
-
+    <SpeakerRow
+      v-for="entry in speakers"
+      :key="entry.speaker"
+      :name="displayName(entry.speaker)"
+      :color-class="getSpeakerColor(entry.index)"
+    >
       <div v-if="entry.labels.length" class="LabelGroup">
         <p class="GroupHeading">Behaviors</p>
         <div class="ChipList">
@@ -125,7 +113,7 @@ const categoryColorClass: Record<string, string> = {
           </span>
         </div>
       </div>
-    </div>
+    </SpeakerRow>
 
     <p v-if="!speakers.length" class="EmptyState">
       No labels yet — run the behavior analysis first.
@@ -137,18 +125,7 @@ const categoryColorClass: Record<string, string> = {
 .SpeakerBreakdown {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
-}
-
-.SpeakerSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.SpeakerName {
-  font-size: 1rem;
-  font-weight: 700;
+  gap: var(--space-1);
 }
 
 .LabelGroup {

@@ -40,6 +40,54 @@ const updateName = (raw: string, name: string) => {
 
 <template>
   <div class="SpeakersPage">
+    <div class="SpeakerViews">
+      <div class="SpeakersTabs">
+        <button
+          class="SpeakersTab"
+          :class="{ tabActive: speakerTab === 'airtime' }"
+          @click="speakerTab = 'airtime'"
+        >
+          Airtime breakdown
+        </button>
+        <button
+          v-if="volumeAnalysis"
+          class="SpeakersTab"
+          :class="{ tabActive: speakerTab === 'volume' }"
+          @click="speakerTab = 'volume'"
+        >
+          Volume profile
+        </button>
+        <button
+          v-if="behaviorLabels.length || emotionLabels.length"
+          class="SpeakersTab"
+          :class="{ tabActive: speakerTab === 'labels' }"
+          @click="speakerTab = 'labels'"
+        >
+          Label breakdown
+        </button>
+      </div>
+
+      <div class="SpeakerView">
+        <SpeakingTimeBars
+          v-if="speakerTab === 'airtime' && metrics"
+          :speakers="metrics.speakers"
+          :display-name="displayName"
+        />
+        <VolumeProfile
+          v-if="speakerTab === 'volume' && volumeAnalysis"
+          :speakers="volumeAnalysis.speakers"
+          :display-name="displayName"
+        />
+        <SpeakerBreakdown
+          v-if="speakerTab === 'labels'"
+          :segments="segments"
+          :labels="behaviorLabels"
+          :emotions="emotionLabels"
+          :display-name="displayName"
+        />
+      </div>
+    </div>
+
     <!-- Editable speaker names -->
     <div class="SpeakerNames">
       <div v-for="raw in rawSpeakers" :key="raw" class="SpeakerNameRow">
@@ -54,50 +102,6 @@ const updateName = (raw: string, name: string) => {
       </div>
     </div>
 
-    <div class="SpeakersTabs">
-      <button
-        class="SpeakersTab"
-        :class="{ tabActive: speakerTab === 'airtime' }"
-        @click="speakerTab = 'airtime'"
-      >
-        Airtime breakdown
-      </button>
-      <button
-        v-if="volumeAnalysis"
-        class="SpeakersTab"
-        :class="{ tabActive: speakerTab === 'volume' }"
-        @click="speakerTab = 'volume'"
-      >
-        Volume profile
-      </button>
-      <button
-        v-if="behaviorLabels.length || emotionLabels.length"
-        class="SpeakersTab"
-        :class="{ tabActive: speakerTab === 'labels' }"
-        @click="speakerTab = 'labels'"
-      >
-        Label breakdown
-      </button>
-    </div>
-
-    <SpeakingTimeBars
-      v-if="speakerTab === 'airtime' && metrics"
-      :speakers="metrics.speakers"
-      :display-name="displayName"
-    />
-    <VolumeProfile
-      v-if="speakerTab === 'volume' && volumeAnalysis"
-      :speakers="volumeAnalysis.speakers"
-      :display-name="displayName"
-    />
-    <SpeakerBreakdown
-      v-if="speakerTab === 'labels'"
-      :segments="segments"
-      :labels="behaviorLabels"
-      :emotions="emotionLabels"
-      :display-name="displayName"
-    />
-
     <AnalysisSettings
       :threshold="interruptionThreshold"
       :interruption-count="interruptions.length"
@@ -109,6 +113,12 @@ const updateName = (raw: string, name: string) => {
 </template>
 
 <style scoped>
+.SpeakerView {
+  background-color: var(--base-20);
+  padding: var(--space-1);
+  border-radius: var(--radius);
+}
+
 .SpeakersPage {
   display: flex;
   flex-direction: column;

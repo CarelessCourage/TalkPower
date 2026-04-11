@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 import type { SpeakerVolume } from '~/types/meeting';
+import { useSpeakerColors } from '~/composables/useSpeakerColors';
 
 interface Props {
   speakers: SpeakerVolume[];
@@ -10,16 +11,7 @@ interface Props {
 
 const { speakers, displayName = (raw: string) => raw } = defineProps<Props>();
 
-const colorClasses = [
-  'base-accent',
-  'base-info',
-  'base-warning',
-  'base-success',
-  'base-yellow'
-];
-const getSpeakerColor = (index: number): string =>
-  colorClasses[index % colorClasses.length]!;
-
+const { getSpeakerColor } = useSpeakerColors();
 const barsRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
@@ -41,20 +33,13 @@ onMounted(() => {
 
 <template>
   <div class="VolumeProfile" ref="barsRef">
-    <div
+    <SpeakerRow
       v-for="(speaker, i) in speakers"
       :key="speaker.speaker"
-      class="VolumeRow"
+      :name="displayName(speaker.speaker)"
+      :value="`${Math.round(speaker.averageRms * 100)}%`"
+      :color-class="getSpeakerColor(i)"
     >
-      <div class="VolumeLabel">
-        <span class="VolumeName" :class="getSpeakerColor(i)">{{
-          displayName(speaker.speaker)
-        }}</span>
-        <span class="VolumeAvg mono"
-          >{{ Math.round(speaker.averageRms * 100) }}%</span
-        >
-      </div>
-
       <div class="VolumeTrack">
         <!-- Baseline marker -->
         <div
@@ -73,22 +58,14 @@ onMounted(() => {
           :style="{ left: speaker.peakRms * 100 + '%' }"
         />
       </div>
-
-      <div class="VolumeDetails">
-        <span class="VolumeDetail"
-          >baseline {{ Math.round(speaker.baseline * 100) }}%</span
-        >
-        <span class="VolumeDetail"
-          >peak {{ Math.round(speaker.peakRms * 100) }}%</span
-        >
-        <span
-          v-if="speaker.raisedVoiceCount > 0"
-          class="VolumeDetail detailRaised"
-        >
+      <template #stats>
+        <span>baseline {{ Math.round(speaker.baseline * 100) }}%</span>
+        <span>peak {{ Math.round(speaker.peakRms * 100) }}%</span>
+        <span v-if="speaker.raisedVoiceCount > 0" class="detailRaised">
           🔊 raised {{ speaker.raisedVoiceCount }}×
         </span>
-      </div>
-    </div>
+      </template>
+    </SpeakerRow>
   </div>
 </template>
 
@@ -96,31 +73,7 @@ onMounted(() => {
 .VolumeProfile {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-}
-
-.VolumeRow {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-bit-1);
-}
-
-.VolumeLabel {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-2);
-}
-
-.VolumeName {
-  font-weight: 700;
-  font-size: var(--caption-text-height);
-  color: var(--base-80);
-}
-
-.VolumeAvg {
-  font-size: var(--caption-text-height);
-  color: var(--base-60);
+  gap: var(--space-1);
 }
 
 .VolumeTrack {
@@ -157,17 +110,7 @@ onMounted(() => {
   z-index: 1;
 }
 
-.VolumeDetails {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.VolumeDetail {
-  font-size: var(--caption-text-height);
-  color: var(--base-50);
-}
-
-.VolumeDetail.detailRaised {
+.detailRaised {
   color: var(--warning-70);
   font-weight: 600;
 }
