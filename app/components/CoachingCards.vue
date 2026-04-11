@@ -70,7 +70,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 }
 
 .CoachCard {
-  background: var(--base-20);
+  background: var(--base-10);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: var(--space-bit-2) var(--space-bit-3);
@@ -92,7 +92,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 }
 
 .CoachSpeaker {
-  color: var(--accent-text, var(--accent));
+  color: var(--base-120);
 }
 
 .CoachToneLabel {
