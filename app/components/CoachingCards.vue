@@ -70,7 +70,7 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
 }
 
 .CoachCard {
-  background: color-mix(in oklch, var(--base-20) 92%, transparent);
+  background: var(--base-20);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: var(--space-bit-2) var(--space-bit-3);

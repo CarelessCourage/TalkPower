@@ -286,9 +286,9 @@ watch(
 }
 
 .TimelineCard.cardHardInterruption {
-  border-left: 3px solid var(--accent-60);
+  border-left: 3px solid var(--accent-30);
   padding-left: calc(var(--space-bit-3) - 3px);
-  background: color-mix(in srgb, var(--accent) 4%, transparent);
+  background: var(--base);
 }
 
 .TimelineCard.cardSoftInterruption {

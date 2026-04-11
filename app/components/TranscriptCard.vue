@@ -121,9 +121,9 @@ const categoryColorClass: Record<string, string> = {
 }
 
 .TranscriptCard.cardHardInterruption {
-  border-left: 3px solid var(--accent-60);
+  border-left: 3px solid var(--accent-30);
   padding-left: calc(var(--space-bit-3) - 3px);
-  background: color-mix(in srgb, var(--accent) 4%, transparent);
+  background: var(--base);
 }
 
 .TranscriptCard.cardActive.cardHardInterruption {
@@ -191,7 +191,7 @@ const categoryColorClass: Record<string, string> = {
 }
 
 .CardLabel.labelDeceptive {
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border: 1px solid var(--accent-30);
 }
 
 .LabelDeception {
@@ -215,14 +215,14 @@ const categoryColorClass: Record<string, string> = {
   font-style: italic;
   letter-spacing: 0.02em;
   cursor: help;
-  background: color-mix(in srgb, var(--base-50) 15%, transparent);
+  background: var(--base-20);
   color: var(--base-80);
-  border: 1px solid color-mix(in srgb, var(--base-50) 25%, transparent);
+  border: 1px solid var(--base-30);
 }
 
 .CardEmotion.emotionMasked {
-  background: color-mix(in srgb, var(--warning) 12%, transparent);
-  border-color: color-mix(in srgb, var(--warning) 30%, transparent);
+  background: var(--warning-10);
+  border-color: var(--warning-30);
   color: var(--warning-80);
 }
 
@@ -235,27 +235,27 @@ const categoryColorClass: Record<string, string> = {
 }
 
 .labelConstructive {
-  background: color-mix(in srgb, var(--success) 25%, transparent);
+  background: var(--success-10);
   color: var(--success-80);
 }
 
 .labelDestructive {
-  background: color-mix(in srgb, var(--accent) 25%, transparent);
+  background: var(--base);
   color: var(--accent-80);
 }
 
 .labelNeutral {
-  background: color-mix(in srgb, var(--base-50) 25%, transparent);
+  background: var(--base-20);
   color: var(--base-80);
 }
 
 .labelAssertive {
-  background: color-mix(in srgb, var(--info) 25%, transparent);
+  background: var(--info-10);
   color: var(--info-80);
 }
 
 .labelEvasive {
-  background: color-mix(in srgb, var(--warning) 25%, transparent);
+  background: var(--warning-10);
   color: var(--warning-80);
 }
 </style>

@@ -94,7 +94,7 @@ const onInput = (e: Event) => {
   letter-spacing: 0.04em;
   padding: 1px var(--space-bit-2);
   border-radius: var(--radius-inner);
-  background: color-mix(in srgb, var(--success) 25%, transparent);
+  background: var(--success-10);
   color: var(--success-80);
 }
 

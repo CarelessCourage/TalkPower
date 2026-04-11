@@ -101,7 +101,7 @@ const acceptedFormats = '.mp3,.mp4,.mpeg,.mpga,.m4a,.wav,.webm';
 
 .AudioUpload.dropActive {
   border-color: var(--accent-70);
-  background: var(--accent-10);
+  background: var(--base);
 }
 
 .AudioUpload.uploading {

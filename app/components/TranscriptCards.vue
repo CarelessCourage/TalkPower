@@ -85,7 +85,7 @@ const getEmotion = (index: number): EmotionLabel | undefined => {
 
 .TranscriptCardWrapper {
   pointer-events: auto;
-  background: color-mix(in srgb, var(--base) 85%, transparent);
+  background: var(--base-10);
   backdrop-filter: blur(8px);
   width: max-content;
   max-width: 100%;
