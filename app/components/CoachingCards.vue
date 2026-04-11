@@ -73,7 +73,6 @@ const toneIcon = (tone: CoachingCard['tone']): string => {
   background: color-mix(in oklch, var(--base-20) 92%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: var(--radius);
   padding: var(--space-bit-2) var(--space-bit-3);
   max-width: 280px;
   border-left: 3px solid var(--accent);

@@ -242,7 +242,7 @@ defineExpose({ currentTime, duration: playerDuration, seek });
   position: absolute;
   top: 0;
   right: 0;
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-1);
   max-height: 60%;
   overflow-y: auto;
   scrollbar-width: none;

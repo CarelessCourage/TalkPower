@@ -97,7 +97,9 @@ const categoryColorClass: Record<string, string> = {
           </span>
           <span v-if="getInterruption(index)" class="CardCutOff">
             {{
-              getInterruption(index)!.severity === 'hard' ? 'cut off' : 'talked over'
+              getInterruption(index)!.severity === 'hard'
+                ? 'cut off'
+                : 'talked over'
             }}
             <span :class="getSpeakerColor(getInterruption(index)!.interrupted)">
               {{ displayName(getInterruption(index)!.interrupted) }}
@@ -163,7 +165,6 @@ const categoryColorClass: Record<string, string> = {
   flex-direction: column;
   gap: var(--space-bit-1);
   padding: var(--space-bit-2) var(--space-bit-3);
-  border-radius: var(--radius);
   background: color-mix(in srgb, var(--base) 85%, transparent);
   backdrop-filter: blur(8px);
 }
