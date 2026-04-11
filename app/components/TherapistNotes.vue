@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref, watch } from 'vue';
 import type { TherapistNote } from '~/types/meeting';
 
 interface Props {
@@ -41,35 +41,43 @@ const grouped = computed(() => {
   };
   return [...map.entries()].sort((a, b) => order(a[0]) - order(b[0]));
 });
+
+const activeTab = ref(0);
+
+watch(grouped, () => {
+  if (activeTab.value >= grouped.value.length) activeTab.value = 0;
+});
+
+const activeNotes = computed(() => grouped.value[activeTab.value]?.[1] ?? []);
 </script>
 
 <template>
   <div class="TherapistNotes">
     <p v-if="summary" class="NotesSummary">{{ summary }}</p>
 
-    <div class="NotesGroups">
-      <div
-        v-for="[addressee, groupNotes] in grouped"
+    <div class="NotesTabs">
+      <button
+        v-for="([addressee], idx) in grouped"
         :key="addressee"
-        class="NotesGroup"
+        class="NotesTab"
+        :class="{ notesTabActive: idx === activeTab }"
+        @click="activeTab = idx"
       >
-        <div class="GroupHeader">
-          <Icon :name="addresseeIcon(addressee)" size="14" class="GroupIcon" />
-          <span class="GroupLabel">{{ addresseeLabel(addressee) }}</span>
-        </div>
+        <Icon :name="addresseeIcon(addressee)" size="14" class="TabIcon" />
+        <span class="TabLabel">{{ addresseeLabel(addressee) }}</span>
+      </button>
+    </div>
 
-        <div class="GroupCards">
-          <details
-            v-for="(note, i) in groupNotes"
-            :key="i"
-            class="NoteCard"
-            open
-          >
-            <summary class="NoteHeading">{{ note.heading }}</summary>
-            <p class="NoteBody">{{ note.body }}</p>
-          </details>
-        </div>
-      </div>
+    <div class="GroupCards">
+      <details
+        v-for="(note, i) in activeNotes"
+        :key="note.heading"
+        class="NoteCard"
+        open
+      >
+        <summary class="NoteHeading">{{ note.heading }}</summary>
+        <p class="NoteBody">{{ note.body }}</p>
+      </details>
     </div>
   </div>
 </template>
@@ -88,36 +96,44 @@ const grouped = computed(() => {
   font-style: italic;
 }
 
-.NotesGroups {
+.NotesTabs {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-bit-1);
+  border-bottom: 1px solid var(--base-20);
+  padding-bottom: 0;
 }
 
-.NotesGroup {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-bit-3);
-}
-
-.GroupHeader {
-  display: flex;
+.NotesTab {
+  display: inline-flex;
   align-items: center;
   gap: var(--space-bit-2);
-  padding-bottom: var(--space-bit-1);
-  border-bottom: 1px solid var(--base-20);
-}
-
-.GroupIcon {
+  padding: var(--space-bit-2) var(--space-bit-3);
+  border: none;
+  background: none;
   color: var(--base-50);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition:
+    color var(--time-2) var(--timing),
+    border-color var(--time-2) var(--timing);
 }
 
-.GroupLabel {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--base-60);
+.NotesTab:hover {
+  color: var(--base-80);
+}
+
+.notesTabActive {
+  color: var(--accent-80);
+  border-bottom-color: var(--accent-80);
+}
+
+.TabIcon {
+  flex-shrink: 0;
 }
 
 .GroupCards {
