@@ -1,0 +1,126 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "seeking validation",
+      "category": "constructive",
+      "detail": "The squire expresses a desire for reassurance about his future."
+    },
+    {
+      "segmentIndex": 1,
+      "label": "encouraging",
+      "category": "constructive",
+      "detail": "The knight provides a positive response to the squire's question."
+    },
+    {
+      "segmentIndex": 7,
+      "label": "vulnerability",
+      "category": "constructive",
+      "detail": "The knight reveals a personal hurt from his past, showing a moment of openness."
+    },
+    {
+      "segmentIndex": 11,
+      "label": "defensive",
+      "category": "destructive",
+      "detail": "The knight reacts to the squire's inquiry with hostility, shutting down the conversation."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "stonewalling",
+      "category": "destructive",
+      "detail": "The knight refuses to share his experiences, dismissing the squire's request for help."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "anxious",
+      "trigger": "seeking reassurance about his future",
+      "surface": "hopeful"
+    },
+    {
+      "segmentIndex": 7,
+      "emotion": "vulnerable",
+      "trigger": "sharing a personal hurt",
+      "surface": "gruff"
+    },
+    {
+      "segmentIndex": 11,
+      "emotion": "defensive",
+      "trigger": "feeling pressed for personal information",
+      "surface": "gruff"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "frustrated",
+      "trigger": "the squire's persistence",
+      "surface": "dismissive"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Encouragement Needed",
+      "body": "Speaker A is clearly seeking validation and support, which is a positive step. Speaker B's initial encouragement is helpful, but he should continue to foster this openness rather than retreating into defensiveness.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Vulnerability Acknowledgment",
+      "body": "Speaker B's admission of being called stupid is a moment of vulnerability that could strengthen their bond. It would be beneficial for him to elaborate on how he coped with this to help Speaker A feel less alone.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Addressing Defensive Responses",
+      "body": "Speaker B's defensive reactions hinder the conversation and may discourage Speaker A from expressing himself. It’s important for Speaker B to recognize the impact of his tone and consider a more supportive approach.",
+      "addressedTo": "Speaker B"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Encourage the squire's dreams openly.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 7,
+      "end": 11,
+      "text": "Share your story to connect and inspire.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 11,
+      "end": 15,
+      "text": "Avoid shutting down; it's okay to share.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 12,
+      "end": 16,
+      "text": "Consider how your words affect the squire.",
+      "tone": "insight",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 4,
+      "end": 8,
+      "text": "Acknowledge the squire's feelings; he's seeking support.",
+      "tone": "insight",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 10,
+      "end": 14,
+      "text": "Encourage the squire to express his feelings.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    }
+  ],
+  "summary": "The meeting showcases a dynamic where the squire seeks validation and support from the knight, who initially responds positively but becomes defensive when pressed for personal insights. This shift creates tension, as the knight's vulnerability is not met with the expected guidance, leading to a breakdown in communication. Both parties have opportunities for deeper connection and understanding if they navigate their emotions more effectively.",
+  "speakerNames": {
+    "Speaker A": "Squire",
+    "Speaker B": "Sir Dunkan"
+  }
+}

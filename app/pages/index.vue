@@ -109,7 +109,8 @@ provide(meetingStateKey, {
 });
 
 const tabs = [
-  { to: '/behavior', label: 'Behavior', icon: 'lucide:brain' },
+  { to: '/notes', label: 'Notes', icon: 'lucide:notebook-pen' },
+  { to: '/behavior', label: 'Prompt', icon: 'lucide:sparkles' },
   { to: '/speakers', label: 'Speakers', icon: 'lucide:users' },
   { to: '/transcript', label: 'Transcript', icon: 'lucide:scroll-text' }
 ];

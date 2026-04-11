@@ -1,0 +1,154 @@
+{
+  "labels": [
+    {
+      "segmentIndex": 0,
+      "label": "seeking validation",
+      "category": "constructive",
+      "detail": "The squire expresses his aspiration and seeks reassurance about his future."
+    },
+    {
+      "segmentIndex": 7,
+      "label": "revealing vulnerability",
+      "category": "constructive",
+      "detail": "Sir Duncan shares his own insecurities, creating a moment of potential connection."
+    },
+    {
+      "segmentIndex": 11,
+      "label": "defensive response",
+      "category": "destructive",
+      "detail": "Sir Duncan reacts defensively to the squire's inquiry, shutting down the conversation."
+    },
+    {
+      "segmentIndex": 12,
+      "label": "stonewalling",
+      "category": "destructive",
+      "detail": "Sir Duncan refuses to engage further, indicating a reluctance to share his feelings."
+    },
+    {
+      "segmentIndex": 13,
+      "label": "pleading for connection",
+      "category": "constructive",
+      "detail": "The squire attempts to bridge the gap by asking for help, showing his desire for mentorship."
+    },
+    {
+      "segmentIndex": 15,
+      "label": "sarcastic deflection",
+      "category": "destructive",
+      "detail": "Sir Duncan's response comes off as dismissive and sarcastic, undermining the squire's request."
+    }
+  ],
+  "emotions": [
+    {
+      "segmentIndex": 0,
+      "emotion": "anxious",
+      "trigger": "seeking reassurance about his future",
+      "surface": "hopeful"
+    },
+    {
+      "segmentIndex": 7,
+      "emotion": "vulnerable",
+      "trigger": "sharing personal insecurity",
+      "surface": "gruff"
+    },
+    {
+      "segmentIndex": 11,
+      "emotion": "defensive",
+      "trigger": "feeling threatened by probing questions",
+      "surface": "gruff"
+    },
+    {
+      "segmentIndex": 12,
+      "emotion": "resigned",
+      "trigger": "refusing to share personal struggles",
+      "surface": "dismissive"
+    },
+    {
+      "segmentIndex": 13,
+      "emotion": "pleading",
+      "trigger": "desire for mentorship and support",
+      "surface": "calm"
+    },
+    {
+      "segmentIndex": 15,
+      "emotion": "dismissive",
+      "trigger": "responding to a sincere request with sarcasm",
+      "surface": "nonchalant"
+    }
+  ],
+  "notes": [
+    {
+      "heading": "Encouraging Vulnerability",
+      "body": "Sir Duncan's admission about being called stupid is a significant moment that could lead to deeper connection. Encouraging him to explore this vulnerability further may help both him and the squire.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Building Connection",
+      "body": "The squire's attempts to connect are genuine and should be met with openness. Sir Duncan could benefit from recognizing the squire's need for guidance and support.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Navigating Defensive Responses",
+      "body": "Sir Duncan's defensiveness when asked about his past experiences hinders the potential for mentorship. It may be helpful for him to reflect on what makes him uncomfortable about sharing.",
+      "addressedTo": "Speaker B"
+    },
+    {
+      "heading": "Validating Feelings",
+      "body": "The squire's feelings of inadequacy are valid and deserve acknowledgment. Encouraging him to express these feelings openly can foster a healthier dialogue.",
+      "addressedTo": "Speaker A"
+    },
+    {
+      "heading": "Fostering Open Dialogue",
+      "body": "Both parties are struggling with insecurities that could be addressed through open dialogue. Future conversations should focus on creating a safe space for vulnerability.",
+      "addressedTo": "all"
+    }
+  ],
+  "coaching": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "Great job expressing your dreams, stay confident!",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 7,
+      "end": 11,
+      "text": "Opening up about past hurts can deepen connection.",
+      "tone": "tip",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 11,
+      "end": 15,
+      "text": "Defensiveness can shut down important conversations.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 13,
+      "end": 17,
+      "text": "Keep asking for help; it's a sign of strength!",
+      "tone": "praise",
+      "speaker": "Speaker A"
+    },
+    {
+      "start": 14,
+      "end": 18,
+      "text": "Avoid sarcasm; it can undermine sincere requests.",
+      "tone": "warning",
+      "speaker": "Speaker B"
+    },
+    {
+      "start": 29,
+      "end": 33,
+      "text": "Silence can be powerful, but don't let it linger too long.",
+      "tone": "insight",
+      "speaker": "all"
+    }
+  ],
+  "summary": "The meeting reveals a complex dynamic of insecurity and vulnerability between the squire and Sir Duncan. While the squire seeks validation and connection, Sir Duncan's defensive responses hinder their ability to bond. Both characters exhibit moments of constructive communication, but their fears prevent deeper engagement.",
+  "speakerNames": {
+    "Speaker A": "The Squire",
+    "Speaker B": "Sir Duncan"
+  }
+}

@@ -90,9 +90,8 @@ const activeNotes = computed(() => grouped.value[activeTab.value]?.[1] ?? []);
 }
 
 .NotesSummary {
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--base-80);
   font-style: italic;
   margin-bottom: var(--space-4);
 }

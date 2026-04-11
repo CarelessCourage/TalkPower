@@ -2,7 +2,7 @@
 const router = useRouter();
 
 const enter = () => {
-  router.push('/behavior');
+  router.push('/notes');
 };
 </script>
 

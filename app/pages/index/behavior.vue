@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import { useMeetingState } from '~/composables/useMeetingState';
 
-const {
-  behaviorAnalysis,
-  behaviorContext,
-  analyzingBehavior,
-  behaviorLabels,
-  analyzeBehavior,
-  displayName
-} = useMeetingState();
+const { behaviorContext, analyzingBehavior, behaviorLabels, analyzeBehavior } =
+  useMeetingState();
 </script>
 
 <template>
@@ -18,12 +12,6 @@ const {
       :analyzing="analyzingBehavior"
       :has-labels="behaviorLabels.length > 0"
       @analyze="analyzeBehavior"
-    />
-    <TherapistNotes
-      v-if="behaviorAnalysis?.notes?.length || behaviorAnalysis?.summary"
-      :notes="behaviorAnalysis?.notes ?? []"
-      :summary="behaviorAnalysis?.summary"
-      :display-name="displayName"
     />
   </div>
 </template>
