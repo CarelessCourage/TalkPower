@@ -3,4 +3,4 @@ export {
   theOfficeLabels as labels,
   theOfficeContext as context
 } from '~/data/the-office-labels';
-export { default as video } from '~/assets/video/theOffice.mp4';
+export const video = '/video/theOffice.mp4';

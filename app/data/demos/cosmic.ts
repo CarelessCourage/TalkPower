@@ -3,4 +3,4 @@ export {
   cosmicLabels as labels,
   cosmicContext as context
 } from '~/data/cosmic-labels';
-export { default as video } from '~/assets/video/cosmic.mp4';
+export const video = '/video/cosmic.mp4';

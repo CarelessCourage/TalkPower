@@ -3,4 +3,4 @@ export {
   demoLabels as labels,
   demoContext as context
 } from '~/data/demo-labels';
-export { default as video } from '~/assets/video/argumentAtTheMuseum.mp4';
+export const video = '/video/argumentAtTheMuseum.mp4';

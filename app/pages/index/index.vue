@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import auraLogoVideo from '~/assets/video/auraLogo.mp4';
+const auraLogoVideo = '/video/auraLogo.mp4';
 
 const router = useRouter();
 

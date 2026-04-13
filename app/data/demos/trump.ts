@@ -3,4 +3,4 @@ export {
   trumpLabels as labels,
   trumpContext as context
 } from '~/data/trump-labels';
-export { default as video } from '~/assets/video/trumpZ.mp4';
+export const video = '/video/trumpZ.mp4';

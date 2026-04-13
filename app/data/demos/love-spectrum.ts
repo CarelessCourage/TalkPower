@@ -3,4 +3,4 @@ export {
   loveSpectrumLabels as labels,
   loveSpectrumContext as context
 } from '~/data/love-spectrum-labels';
-export { default as video } from '~/assets/video/loveOnTheSpectrum.mp4';
+export const video = '/video/loveOnTheSpectrum.mp4';
